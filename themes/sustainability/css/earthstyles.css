@@ -1,0 +1,220 @@
+
+
+/*Earthday styles*/
+
+#header-wrapper {
+	background:transparent url(../images/earthheader-background.png) repeat scroll 0 0;
+	height:124px;
+	width:auto;
+	}
+#nav {
+	margin:0 auto 0 auto;}
+#container{
+	background-color:#edfdf0;}
+
+#middle-image {
+	background:transparent url(../images/earthmiddle3.jpg) no-repeat scroll 50% 0%;
+	/*padding-bottom:350px;*/
+	width:auto;}
+	
+#content-wrapper {
+	background-color:#EDFDF0;}
+
+#earthwrapper {	
+	-moz-background-clip:border;
+	-moz-background-inline-policy:continuous;
+	-moz-background-origin:padding;
+	width:990px;
+	height:auto;
+	/*margin:0px auto 20px auto;*/
+	margin:0px auto 0 auto;
+	background:white none repeat scroll 0 0;
+	background: url(../images/interior-shadow.png) repeat-y -16px 0px;}
+#earthcontent {
+	-moz-background-clip:border;
+	-moz-background-inline-policy:continuous;
+	-moz-background-origin:padding;
+	width:959px; 
+	background:transparent none repeat scroll 0 0;
+	min-height:500px;
+	padding:20px 0px 30px 0px;
+	margin:0 auto 0px auto;}
+
+.pagination {
+	margin-left: 15px !important;
+
+}
+
+#leftcolumn p, div#rightcolumn li {
+	color:#666666;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:12px;}
+
+span.color {
+	color:#385b63;
+	font-weight:700;}
+
+
+h1.logo a {
+	float: left;
+	width: 643px;
+	height: 60px;
+	background: url(../images/earthday.png) no-repeat 27px 0px;
+	text-indent: -9999px;
+	/*margin: 4px 0px 0px 1px; */}
+
+
+
+
+
+/*LEFT COLUMN */
+	#leftcolumn {
+		width:635px;
+		background-color:white;
+		float:left;
+		margin:0 20px 10px 0px;}
+	#leftcolumn ul {
+		margin:0 0 20px 0;}
+	#leftcolumn ul li {
+		margin: 15px 15px 30px 15px;
+		display:block;}
+	#leftcolumn h2{
+		font-family:'century gothic' , Arial, Helvetica, sans-serif;
+		text-transform:uppercase;
+		color:#2e8b69;
+		font-size:26px;
+		}
+	#leftcolumn h3 {
+		font-family:'century gothic' , Arial, Helvetica, sans-serif;
+		text-transform:uppercase;
+		color:#666;
+		font-size:21px;
+		}
+	div#leftcolumn h3 {
+		width:385px;
+		float:left;
+		margin: 0 10px 0 0;}
+	#leftcolumn p {
+		width:385px;
+		float:left;
+		margin: 10px 10px 0 0;
+	}
+	#leftcolumn .time p {
+		margin: 0px 10px 0 0;
+	}
+	strong {
+		font-weight: bold;
+	}
+	div#leftcolumn h2 {
+		float:left;
+		margin:0 10px 0 0;}
+	#leftcolumn li.no-image p, #leftcolumn li.no-image h3{
+		width:605px;}
+/*end LEFT COLUMN */
+
+
+/*RIGHT COLUMN */
+	#rightcolumn {
+		width:300px;
+		float:left;
+		margin:0 0 20px 0;
+		background-color:white;}
+	#rightcolumn h3 {
+		font-family:'century gothic' , Arial, Helvetica, sans-serif;
+		text-transform:uppercase;
+		color:black;
+		font-size:25px;
+		margin:15px 15px 0 15px;
+		}		
+	#rightcolumn li {
+		margin:0 0 10px 0;
+		}
+	#rightcolumn ul {
+		margin:0 15px 0 15px;}
+	#rightcolumn p {
+		margin:0 15px 0 8px;}
+	#rightcolumn a.submit {
+		background-image:url(../images/earthdaybutton.png);
+		display:block; 
+		height:49px;
+		width:127px;
+		text-indent:-9999px;
+		margin:0 0 10px 0;}
+/*end RIGHT COLUMN */
+
+/*MAIN FEATURE (top)*/
+	#feature {
+		width:959px;
+		height:auto;
+		background-color:#edfdf0;
+		margin:0px auto 0px auto;}
+	#feature h2  {
+		float:left;
+		font-family:'century gothic' , Arial, Helvetica, sans-serif;
+		font-size:45px;
+		padding: 0px 0px 0px 8px;
+		text-align:center;
+		text-transform:uppercase;
+		}
+	#feature h3 {
+		font-family:'century gothic' , Arial, Helvetica, sans-serif;
+		font-size:20px;
+		text-align:center;
+		float:left;
+		margin-bottom:20px;
+		text-transform:uppercase;
+		padding: 0px 0px 0px 11px;}
+	#featuretext p {
+		font-family:'century gothic' , Arial, Helvetica, sans-serif;
+		padding: 0px 0px 0px 11px;
+		}
+	#featuretext {
+		width:400px; 
+		float:left; 
+		padding-top:80px;}
+	#feature img {
+		float:left;
+		margin:15px;}
+/*end main feature*/
+
+
+/*FOOTER*/
+#footer-container {
+	background-color:#385b63;}
+#footer-container {
+	width:100%;
+	height:auto !important;
+	clear:both;
+	bottom:0;}
+
+#earthwrapper a {
+  color: #2E8B69;
+}
+.earthcontent ul {
+	clear: left;
+	color: #666 !important;
+	float: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px !important;
+	margin: 0px 0px 5px 10px !important;
+	padding: 5px 0px 0px 0px;
+}
+.earthcontent ul, .earthcontent li {
+	list-style: disc !important;
+}
+/*end FOOTER*/
+
+#earthtagline {
+	margin-left: 15px;
+	padding-bottom: 25px;
+
+}
+
+#earthtagline h1 {
+	font-size: 36px;
+	font-family: 'century gothic' , Arial, Helvetica, sans-serif;
+
+}
+
+
+/*end Earthday styles*/
