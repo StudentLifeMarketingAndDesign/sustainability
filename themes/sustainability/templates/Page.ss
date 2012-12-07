@@ -160,14 +160,14 @@ $Layout
 
 
   <ul class="menu">
-       <% control Menu(1) %>
+       <% loop Menu(1) %>
                 <li class="$URLSegment"><a href="$Link">$MenuTitle</a>
                   <% if Children %>  <ul>
-                        <% control Children %>
+                        <% loop Children %>
                             <li><a href="$Link">$Title</a></li>
-                        <% end_control %>
+                        <% end_loop %>
                     </ul><% end_if %></li>
-            <% end_control %>
+            <% end_loop %>
       </ul>
 		
 <p class="copywright">&copy; <a href="http://www.uiowa.edu/">The University of Iowa</a> $Now.Year. All rights reserved.</p>

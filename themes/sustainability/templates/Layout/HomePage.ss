@@ -129,36 +129,36 @@ $EventDateRange
 
 <div class="ui-tabs ui-widget ui-widget-content ui-corner-all" id="tabs">
 <ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">
-<% control ChildrenOf(what-you-can-do) %>
+<% loop ChildrenOf(what-you-can-do) %>
 <li id="list$Pos" <% if First %>class="ui-corner-top ui-tabs-selected ui-state-active" <% else %> class="ui-corner-top ui-state-default"<% end_if %>><a href="#tabs-$Pos">$MenuTitle</a></li>
-<% end_control %>
+<% end_loop %>
 </ul>
 
 
 <div class="ui-tabs-panel ui-widget-content ui-corner-bottom" id="tabs-1">
 <div class="link-block1"> 
 <ul>
-<% control ChildrenOf(students) %>
+<% loop ChildrenOf(students) %>
 <li><a href="$Link">$Title</a></li>
-<% end_control %>
+<% end_loop %>
 </ul>
 </div></div>
 
 <div class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide" id="tabs-2">
 <div class="link-block1"> 
 <ul>
-<% control ChildrenOf(faculty-staff) %>
+<% loop ChildrenOf(faculty-staff) %>
 <li><a href="$Link">$Title</a></li>
-<% end_control %>
+<% end_loop %>
 </ul>
 </div></div>
 
 <div class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide" id="tabs-3">
 <div class="link-block1"> 
 <ul>
-<% control ChildrenOf(outreach) %>
+<% loop ChildrenOf(outreach) %>
 <li><a href="$Link">$Title</a></li>
-<% end_control %>
+<% end_loop %>
 </ul>
 </div></div>
 
@@ -174,7 +174,7 @@ $EventDateRange
 <h3 class="news" title="News"><a href="$BaseHref/news">News</a></h3>
 <p class="view-all"><a href="$BaseHref/news">View All</a></p>
 <ul class="news">
-<% control News %>
+<% loop News %>
 <% if canView %>
 <li>
 
@@ -191,19 +191,19 @@ $EventDateRange
 <% end_if %>
 </span></li>
 <% end_if %>
-<% end_control %>
+<% end_loop %>
 </ul>
 
 <br /><br />
 <h3 class="blog" title="Blog"><a href="$BaseHref/blog">Sustainability Blog</a></h3>
 <p class="view-all"><a href="$BaseHref/blog">View All</a></p>
 <ul class="news">
-<% control RSSFeedImport(1) %>
+<% loop RSSFeedImport(1) %>
 <li>
 <h4><a href="$Link">$Title</a></h4>
 <p>$Description.LimitWordCount(10)</p>
 <span class="more"><a href="$Link">Read More</a></span></li>
-<% end_control %>
+<% end_loop %>
 
 </ul>
 
