@@ -17,7 +17,7 @@ class HomePage extends Page {
    }
 }
  
-class HomePage_Controller extends Page_Controller {
+class HomePage_Controller extends RSSBlogPostsPage_Controller {
 	
 		public function init() {
 			parent::init();

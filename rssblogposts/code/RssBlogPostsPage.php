@@ -38,8 +38,8 @@ class RssBlogPostsPage_Controller extends Page_Controller {
 		
 	function RSSBlogPosts($numItems = 30, $feedURL="http://imu.uiowa.edu/news/feed/") {
 		
-			$output = new DataObjectSet();
-			$output->setPageLength(3);
+			$output = new ArrayList();
+			//$output->setPageLength(3);
 			include_once('simplepie/simplepie.inc');
 			$t1 = microtime(true);
 			$feed = new SimplePie($feedURL, TEMP_FOLDER);

@@ -146,7 +146,7 @@ class Page_Controller extends ContentController {
 
 	  	return $this->customise($data)->renderWith(array('Page_results', 'Page'));
 	}
-	
+	/*
 	function RSSFeedImport($numItems) {
 			
 		$feedURL= "feed://sustainability.uiowa.edu/blog/?feed=rss2";
@@ -185,7 +185,8 @@ class Page_Controller extends ContentController {
 
 		 return $output;
 	  }
-}
+	  
+}*/
 	
 }
 

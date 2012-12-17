@@ -198,7 +198,8 @@ $EventDateRange
 <h3 class="blog" title="Blog"><a href="$BaseHref/blog">Sustainability Blog</a></h3>
 <p class="view-all"><a href="$BaseHref/blog">View All</a></p>
 <ul class="news">
-<% loop RSSFeedImport(1) %>
+
+<% loop RSSBlogPosts(1) %>
 <li>
 <h4><a href="$Link">$Title</a></h4>
 <p>$Description.LimitWordCount(10)</p>
