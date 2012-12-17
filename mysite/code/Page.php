@@ -90,12 +90,22 @@ class Page_Controller extends ContentController {
 		return $items ? $items : false;
 	}
 	
-		function News($limit=3) {
+	function News($limit=3) {
 		$set = DataObject::get("NewsPage", null, null, null, $limit);
 		
 		return $set;
 	}
 	
+	function EventNews($limit=8){
+		$items = DataObject::get("EventsPage", "Expiry > NOW()", "EventDate", null, $limit);
+		$set = DataObject::get("NewsPage", null, null, null, $limit);
+		$newarray = new DataObjectSet();
+		$newarray->merge($items);
+		$newarray->merge($set);
+		Debug::show($newarray);
+		return $newarray;
+		
+	}
 	
 	
 		function Siblings() {/* Control structure that allows us to grab a list of 
@@ -138,13 +148,15 @@ class Page_Controller extends ContentController {
 	}
 	
 	function RSSFeedImport($numItems) {
-		
+			
 		$feedURL= "feed://sustainability.uiowa.edu/blog/?feed=rss2";
-	  $output = new DataObjectSet();
+	  $output = new ArrayList();
 	  
-	  include_once(Director::getAbsFile(SAPPHIRE_DIR . '/thirdparty/simplepie/simplepie.inc'));
+	  include_once(Director::getAbsFile(FRAMEWORK_DIR . '/thirdparty/simplepie/simplepie.inc'));
 	  
 	  $t1 = microtime(true);
+
+
 	  $feed = new SimplePie($feedURL, TEMP_FOLDER);
 	  $feed->init();
 	  if($items = $feed->get_items(0, $numItems)) {
@@ -169,6 +181,8 @@ class Page_Controller extends ContentController {
 			   'Description'   => $desc
 			)));
 		 }
+		 
+
 		 return $output;
 	  }
 }

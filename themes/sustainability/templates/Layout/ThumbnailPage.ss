@@ -41,7 +41,7 @@
 
 <% if ThumbnailImage %>
 <div class="image">
-<img src="<% control ThumbnailImage %><% control SetWidth(316) %> $URL <% end_control %><% end_control %>" alt="$Title"/>
+<img src="<% loop ThumbnailImage %><% loop SetWidth(316) %> $URL <% end_loop %><% end_loop %>" alt="$Title"/>
 <p class="caption">$ThumbnailCaption</p>
 </div>
 <% end_if %> 

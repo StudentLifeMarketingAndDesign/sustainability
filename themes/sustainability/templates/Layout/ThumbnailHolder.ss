@@ -42,14 +42,14 @@
 
 $Content
 
-<% control ChildrenOf(Sustainabilty-at-UI) %>
+<% loop ChildrenOf(Sustainabilty-at-UI) %>
 
 <div class="type-b">
 <div class="image-content$Pos">
 
 <% if ThumbnailImage %> 
 <div class="image-thumbnail">
-<a href="$Link"><img src="<% control ThumbnailImage  %><% control SetWidth(155) %> $URL <% end_control %><% end_control %>" alt="$Title" /></a>
+<a href="$Link"><img src="<% loop ThumbnailImage  %><% loop SetWidth(155) %> $URL <% end_loop %><% end_loop %>" alt="$Title" /></a>
 <p class="caption">$Title</p>
 </div>
 <% end_if %>
@@ -67,7 +67,7 @@ $Content
 
 
 
-<% end_control %>
+<% end_loop %>
 <div class="clear"></div>
 
 

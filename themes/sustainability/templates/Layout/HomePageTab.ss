@@ -40,7 +40,7 @@
 
 <% if FeatureImage %>
 <div class="image">
-<img src="<% control FeatureImage %><% control SetWidth(316) %> $URL <% end_control %><% end_control %>" alt="$Title"/>
+<img src="<% loop FeatureImage %><% loop SetWidth(316) %> $URL <% end_loop %><% end_loop %>" alt="$Title"/>
 <p class="caption">$Title</p>
 </div>
 <% end_if %> 

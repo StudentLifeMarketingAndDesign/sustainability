@@ -20,7 +20,8 @@ class EventsPage extends Page {
 	"VideoLink" => "Text",
 	'FlickrUsername' => 'Text',
 	'FlickrSetnumber' => 'Text',
-	
+	'HomeLink' => 'Text'
+
 	
 	
 	

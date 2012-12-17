@@ -16,10 +16,10 @@
 
 <h1>$Title</h1>
 
-<% control Children %>
+<% loop Children %>
 <div id="goal">
 <a href="$Link"><h2>$Title</h2></a>
-<% control Children %>
+<% loop Children %>
 	<table>
 	<tr>
 	<th class="title">$Title</th>
@@ -27,20 +27,20 @@
 	<th class="number">FY08</th>
 	<th class="number">FY09</th>
 	</tr>
-	<% control Children %>
+	<% loop Children %>
 		<tr>
 		<td class="title"><a href="$Link" class="tu_iframe_450x530">$Title</a></td>
 		<td class="number">$FY07</td>
 		<td class="number">$FY08</td>
 		<td class="number">$FY09</td>
 		</tr>
-	<% end_control %>
+	<% end_loop %>
 	</table>
-<% end_control %>
+<% end_loop %>
 </div>
 
 
-<% end_control %>
+<% end_loop %>
 
 $Content
  

@@ -30,7 +30,7 @@
               <h1>Earth Month Events</h1>
               <p>Protect the environment in which we live, learn and work.</p>
               </div>
-           <ul><% control EarthdayEvents %>
+           <ul><% loop EarthdayEvents %>
            
            
            
@@ -70,7 +70,7 @@
 				<% end_if %>
                 <div style="clear: left;"></div> 
                 </li> 
-                <% end_control %>
+                <% end_loop %>
     		</ul> 
     	<div class="clear" style="clear:left;"></div>
 <% if EarthDayEvents.MoreThanOnePage %>
@@ -78,13 +78,13 @@
   <% if EarthDayEvents.PrevLink %>
     <a href="$EarthDayEvents.PrevLink">&laquo; Prev</a> | 
   <% end_if %>
-  <% control EarthDayEvents.Pages %>
+  <% loop EarthDayEvents.Pages %>
     <% if CurrentBool %>
       <strong>$PageNum</strong> 
     <% else %>
       <a href="$Link" title="Go to page $PageNum">$PageNum</a> 
     <% end_if %>
-  <% end_control %>
+  <% end_loop %>
   <% if EarthDayEvents.NextLink %>
     | <a href="$EarthDayEvents.NextLink">Next &raquo;</a>
   <% end_if %>
@@ -96,7 +96,7 @@
             <h3>Upcoming Events</h3>
             <p><a href="http://sustainability.uiowa.edu/event-submission/" class="submit">Submit your event</a></p>
                 <ul>
-                <% control Children %>
+                <% loop Children %>
                 <li>
 				<span class="color">$EventDate</span><br />
 				<% if ExLink %>
@@ -105,7 +105,7 @@
 					$Title
 				<% end_if %>
                 </li>
-                <% end_control %>
+                <% end_loop %>
                 </ul>  
        </div><!-- end right column image div -->
            

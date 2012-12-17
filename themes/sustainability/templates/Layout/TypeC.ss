@@ -42,7 +42,7 @@
 
 <% if TypeCImage %> 
 
-<img src="<% control TypeCImage %><% control SetWidth(695) %> $URL <% end_control %><% end_control %>" alt="$Title" />
+<img src="<% loop TypeCImage %><% loop SetWidth(695) %> $URL <% end_loop %><% end_loop %>" alt="$Title" />
 <p class="typeC-caption">$TypeCCaption</p>
 
 <% end_if %>
@@ -52,14 +52,14 @@
 $Content
 <br />
 <div class="type-c">
-<% control Children %>
+<% loop Children %>
 
 <div class="image-content$Pos">
 
 
 <% if HeaderImage %> 
 <div class="image-thumbnail">
-<img src="<% control HeaderImage  %><% control SetWidth(155) %> $URL <% end_control %><% end_control %>" alt="$Title" />
+<img src="<% loop HeaderImage  %><% loop SetWidth(155) %> $URL <% end_loop %><% end_loop %>" alt="$Title" />
 <p class="caption">$Title</p>
 </div>
 <% end_if %>
@@ -77,7 +77,7 @@ $Content
 <% end_if %>
 </span> 
 </div>
-<% end_control %>
+<% end_loop %>
 </div>
 <div class="clear"></div>
 

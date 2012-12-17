@@ -44,7 +44,7 @@
 
 
 
-<% control Children %>
+<% loop Children %>
 
 
 <% if ClassName = InteriorPage %>
@@ -54,7 +54,7 @@
         
         <% if HeaderImage %>
 			<div class="image-box">
-			<img class="right" src="<% control HeaderImage %><% control SetWidth(316) %> $URL <% end_control %><% end_control %>"/>
+			<img class="right" src="<% loop HeaderImage %><% loop SetWidth(316) %> $URL <% end_loop %><% end_loop %>"/>
 			 <% if ImageCaption %><p class="typeC-caption">$ImageCaption</p><% end_if %>
 			</div>
         <% end_if %>
@@ -80,12 +80,12 @@
             <h2 class="overview"><a href="$Link">$Title</a></h2>
             <br />
             <div class="thumbnail-background">
-            <% control Children %>
+            <% loop Children %>
             <div class="image-content$Pos">
             
             <% if ThumbnailImage %> 
             <div class="image-thumbnail">
-            <img src="<% control ThumbnailImage  %><% control SetWidth(155) %> $URL <% end_control %><% end_control %>" alt="$Title" />
+            <img src="<% loop ThumbnailImage  %><% loop SetWidth(155) %> $URL <% end_loop %><% end_loop %>" alt="$Title" />
             <% if ThumbnailCaption %> <p class="caption">$ThumbnailCaption</p><% end_if %>
             </div>
             <% end_if %>
@@ -102,7 +102,7 @@
             <% end_if %>
             </span> 
             </div>
-            <% end_control %>
+            <% end_loop %>
             <div class="clear"></div>
             </div>
         </div>
@@ -110,7 +110,7 @@
     <% end_if %>
     <% end_if %>
 
-<% end_control %>
+<% end_loop %>
 <div class="clear"></div>
 
 

@@ -42,12 +42,12 @@
 
 <div id="goalitem">
 <h1>$Title</h1>
-<% control Parent %>
-<% control Parent %>
-	<% control Parent %><a href="$Link">Vision 2020</a> &gt; <% end_control %>
+<% loop Parent %>
+<% loop Parent %>
+	<% loop Parent %><a href="$Link">Vision 2020</a> &gt; <% end_loop %>
 	<a href="$Link">$LongName</a> &gt; 
-<% end_control %>
-<% end_control %>
+<% end_loop %>
+<% end_loop %>
 $Title
 <br /><br />
 <span class="goalitemrow"><span class="year">FY05</span> <span class="num">$FY05</span><div class="clear"></div></span>
@@ -58,10 +58,10 @@ $Title
 <div class="clear"></div>
 </div>
 
-<% control Parent %>
+<% loop Parent %>
 <br /><br /><br />
 <a href="$Link">Back</a><br />
-<% end_control %>
+<% end_loop %>
 
 $Content
  

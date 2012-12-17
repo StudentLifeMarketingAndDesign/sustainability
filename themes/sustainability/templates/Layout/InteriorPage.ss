@@ -67,7 +67,7 @@
 
 <% if HeaderImage %>
 <div class="image">
-<img src="<% control HeaderImage %><% control SetWidth(316) %> $URL <% end_control %><% end_control %>" alt="$Title"/>
+<img src="<% loop HeaderImage %><% loop SetWidth(316) %> $URL <% end_loop %><% end_loop %>" alt="$Title"/>
 <% if ImageCaption %><p class="caption">$ImageCaption</p><% end_if %> 
 <% if YouTubeID %>
 <iframe width="316" height="217" src="http://www.youtube.com/embed/$YouTubeID" frameborder="0" allowfullscreen></iframe>

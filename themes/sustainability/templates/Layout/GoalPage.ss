@@ -17,7 +17,7 @@
 <div id="goalspace" class="typography">
 <% if HeaderImage %>
 	<div class="image">
-	<img src="<% control HeaderImage %><% control SetWidth(316) %> $URL <% end_control %><% end_control %>" alt="$Title"/>
+	<img src="<% loop HeaderImage %><% loop SetWidth(316) %> $URL <% end_loop %><% end_loop %>" alt="$Title"/>
 	<% if ImageCaption %><p class="caption">$ImageCaption</p><% end_if %> 
 	</div>
 <% end_if %>
@@ -28,7 +28,7 @@
 $Description
 
 <div id="goal">
-<% control Children %>
+<% loop Children %>
 <table>
 	<tr>
 	<th class="title">$Title</th>
@@ -36,16 +36,16 @@ $Description
 	<th class="number">FY08</th>
 	<th class="number">FY09</th>
 	</tr>
-<% control Children %>
+<% loop Children %>
 	<tr>
 	<td class="title"><a href="$Link" class="tu_iframe_450x530">$Title</a></td>
 	<td class="number">$FY07</td>
 	<td class="number">$FY08</td>
 	<td class="number">$FY09</td>
 	</tr>
-<% end_control %>
+<% end_loop %>
 </table>
-<% end_control %>
+<% end_loop %>
 <!--
 <ul id="goals">
 <li id="headings">
@@ -63,11 +63,11 @@ $Description
 </ul>
 -->
 </div>
-<% control Parent %>
+<% loop Parent %>
 
 <br /><br />
 <a href="$Link">Back to Index</a><br />
-<% end_control %>
+<% end_loop %>
 
 $Content
  

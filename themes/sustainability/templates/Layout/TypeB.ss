@@ -44,13 +44,13 @@ $Content
 
 <br />
 
-<% control Children %>
+<% loop Children %>
 <div class="type-b">
 <div class="image-content$Pos">
 
 <% if HeaderImage %> 
 <div class="image-thumbnail">
-<img src="<% control HeaderImage  %><% control SetWidth(155) %> $URL <% end_control %><% end_control %>" alt="$Title" />
+<img src="<% loop HeaderImage  %><% loop SetWidth(155) %> $URL <% end_loop %><% end_loop %>" alt="$Title" />
 <p class="caption">$Title</p>
 </div>
 <% end_if %>
@@ -71,7 +71,7 @@ $Content
 
 
 
-<% end_control %>
+<% end_loop %>
 <div class="clear"></div>
 
 

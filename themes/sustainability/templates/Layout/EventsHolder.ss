@@ -48,7 +48,7 @@
 
 <% if TypeCImage %> 
 
-<img src="<% control TypeCImage %><% control SetWidth(695) %> $URL <% end_control %><% end_control %>" alt="$Title" />
+<img src="<% loop TypeCImage %><% loop SetWidth(695) %> $URL <% end_loop %><% end_loop %>" alt="$Title" />
 <% if TypeCCaption %> <p class="typeC-caption">$TypeCCaption</p><% end_if %>
 
 <% end_if %>
@@ -56,7 +56,7 @@ $Content
 <div class="events-holder">
 <ul class="events">
 
-<% control allEvents %>
+<% loop allEvents %>
 <li class="events$Pos">
 
 <% if EventLink %>
@@ -101,7 +101,7 @@ $EventDateRange
 <% end_if %>
 </span>
 </li>
-<% end_control %>
+<% end_loop %>
 </ul>
 
 
@@ -112,13 +112,13 @@ $EventDateRange
 <a href="$allEvents.PrevLink"><< Prev</a> |
 <% end_if %>
 
-<% control allEvents.Pages %>
+<% loop allEvents.Pages %>
 <% if CurrentBool %>
 <strong>$PageNum</strong>
 <% else %>
 <a href="$Link" title="Go to page $PageNum">$PageNum</a>
 <% end_if %>
-<% end_control %>
+<% end_loop %>
 
 <% if allEvents.NextLink %>
 | <a href="$allEvents.NextLink">Next >></a>

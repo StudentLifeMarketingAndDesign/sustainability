@@ -43,7 +43,7 @@
 
 <% if HeaderImage %>
 <div class="image">
-<img src="<% control HeaderImage %><% control SetWidth(316) %> $URL <% end_control %><% end_control %>"/>
+<img src="<% loop HeaderImage %><% loop SetWidth(316) %> $URL <% end_loop %><% end_loop %>"/>
 <% if ImageCaption %><p class="caption">$ImageCaption</p><% end_if %>
 </div>
 <% end_if %> 
@@ -53,7 +53,7 @@
 <div class="events-holder">
 
 <ul class="news">
-<% control allNews %>
+<% loop allNews %>
 <li>
 
 <% if NewsLink %><h4><a href="$NewsLink" target="_blank">$Title</a></h4>
@@ -70,7 +70,7 @@
 <a href="$Link" target="_blank">Read More</a>
 <% end_if %>
 </span></li>
-<% end_control %>
+<% end_loop %>
 
 </ul>
 
@@ -82,13 +82,13 @@
 <a href="$allNews.PrevLink"><< Prev</a> |
 <% end_if %>
 
-<% control allNews.Pages %>
+<% loop allNews.Pages %>
 <% if CurrentBool %>
 <strong>$PageNum</strong>
 <% else %>
 <a href="$Link" title="Go to page $PageNum">$PageNum</a>
 <% end_if %>
-<% end_control %>
+<% end_loop %>
 
 <% if allNews.NextLink %>
 | <a href="$allNews.NextLink">Next >></a>
