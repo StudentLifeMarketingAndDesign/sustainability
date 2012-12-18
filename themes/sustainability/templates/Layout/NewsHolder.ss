@@ -61,7 +61,7 @@
 <h4><a href="$Link">$Title</a></h4>
 <% end_if %>
 <p class="date">
-<% if NewsDate %>$NewsDate.Format(F d&#44; Y)<% end_if %>
+<% if NewsDate %>$NewsDate.Format("F d&#44 Y")<% end_if %>
 </p>
 <p>$Content.LimitWordCount(20)</p>
 <span class="more">
