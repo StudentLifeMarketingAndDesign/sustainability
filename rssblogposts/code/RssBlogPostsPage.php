@@ -36,7 +36,7 @@ class RssBlogPostsPage_Controller extends Page_Controller {
 		// included so that our older themes still work
 		}
 		
-	function RSSBlogPosts($numItems = 30, $feedURL="http://imu.uiowa.edu/news/feed/") {
+	function RSSBlogPosts($numItems = 30, $feedURL="feed://sustainability.uiowa.edu/blog/?feed=rss2") {
 		
 			$output = new ArrayList();
 			//$output->setPageLength(3);
