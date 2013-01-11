@@ -83,7 +83,7 @@
 
 <% if VideoLink %>
 <div id="video">
-<object id="video" width="315" height="255"><param name="movie" value="http://www.youtube.com/v/{$VideoLink}&hl=en_US&fs=1&"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/{$VideoLink}&hl=en_US&fs=1&"" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="315" height="255"></embed></object>
+<object id="video" width="315" height="255"><param name="movie" value="http://www.youtube.com/v/{$VideoLink}&hl=en_US&fs=1&"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/{$VideoLink}&hl=en_US&fs=1&" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="315" height="255"></embed></object>
 </div>
 <% if VideoCaption %>
 <p class="video-caption">$VideoCaption</p>
@@ -93,8 +93,11 @@
 </div>
 
 <p><strong>
-<% if EventDate %>$EventDate.Format(F d&#44; Y)<% end_if %>
-<% if EventDateRange %>$EventDateRange<% end_if %></strong>
+<% if EventDateRange %>$EventDateRange
+<% else_if EventDate %>$EventDate.Format("F d&#44 Y")
+<% end_if %></strong>
+
+
 <em>
 <% if EventTime %>- $EventTime<% end_if %>
 <% if EventLocation %>- $EventLocation<% end_if %></em></p>

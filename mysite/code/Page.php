@@ -85,7 +85,8 @@ class Page_Controller extends ContentController {
 	}
 	
 	function Events($limit=3) {
-       $items = DataObject::get("EventsPage", "Expiry > NOW()", "EventDate", null, $limit);
+       //$items = DataObject::get("EventsPage", "Expiry > NOW()", "EventDate", null, $limit);
+       $items = DataObject::get("EventsPage", 'EventDate > NOW()', 'EventDate', null, $limit);
 		
 		return $items ? $items : false;
 	}
@@ -97,7 +98,7 @@ class Page_Controller extends ContentController {
 	}
 	
 	function EventNews($limit=8){
-		$items = DataObject::get("EventsPage", "Expiry > NOW()", "EventDate", null, $limit);
+		$items = DataObject::get("EventsPage", null, null, null, $limit);
 		$set = DataObject::get("NewsPage", null, null, null, $limit);
 		$newarray = new DataObjectSet();
 		$newarray->merge($items);

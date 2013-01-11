@@ -74,7 +74,7 @@ $Content
 <p class="date">
 <% if EventDateRange %>
 $EventDateRange
-<% else %>
+<% else_if EventDate %>
  $EventDate.Format("F d&#44 Y")
 <% end_if %>
  

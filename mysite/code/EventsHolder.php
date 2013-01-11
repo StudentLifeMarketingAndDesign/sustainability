@@ -43,10 +43,19 @@ class EventsHolder_Controller extends Page_Controller {
 	
 		function allEvents() {
 	if(!isset($_GET['start']) || !is_numeric($_GET['start']) || (int)$_GET['start'] < 1) $_GET['start'] = 0;
+		/*
 		$SQL_start = (int)$_GET['start'];
 		$items = DataObject::get(
 		$callerClass = "EventsPage",
 		$filter = "ShowInMenus = '1' and ParentID = '27' and Expiry > NOW()",
+		$sort = "EventDate",
+		$join = "",
+		$limit = "{$SQL_start},6"
+		*/
+		$SQL_start = (int)$_GET['start'];
+		$items = DataObject::get(
+		$callerClass = "EventsPage",
+		$filter = "EventDate > NOW()",	
 		$sort = "EventDate",
 		$join = "",
 		$limit = "{$SQL_start},6"

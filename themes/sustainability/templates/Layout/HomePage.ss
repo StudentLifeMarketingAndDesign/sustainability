@@ -64,7 +64,9 @@
 <p class="view-all"><a href="$BaseHref/events">View All</a></p>
 <ul class="events">
 
-<% control Events %>
+<% loop Events %>
+
+
 <li class="events$Pos">
 
 <% if EventLink %>
@@ -82,8 +84,8 @@
 <p class="date">
 <% if EventDateRange %>
 $EventDateRange
-<% else %>
- $EventDate.Format(F d&#44; Y)
+<% else_if EventDate %>
+ $EventDate.Format("F d&#44 Y")
 <% end_if %>
 <% if EventTime %>- $EventTime,<% end_if %><br />
 <% if EventLocation %>$EventLocation<% end_if %>
@@ -101,7 +103,7 @@ $EventDateRange
 <% end_if %>
 <% end_if %>
 </span></li>
-<% end_control %>
+<% end_loop %>
 
 </ul>
 
