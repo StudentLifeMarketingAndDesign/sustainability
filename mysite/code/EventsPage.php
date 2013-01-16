@@ -59,8 +59,8 @@ function getCMSFields() {
 	$fields->addFieldToTab('Root.Audio', new TextField('SongCaption', 'Audio Description'));
 	$fields->addFieldToTab('Root.Audio', new FileIFrameField('SongFile','Audio File (the file currently MUST be .mp3, NOT .m4a or anything else)',null,null,null,'assets/Uploads/mp3s/'));
 		$fields->addFieldToTab('Root.Flickr', new TextField('FlickrUsername', 'Flickr username - yours is sustainabilityuiowa'));
-	$fields->addFieldToTab('Root.Flickr', new TextField('FlickrSetnumber', 'Flickr set number - the number at the end of this url http://www.flickr.com/photos/sustainabilityuiowa/sets/72157624326037025/'));
-
+	//$fields->addFieldToTab('Root.Flickr', new TextField('FlickrSetnumber', 'Flickr set number - the number at the end of this url http://www.flickr.com/photos/sustainabilityuiowa/sets/72157624326037025/'));
+	$fields->addFieldToTab('Root.Flickr', new TextField('FlickrSetnumber', 'Flickr set number - the number at the end of this url http://www.flickr.com/photos/sustainabilityuiowa/sets/72157629223461288/'));
 
 	
 	

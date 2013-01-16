@@ -20,9 +20,9 @@
 						<% loop Children %>
 						<li class="$LinkingMode<% if FirstLast %> $FirstLast<% end_if %>">
 							<% if LinkingMode = current %>
-								<span class="item selected">$MenuTitle</span>
+								<span class="item selected menuIndent">$MenuTitle</span>
 							<% else %>
-								<a class="item" href="$Link" title="View more on $Title">$MenuTitle</a>
+								<a class="item menuIndent" href="$Link" title="View more on $Title">$MenuTitle</a>
 							<% end_if %>
 						</li>
 						<% end_loop %>

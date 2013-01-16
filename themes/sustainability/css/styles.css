@@ -1413,3 +1413,8 @@ background: white url(../images/formbg.gif) repeat-x left top;
 #earthform label {
   float: left; width: 100px;
 }
+
+.menuIndent {
+	display: inline-block;
+	margin-left: 15px;
+}
