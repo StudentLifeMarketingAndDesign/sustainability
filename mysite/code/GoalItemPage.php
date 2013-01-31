@@ -26,8 +26,8 @@ class GoalItemPage extends Page {
 		$fields->addFieldToTab('Root.Content.Main', new TextField('FY08'));
 		$fields->addFieldToTab('Root.Content.Main', new TextField('FY09'));
 		$fields->addFieldToTab('Root.Content.Main', new HTMLEditorField('Description'));
-		$fields->addFieldToTab('Root.Content.Images', new ImageField('GraphImage', 'Graph / Chart Image'));
-		$fields->addFieldToTab('Root.Content.Images', new ImageField('SupplementalImage', 'Supplemental Image'));
+		$fields->addFieldToTab('Root.Content.Images', new UploadField('GraphImage', 'Graph / Chart Image'));
+		$fields->addFieldToTab('Root.Content.Images', new UploadField('SupplementalImage', 'Supplemental Image'));
 		return $fields;
    }
 }

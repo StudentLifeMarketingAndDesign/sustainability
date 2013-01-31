@@ -24,7 +24,7 @@ class NewsLetter extends Page {
 		$fields->addFieldToTab('Root.Content.Main', new TextField('MainStoryLink','Main Story URL'));
 		$fields->addFieldToTab('Root.Content.Main', new HTMLEditorField('Content','Text for the main story.'));
 		//$fields->addFieldToTab('Root.Content.Main', new TextField('ImageCaption','ImageCaption'));
-		$fields->addFieldToTab('Root.Content.Main', new ImageField('FeatureImage', 'Main Image size should be 580w x 300t pixels'));
+		$fields->addFieldToTab('Root.Content.Main', new UploadField('FeatureImage', 'Main Image size should be 580w x 300t pixels'));
     	$fields->addFieldToTab("Root.Content.Features", new DataObjectManager(
 			$this,
 			'NewsLetterFeature',

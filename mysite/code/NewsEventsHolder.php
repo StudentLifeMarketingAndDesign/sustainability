@@ -18,7 +18,7 @@ function getCMSFields() {
 	$fields = parent::getCMSFields();
 	
 	$fields->addFieldToTab('Root.Content.Images', new TextField('TypeCCaption','ImageCaption'));
-	$fields->addFieldToTab('Root.Content.Images', new ImageField('TypeCImage', 'HeaderImage size should be 695x180 pixels'));
+	$fields->addFieldToTab('Root.Content.Images', new UploadField('TypeCImage', 'HeaderImage size should be 695x180 pixels'));
 	
     return $fields;
 	

@@ -25,7 +25,7 @@ class Earthday extends Page {
 		$fields->addFieldToTab("Root.Content.Main", new HTMLEditorField('TopFeature'));
 		
 		$fields->removeFieldFromTab("Root.Content.Main","Content");
-		$fields->addFieldToTab("Root.Content.Main", new ImageField('EventImage'));
+		$fields->addFieldToTab("Root.Content.Main", new UploadField('EventImage'));
 		return $fields;
 	}
 	

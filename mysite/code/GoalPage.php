@@ -20,7 +20,7 @@ class GoalPage extends Page {
 		$fields->removeFieldFromTab("Root.Content.Main","Content");
 		#$fields->removeFieldFromTab("Root.Content.Main","FeaturedOnParent");
 		$fields->addFieldToTab('Root.Content.Images', new TextField('ImageCaption','ImageCaption'));
-		$fields->addFieldToTab('Root.Content.Images', new ImageField('HeaderImage', 'Header Image size should be 316x222 pixels'));
+		$fields->addFieldToTab('Root.Content.Images', new UploadField('HeaderImage', 'Header Image size should be 316x222 pixels'));
 		$fields->addFieldToTab('Root.Content.Main', new TextField('LongName'));
 		$fields->addFieldToTab('Root.Content.Main', new HTMLEditorField('Description'));
 		return $fields;

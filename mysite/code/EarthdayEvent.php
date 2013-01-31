@@ -26,7 +26,7 @@ class EarthdayEvent extends Page {
 		$fields->addFieldToTab("Root.Content.Main", new TextField('EventType'));
 		$fields->addFieldToTab("Root.Content.Main", new HTMLEditorField('Content','Enter a brief (2-3 sentence) description of the event here.'));
 		$fields->addFieldToTab("Root.Content.Main", new HTMLEditorField('TimeAndLocation','Enter time and location information here.'));
-		$fields->addFieldToTab("Root.Content.Main", new ImageField('EventImage'));
+		$fields->addFieldToTab("Root.Content.Main", new UploadField('EventImage'));
 		
 		
 		return $fields;

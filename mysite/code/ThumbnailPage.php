@@ -29,7 +29,7 @@ function getCMSFields() {
 
 	$fields->addFieldToTab('Root.Content.Main', new TextField('ExternalLink', 'ExternalLink'));
 		$fields->addFieldToTab('Root.Content.Images', new TextField('ThumbnailCaption', 'thumbnail caption '));
-	$fields->addFieldToTab('Root.Content.Images', new ImageField('ThumbnailImage', 'Thumbnail Image'));
+	$fields->addFieldToTab('Root.Content.Images', new UploadField('ThumbnailImage', 'Thumbnail Image'));
 
 
 	

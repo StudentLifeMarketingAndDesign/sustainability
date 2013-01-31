@@ -52,7 +52,7 @@ function getCMSFields() {
 	$fields->addFieldToTab('Root.Main', new TextField('EventTime', 'Event Time'));
 	$fields->addFieldToTab('Root.Main', new TextField('EventSponsor', 'Event Sponsor'));
     $fields->addFieldToTab('Root.Main', new TextField('EventSponsorLink', 'Event Sponsor Link'));
-	$fields->addFieldToTab('Root.Images', new ImageField('HeaderImage', 'HeaderImage size should be 316x222 pixels'));
+	$fields->addFieldToTab('Root.Images', new UploadField('HeaderImage', 'HeaderImage size should be 316x222 pixels'));
 	$fields->addFieldToTab('Root.Images', new TextField('ImageCaption', 'Image Caption'));
 	$fields->addFieldToTab('Root.Video', new TextField('VideoCaption', 'Video Caption'));
 	$fields->addFieldToTab('Root.Video', new TextField('VideoLink', 'Youtube Video code: the numbers at the end of http://www.youtube.com/watch?v=XgOx8HOihWo so it would be XgOx8HOihWo in this example'));

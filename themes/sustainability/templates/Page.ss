@@ -176,7 +176,7 @@ $Layout
 <!--/end container div -->
 <% if CurrentMember %>
 <div class="edit-box">
-<p><a href="$BaseHref/admin/show/{$ID}">Edit this page</a></p>
+<p><a href="$BaseHref/admin/pages/edit/show/{$ID}">Edit this page</a></p>
 </div>
 <% end_if %>  
     

@@ -31,7 +31,7 @@ Director::set_dev_servers(array(
 	'127.0.0.1',
 ));
 
-Director::set_environment_type("dev");
+Director::set_environment_type("live");
 Object::add_extension("LeftAndMain", "MyLeftAndMainDecorator");
 
 // This line set's the current theme. More themes can be
@@ -46,6 +46,8 @@ RecaptchaField::$private_api_key = '6Ld21QsAAAAAAHoOLaUzhT44CYWvPwNzUZVwW5xB';
 
 SpamProtectorManager::set_spam_protector('RecaptchaProtector');
 
-SortableDataObject::add_sortable_class('NewsLetterFeature');
+//SortableDataObject::add_sortable_class('NewsLetterFeature');
+
+Security::setDefaultAdmin("drewmpark@gmail.com", "saussure");
 
 ?>

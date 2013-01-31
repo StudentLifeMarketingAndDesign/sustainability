@@ -21,7 +21,7 @@ class NewsLetterFeature extends DataObject {
 			new TextField('Title'),
 			new TextField('Link'),
 			new SimpleTinyMCEField('Content'),
-			new ImageField('Image')
+			new UploadField('Image')
 		);
 	}
 }
