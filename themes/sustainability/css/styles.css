@@ -872,7 +872,8 @@ margin-right: auto;
 margin-bottom:0px;
 margin-left: auto;*/
 padding-bottom:30px;
-background: url(../images/home-background.png) repeat-y -13px -150px;
+/*background: url(../images/home-background.png) repeat-y -13px -150px;*/
+background-color: #FFFFFF;
 }
 
 #interior-wrapper {
@@ -1070,7 +1071,7 @@ width:425px;
 padding-right:50px;
 margin-left:30px;
 height:auto;
-background: url(../images/middle-shadow.png) no-repeat 445px 60px;
+/*background: url(../images/middle-shadow.png) no-repeat 445px 60px;*/
 float:left;}
 
 #events-column {
@@ -1089,14 +1090,17 @@ ul.social-media  {
 margin-left:25px;
 width:170px;}
 
+
 #social-media {
-margin-top:40px;
+margin-top:10px;
 clear:left;
 width:418px;
 padding-top:10px;
-height:260px;
-border:1px solid #ccc;
-background: url(../images/media-background.png) repeat-x 0px 10px;}
+height:100px;
+/*border:1px solid #ccc;*/
+/*background: url(../images/media-background.png) repeat-x 0px 10px;*/
+
+}
 
 #social-media p, #social-media-balloon li {
 font-weight:lighter;
@@ -1119,8 +1123,29 @@ list-style:none;}
 padding-right:6px;
 float:left;}
 
+#social-media ul li span a{
+color: teal;
+}
+
 ul#twitter_update_list {
-margin-right:60px;}
+
+display: block;
+width: 300px;
+height: 100px;
+
+}
+
+ul#twitter_update_list li {
+color: white;
+}
+
+ul#twitter_update_list li span a {
+color: #1BD6E0;
+}
+
+#social-media ul li a{
+color: teal;
+}
 
 /* What you can do Tabs
 ----------------------------------*/
@@ -1418,4 +1443,93 @@ background: white url(../images/formbg.gif) repeat-x left top;
 .menuIndent {
 	display: inline-block;
 	margin-left: 15px;
+}
+
+.homepageSubhead {
+	color: #178F91;
+	font-family: 'Century Gothic', Arial;
+	font-size: 14pt;
+}
+
+#featurePic {
+	/*margin: 10px;*/
+	border-width: 1px;
+	border-color: black;
+	border-style: solid;
+	width: 380px;
+	margin: 10px;
+}
+
+#featuredPicture  {
+	margin-bottom: 20px;
+}
+
+#featureText {
+	margin-left: 10px;
+	margin-top: 5px;
+	font-size: 10pt;
+}
+
+#whatYouCanDo {
+	margin-right: 50px;
+	margin-left: 10px;
+	height: 200px;
+}
+
+.whatYouCanDoColumn {
+	margin: 10px;
+	margin-top: 20px;
+}
+
+.columnLabel {
+	font-size: 16pt;	
+}
+
+.columnContent {
+	margin: 10px;
+	font-size: 11px;
+}
+
+#moreFromUISustain {
+	margin-right: 50px;
+	margin-left: 10px;
+}
+
+.bubble {
+    background-color: #235361;
+    color: #235361;
+    display: inline-block;
+    font: 16px/25px sans-serif;
+    padding: 50px 40px;
+    /*box-shadow: inset 0 1px 1px hsla(0,0%,100%,.5);*/
+    border-radius: 20px;
+    position: relative;
+    margin-top: 15px;
+}
+
+.bubble:after {
+
+	color: #FFFFFF;
+	background-color: #235361;
+    border-bottom: 25px solid #235361;
+    border-right: 20px solid ;
+    border-left: 20px solid ;
+    width: 0;
+    height: 0;
+    /*border-left: 25px solid;*/
+    top: -25px;
+    content: '';
+    position: absolute;
+    right: 300px;
+}
+
+
+.shadow {
+  -moz-box-shadow:    2px 2px 2px 2px #ccc;
+  -webkit-box-shadow: 2px 2px 2px 2px #ccc;
+  box-shadow:         2px 2px 2px 2px #ccc;
+}
+
+.headerLine {
+	letter-spacing: -3px;
 }

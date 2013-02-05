@@ -98,12 +98,22 @@ class Page_Controller extends ContentController {
 	}
 	
 	function EventNews($limit=8){
-		$items = DataObject::get("EventsPage", null, null, null, $limit);
-		$set = DataObject::get("NewsPage", null, null, null, $limit);
+		
+		if (($limit % 2) == 0){
+			$eventLimit = $limit / 2;
+			$newsLimit = $limit / 2;
+		}
+		else {
+			$eventLimit = intval($limit / 2);
+			$newsLimit = intval($limit / 2) + 1;
+		}
+		$items = DataObject::get("EventsPage", null, null, null, $eventLimit);
+		$set = DataObject::get("NewsPage", null, null, null, $newsLimit);
 		$newarray = new DataObjectSet();
+		Debug::show($items);
 		$newarray->merge($items);
 		$newarray->merge($set);
-		Debug::show($newarray);
+		//Debug::show($newarray);
 		return $newarray;
 		
 	}

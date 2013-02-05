@@ -39,7 +39,7 @@ function init() {
 class SizedImage extends Image {
 	function generateNiceImage($gd) {
 		$gd->SetQuality(90);
-		return $gd->croppedResize(495,335);
+		return $gd->croppedResize(900,360);
 	}
 }
 ?>

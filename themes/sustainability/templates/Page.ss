@@ -14,6 +14,9 @@ $MetaTags(false)
 
 <link rel="stylesheet" href="$ThemeDir/css/ui.css" type="text/css" media="print, projection, screen"/>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+<!-<script src="http://code.jquery.com/jquery-latest.min.js"
+        type="text/javascript"></script>-->
+        
 <script type="text/javascript" src="$BaseHref/mysite/code/javascript/shadowbox.js"></script>
 <script type="text/javascript">
 Shadowbox.init();
@@ -39,6 +42,22 @@ $(document).ready(function leaveFrame() {
 <script type="text/javascript" src="$BaseHref/mysite/code/javascript/hoverIntent.js"></script>
 <link rel="stylesheet" href="{$ThemeDir}/anythingSlider/anythingslider.css">
 <script src="{$ThemeDir}/anythingSlider/jquery.anythingslider.min.js"></script>
+<script src="{$ThemeDir}/Slides/source/slides.jquery.js"></script>
+<link rel="stylesheet" href="{$ThemeDir}/craftyslide/css/craftyslide.css" />
+<script src="{$ThemeDir}/craftyslide/js/craftyslide.js"></script>
+
+
+<style type="text/css" media="screen">
+        .slides_container {
+            width:570px;
+            height:270px;
+        }
+        .slides_container div {
+            width:570px;
+            height:270px;
+            display:block;
+        }
+    </style>
 <!--<script type="text/javascript" src="$BaseHref/mysite/code/javascript/superfish.js"></script>
 <script type="text/javascript">
     $(document).ready(function(){   
