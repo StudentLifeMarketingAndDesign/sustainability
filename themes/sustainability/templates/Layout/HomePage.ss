@@ -1,3 +1,4 @@
+<!DOCTYPE html> 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
 <script src="$BaseHref/mysite/code/javascript/ui_002.js" type="text/javascript"></script>
 <script src="$BaseHref/mysite/code/javascript/ui.js" type="text/javascript"></script>
@@ -13,7 +14,7 @@
       
 <div id="content-wrapper">
 <div id="middle-image">
-
+<!--
 <div id="feature-wrapper">
 
 <div id="feature-container">
@@ -53,8 +54,13 @@
 
 
 </div></div>
+
 </div><!--/end bodywrap div -->
- 
+
+<div id="slider">
+
+</div>
+
 <div id="home-wrapper"> 
   
 <div id="events-column">
@@ -120,7 +126,6 @@ $EventDateRange
 		jQuery("#tabs").tabs();
 	});
 	</script>
-    
    
   <h3 class="what" title="What You Can Do"><a href="$BaseHref/what-you-can-do">What Can You Do?</a></h3> 
   <p class="view-all"><a href="$BaseHref/what-you-can-do">View All</a></p> 
@@ -235,9 +240,20 @@ $EventDateRange
 <div id="bottom-shadow"></div></div></div>
 
 
-
 <script type="text/javascript" src="http://twitter.com/javascripts/blogger.js"></script>
 
 <script src="https://api.twitter.com/1/statuses/user_timeline.json?screen_name=uisustainable&amp;include_rts=true&amp;count=1&amp;callback=twitterCallback2"></script>
+
+ <script type="text/javascript">
+		jQuery(document).ready(function($) {
+			
+			$('news-column').fadeOut();
+			$('news-column').anythingSlider();
+			
+			
+			//jQuery('#slider').anythingSlider();
+		});
+
+	</script>
 
 <!--<script type="text/javascript" src="http://twitter.com/statuses/user_timeline/UIsustainable.json?callback=twitterCallback2&amp;count=1"></script>-->

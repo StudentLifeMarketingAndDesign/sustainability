@@ -37,6 +37,8 @@ $(document).ready(function leaveFrame() {
 </script> 
 
 <script type="text/javascript" src="$BaseHref/mysite/code/javascript/hoverIntent.js"></script>
+<link rel="stylesheet" href="{$ThemeDir}/anythingSlider/anythingslider.css">
+<script src="{$ThemeDir}/anythingSlider/jquery.anythingslider.min.js"></script>
 <!--<script type="text/javascript" src="$BaseHref/mysite/code/javascript/superfish.js"></script>
 <script type="text/javascript">
     $(document).ready(function(){   
