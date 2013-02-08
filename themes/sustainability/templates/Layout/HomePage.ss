@@ -26,6 +26,13 @@
 
 <div id="homepage-wrapper">
 
+
+<div class="homepageSubhead padded spansColumns">THE 2020 VISION<span class="headerLine">-------------------------------------------------------------------------------------------------------------------------------------------
+	------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	-------------------------------
+</span>
+</div>
+
 <div id="feature-wrapper">
 
 
@@ -65,15 +72,15 @@
 <div id="slideshow">
   <ul>
     <li>
-      <img src="assets/Images/Fall-2011/854-2-4-45-x-4-5-Radish-Ad.jpg" title="Lorem ipsum dolor sit amet" />
+      <img src="assets/Images/Fall-2011/854-2-4-45-x-4-5-Radish-Ad.jpg" />
     </li>
     
     <li>
-      <img src="assets/Images/Fall-2011/854-2-4-45-x-4-5-Radish-Ad.jpg" title="Lorem ipsum dolor sit amet" />
+      <img src="assets/Images/BillMcKibbenNancieBattaglia-web.jpg" />
     </li>
     
     <li>           
-      <img src="assets/Images/Fall-2011/854-2-4-45-x-4-5-Radish-Ad.jpg" title="Lorem ipsum dolor sit amet" />
+      <img src="assets/Images/Fall-2011/854-2-4-45-x-4-5-Radish-Ad.jpg" />
     </li>	                         
   </ul>
 </div>
@@ -83,9 +90,10 @@
 <!--<img src="assets/Images/Fall-2011/854-2-4-45-x-4-5-Radish-Ad.jpg" width=100 height=100/> -->
 <div id="home-wrapper"> 
   
-<h3 class="newsSection" title="News"><a href="{$BaseHref}news" class="homepageSubhead">NEWS & EVENTS<span class="headerLine">-------------------------------------------------------------------------
-	---------------------------------------------------------------------
-</span></a></h3>  
+<div class="newsSection homepageSubhead" title="News"><h3><a href="{$BaseHref}news" class="homepageSubhead">NEWS & EVENTS<span class="headerLine">-------------------------------------------------------------------------
+	-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	------------------------------------
+</div></a></h3>  
   
 <div id="events-column">
 
@@ -145,7 +153,10 @@ $EventDateRange
 
 <div id="whatYouCanDo"> 
 
-<h3 class="whatYouCanDo" title="What You Can Do"><a href="$BaseHref/what-you-can-do" class="homepageSubhead">WHAT YOU CAN DO</a></h3> 
+<div class="whatYouCanDo homepageSubhead" title="What You Can Do"><a href="$BaseHref/what-you-can-do" class="homepageSubhead"><h3>WHAT YOU CAN DO<span class="headerLine">------------------------
+--------------------------------------------------------------------</span
+
+</a></h3></div> 
 
 	<div class="whatYouCanDoColumn">
 		<div class="columnLabel">$WhatYouCanDoLabel</div>
@@ -244,38 +255,86 @@ $EventDateRange
 
 <!--<p class="view-all"><a href="{$BaseHref}news">View All</a></p>-->
 <ul class="news">
-<% loop EventNews(3) %>
-<% if canView %>
-<li>
+<% loop EventNews(5) %>
 
-<% if NewsLink %><h4><a href="$NewsLink" target="_blank">$Title</a></h4>
-<% else %>
-<h4><a href="$Link">$Title</a></h4>
-<% end_if %>
+	<% if ClassName == 'NewsPage' %>
+	
+		<% if canView %>
+		<li>
+		
+		<% if NewsLink %><h4><a href="$NewsLink" target="_blank">$Title</a></h4>
+		<% else %>
+		<h4><a href="$Link">$Title</a></h4>
+		<% end_if %>
+		
+		<p>$Content.LimitWordCount(20)</p>
+		<span class="more">
+		<% if NewsLink %><a href="$NewsLink" class="external-link" target="_blank">Read More</a>
+		<% else %>
+		<a href="$Link">Read More</a>
+		<% end_if %>
+		</span></li>
+		<% end_if %>
+			
+	<% else_if ClassName == 'EventsPage' %>
+			
+		<li class="events$Pos">
 
-<p>$Content.LimitWordCount(20)</p>
-<span class="more">
-<% if NewsLink %><a href="$NewsLink" class="external-link" target="_blank">Read More</a>
-<% else %>
-<a href="$Link">Read More</a>
-<% end_if %>
-</span></li>
-<% end_if %>
-<% end_loop %>
+		<% if EventLink %>
+			<h4><a href="$EventLink" target="_blank">$Title</a></h4>
+		<% else %>
+			<% if Content %>
+				<h4><a href="$Link">$Title</a></h4>
+			<% else %>
+				<h4>$Title</h4>
+		
+			<% end_if %>
+		<% end_if %>
+		
+		
+		<p class="date">
+		<% if EventDateRange %>
+		$EventDateRange
+		<% else_if EventDate %>
+		 $EventDate.Format("F d&#44 Y")
+		<% end_if %>
+		<% if EventTime %>- $EventTime,<% end_if %><br />
+		<% if EventLocation %>$EventLocation<% end_if %>
+		
+		</p>
+		
+		<% if EventSponsor %>
+		<p class="sponsor"><a href="$EventSponsorLink" target="_blank">$EventSponsor</a></p>
+		<% end_if %>
+		<span class="more">
+		<% if EventLink %><a href="$EventLink" class="external-link" target="_blank">Read More</a>
+		<% else %>
+		<% if Content %>
+		<a href="$Link">Read More</a>
+		<% end_if %>
+		<% end_if %>
+		</span></li>
+		
+	<% end_if %>
+
+<% end_loop %>	
+
 </ul>
-
-<br /><br />
-<h3 class="siteBlog" title="Blog"><a href="$BaseHref/blog" class="homepageSubhead">SUSTAINABILITY BLOG</a></h3>
-<p class="view-all"><a href="$BaseHref/blog">View All</a></p>
-<ul class="news">
-
+		
+		<br /><br />
+		<h3><a href="$BaseHref/blog" class="homepageSubhead sustainabilitySubhead">SUSTAINABILITY BLOG<span class="headerLine">--------------------------------------------------------------------------------</span></a></h3>
+		<!--<p class="view-all"><a href="$BaseHref/blog">View All</a></p>-->
+		<ul class="news">
+		
 <% loop RSSBlogPosts(1) %>
 <li>
 <h4><a href="$Link">$Title</a></h4>
 <p>$Description.LimitWordCount(10)</p>
 <span class="more"><a href="$Link">Read More</a></span></li>
+
 <% end_loop %>
 
+	
 </ul>
 
 
@@ -313,13 +372,26 @@ $EventDateRange
 			$('news-column').fadeOut();
 			 $("#slideshow").craftyslide();
 			//jQuery('#slider').anythingSlider();
+			
+			
+			$("#slideshow").craftyslide({
+			  'width': 900,
+			  'height': 400,
+			  'pagination': false,
+			    'fadetime': 500,
+			    'delay': 2500
+
+			});
+			
+			$('#slideshow').css = ("overflow", "hidden");
+			
 			$('#slideshow img').each(function(){
-				$(this).css = ("visibility", "hidden");
+				//$(this).css = ("height", "400px");
 				
 				//$(this).fadeOut();
-			}
+			});
 			
-			);
+			
 		});
 
 	</script>
