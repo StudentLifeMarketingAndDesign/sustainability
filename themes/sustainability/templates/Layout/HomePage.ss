@@ -1,5 +1,5 @@
 <!DOCTYPE html> 
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+
 <script src="$BaseHref/mysite/code/javascript/ui_002.js" type="text/javascript"></script>
 <script src="$BaseHref/mysite/code/javascript/ui.js" type="text/javascript"></script>
 <script type="text/javascript">
@@ -13,15 +13,23 @@
     
       
 <div id="content-wrapper">
+
+
+
 <div id="middle-image">
-<!--
-<div id="feature-wrapper">
 
-<div id="feature-container">
-
+<div id="menu-wrapper">
 
 <% include Navigation %>
 
+</div>
+
+<div id="homepage-wrapper">
+
+<div id="feature-wrapper">
+
+
+<!--
 <div class="clear"></div>
 <div id="rotate">
 
@@ -52,20 +60,36 @@
 
 
 
+-->
+
+<div id="slideshow">
+  <ul>
+    <li>
+      <img src="assets/Images/Fall-2011/854-2-4-45-x-4-5-Radish-Ad.jpg" title="Lorem ipsum dolor sit amet" />
+    </li>
+    
+    <li>
+      <img src="assets/Images/Fall-2011/854-2-4-45-x-4-5-Radish-Ad.jpg" title="Lorem ipsum dolor sit amet" />
+    </li>
+    
+    <li>           
+      <img src="assets/Images/Fall-2011/854-2-4-45-x-4-5-Radish-Ad.jpg" title="Lorem ipsum dolor sit amet" />
+    </li>	                         
+  </ul>
+</div>
 
 </div></div>
 
-</div><!--/end bodywrap div -->
-
-<div id="slider">
-
-</div>
-
+<!--<img src="assets/Images/Fall-2011/854-2-4-45-x-4-5-Radish-Ad.jpg" width=100 height=100/> -->
 <div id="home-wrapper"> 
+  
+<h3 class="newsSection" title="News"><a href="{$BaseHref}news" class="homepageSubhead">NEWS & EVENTS<span class="headerLine">-------------------------------------------------------------------------
+	---------------------------------------------------------------------
+</span></a></h3>  
   
 <div id="events-column">
 
-
+<!--
 <h3 class="events" title="Events"><a href="{$BaseHref}events">Events</a></h3>
 <p class="view-all"><a href="$BaseHref/events">View All</a></p>
 <ul class="events">
@@ -112,9 +136,28 @@ $EventDateRange
 <% end_loop %>
 
 </ul>
+-->
 
+<div id="featurePic">
+	<img id="featuredPicture" src="$FeatureImage.URL">
+</div>
+<div id="featureText">$FeatureText</div>
 
+<div id="whatYouCanDo"> 
 
+<h3 class="whatYouCanDo" title="What You Can Do"><a href="$BaseHref/what-you-can-do" class="homepageSubhead">WHAT YOU CAN DO</a></h3> 
+
+	<div class="whatYouCanDoColumn">
+		<div class="columnLabel">$WhatYouCanDoLabel</div>
+		<div class="columnContent">$WhatYouCanDo</div>
+	</div>
+	<div class="whatYouCanDoColumn">
+		<div class="columnLabel">$WhatYouCanDoLabelRight</div>
+		<div class="columnContent">$WhatYouCanDo2</div>
+	</div>
+</div>
+
+	
 
 <script type="text/javascript" src="/mysite/code/javascript/tabs_ui_002.js"></script>
 <script type="text/javascript" src="/mysite/code/javascript/tabs_ui.js"></script>
@@ -127,8 +170,30 @@ $EventDateRange
 	});
 	</script>
    
-  <h3 class="what" title="What You Can Do"><a href="$BaseHref/what-you-can-do">What Can You Do?</a></h3> 
-  <p class="view-all"><a href="$BaseHref/what-you-can-do">View All</a></p> 
+  
+<div id="moreFromUISustainability">
+
+	<h3 class="moreFromUISustainability" title="News"><a href="{$BaseHref}news" class="homepageSubhead">MORE FROM UI SUSTAINABILITY</a></h3>
+		
+	<div id="social-media">
+	
+		<ul>
+		<li><a href="http://twitter.com/uisustainable" target="_blank"><img src="$ThemeDir/images/twitter.png" alt="Twitter" width="91" height="81" title="Follow us on Twitter"/></a></li>
+		<li><a href="http://www.facebook.com/pages/The-University-of-Iowa-Office-of-Sustainability/251818755982" target="_blank"><img src="$ThemeDir/images/facebook.png" alt="Facebook" width="94" height="81" title="Find us on Facebook" /></a></li>
+		<li><a href="{$BaseHref}home/rss" target="_blank"><img src="$ThemeDir/images/rss.png" alt="RSS" width="94" height="81" title="View our RSS feed"/></a></li>
+		<li><a href="{$BaseHref}contact"><img src="$ThemeDir/images/email.png" alt="Email" width="92" height="81" title="Contact Us"/></a></li>
+		</ul>
+			
+	</div>
+	
+	<div class="bubble"><ul id="twitter_update_list"><li></li></ul></div>
+
+</div>
+
+
+</div>
+  
+<!--
 <div id="what">
 <div id="demo">
 
@@ -173,15 +238,13 @@ $EventDateRange
 </div>
 </div>
 </div>
-  
-</div>
+-->
     
 <div id="news-column">
 
-<h3 class="news" title="News"><a href="{$BaseHref}news">News</a></h3>
-<p class="view-all"><a href="{$BaseHref}news">View All</a></p>
+<!--<p class="view-all"><a href="{$BaseHref}news">View All</a></p>-->
 <ul class="news">
-<% loop News %>
+<% loop EventNews(3) %>
 <% if canView %>
 <li>
 
@@ -202,7 +265,7 @@ $EventDateRange
 </ul>
 
 <br /><br />
-<h3 class="blog" title="Blog"><a href="$BaseHref/blog">Sustainability Blog</a></h3>
+<h3 class="siteBlog" title="Blog"><a href="$BaseHref/blog" class="homepageSubhead">SUSTAINABILITY BLOG</a></h3>
 <p class="view-all"><a href="$BaseHref/blog">View All</a></p>
 <ul class="news">
 
@@ -218,7 +281,7 @@ $EventDateRange
 
 
 
-
+<!--
 <div id="social-media">
 
 
@@ -231,13 +294,13 @@ $EventDateRange
 <li><a href="{$BaseHref}home/rss" target="_blank"><img src="$ThemeDir/images/rss.png" alt="RSS" width="94" height="81" title="View our RSS feed"/></a></li>
 <li><a href="{$BaseHref}contact"><img src="$ThemeDir/images/email.png" alt="Email" width="92" height="81" title="Contact Us"/></a></li>
 </ul>
-</div>
-    
-</div>
-<div class="clear"></div>
-</div> <!--end home wrapper -->
-<div class="clear"></div>
-<div id="bottom-shadow"></div></div></div>
+</div>-->
+  
+</div><div class="clear"></div>  
+</div></div>
+</div> 
+
+<!--<div id="bottom-shadow"></div>--></div>
 
 
 <script type="text/javascript" src="http://twitter.com/javascripts/blogger.js"></script>
@@ -248,10 +311,15 @@ $EventDateRange
 		jQuery(document).ready(function($) {
 			
 			$('news-column').fadeOut();
-			$('news-column').anythingSlider();
-			
-			
+			 $("#slideshow").craftyslide();
 			//jQuery('#slider').anythingSlider();
+			$('#slideshow img').each(function(){
+				$(this).css = ("visibility", "hidden");
+				
+				//$(this).fadeOut();
+			}
+			
+			);
 		});
 
 	</script>

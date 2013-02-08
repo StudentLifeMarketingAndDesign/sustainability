@@ -310,7 +310,7 @@ margin-left: 1px;
 #nav {
 clear:both;
 margin: 0px;
-height:72px;
+height:55px;
 width:990px;
 }
 
@@ -484,6 +484,11 @@ margin-top: 0px;
 margin-right: auto;
 margin-bottom:0px;
 margin-left: auto;*/
+}
+
+#menu-wrapper {
+	width: 990px;
+	margin:0px auto 0px auto;
 }
 
 /* ---------------- Interior Page  ---------------- */
@@ -864,8 +869,10 @@ font-size:12px;
 }
 
 #home-wrapper {
+padding-left: 25px;
 width: 990px;
 margin:0px auto 0px auto;
+background-color: white;
 /*
 margin-top: 0px;
 margin-right: auto;
@@ -874,6 +881,13 @@ margin-left: auto;*/
 padding-bottom:30px;
 /*background: url(../images/home-background.png) repeat-y -13px -150px;*/
 background-color: #FFFFFF;
+}
+
+#homepage-wrapper {
+	width: 990px;
+	background-color: white;
+	background-color: #FFFFFF;
+	margin: 0 auto 0 auto;
 }
 
 #interior-wrapper {
@@ -978,7 +992,7 @@ h3.what a {background: url(../images/whatcanyoudo.png) no-repeat -9px 0px;}
 
 #content-right-column h3.events a {margin:30px;}
 
-ul.news, ul.events {margin-top:60px;}
+/*ul.news, ul.events {margin-top:60px;}*/
 
 ul.news p {
 font-weight:lighter;
@@ -1456,12 +1470,13 @@ background: white url(../images/formbg.gif) repeat-x left top;
 	border-width: 1px;
 	border-color: black;
 	border-style: solid;
-	width: 380px;
+	width: 100%;
+	overflow: hidden;
 	margin: 10px;
 }
 
 #featuredPicture  {
-	margin-bottom: 20px;
+
 }
 
 #featureText {
@@ -1471,7 +1486,7 @@ background: white url(../images/formbg.gif) repeat-x left top;
 }
 
 #whatYouCanDo {
-	margin-right: 50px;
+	margin-top: 20px;
 	margin-left: 10px;
 	height: 200px;
 }
@@ -1479,6 +1494,7 @@ background: white url(../images/formbg.gif) repeat-x left top;
 .whatYouCanDoColumn {
 	margin: 10px;
 	margin-top: 20px;
+	float: left;
 }
 
 .columnLabel {
@@ -1487,6 +1503,7 @@ background: white url(../images/formbg.gif) repeat-x left top;
 
 .columnContent {
 	margin: 10px;
+	margin-left: 30px;
 	font-size: 11px;
 }
 
@@ -1532,4 +1549,13 @@ background: white url(../images/formbg.gif) repeat-x left top;
 
 .headerLine {
 	letter-spacing: -3px;
+}
+
+.newsSection {
+	display: block;
+	
+}
+
+#whatYouCanDo li {
+	list-style-type: disc;
 }
