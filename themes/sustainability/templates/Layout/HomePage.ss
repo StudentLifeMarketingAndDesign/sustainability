@@ -70,20 +70,24 @@
 -->
 
 <div id="slideshow">
-  <ul>
-  	 <li>
-      <img src="assets/Images/Fall-2011/854-2-4-45-x-4-5-Radish-Ad.jpg" height="450px" />
-    </li>
-   
-    <li>
-      <img src="assets/Images/BillMcKibbenNancieBattaglia-web.jpg" height="450px" />
-    </li>
-    
-    <li>           
-      <img src="assets/Images/Fall-2011/854-2-4-45-x-4-5-Radish-Ad.jpg" height="450px"/>
-    </li>
-                     
-  </ul>
+ <ul>
+<% loop Home %>
+	<% if HomeLink %>
+	
+		 <a href="$HomeLink" class="external-link" target="_blank">
+	 	 	 <li>
+		     	<img src="$FeatureImage.NiceImage.URL" height="450px" />
+		      </li>
+	 	 </a>  	 
+	 <% else %>
+	 	 <a href="$Link">
+		  	 <li>
+		      	<img src="$FeatureImage.NiceImage.URL" height="450px" />
+		      </li>
+	  	 </a>
+	 <% end_if %>                    
+<% end_loop  %>
+</ul>
 </div>
 
 </div></div>
