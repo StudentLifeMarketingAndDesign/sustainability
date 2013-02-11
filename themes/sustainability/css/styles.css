@@ -893,6 +893,7 @@ background-color: #FFFFFF;
 	padding-left: 25px;
 	padding-bottom: 25px;
 	padding-right: 25px;
+	height: 570px;
 }
 
 #interior-wrapper {
@@ -1563,6 +1564,7 @@ background: white url(../images/formbg.gif) repeat-x left top;
 .newsSection {
 	display: block;
 	margin-bottom: 10px;
+	width: 95%;
 	
 }
 
@@ -1584,4 +1586,8 @@ background: white url(../images/formbg.gif) repeat-x left top;
 
 .whatYouCanDoColumn {
 	font-family: Arial, Times New Roman;
+}
+
+.whatYouCanDoColumn a {
+	color: black;
 }

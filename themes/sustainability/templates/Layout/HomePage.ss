@@ -71,17 +71,18 @@
 
 <div id="slideshow">
   <ul>
-    <li>
-      <img src="assets/Images/Fall-2011/854-2-4-45-x-4-5-Radish-Ad.jpg" />
+  	 <li>
+      <img src="assets/Images/Fall-2011/854-2-4-45-x-4-5-Radish-Ad.jpg" height="450px" />
     </li>
-    
+   
     <li>
-      <img src="assets/Images/BillMcKibbenNancieBattaglia-web.jpg" />
+      <img src="assets/Images/BillMcKibbenNancieBattaglia-web.jpg" height="450px" />
     </li>
     
     <li>           
-      <img src="assets/Images/Fall-2011/854-2-4-45-x-4-5-Radish-Ad.jpg" />
-    </li>	                         
+      <img src="assets/Images/Fall-2011/854-2-4-45-x-4-5-Radish-Ad.jpg" height="450px"/>
+    </li>
+                     
   </ul>
 </div>
 
@@ -154,9 +155,9 @@ $EventDateRange
 <div id="whatYouCanDo"> 
 
 <div class="whatYouCanDo homepageSubhead" title="What You Can Do"><a href="$BaseHref/what-you-can-do" class="homepageSubhead"><h3>WHAT YOU CAN DO<span class="headerLine">------------------------
---------------------------------------------------------------------</span
+--------------------------------------------------------------------</span>
 
-</a></h3></div> 
+</h3></a></div> 
 
 	<div class="whatYouCanDoColumn">
 		<div class="columnLabel">$WhatYouCanDoLabel</div>
@@ -322,7 +323,7 @@ $EventDateRange
 </ul>
 		
 		<br /><br />
-		<h3><a href="$BaseHref/blog" class="homepageSubhead sustainabilitySubhead">SUSTAINABILITY BLOG<span class="headerLine">--------------------------------------------------------------------------------</span></a></h3>
+		<h3><a href="$BaseHref/blog" class="homepageSubhead sustainabilitySubhead">SUSTAINABILITY BLOG<span class="headerLine">---------------------------------------------------------------------------------------------------</span></a></h3>
 		<!--<p class="view-all"><a href="$BaseHref/blog">View All</a></p>-->
 		<ul class="news">
 		
@@ -368,28 +369,23 @@ $EventDateRange
 
  <script type="text/javascript">
 		jQuery(document).ready(function($) {
-			
-			$('news-column').fadeOut();
-			 $("#slideshow").craftyslide();
-			//jQuery('#slider').anythingSlider();
-			
-			
+		
 			$("#slideshow").craftyslide({
 			  'width': 900,
-			  'height': 400,
-			  'pagination': false,
+			  'height': 450,
+			  'pagination': true,
 			    'fadetime': 500,
 			    'delay': 2500
 
 			});
 			
-			$('#slideshow').css = ("overflow", "hidden");
+			//$('#slideshow').css = ("overflow", "hidden");
 			
-			$('#slideshow img').each(function(){
+			//$('#slideshow img').each(function(){
 				//$(this).css = ("height", "400px");
 				
 				//$(this).fadeOut();
-			});
+			//});
 			
 			
 		});
