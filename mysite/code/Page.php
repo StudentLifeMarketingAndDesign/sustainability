@@ -109,7 +109,7 @@ class Page_Controller extends ContentController {
 		}
 		$items = DataObject::get("EventsPage", null, null, null, $eventLimit);
 		$set = DataObject::get("NewsPage", null, null, null, $newsLimit);
-		$newarray = new DataObjectSet();
+		$newarray = new ArrayList();
 		Debug::show($items);
 		$newarray->merge($items);
 		$newarray->merge($set);

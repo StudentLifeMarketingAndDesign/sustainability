@@ -941,6 +941,15 @@ color:#ccc;
 padding-left:25px;
 background:url(../images/list.png) no-repeat 0px -4px;}
 
+div.view-all a {
+
+margin-top:-22px;
+font-size:12px;
+color:#ccc;
+padding-left:25px;
+background:url(../images/list.png) no-repeat 0px -4px;}		
+}
+
 .summary a {
 text-decoration:underline;}
 
@@ -1580,6 +1589,10 @@ background: white url(../images/formbg.gif) repeat-x left top;
 	margin-left: -25px;
 }
 
+.sustainabilityLink {
+	margin-left: -25px;
+	margin-top: 8px;
+}
 .spansColumns {
 	width: 100%;
 }

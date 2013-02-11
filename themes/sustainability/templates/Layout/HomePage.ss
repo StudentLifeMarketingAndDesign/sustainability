@@ -99,6 +99,8 @@
 	-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	------------------------------------
 </div></a></h3>  
+
+<div class="view-all"><a href="http://sustainability.uiowa.edu//news">View All</a></div>
   
 <div id="events-column">
 
@@ -259,6 +261,7 @@ $EventDateRange
 <div id="news-column">
 
 <!--<p class="view-all"><a href="{$BaseHref}news">View All</a></p>-->
+
 <ul class="news">
 <% loop EventNews(5) %>
 
@@ -329,6 +332,10 @@ $EventDateRange
 		<br /><br />
 		<h3><a href="$BaseHref/blog" class="homepageSubhead sustainabilitySubhead">SUSTAINABILITY BLOG<span class="headerLine">---------------------------------------------------------------------------------------------------</span></a></h3>
 		<!--<p class="view-all"><a href="$BaseHref/blog">View All</a></p>-->
+		
+		
+		<div class="view-all sustainabilityLink"><a href="http://sustainability.uiowa.edu//blog">View All</a></div>
+		
 		<ul class="news">
 		
 <% loop RSSBlogPosts(1) %>
