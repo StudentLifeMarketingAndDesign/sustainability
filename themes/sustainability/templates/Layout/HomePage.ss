@@ -78,13 +78,13 @@
 	
 		 <a href="$HomeLink" class="external-link" target="_blank">
 	 	 	 <li>
-		     	<img src="$FeatureImage.NiceImage.URL" height="450px" />
+		     	<img src="$FeatureImage.NiceImage.URL"  />
 		      </li>
 	 	 </a>  	 
 	 <% else %>
 	 	 <a href="$Link">
 		  	 <li>
-		      	<img src="$FeatureImage.NiceImage.URL" height="450px" />
+		      	<img src="$FeatureImage.NiceImage.URL"  />
 		      </li>
 	  	 </a>
 	 <% end_if %>                    
@@ -387,7 +387,7 @@ $EventDateRange
 		
 			$("#slideshow").craftyslide({
 			  'width': 900,
-			  'height': 450,
+			  'height': 400,
 			  'pagination': true,
 			    'fadetime': 500,
 			    'delay': 2500

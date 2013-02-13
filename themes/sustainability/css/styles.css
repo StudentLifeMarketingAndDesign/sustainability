@@ -895,7 +895,7 @@ background-color: #FFFFFF;
 	padding-left: 25px;
 	padding-bottom: 25px;
 	padding-right: 25px;
-	height: 570px;
+	height: 500px;
 }
 
 #interior-wrapper {
@@ -1033,12 +1033,15 @@ ul.events li {padding-left:0px;}
 
 #news-column ul.news li.events1, #events-column ul.events li.events4  {
 background: url(../images/event-list-image.png) no-repeat 0px 0px;
+margin-left: 35px;
 }
 #news-column ul.news li.events2, #events-column ul.events li.events5 {
 background: url(../images/events-list-image2.png) no-repeat 0px 0px;
+margin-left: 35px;
 }
 #news-column ul.news li.events3, #events-column ul.events li.events6  {
 background: url(../images/events-list-image3.png) no-repeat 0px 0px;
+margin-left: 35px;
 }
 
 #content-right-column ul.events li h4 a{font-size:14px;}
