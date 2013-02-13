@@ -1,3 +1,5 @@
+<!DOCTYPE html> 
+
 
 <div id="content-wrapper">
 <div id="middle-image">
@@ -53,6 +55,8 @@
 <div class="events-holder">
 
 <ul class="news">
+
+<!--
 <% loop allNews %>
 <li>
 
@@ -71,18 +75,85 @@
 <% end_if %>
 </span></li>
 <% end_loop %>
+-->
+
+<% loop paginatedEventNews %>
+
+	<% if ClassName == 'NewsPage' %>
+	
+		<% if canView %>
+		<li>
+		
+		<% if NewsLink %><h4><a href="$NewsLink" target="_blank">$Title</a></h4>
+		<% else %>
+		<h4><a href="$Link">$Title</a></h4>
+		<% end_if %>
+		
+		<p>$Content.LimitWordCount(20)</p>
+		<span class="more">
+		<% if NewsLink %><a href="$NewsLink" class="external-link" target="_blank">Read More</a>
+		<% else %>
+		<a href="$Link">Read More</a>
+		<% end_if %>
+		</span></li>
+		<% end_if %>
+			
+	<% else_if ClassName == 'EventsPage' %>
+			
+		<li class="events$Pos">
+
+		<% if EventLink %>
+			<h4><a href="$EventLink" target="_blank">$Title</a></h4>
+		<% else %>
+			<% if Content %>
+				<h4><a href="$Link">$Title</a></h4>
+			<% else %>
+				<h4>$Title</h4>
+		
+			<% end_if %>
+		<% end_if %>
+		
+		
+		<p class="date">
+		<% if EventDateRange %>
+		$EventDateRange
+		<% else_if EventDate %>
+		 $EventDate.Format("F d&#44 Y")
+		<% end_if %>
+		<% if EventTime %>- $EventTime,<% end_if %><br />
+		<% if EventLocation %>$EventLocation<% end_if %>
+		
+		</p>
+		
+		<% if EventSponsor %>
+		<p class="sponsor"><a href="$EventSponsorLink" target="_blank">$EventSponsor</a></p>
+		<% end_if %>
+		<span class="more">
+		<% if EventLink %><a href="$EventLink" class="external-link" target="_blank">Read More</a>
+		<% else %>
+		<% if Content %>
+		<a href="$Link">Read More</a>
+		<% end_if %>
+		<% end_if %>
+		</span></li>
+		
+	<% end_if %>
+
+<% end_loop %>	
+
+
 
 </ul>
 
 
-
-<li>  <% if allNews.MoreThanOnePage %>
+<li>  <% if paginatedEventNews.MoreThanOnePage %>
 <p class="pageNumbers">
-<% if allNews.PrevLink %>
-<a href="$allNews.PrevLink"><< Prev</a> |
+<% if paginatedEventNews.NotFirstPage %>
+
+<a href="$paginatedEventNews.PrevLink"><< Prev</a> |
 <% end_if %>
 
-<% loop allNews.Pages %>
+<% loop paginatedEventNews.Pages %>
 <% if CurrentBool %>
 <strong>$PageNum</strong>
 <% else %>
@@ -90,8 +161,8 @@
 <% end_if %>
 <% end_loop %>
 
-<% if allNews.NextLink %>
-| <a href="$allNews.NextLink">Next >></a>
+<% if paginatedEventNews.NotLastPage %>
+| <a href="$paginatedEventNews.NextLink">Next >></a>
 <% end_if %>
 </p>
 <% end_if %>  
