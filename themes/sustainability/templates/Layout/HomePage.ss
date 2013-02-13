@@ -27,11 +27,13 @@
 <div id="homepage-wrapper">
 
 
-<div class="homepageSubhead padded spansColumns">THE 2020 VISION<span class="headerLine">-------------------------------------------------------------------------------------------------------------------------------------------
+<!--<div class="homepageSubhead padded spansColumns">THE 2020 VISION<span class="headerLine">-------------------------------------------------------------------------------------------------------------------------------------------
 	------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-	-------------------------------
+	------------------------------------------------------------------------------------------------
 </span>
-</div>
+</div>-->
+<br>
+<!--DELETE THIS EVENTUALLY!!!-->
 
 <div id="feature-wrapper">
 
@@ -97,10 +99,9 @@
   
 <div class="newsSection homepageSubhead" title="News"><h3><a href="{$BaseHref}news" class="homepageSubhead">NEWS & EVENTS<span class="headerLine">-------------------------------------------------------------------------
 	-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-	------------------------------------
-</div></a></h3>  
+	-------------------------------------------------------------------------------------------------------------------------------------------------------</span>
+</a></h3></div>  
 
-<div class="view-all"><a href="http://sustainability.uiowa.edu//news">View All</a></div>
   
 <div id="events-column">
 
@@ -191,7 +192,9 @@ $EventDateRange
   
 <div id="moreFromUISustainability">
 
-	<h3 class="moreFromUISustainability" title="News"><a href="{$BaseHref}news" class="homepageSubhead">MORE FROM UI SUSTAINABILITY</a></h3>
+	<div class="moreFromUISustainability homepageSubhead" title="News"><span class="homepageSubhead"><h3>MORE FROM UI SUSTAINABILITY<span class="headerLine">
+	-------------------------------------------------------------------------------------------------------
+	</span></h3></span></div>
 		
 	<div id="social-media">
 	
@@ -328,17 +331,18 @@ $EventDateRange
 <% end_loop %>	
 
 </ul>
+
+<div class="view-all"><a href="http://sustainability.uiowa.edu//news">View All</a></div>
 		
 		<br /><br />
-		<h3><a href="$BaseHref/blog" class="homepageSubhead sustainabilitySubhead">SUSTAINABILITY BLOG<span class="headerLine">---------------------------------------------------------------------------------------------------</span></a></h3>
+		<div class="newsSection homepageSubhead" title="Sustainability Blog"><h3><a href="$BaseHref/blog" class="homepageSubhead sustainabilitySubhead">SUSTAINABILITY BLOG<span class="headerLine">---------------------------------------------------------------------------------------------------</span></a></h3></div>
 		<!--<p class="view-all"><a href="$BaseHref/blog">View All</a></p>-->
 		
 		
-		<div class="view-all sustainabilityLink"><a href="http://sustainability.uiowa.edu//blog">View All</a></div>
 		
 		<ul class="news">
 		
-<% loop RSSBlogPosts(1) %>
+<% loop RSSBlogPosts(2) %>
 <li>
 <h4><a href="$Link">$Title</a></h4>
 <p>$Description.LimitWordCount(10)</p>
@@ -349,7 +353,7 @@ $EventDateRange
 	
 </ul>
 
-
+		<div class="view-all"><a href="http://sustainability.uiowa.edu//blog">View All</a></div>
 
 
 <!--

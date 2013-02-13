@@ -638,7 +638,9 @@ width:auto;
 height:auto;
 line-height:15px;
 margin-top:8px;
-background:#EA964B;}
+background:#EA964B;
+visibility:hidden;
+}
 
 /* image styles */
 
@@ -941,6 +943,12 @@ color:#ccc;
 padding-left:25px;
 background:url(../images/list.png) no-repeat 0px -4px;}
 
+div.view-all {
+margin-top: 15px;
+}
+
+
+
 div.view-all a {
 
 margin-top:-22px;
@@ -1098,7 +1106,6 @@ margin-left:510px;
 #news-column {
 width:475px;
 
-margin-left:30px;
 height:auto;
 /*background: url(../images/middle-shadow.png) no-repeat 445px 60px;*/
 float:left;}
@@ -1160,7 +1167,7 @@ ul#twitter_update_list {
 
 display: block;
 width: 300px;
-height: 100px;
+
 
 }
 
@@ -1491,6 +1498,11 @@ background: white url(../images/formbg.gif) repeat-x left top;
 	height: 250px;
 	overflow: hidden;
 	margin: 10px;
+	margin-bottom: 15px;
+	-moz-box-shadow:    0px 0px 15px 3px #CCC;
+	-webkit-box-shadow: 0px 0px 15px 3px #CCC;
+	box-shadow:         0px 0px 15px 3px #CCC;
+
 }
 
 #featuredPicture  {
@@ -1506,7 +1518,8 @@ background: white url(../images/formbg.gif) repeat-x left top;
 #whatYouCanDo {
 	margin-top: 20px;
 	margin-left: 10px;
-	height: 200px;
+	height: 160px;
+	overflow: hidden;
 }
 
 .whatYouCanDoColumn {
@@ -1536,14 +1549,17 @@ background: white url(../images/formbg.gif) repeat-x left top;
     color: #235361;
     display: inline-block;
     font: 16px/25px sans-serif;
-    padding: 50px 40px;
+    padding: 20px 40px;
     /*box-shadow: inset 0 1px 1px hsla(0,0%,100%,.5);*/
     border-radius: 20px;
     position: relative;
-    margin-top: 15px;
+    margin-top: 15px;    
+  -moz-box-shadow:    0px 0px 15px 3px #CCC;
+  -webkit-box-shadow: 0px 0px 15px 3px #CCC;
+  box-shadow:         0px 0px 15px 3px #CCC;
 }
 
-.bubble:after {
+.bubble:after, .bubble:before {
 
 	color: #FFFFFF;
 	background-color: #235361;
@@ -1560,6 +1576,8 @@ background: white url(../images/formbg.gif) repeat-x left top;
 }
 
 
+
+
 .shadow {
   -moz-box-shadow:    2px 2px 2px 2px #ccc;
   -webkit-box-shadow: 2px 2px 2px 2px #ccc;
@@ -1573,7 +1591,7 @@ background: white url(../images/formbg.gif) repeat-x left top;
 .newsSection {
 	display: block;
 	margin-bottom: 10px;
-	width: 95%;
+	width: 100%;
 	
 }
 
@@ -1586,7 +1604,7 @@ background: white url(../images/formbg.gif) repeat-x left top;
 }
 
 .sustainabilitySubhead {
-	margin-left: -25px;
+	/*margin-left: -25px;*/
 }
 
 .sustainabilityLink {
@@ -1603,4 +1621,8 @@ background: white url(../images/formbg.gif) repeat-x left top;
 
 .whatYouCanDoColumn a {
 	color: black;
+}
+
+#moreFromUISustainability{
+	margin-left: 10px;
 }
