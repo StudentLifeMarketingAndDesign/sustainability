@@ -50,32 +50,12 @@
 </div>
 <% end_if %> 
 
-<h1>$Title</h1>
+<h1>News & Events</h1>
 
 <div class="events-holder">
 
 <ul class="news">
 
-<!--
-<% loop allNews %>
-<li>
-
-<% if NewsLink %><h4><a href="$NewsLink" target="_blank">$Title</a></h4>
-<% else %>
-<h4><a href="$Link">$Title</a></h4>
-<% end_if %>
-<p class="date">
-<% if NewsDate %>$NewsDate.Format("F d&#44 Y")<% end_if %>
-</p>
-<p>$Content.LimitWordCount(20)</p>
-<span class="more">
-<% if NewsLink %><a href="$NewsLink" class="external-link" target="_blank">Read More</a>
-<% else %>
-<a href="$Link" target="_blank">Read More</a>
-<% end_if %>
-</span></li>
-<% end_loop %>
--->
 
 <% loop paginatedEventNews %>
 
@@ -125,9 +105,8 @@
 		
 		</p>
 		
-		<% if EventSponsor %>
-		<p class="sponsor"><a href="$EventSponsorLink" target="_blank">$EventSponsor</a></p>
-		<% end_if %>
+		<p class="sponsor"><% if EventSponsor %><a href="$EventSponsorLink" target="_blank">$EventSponsor</a>
+		<% end_if %></p>
 		<span class="more">
 		<% if EventLink %><a href="$EventLink" class="external-link" target="_blank">Read More</a>
 		<% else %>

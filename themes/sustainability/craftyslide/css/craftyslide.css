@@ -9,9 +9,9 @@ Craftyslide CSS Styles
 	padding:0;
 	position:relative;
 	border:15px solid #fff;
-	-webkit-box-shadow:0 3px 5px #999;
-	-moz-box-shadow:0 3px 5px #999;
-	box-shadow:0 3px 5px #999;
+	-webkit-box-shadow:0 0 3px 5px #CCC;
+	-moz-box-shadow:0 0 3px 5px #CCC;
+	box-shadow:0 0 3px 5px #CCC;
 	width:990px;
 	margin:auto;
 

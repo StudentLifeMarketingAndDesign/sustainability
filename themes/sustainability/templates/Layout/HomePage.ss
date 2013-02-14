@@ -27,49 +27,11 @@
 <div id="homepage-wrapper">
 
 
-<!--<div class="homepageSubhead padded spansColumns">THE 2020 VISION<span class="headerLine">-------------------------------------------------------------------------------------------------------------------------------------------
-	------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-	------------------------------------------------------------------------------------------------
-</span>
-</div>-->
 <br>
-<!--DELETE THIS EVENTUALLY!!!-->
+
 
 <div id="feature-wrapper">
 
-
-<!--
-<div class="clear"></div>
-<div id="rotate">
-
-
-
-<% control Home %>
-	<div <% if First %>class="ui-tabs-panel" <% else %> class="ui-tabs-panel ui-tabs-hide"<% end_if %> id="tab$Pos">
-		<div class="feature-image" style="background: url('$FeatureImage.NiceImage.URL') no-repeat 0px 0px;">
-		<div class="feature-mask"></div></div>
-		<h2><a href="$Link">$Title</a></h2><br />
-		<div class="summary">$getSummaryHTML</div>
-		<% if HomeLink %>
-			<span class="more"><a href="$HomeLink" class="external-link" target="_blank">Read More</a></span>
-		<% else %>
-			<span class="more"><a href="$Link">Read More</a></span>
-		<% end_if %>
-	</div>
-<% end_control %>
-
-<ul class="ui-tabs-nav" id="ui-tabs-navx">
-<% control Home %>
-<li id="menu$Pos" <% if First %>class="ui-tabs-selected"<% end_if %>><a href="#tab$Pos">$Title</a></li>
-<% end_control %>
-</ul>
-
-
-
-
-
-
--->
 
 <div id="slideshow">
  <ul>
@@ -105,54 +67,6 @@
   
 <div id="events-column">
 
-<!--
-<h3 class="events" title="Events"><a href="{$BaseHref}events">Events</a></h3>
-<p class="view-all"><a href="$BaseHref/events">View All</a></p>
-<ul class="events">
-
-<% loop Events %>
-
-
-<li class="events$Pos">
-
-<% if EventLink %>
-	<h4><a href="$EventLink" target="_blank">$Title</a></h4>
-<% else %>
-	<% if Content %>
-		<h4><a href="$Link">$Title</a></h4>
-	<% else %>
-		<h4>$Title</h4>
-
-	<% end_if %>
-<% end_if %>
-
-
-<p class="date">
-<% if EventDateRange %>
-$EventDateRange
-<% else_if EventDate %>
- $EventDate.Format("F d&#44 Y")
-<% end_if %>
-<% if EventTime %>- $EventTime,<% end_if %><br />
-<% if EventLocation %>$EventLocation<% end_if %>
-
-</p>
-
-<% if EventSponsor %>
-<p class="sponsor"><a href="$EventSponsorLink" target="_blank">$EventSponsor</a></p>
-<% end_if %>
-<span class="more">
-<% if EventLink %><a href="$EventLink" class="external-link" target="_blank">Read More</a>
-<% else %>
-<% if Content %>
-<a href="$Link">Read More</a>
-<% end_if %>
-<% end_if %>
-</span></li>
-<% end_loop %>
-
-</ul>
--->
 
 <div id="featurePic">
 	<img id="featuredPicture" src="$FeatureImage.URL">
@@ -214,52 +128,7 @@ $EventDateRange
 
 </div>
   
-<!--
-<div id="what">
-<div id="demo">
 
-
-
-<div class="ui-tabs ui-widget ui-widget-content ui-corner-all" id="tabs">
-<ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">
-<% loop ChildrenOf(what-you-can-do) %>
-<li id="list$Pos" <% if First %>class="ui-corner-top ui-tabs-selected ui-state-active" <% else %> class="ui-corner-top ui-state-default"<% end_if %>><a href="#tabs-$Pos">$MenuTitle</a></li>
-<% end_loop %>
-</ul>
-
-
-<div class="ui-tabs-panel ui-widget-content ui-corner-bottom" id="tabs-1">
-<div class="link-block1"> 
-<ul>
-<% loop ChildrenOf(students) %>
-<li><a href="$Link">$Title</a></li>
-<% end_loop %>
-</ul>
-</div></div>
-
-<div class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide" id="tabs-2">
-<div class="link-block1"> 
-<ul>
-<% loop ChildrenOf(faculty-staff) %>
-<li><a href="$Link">$Title</a></li>
-<% end_loop %>
-</ul>
-</div></div>
-
-<div class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide" id="tabs-3">
-<div class="link-block1"> 
-<ul>
-<% loop ChildrenOf(outreach) %>
-<li><a href="$Link">$Title</a></li>
-<% end_loop %>
-</ul>
-</div></div>
-
-
-</div>
-</div>
-</div>
--->
     
 <div id="news-column">
 
@@ -314,9 +183,8 @@ $EventDateRange
 		
 		</p>
 		
-		<% if EventSponsor %>
-		<p class="sponsor"><a href="$EventSponsorLink" target="_blank">$EventSponsor</a></p>
-		<% end_if %>
+		<p class="sponsor"><% if EventSponsor %><a href="$EventSponsorLink" target="_blank">$EventSponsor</a>
+		<% end_if %></p>
 		<span class="more">
 		<% if EventLink %><a href="$EventLink" class="external-link" target="_blank">Read More</a>
 		<% else %>
@@ -332,7 +200,7 @@ $EventDateRange
 
 </ul>
 
-<div class="view-all"><a href="http://sustainability.uiowa.edu//news">View All</a></div>
+<div class="view-all"><a href="{$BaseHref}news">View All</a></div>
 		
 		<br /><br />
 		<div class="newsSection homepageSubhead" title="Sustainability Blog"><h3><a href="$BaseHref/blog" class="homepageSubhead sustainabilitySubhead">SUSTAINABILITY BLOG<span class="headerLine">---------------------------------------------------------------------------------------------------</span></a></h3></div>
@@ -353,23 +221,10 @@ $EventDateRange
 	
 </ul>
 
-		<div class="view-all"><a href="http://sustainability.uiowa.edu//blog">View All</a></div>
+		<div class="view-all"><a href="{$BaseHref}blog">View All</a></div>
 
 
-<!--
-<div id="social-media">
 
-
-<div id="social-media-balloon">
-<ul id="twitter_update_list"><li></li></ul>
-</div>
-<ul>
-<li><a href="http://twitter.com/uisustainable" target="_blank"><img src="$ThemeDir/images/twitter.png" alt="Twitter" width="91" height="81" title="Follow us on Twitter"/></a></li>
-<li><a href="http://www.facebook.com/pages/The-University-of-Iowa-Office-of-Sustainability/251818755982" target="_blank"><img src="$ThemeDir/images/facebook.png" alt="Facebook" width="94" height="81" title="Find us on Facebook" /></a></li>
-<li><a href="{$BaseHref}home/rss" target="_blank"><img src="$ThemeDir/images/rss.png" alt="RSS" width="94" height="81" title="View our RSS feed"/></a></li>
-<li><a href="{$BaseHref}contact"><img src="$ThemeDir/images/email.png" alt="Email" width="92" height="81" title="Contact Us"/></a></li>
-</ul>
-</div>-->
   
 </div><div class="clear"></div>  
 </div></div>

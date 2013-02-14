@@ -114,12 +114,16 @@ class Page_Controller extends ContentController {
 		$newarray->merge($items);
 		$newarray->merge($set);
 		//Debug::show($newarray);
+
+		
 		return $newarray;
+
 		
 	}
 	
 	function paginatedEventNews(){
 		$items = DataObject::get("EventsPage");
+
 		$set = DataObject::get("NewsPage");
 		$eventNewsArray = new ArrayList();
 		
