@@ -24,7 +24,7 @@
 
 </div>
 
-<div id="homepage-wrapper">
+<div id="slider-wrapper">
 
 
 <br>

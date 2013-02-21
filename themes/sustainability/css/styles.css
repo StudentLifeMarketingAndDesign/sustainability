@@ -162,7 +162,7 @@ border-top:1px dotted #ccc;
 padding-top:10px;
 }
 
-#homepage-wrapper ul.news {
+#slider-wrapper ul.news {
 margin-top:-2px;
 margin-left:-8px;}
 
@@ -891,13 +891,13 @@ padding-bottom:30px;
 background-color: #FFFFFF;
 }
 
-#homepage-wrapper {
+#slider-wrapper {
 	width: 990px;
 	background-color: white;
 	background-color: #FFFFFF;
 	margin: 0 auto 0 auto;
 	padding-left: 25px;
-	padding-bottom: 25px;
+	padding-bottom: 10px;
 	padding-right: 25px;
 	height: 500px;
 }
