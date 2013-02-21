@@ -14,8 +14,8 @@ class GoalTable extends Page {
 	
 	function getCMSFields() {
 		$fields = parent::getCMSFields();
-		$fields->removeFieldFromTab("Root.Content.Main","Content");
-		//$fields->addFieldToTab('Root.Content.Main', new TextField('Metric'));
+		$fields->removeFieldFromTab("Root.Main","Content");
+		//$fields->addFieldToTab('Root.Main', new TextField('Metric'));
 		return $fields;
    }
 }

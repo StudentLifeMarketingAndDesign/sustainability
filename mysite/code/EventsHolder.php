@@ -17,8 +17,8 @@ static $allowed_children = array('EventsPage', 'EventsHolder');
 function getCMSFields() {
 	$fields = parent::getCMSFields();
 	
-	$fields->addFieldToTab('Root.Content.Images', new TextField('TypeCCaption','ImageCaption'));
-	$fields->addFieldToTab('Root.Content.Images', new UploadField('TypeCImage', 'HeaderImage size should be 695x180 pixels'));
+	$fields->addFieldToTab('Root.Images', new TextField('TypeCCaption','ImageCaption'));
+	$fields->addFieldToTab('Root.Images', new UploadField('TypeCImage', 'HeaderImage size should be 695x180 pixels'));
 	
     return $fields;
 	

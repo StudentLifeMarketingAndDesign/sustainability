@@ -23,8 +23,8 @@ class SlideshowPage extends Page {
    $fields = parent::getCMSFields();
    
 
-	$fields->addFieldToTab('Root.Content.Flickr', new TextField('FlickrUsername', 'Flickr username - yours is sustainabilityuiowa'));
-	$fields->addFieldToTab('Root.Content.Flickr', new TextField('FlickrSetnumber', 'Flickr set number - the number at the end of this url http://www.flickr.com/photos/sustainabilityuiowa/sets/72157624326037025/'));
+	$fields->addFieldToTab('Root.Flickr', new TextField('FlickrUsername', 'Flickr username - yours is sustainabilityuiowa'));
+	$fields->addFieldToTab('Root.Flickr', new TextField('FlickrSetnumber', 'Flickr set number - the number at the end of this url http://www.flickr.com/photos/sustainabilityuiowa/sets/72157624326037025/'));
 	
 
     	

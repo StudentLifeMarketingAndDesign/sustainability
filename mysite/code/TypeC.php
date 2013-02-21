@@ -20,8 +20,8 @@ class TypeC extends Page {
 
 
 	
-$fields->addFieldToTab('Root.Content.Images', new TextField('TypeCCaption','ImageCaption'));
-	$fields->addFieldToTab('Root.Content.Images', new UploadField('TypeCImage', 'Header Image size should be 695x180 pixels'));
+$fields->addFieldToTab('Root.Images', new TextField('TypeCCaption','ImageCaption'));
+	$fields->addFieldToTab('Root.Images', new UploadField('TypeCImage', 'Header Image size should be 695x180 pixels'));
 	
     	
 

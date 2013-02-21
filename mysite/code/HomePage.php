@@ -21,14 +21,14 @@ class HomePage extends Page {
    
 	  $fields = parent::getCMSFields();
 	   
-	  $fields->removeFieldFromTab("Root.Content.Main","Content");
+	  $fields->removeFieldFromTab("Root.Main","Content");
 	   
-	  $fields->addFieldToTab("Root.Content.Main", new UploadField('FeatureImage', 'Feature Image'));
-	  $fields->addFieldToTab("Root.Content.Main", new HTMLEditorField('FeatureText', 'Feature Text'));
-	  $fields->addFieldToTab("Root.Content.Main", new TextField('WhatYouCanDoLabel', 'What You Can Do Label'));
-	  $fields->addFieldToTab("Root.Content.Main", new HTMLEditorField('WhatYouCanDo', 'What You Can Do'));
-	  $fields->addFieldToTab("Root.Content.Main", new TextField('WhatYouCanDoLabelRight', 'What You Can Do Label (Right Column)'));
-	  $fields->addFieldToTab("Root.Content.Main", new HTMLEditorField('WhatYouCanDo2', 'What You Can Do (Right Column)'));
+	  $fields->addFieldToTab("Root.Main", new UploadField('FeatureImage', 'Feature Image'));
+	  $fields->addFieldToTab("Root.Main", new HTMLEditorField('FeatureText', 'Feature Text'));
+	  $fields->addFieldToTab("Root.Main", new TextField('WhatYouCanDoLabel', 'What You Can Do Label'));
+	  $fields->addFieldToTab("Root.Main", new HTMLEditorField('WhatYouCanDo', 'What You Can Do'));
+	  $fields->addFieldToTab("Root.Main", new TextField('WhatYouCanDoLabelRight', 'What You Can Do Label (Right Column)'));
+	  $fields->addFieldToTab("Root.Main", new HTMLEditorField('WhatYouCanDo2', 'What You Can Do (Right Column)'));
 
 	  return $fields;
    }

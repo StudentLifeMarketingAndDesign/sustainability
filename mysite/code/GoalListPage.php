@@ -13,9 +13,9 @@ class GoalListPage extends Page {
 	
 	function getCMSFields() {
 		$fields = parent::getCMSFields();
-		$fields->removeFieldFromTab("Root.Content.Main","Content");
-		#$fields->removeFieldFromTab("Root.Content.Main","FeaturedOnParent");
-		#$fields->addFieldToTab('Root.Content.Main', new HTMLEditorField('Description'));
+		$fields->removeFieldFromTab("Root.Main","Content");
+		#$fields->removeFieldFromTab("Root.Main","FeaturedOnParent");
+		#$fields->addFieldToTab('Root.Main', new HTMLEditorField('Description'));
 		return $fields;
    }
 }

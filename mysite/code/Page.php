@@ -14,9 +14,9 @@ class Page extends SiteTree {
 		$fields = parent::getCMSFields();
    		if ($this->getParent()){
 			if(($this->getParent()->ClassName) == "TypeA"){
-				$fields->removeFieldFromTab('Root.Content.Main', 'Content');
-				$fields->addFieldToTab('Root.Content.Main', new CheckboxField('FeaturedOnParent', 'Is this featured on the page \''.$this->getParent()->MenuTitle.'\'?'));
-				$fields->addFieldToTab('Root.Content.Main', new HTMLEditorField('Content', 'Content'));
+				$fields->removeFieldFromTab('Root.Main', 'Content');
+				$fields->addFieldToTab('Root.Main', new CheckboxField('FeaturedOnParent', 'Is this featured on the page \''.$this->getParent()->MenuTitle.'\'?'));
+				$fields->addFieldToTab('Root.Main', new HTMLEditorField('Content', 'Content'));
 			}
 			
 		}return $fields;

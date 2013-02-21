@@ -19,8 +19,8 @@ class TypeD extends Page {
    $fields = parent::getCMSFields();
 
 
-		$fields->addFieldToTab('Root.Content.Images', new TextField('ImageCaption','ImageCaption'));
-	$fields->addFieldToTab('Root.Content.Images', new UploadField('HeaderImage', 'Header Image size should be 316x222 pixels'));
+		$fields->addFieldToTab('Root.Images', new TextField('ImageCaption','ImageCaption'));
+	$fields->addFieldToTab('Root.Images', new UploadField('HeaderImage', 'Header Image size should be 316x222 pixels'));
 
     	
 

@@ -25,7 +25,7 @@ function getCMSFields() {
 
 
 
-	$fields->addFieldToTab('Root.Content.Main', new TextField('NewsLink', 'News Link'));
+	$fields->addFieldToTab('Root.Main', new TextField('NewsLink', 'News Link'));
 
 
 

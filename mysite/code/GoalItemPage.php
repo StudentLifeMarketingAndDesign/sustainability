@@ -18,16 +18,16 @@ class GoalItemPage extends Page {
 	
 	function getCMSFields() {
 		$fields = parent::getCMSFields();
-		$fields->removeFieldFromTab("Root.Content.Main","Content");
-		$fields->removeFieldFromTab("Root.Content.Main","FeaturedOnParent");
-		$fields->addFieldToTab('Root.Content.Main', new TextField('FY05'));
-		$fields->addFieldToTab('Root.Content.Main', new TextField('FY06'));
-		$fields->addFieldToTab('Root.Content.Main', new TextField('FY07'));
-		$fields->addFieldToTab('Root.Content.Main', new TextField('FY08'));
-		$fields->addFieldToTab('Root.Content.Main', new TextField('FY09'));
-		$fields->addFieldToTab('Root.Content.Main', new HTMLEditorField('Description'));
-		$fields->addFieldToTab('Root.Content.Images', new UploadField('GraphImage', 'Graph / Chart Image'));
-		$fields->addFieldToTab('Root.Content.Images', new UploadField('SupplementalImage', 'Supplemental Image'));
+		$fields->removeFieldFromTab("Root.Main","Content");
+		$fields->removeFieldFromTab("Root.Main","FeaturedOnParent");
+		$fields->addFieldToTab('Root.Main', new TextField('FY05'));
+		$fields->addFieldToTab('Root.Main', new TextField('FY06'));
+		$fields->addFieldToTab('Root.Main', new TextField('FY07'));
+		$fields->addFieldToTab('Root.Main', new TextField('FY08'));
+		$fields->addFieldToTab('Root.Main', new TextField('FY09'));
+		$fields->addFieldToTab('Root.Main', new HTMLEditorField('Description'));
+		$fields->addFieldToTab('Root.Images', new UploadField('GraphImage', 'Graph / Chart Image'));
+		$fields->addFieldToTab('Root.Images', new UploadField('SupplementalImage', 'Supplemental Image'));
 		return $fields;
    }
 }

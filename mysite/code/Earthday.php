@@ -17,15 +17,15 @@ class Earthday extends Page {
 	
 		function getCMSFields() {
 		$fields = parent::getCMSFields();
-		$fields->addFieldToTab("Root.Content.Main", new TextField('EventName'));
-		$fields->addFieldToTab("Root.Content.Main", new TextField('EventSubheading'));
+		$fields->addFieldToTab("Root.Main", new TextField('EventName'));
+		$fields->addFieldToTab("Root.Main", new TextField('EventSubheading'));
 
-		$fields->addFieldToTab("Root.Content.Main", new TextField('EventDate'));
-		$fields->addFieldToTab("Root.Content.Main", new TextField('EventType'));
-		$fields->addFieldToTab("Root.Content.Main", new HTMLEditorField('TopFeature'));
+		$fields->addFieldToTab("Root.Main", new TextField('EventDate'));
+		$fields->addFieldToTab("Root.Main", new TextField('EventType'));
+		$fields->addFieldToTab("Root.Main", new HTMLEditorField('TopFeature'));
 		
-		$fields->removeFieldFromTab("Root.Content.Main","Content");
-		$fields->addFieldToTab("Root.Content.Main", new UploadField('EventImage'));
+		$fields->removeFieldFromTab("Root.Main","Content");
+		$fields->addFieldToTab("Root.Main", new UploadField('EventImage'));
 		return $fields;
 	}
 	

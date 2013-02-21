@@ -17,16 +17,16 @@ class EarthdayEvent extends Page {
 		function getCMSFields() {
 		$fields = parent::getCMSFields();
 		//$fields->removeByName("Content");
-		$fields->addFieldToTab("Root.Content.Main", new TextField('ExLink','Enter the URL of an external page with additional information.'));
+		$fields->addFieldToTab("Root.Main", new TextField('ExLink','Enter the URL of an external page with additional information.'));
 		
-		$fields->addFieldToTab("Root.Content.Main", new TextField('EventDate','Date to be displayed.'));
+		$fields->addFieldToTab("Root.Main", new TextField('EventDate','Date to be displayed.'));
 		$datefield = new DateField('Date','Date to unpublish this event.');
 		$datefield->setConfig('showcalendar', true);
-		$fields->addFieldToTab("Root.Content.Main", $datefield);
-		$fields->addFieldToTab("Root.Content.Main", new TextField('EventType'));
-		$fields->addFieldToTab("Root.Content.Main", new HTMLEditorField('Content','Enter a brief (2-3 sentence) description of the event here.'));
-		$fields->addFieldToTab("Root.Content.Main", new HTMLEditorField('TimeAndLocation','Enter time and location information here.'));
-		$fields->addFieldToTab("Root.Content.Main", new UploadField('EventImage'));
+		$fields->addFieldToTab("Root.Main", $datefield);
+		$fields->addFieldToTab("Root.Main", new TextField('EventType'));
+		$fields->addFieldToTab("Root.Main", new HTMLEditorField('Content','Enter a brief (2-3 sentence) description of the event here.'));
+		$fields->addFieldToTab("Root.Main", new HTMLEditorField('TimeAndLocation','Enter time and location information here.'));
+		$fields->addFieldToTab("Root.Main", new UploadField('EventImage'));
 		
 		
 		return $fields;

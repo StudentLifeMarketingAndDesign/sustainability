@@ -17,12 +17,12 @@ class GoalPage extends Page {
 	
 	function getCMSFields() {
 		$fields = parent::getCMSFields();
-		$fields->removeFieldFromTab("Root.Content.Main","Content");
-		#$fields->removeFieldFromTab("Root.Content.Main","FeaturedOnParent");
-		$fields->addFieldToTab('Root.Content.Images', new TextField('ImageCaption','ImageCaption'));
-		$fields->addFieldToTab('Root.Content.Images', new UploadField('HeaderImage', 'Header Image size should be 316x222 pixels'));
-		$fields->addFieldToTab('Root.Content.Main', new TextField('LongName'));
-		$fields->addFieldToTab('Root.Content.Main', new HTMLEditorField('Description'));
+		$fields->removeFieldFromTab("Root.Main","Content");
+		#$fields->removeFieldFromTab("Root.Main","FeaturedOnParent");
+		$fields->addFieldToTab('Root.Images', new TextField('ImageCaption','ImageCaption'));
+		$fields->addFieldToTab('Root.Images', new UploadField('HeaderImage', 'Header Image size should be 316x222 pixels'));
+		$fields->addFieldToTab('Root.Main', new TextField('LongName'));
+		$fields->addFieldToTab('Root.Main', new HTMLEditorField('Description'));
 		return $fields;
    }
 }

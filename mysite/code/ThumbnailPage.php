@@ -27,9 +27,9 @@ function getCMSFields() {
 	$fields = parent::getCMSFields();
 
 
-	$fields->addFieldToTab('Root.Content.Main', new TextField('ExternalLink', 'ExternalLink'));
-		$fields->addFieldToTab('Root.Content.Images', new TextField('ThumbnailCaption', 'thumbnail caption '));
-	$fields->addFieldToTab('Root.Content.Images', new UploadField('ThumbnailImage', 'Thumbnail Image'));
+	$fields->addFieldToTab('Root.Main', new TextField('ExternalLink', 'ExternalLink'));
+		$fields->addFieldToTab('Root.Images', new TextField('ThumbnailCaption', 'thumbnail caption '));
+	$fields->addFieldToTab('Root.Images', new UploadField('ThumbnailImage', 'Thumbnail Image'));
 
 
 	

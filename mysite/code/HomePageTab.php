@@ -18,9 +18,9 @@ class HomePageTab extends Page {
 	);
 	function getCMSFields() {
 		$fields = parent::getCMSFields();
-		$fields->addFieldToTab('Root.Content.Images', new UploadField('FeatureImage', 'Feature Box Image 486 x 323'));
-		$fields->addFieldToTab('Root.Content.Main', new TextField('HomeLink', 'External Link'));
-		#$fields->addFieldToTab('Root.Content.Main', new TextField('ExLink', 'External Link'));
+		$fields->addFieldToTab('Root.Images', new UploadField('FeatureImage', 'Feature Box Image 486 x 323'));
+		$fields->addFieldToTab('Root.Main', new TextField('HomeLink', 'External Link'));
+		#$fields->addFieldToTab('Root.Main', new TextField('ExLink', 'External Link'));
 		return $fields;
 	}
    
