@@ -210,7 +210,7 @@
 		
 		<ul class="news">
 		
-<% loop RSSBlogPosts(2) %>
+<% loop RSSDisplay(2,"http://sustainability.uiowa.edu/blog/feed/") %>
 <li>
 <h4><a href="$Link">$Title</a></h4>
 <p>$Description.LimitWordCount(10)</p>
