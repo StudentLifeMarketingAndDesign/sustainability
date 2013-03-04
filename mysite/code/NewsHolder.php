@@ -15,7 +15,7 @@ static $allowed_children = array('NewsPage');
 function getCMSFields() {
 	$fields = parent::getCMSFields();
 	
-	$fields->removeFieldFromTab("Root.Content","Content");
+	$fields->removeFieldFromTab("Root.Main","Content");
 	
     return $fields;
 	

@@ -1,5 +1,4 @@
 <?php
-
 class Page extends SiteTree {
 	
 	public static $db = array(
@@ -218,5 +217,4 @@ class Page_Controller extends ContentController {
 }*/
 	
 }
-
 ?>
