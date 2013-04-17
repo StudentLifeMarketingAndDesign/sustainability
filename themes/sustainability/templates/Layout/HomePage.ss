@@ -40,13 +40,13 @@
 	
 		 <a href="$HomeLink" class="external-link" target="_blank">
 	 	 	 <li>
-		     	<img src="$FeatureImage.NiceImage.URL"  />
+		     	<!--<img src="$FeatureImage.NiceImage.URL"  />-->
 		      </li>
 	 	 </a>  	 
 	 <% else %>
 	 	 <a href="$Link">
 		  	 <li>
-		      	<img src="$FeatureImage.NiceImage.URL"  />
+		      	<!--<img src="$FeatureImage.NiceImage.URL"  />-->
 		      </li>
 	  	 </a>
 	 <% end_if %>                    

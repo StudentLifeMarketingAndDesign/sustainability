@@ -12,19 +12,15 @@ class NewsLetterFeature extends DataObject {
 		"Newsletter" => "NewsLetter",
 		"Image" => "Image"
 	);
+	
+	public static $plural_name = 'News Letter Features';
+ 
 	function getCMSFields() {
 		$fields = parent::getCMSFields();
+
     	return $fields;
 	}
-	public function getCMSFields_forPopup() {
-		return new FieldSet(
-			new TextField('Title'),
-			new TextField('Link'),
-			new SimpleTinyMCEField('Content'),
-			new UploadField('Image')
-		);
-	}
-}
+	
 
- 
+}
 ?>

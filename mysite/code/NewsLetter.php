@@ -25,6 +25,9 @@ class NewsLetter extends Page {
 		$fields->addFieldToTab('Root.Main', new HTMLEditorField('Content','Text for the main story.'));
 		//$fields->addFieldToTab('Root.Main', new TextField('ImageCaption','ImageCaption'));
 		$fields->addFieldToTab('Root.Main', new UploadField('FeatureImage', 'Main Image size should be 580w x 300t pixels'));
+		
+		
+		/*
     	$fields->addFieldToTab("Root.Features", new DataObjectManager(
 			$this,
 			'NewsLetterFeature',
@@ -32,6 +35,13 @@ class NewsLetter extends Page {
 			array('Title' => 'Title'),
 			'getCMSFields_forPopup'
 		));
+		*/
+		
+		$gridFieldConfig = GridFieldConfig_RelationEditor::create();
+		
+		$gridField = new GridField('Features', 'Features', $this->Features(), $gridFieldConfig);
+		$fields->addFieldToTab("Root.Main", $gridField);
+		
 		return $fields;
 	}
 }

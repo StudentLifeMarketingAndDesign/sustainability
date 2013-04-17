@@ -1,4 +1,5 @@
 <?php
+
 class Page extends SiteTree {
 	
 	public static $db = array(
@@ -83,7 +84,7 @@ class Page_Controller extends ContentController {
 		return $set;
 	}
 	
-	function Events($limit=3) {
+	function Events($limit=4) {
        //$items = DataObject::get("EventsPage", "Expiry > NOW()", "EventDate", null, $limit);
        $items = DataObject::get("EventsPage", 'EventDate > NOW()', 'EventDate', null, $limit);
 		
@@ -118,6 +119,15 @@ class Page_Controller extends ContentController {
 		return $newarray;
 
 		
+	}
+	
+		
+	function getEvents(){
+		return new PaginatedList(EventsPage::get()->where("\"EventDate\" > NOW()")->sort('EventDate', 'DESC'), $this->request);
+	}
+	
+	function getNews(){
+		return new PaginatedList(NewsPage::get()->where("\"EventDate\" > NOW()")->sort('NewsDate', 'DESC'), $this->request);
 	}
 	
 	function paginatedEventNews(){
@@ -217,4 +227,5 @@ class Page_Controller extends ContentController {
 }*/
 	
 }
+
 ?>

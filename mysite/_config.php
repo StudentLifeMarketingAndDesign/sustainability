@@ -36,7 +36,7 @@ Object::add_extension("LeftAndMain", "MyLeftAndMainDecorator");
 
 // This line set's the current theme. More themes can be
 // downloaded from http://www.silverstripe.com/themes/
-SSViewer::set_theme('sustainability');
+SSViewer::set_theme('sustainabilityold');
 
 Mollom::setPublicKey("a80de3eac6cf28fe533df3af0d4ac5a2");
 Mollom::setPrivateKey("6d63606b380ef59e554468873dc71af8");

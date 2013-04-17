@@ -15,7 +15,7 @@ static $allowed_children = array('NewsPage');
 function getCMSFields() {
 	$fields = parent::getCMSFields();
 	
-	$fields->removeFieldFromTab("Root.Main","Content");
+	$fields->removeFieldFromTab("Root.Content","Content");
 	
     return $fields;
 	
@@ -55,6 +55,11 @@ class NewsHolder_Controller extends Page_Controller {
   	if (isset($doSet)){
   		$paginatedSet = new PaginatedList($doSet, $this->request);
   		$paginatedSet->setPageLength(10);
+	}
+	
+	function newsTest(){
+		$items = NewsPage::get();
+		return $items;
 	}
 	
 

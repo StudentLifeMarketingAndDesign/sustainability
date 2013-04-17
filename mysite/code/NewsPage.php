@@ -44,7 +44,12 @@ function getCMSFields() {
 	$fields->addFieldToTab('Root.Video', new TextField('VideoCaption', 'Video Caption'));
 	$fields->addFieldToTab('Root.Video', new TextField('VideoLink', 'Youtube Video code: the numbers at the end of http://www.youtube.com/watch?v=XgOx8HOihWo so it would be XgOx8HOihWo in this example'));
 	$fields->addFieldToTab('Root.Audio', new TextField('SongCaption', 'Audio Description'));
-	$fields->addFieldToTab('Root.Audio', new FileIFrameField('SongFile','Audio File (the file currently MUST be .mp3, NOT .m4a or anything else)',null,null,null,'assets/Uploads/mp3s/'));
+	
+	$audioField = new UploadField('SongFile','Audio File (the file currently MUST be .mp3, NOT .m4a or anything else)');
+	$audioField->setFolderName('Uploads/mp3');
+	$fields->addFieldToTab('Root.Audio', $audioField);
+	
+	
 	$fields->addFieldToTab('Root.Flickr', new TextField('FlickrUsername', 'Flickr username - yours is sustainabilityuiowa'));
 	$fields->addFieldToTab('Root.Flickr', new TextField('FlickrSetnumber', 'Flickr set number - the number at the end of this url http://www.flickr.com/photos/sustainabilityuiowa/sets/72157624326037025/'));
 	

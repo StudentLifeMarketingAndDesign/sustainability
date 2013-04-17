@@ -1,0 +1,57 @@
+#goalspace {
+  background: #FFF;
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 500px;
+  margin: 0px 10px 0px 0px;
+  padding: 20px 20px 30px 15px;
+}
+#goalspace a {
+  color: #4A92A8;
+  font-size: 12px;
+}
+#goalspace h1 {
+  clear: left;
+  color: #000;
+  font-size: 24px;
+  margin: 0px 0px 0px 0px;
+  padding: 0px;
+}
+#goalspace h2 {
+  clear: left;
+  font-size: 16px;
+  margin: 20px 0px 0px 0px;
+  padding: 0px;
+}
+#goal {
+  clear: right;
+}
+#goal table {
+  font-size: 12px;
+}
+#goal tr {
+  border-bottom: 1px solid #EEE;
+}
+#goal td {
+  border-spacing: 0px;
+  padding: 2px 0px 0px 0px;
+}
+#goal th {
+  border-spacing: 0px;
+  font-weight: bold;
+  padding: 2px 0px 0px 0px;
+}
+.number {
+  text-align: right;
+  vertical-align: text-top;
+  margin: 0px;
+  padding: 0px;
+  width: 150px;
+}
+.title {
+  verticle-align: text-top;
+  width: 450px;
+}
+table {
+  margin: 5px 0px 12px 0px;
+}
+
