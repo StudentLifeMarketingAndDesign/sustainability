@@ -41,10 +41,10 @@ class EventsHolder_Controller extends Page_Controller {
 			$rss->outputToBrowser();
 	}	
 	
-		//Deprecated -- the new Events function is in Page.php
+		//Deprecated -- the new Events function is in Page.php!
 		function allEvents() {
 	if(!isset($_GET['start']) || !is_numeric($_GET['start']) || (int)$_GET['start'] < 1) $_GET['start'] = 0;
-		/*
+		/* 
 		$SQL_start = (int)$_GET['start'];
 		$items = DataObject::get(
 		$callerClass = "EventsPage",
