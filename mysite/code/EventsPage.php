@@ -9,6 +9,7 @@ class EventsPage extends Page {
 	
 	'EventLink' => 'Text',
 	"EventDate" => "Date",
+	"Expiration" => "Date",
 	"EventDateRange" => "Text",
 	"EventLocation" => "Text",
 	"EventTime" => "Text",
@@ -43,6 +44,10 @@ function getCMSFields() {
 	$fields->addFieldToTab('Root.Main', new TextField('EventLink', 'Event Link - Entering a Url here will link the event directly to the url, not an interior page - even if there is content in the content area.'));
 	
 	$fields->addFieldToTab('Root.Main', $dateField = new DateField('EventDate', 'Event Date -  Day of Event or First day of event if more than one day.')); 
+    $dateField->setConfig('showcalendar', true);
+    $dateField->setConfig('dateformat', 'MM/dd/YYYY');
+    
+    $fields->addFieldToTab('Root.Main', $dateField = new DateField('Expiration', 'Expiration date for event -- Use this to indicate the date you want the content to disappear from the front page.')); 
     $dateField->setConfig('showcalendar', true);
     $dateField->setConfig('dateformat', 'MM/dd/YYYY');
 	

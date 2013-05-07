@@ -86,9 +86,22 @@ class Page_Controller extends ContentController {
 	
 	function Events($limit=4) {
        //$items = DataObject::get("EventsPage", "Expiry > NOW()", "EventDate", null, $limit);
-       $items = DataObject::get("EventsPage", 'EventDate > NOW()', 'EventDate', null, $limit);
-		
-		return $items ? $items : false;
+       $dateToday = SS_Datetime::now()->Format('m/d/Y');
+       $whereClause = 'EventDate >= ' . $dateToday;
+
+       /*
+       $items = EventsPage::get(); 
+       $otherItems = EventsPage::get()->filter(array('Expiration:LessThan' => $dateToday));
+       $items = $items->subtract($otherItems)->limit($limit);
+       $items = $items->sort('EventDate', 'DESC');
+       */
+       
+       $items = DataObject::get("EventsPage", "Expiration > NOW()", "EventDate", null, $limit);
+       //$items = EventsPage::get()->filter(array('Expiration:GreaterThan' => $dateToday))->sort('EventDate', 'DESC')->limit($limit);
+
+          
+     		
+       return $items ? $items : false;
 	}
 	
 	function News($limit=3) {
