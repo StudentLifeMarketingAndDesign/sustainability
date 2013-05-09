@@ -136,11 +136,11 @@ class Page_Controller extends ContentController {
 	
 		
 	function getEvents(){
-		return new PaginatedList(EventsPage::get()->where("\"EventDate\" > NOW()")->sort('EventDate', 'DESC'), $this->request);
+		return new PaginatedList(EventsPage::get()->sort('EventDate', 'DESC'), $this->request);
 	}
 	
 	function getNews(){
-		return new PaginatedList(NewsPage::get()->where("\"EventDate\" > NOW()")->sort('NewsDate', 'DESC'), $this->request);
+		return new PaginatedList(NewsPage::get()->sort('NewsDate', 'DESC'), $this->request);
 	}
 	
 	function paginatedEventNews(){
