@@ -218,7 +218,7 @@ $EventDateRange
 
 
 <div id="social-media-balloon">
-<ul id="twitter_update_list"><li></li></ul>
+<ul id="twitter_update_list"><li>{$getTweets}</li></ul>
 </div>
 <ul>
 <li><a href="http://twitter.com/uisustainable" target="_blank"><img src="$ThemeDir/images/twitter.png" alt="Twitter" width="91" height="81" title="Follow us on Twitter"/></a></li>
@@ -235,9 +235,3 @@ $EventDateRange
 <div id="bottom-shadow"></div></div></div>
 
 
-
-<script type="text/javascript" src="http://twitter.com/javascripts/blogger.js"></script>
-
-<script src="https://api.twitter.com/1/statuses/user_timeline.json?screen_name=uisustainable&amp;include_rts=true&amp;count=1&amp;callback=twitterCallback2"></script>
-
-<!--<script type="text/javascript" src="http://twitter.com/statuses/user_timeline/UIsustainable.json?callback=twitterCallback2&amp;count=1"></script>-->

@@ -121,7 +121,7 @@
 			
 	</div>
 	
-	<div class="bubble"><ul id="twitter_update_list"><li></li></ul></div>
+	<div class="bubble"><ul id="twitter_update_list"><li>{$getTweets}</li></ul></div>
 
 </div>
 
@@ -233,9 +233,6 @@
 <!--<div id="bottom-shadow"></div>--></div>
 
 
-<script type="text/javascript" src="http://twitter.com/javascripts/blogger.js"></script>
-
-<script src="https://api.twitter.com/1/statuses/user_timeline.json?screen_name=uisustainable&amp;include_rts=true&amp;count=1&amp;callback=twitterCallback2"></script>
 
  <script type="text/javascript">
 		jQuery(document).ready(function($) {
@@ -262,4 +259,3 @@
 
 	</script>
 
-<!--<script type="text/javascript" src="http://twitter.com/statuses/user_timeline/UIsustainable.json?callback=twitterCallback2&amp;count=1"></script>-->
