@@ -121,9 +121,23 @@ $EventDateRange
 	});
 	</script>
     
-   
+  
   <h3 class="what" title="What You Can Do"><a href="$BaseHref/what-you-can-do">What Can You Do?</a></h3> 
   <p class="view-all"><a href="$BaseHref/what-you-can-do">View All</a></p> 
+<div id="sustainableInitiatives">
+  
+	<% if HomepageInitiatives %>
+        <ul>
+		<% loop HomepageInitiatives %>
+			
+			<li><a class="left" href="{$Link}">$Label</a></li>
+			
+		<% end_loop %>
+		</ul>
+	<% end_if %>
+</div>
+<!--
+
 <div id="what">
 <div id="demo">
 
@@ -168,7 +182,7 @@ $EventDateRange
 </div>
 </div>
 </div>
-  
+-->
 </div>
     
 <div id="news-column">

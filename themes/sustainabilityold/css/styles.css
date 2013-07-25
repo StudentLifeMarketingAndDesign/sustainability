@@ -909,7 +909,7 @@ margin-left: auto;*/
 background: url(../images/interior-shadow-bottom.png) no-repeat -28px 0px;
 }
 
-/* ---------------- Home Page  ---------------- */
+/* ---------------- 04 - Home Page Content ---------------- */
 
 p.view-all a {
 float:right;
@@ -1120,6 +1120,25 @@ float:left;}
 
 ul#twitter_update_list {
 margin-right:60px;}
+
+#sustainableInitiatives a {
+display: block;
+background-color: #4a92a8;
+width: 40%;
+height: 25px;
+border: 1px solid gray;
+padding: 10px;
+border-radius: 5px;
+box-shadow: 3px 3px 6px 0px rgba(161,232,245,.8) inset;
+margin-top: 10px;
+margin-right: 10px;
+}
+
+#sustainableInitiatives li {
+	text-align: center;
+	font-family: 'Gill Sans Light', GillSans-Light, 'Gill Sans', Arial, Helvetica, sans-serif;;
+	text-transform: uppercase;
+}
 
 /* What you can do Tabs
 ----------------------------------*/
@@ -1418,3 +1437,4 @@ background: white url(../images/formbg.gif) repeat-x left top;
 	display: inline-block;
 	margin-left: 15px;
 }
+

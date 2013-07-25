@@ -10,12 +10,20 @@ class HomePage extends Page {
 	'WhatYouCanDo' => 'HTMLText',
 	'WhatYouCanDo2' => 'HTMLText',
 	'WhatYouCanDoLabel' => 'Text',
-	'WhatYouCanDoLabelRight' => 'Text',
+	'WhatYouCanDoLabelRight' => 'Text'
+
+
 	);
 	
-	static $has_one = array(
-	'FeatureImage' => 'Image',
+	public static $has_one = array(
+	'FeatureImage' => 'Image'
 	);
+	
+	public static $has_many = array(
+	'HomepageInitiatives' => 'HomepageInitiative' 
+	);
+	
+	
    
    function getCMSFields() {
    
@@ -29,6 +37,26 @@ class HomePage extends Page {
 	  $fields->addFieldToTab("Root.Main", new HTMLEditorField('WhatYouCanDo', 'What You Can Do'));
 	  $fields->addFieldToTab("Root.Main", new TextField('WhatYouCanDoLabelRight', 'What You Can Do Label (Right Column)'));
 	  $fields->addFieldToTab("Root.Main", new HTMLEditorField('WhatYouCanDo2', 'What You Can Do (Right Column)'));
+	  /*
+	  $fields->addFieldToTab("Root.Main", new TextField('Initiative1', 'Initiative Text (top-left)'));
+	  $fields->addFieldToTab("Root.Main", new TextField('InitiativeLink1', 'Initiative Link (top-left)'));
+	  $fields->addFieldToTab("Root.Main", new TextField('Initiative2', 'Initiative Text (top-right)'));	 
+	  $fields->addFieldToTab("Root.Main", new TextField('InitiativeLink2', 'Initiative Link (top-right)'));   
+	  $fields->addFieldToTab("Root.Main", new TextField('Initiative3', 'Initiative Text (bottom-left)'));    
+	  $fields->addFieldToTab("Root.Main", new TextField('InitiativeLink3', 'Initiative Text (bottom-left)'));
+	  $fields->addFieldToTab("Root.Main", new TextField('Initiative4', 'Initiative Text (bottom-right)'));
+	  $fields->addFieldToTab("Root.Main", new TextField('InitiativeLink4', 'Initiative Text (bottom-right)'));*/
+	  
+	  $gridFieldConfig = GridFieldConfig_RelationEditor::create(); 
+	  $gridfield = new GridField("HomepageInitiatives", "Homepage Initiatives", $this->HomepageInitiatives(), $gridFieldConfig);
+	  $fields->addFieldToTab("Root.Main", $gridfield);
+	  
+	/*
+		$gridFieldConfig = GridFieldConfig_RelationEditor::create();
+		
+		$gridField = new GridField('Features', 'Features', $this->Features(), $gridFieldConfig);
+		$fields->addFieldToTab("Root.Main", $gridField);
+	*/  
 
 	  return $fields;
    }
