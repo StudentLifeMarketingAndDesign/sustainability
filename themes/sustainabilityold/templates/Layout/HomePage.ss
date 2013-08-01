@@ -121,16 +121,13 @@ $EventDateRange
 	});
 	</script>
     
-  
-  <h3 class="what" title="What You Can Do"><a href="$BaseHref/what-you-can-do">What Can You Do?</a></h3> 
-  <p class="view-all"><a href="$BaseHref/what-you-can-do">View All</a></p> 
 <div id="sustainableInitiatives">
-  
+    <h3>Sustainable Initiatives</h3>
 	<% if HomepageInitiatives %>
         <ul>
 		<% loop HomepageInitiatives %>
 			
-			<li><a class="left" href="{$Link}">$Label</a></li>
+			<li><a class="initiative{$Pos} left" href="{$Link}">$Label</a></li>
 			
 		<% end_loop %>
 		</ul>

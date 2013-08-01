@@ -96,7 +96,7 @@ class Page_Controller extends ContentController {
        $items = $items->sort('EventDate', 'DESC');
        */
        
-       $items = DataObject::get("EventsPage", "Expiration > NOW()", "EventDate", null, $limit);
+       $items = DataObject::get("EventsPage", "", "EventDate", null, $limit);
        //$items = EventsPage::get()->filter(array('Expiration:GreaterThan' => $dateToday))->sort('EventDate', 'DESC')->limit($limit);
 
           
