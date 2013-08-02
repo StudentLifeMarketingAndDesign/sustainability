@@ -93,8 +93,8 @@
 
 $Content
 
-
-<iframe src="{$BaseHref}/greendorm" width="728" height="900"></iframe>
+<h3>Virtual Dorm Room</h3>
+<iframe class="greendorm" src="{$BaseHref}/greendorm" width="728" height="700"></iframe>
 
 
 

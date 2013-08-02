@@ -865,6 +865,10 @@ font-size:12px;
 #home-wrapper {
 width: 990px;
 margin:0px auto 0px auto;
+
+#home-wrapper a {
+	color: black;
+}
 /*
 margin-top: 0px;
 margin-right: auto;
@@ -957,22 +961,25 @@ text-transform:uppercase;
 font: bold 8px Arial, Helvetica, sans-serif;
 }
 
-h3.news a, h3.events a, h3.what a, h3.blog a {
+h3.news a, h3.events a, h3.what a, h3.blog a, h3.sustain {
 float: left;
 width: 420px;
 height: 28px;
 padding-bottom:8px;
 border-bottom:1px dotted #ccc;
-text-indent: -9999px;
+color: black;
+font-family: 'Quattrocento', serif;
+color: #900;
+font-size: 18pt;
 }
 
-h3.blog a {background: url(../images/ssblog.png) no-repeat 0px 0px;}
+/*h3.blog a {background: url(../images/ssblog.png) no-repeat 0px 0px;}
 
 h3.news a {background: url(../images/news.png) no-repeat 0px 0px;}
 
 h3.events a {background: url(../images/events.png) no-repeat 0px 0px;}
 
-h3.what a {background: url(../images/whatcanyoudo.png) no-repeat -9px 0px;}
+h3.what a {background: url(../images/whatcanyoudo.png) no-repeat -9px 0px;}*/
 
 #content-right-column h3.events a {margin:30px;}
 
@@ -1141,19 +1148,21 @@ text-transform: uppercase;
 
 
 #sustainableInitiatives a.initiative1 {
-background-color: #A6EEFF;
+background-color: #8F8FDD;
 }
 
 #sustainableInitiatives a.initiative2 {
-background-color: #0000B2;
+background-color: #E0B07E;
+
 }
 
 #sustainableInitiatives a.initiative3 {
-background-color: #FF9933;
+background-color: #006B6B;
+
 }
 
 #sustainableInitiatives a.initiative4 {
-background-color: #006B6B;
+background-color: #FF9933;
 }
 
 #sustainableInitiatives h3 {
@@ -1469,3 +1478,6 @@ background: white url(../images/formbg.gif) repeat-x left top;
 	margin-left: 15px;
 }
 
+iframe.greendorm {
+	border: none;
+}

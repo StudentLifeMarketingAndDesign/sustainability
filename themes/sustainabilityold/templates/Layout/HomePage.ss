@@ -120,10 +120,11 @@ $EventDateRange
 		jQuery("#tabs").tabs();
 	});
 	</script>
-    
+	
+<% if HomepageInitiatives %>    
 <div id="sustainableInitiatives">
-    <h3>Sustainable Initiatives</h3>
-	<% if HomepageInitiatives %>
+    <h3 class="sustain">Sustainable Initiatives</h3>
+	
         <ul>
 		<% loop HomepageInitiatives %>
 			
@@ -131,8 +132,8 @@ $EventDateRange
 			
 		<% end_loop %>
 		</ul>
-	<% end_if %>
 </div>
+<% end_if %>
 <!--
 
 <div id="what">
@@ -229,7 +230,7 @@ $EventDateRange
 
 
 <div id="social-media-balloon">
-<ul id="twitter_update_list"><li>{$getTweets}</li></ul>
+<ul id="twitter_update_list"><li></li></ul>
 </div>
 <ul>
 <li><a href="http://twitter.com/uisustainable" target="_blank"><img src="$ThemeDir/images/twitter.png" alt="Twitter" width="91" height="81" title="Follow us on Twitter"/></a></li>

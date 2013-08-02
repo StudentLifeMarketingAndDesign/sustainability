@@ -18,6 +18,7 @@ $MetaTags(false)
         type="text/javascript"></script>-->
         
 <script type="text/javascript" src="$BaseHref/mysite/code/javascript/shadowbox.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Quattrocento:400,700' rel='stylesheet' type='text/css'>
 <script type="text/javascript">
 Shadowbox.init();
 </script>
