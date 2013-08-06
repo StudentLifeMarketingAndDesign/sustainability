@@ -15,7 +15,7 @@
 
 <div id="top-shadow"></div> 
 <div id="interior-wrapper">
-<div id="main-content-wrapper">
+<div id="main-content-wrapper" class="typography">
 
 
 <div id="content-right-column">
@@ -63,7 +63,17 @@
 
 </div>
 
+<div id='contentBox' class='typography'>
+<div id='contentHeader'>
+<h3>Virtual Dorm Room</h3>
+<p>Check out this virtual green dorm room and see how you can live green in the residence halls.</p>
+</div>
+<iframe class="greendorm" src="{$BaseHref}/greendorm" width="728" height="640"></iframe>
+</div>
+
+
 <div id="content" class="typography">
+
 
 <% if HeaderImage %>
 <div class="image">
@@ -89,12 +99,9 @@
 <h1>$Title</h1>
 
 
-
-
 $Content
 
-<h3>Virtual Dorm Room</h3>
-<iframe class="greendorm" src="{$BaseHref}/greendorm" width="728" height="700"></iframe>
+
 
 
 
