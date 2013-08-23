@@ -514,6 +514,13 @@ padding:20px 20px 30px 15px;
 min-height:500px;
 background:white;}
 
+#contentBox {
+background:white;}
+
+#contentHeader{
+padding:20px 20px 5px 15px;	
+}
+
 .type-c .image-thumbnail {
 margin-top:-5px;}
 
