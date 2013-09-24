@@ -13,6 +13,8 @@
 /* ---------------- 01 - Global Elements ---------------- */
 
 
+
+
 body {
 margin:0;
 padding:0;
@@ -88,6 +90,13 @@ padding-right:15px;
 object {
 margin:10px 10px 10px 10px;
 float:right;}
+
+#twitFeed {
+	width: 418px;
+	height: 250px;
+	padding-top: 27px;
+	margin-bottom: -21px; 
+}
 
 /* ---------------- Typography  ---------------- */	
 
@@ -980,7 +989,7 @@ height: 28px;
 padding-bottom:8px;
 border-bottom:1px dotted #ccc;
 color: black;
-font-family: 'Quattrocento', serif;
+/*font-family: 'Quattrocento', serif;*/
 color: #900;
 font-size: 18pt;
 }
@@ -1112,7 +1121,8 @@ margin-top:40px;
 clear:left;
 width:418px;
 padding-top:10px;
-height:260px;
+margin-bottom: 22px; 
+height:96px;
 border:1px solid #ccc;
 background: url(../images/media-background.png) repeat-x 0px 10px;}
 

@@ -224,14 +224,13 @@ $EventDateRange
 
 
 
-
+<div id = "twitFeed">
+	<a class="twitter-timeline" href="https://twitter.com/UIsustainable" data-widget-id="382534614020927488">Tweets by @UIsustainable</a>
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</div>
 
 <div id="social-media">
 
-
-<div id="social-media-balloon">
-<ul id="twitter_update_list"><li></li></ul>
-</div>
 <ul>
 <li><a href="http://twitter.com/uisustainable" target="_blank"><img src="$ThemeDir/images/twitter.png" alt="Twitter" width="91" height="81" title="Follow us on Twitter"/></a></li>
 <li><a href="http://www.facebook.com/pages/The-University-of-Iowa-Office-of-Sustainability/251818755982" target="_blank"><img src="$ThemeDir/images/facebook.png" alt="Facebook" width="94" height="81" title="Find us on Facebook" /></a></li>
