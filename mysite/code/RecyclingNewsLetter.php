@@ -4,16 +4,16 @@
  */
  
 class RecyclingNewsLetter extends Page {
-	static $db = array(
+	private static $db = array(
 		'MainHeader' => 'Text',
 		'MainStoryLink' => 'Text',
 		'FeatureTitle' => 'Text',
 		'FeatureStory' => 'HTMLText',
 	);
-	static $has_one = array(
+	private static $has_one = array(
 		'FeatureImage' => 'Image',
 	);
-   	static $has_many = array (
+   	private static $has_many = array (
 		"Features" => "RecyclingNewsLetterFeature",
 	);
    

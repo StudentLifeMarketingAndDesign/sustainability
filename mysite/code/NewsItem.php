@@ -5,7 +5,7 @@ class NewsItem extends Page {
 	
 		
 	
-	public static $db = array(
+	private static $db = array(
 	
 	
 	
@@ -13,7 +13,7 @@ class NewsItem extends Page {
 	
 	);
 	
-	public static $has_one = array(
+	private static $has_one = array(
 	
 	
 	);

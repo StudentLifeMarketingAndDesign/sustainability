@@ -1,7 +1,7 @@
 <?php
 class EarthdayEvent extends Page {
 
-	public static $db = array(
+	private static $db = array(
 		'EventDate' => 'Text',
 		'Date' => 'Date',
 		'EventType' => 'Text',
@@ -9,7 +9,7 @@ class EarthdayEvent extends Page {
 		'TimeAndLocation' => 'HTMLText'
 	);
 
-	public static $has_one = array(
+	private static $has_one = array(
 		'EventImage' => 'Image',					
 		'ExternalLink' => 'Text'
 	);
@@ -51,7 +51,7 @@ class EarthdayEvent_Controller extends Page_Controller {
 	 *
 	 * @var array
 	 */
-	public static $allowed_actions = array (
+	private static $allowed_actions = array (
 	);
 
 	public function init() {

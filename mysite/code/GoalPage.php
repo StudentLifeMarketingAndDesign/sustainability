@@ -2,17 +2,17 @@
 
 class GoalPage extends Page {
 	
-	public static $db = array(
+	private static $db = array(
 		'LongName' => 'Text',
 		'ImageCaption' => 'Text',
 		'Description' => 'HTMLText'
 	);
 	
-	public static $has_one = array(
+	private static $has_one = array(
 		'HeaderImage' => 'Image'
 	);
 	
-	public static $allowed_children = array("GoalTable"
+	private static $allowed_children = array("GoalTable"
 	);
 	
 	function getCMSFields() {

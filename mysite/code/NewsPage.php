@@ -5,7 +5,7 @@ class NewsPage extends NewsItem {
 	
 		
 	
-	public static $db = array(
+	private static $db = array(
 	
 
 	'NewsLink' => 'Text',
@@ -20,7 +20,7 @@ class NewsPage extends NewsItem {
 	
 	);
 	
-	public static $has_one = array(
+	private static $has_one = array(
 		'HeaderImage' => 'Image',
 		"SongFile" => "File",
 		'FeatureImage' => 'SizedImage'

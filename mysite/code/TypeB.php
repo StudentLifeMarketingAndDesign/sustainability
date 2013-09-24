@@ -4,12 +4,12 @@
  */
  
 class TypeB extends Page {
- static $db = array(
+   private static $db = array(
 
 
   
 );
-   static $has_one = array(
+   private static $has_one = array(
    
 
  

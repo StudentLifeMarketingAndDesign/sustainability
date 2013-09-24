@@ -418,7 +418,12 @@ margin: 0;
 	padding: .5em 1em;
 } /* 16 and etc */
 
-.sf-menu li#home ul {background:none;}
+.sf-menu li#home ul {
+	background:url(../images/color.png);
+	border: 0;
+	
+	padding: .5em 1em;
+	}
 
 .sf-menu li li { background:none;width: 45%; } /* places list items into "columns" */
 .sf-menu li li:hover {background:none;}

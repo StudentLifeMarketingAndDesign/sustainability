@@ -4,7 +4,7 @@
  */
  
 class SlideshowPage extends Page {
- static $db = array(
+   private static $db = array(
 
 
 
@@ -13,7 +13,7 @@ class SlideshowPage extends Page {
 	
   
 );
-   static $has_one = array(
+   private static $has_one = array(
    
 
  

@@ -4,7 +4,7 @@
  */
  
 class HomePage extends Page {
-	static $db = array(
+	private static $db = array(
 	//'FeatureImage' => 'Image',
 	'FeatureText' => 'HTMLText',
 	'WhatYouCanDo' => 'HTMLText',
@@ -15,11 +15,11 @@ class HomePage extends Page {
 
 	);
 	
-	public static $has_one = array(
+	private static $has_one = array(
 	'FeatureImage' => 'Image'
 	);
 	
-	public static $has_many = array(
+	private static $has_many = array(
 	'HomepageInitiatives' => 'HomepageInitiative' 
 	);
 	

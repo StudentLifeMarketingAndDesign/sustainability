@@ -3,12 +3,12 @@
  * Defines the HomePage page type
  */
 class NewsLetterFeature extends DataObject {
-	static $db = array(
+	private static $db = array(
    		"Title" => "varchar(255)",
    		"Link" => "Text",
    		"Content" => "HTMLText",
 	);
-	static $has_one = array(
+	private static $has_one = array(
 		"Newsletter" => "NewsLetter",
 		"Image" => "Image"
 	);

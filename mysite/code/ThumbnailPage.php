@@ -5,7 +5,7 @@ class ThumbnailPage extends Page {
 	
 		
 	
-	public static $db = array(
+	private static $db = array(
 
 	"ThumbnailCaption" => "Text",
 	'ExternalLink' => 'Text',
@@ -15,7 +15,7 @@ class ThumbnailPage extends Page {
 	
 	);
 	
-	public static $has_one = array(
+	private static $has_one = array(
 	
 	   	'ThumbnailImage' => 'Image'
 		

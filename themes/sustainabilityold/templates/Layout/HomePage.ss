@@ -26,7 +26,7 @@
 
 
 
-<% control Home %>
+<% loop Home %>
 	<div <% if First %>class="ui-tabs-panel" <% else %> class="ui-tabs-panel ui-tabs-hide"<% end_if %> id="tab$Pos">
 		<div class="feature-image" style="background: url('$FeatureImage.URL') no-repeat 0px 0px;">
 		<div class="feature-mask"></div></div>
@@ -38,12 +38,12 @@
 			<span class="more"><a href="$Link">Read More</a></span>
 		<% end_if %>
 	</div>
-<% end_control %>
+<% end_loop %>
 
 <ul class="ui-tabs-nav" id="ui-tabs-navx">
-<% control Home %>
+<% loop Home %>
 <li id="menu$Pos" <% if First %>class="ui-tabs-selected"<% end_if %>><a href="#tab$Pos">$Title</a></li>
-<% end_control %>
+<% end_loop %>
 </ul>
 
 

@@ -2,7 +2,7 @@
 
 class GoalItemPage extends Page {
 	
-	public static $db = array(
+	private static $db = array(
 		'Description' => 'HTMLText',
 		'FY05' => 'Text',
 		'FY06' => 'Text',
@@ -11,7 +11,7 @@ class GoalItemPage extends Page {
 		'FY09' => 'Text'
 	);
 	
-	public static $has_one = array(
+	private static $has_one = array(
 		'GraphImage' => 'Image',
 		'SupplementalImage' => 'Image'
 	);

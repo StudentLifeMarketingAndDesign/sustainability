@@ -14,9 +14,7 @@
                     </ul><% end_if %></li>
 					
             <% end_loop %>
-        </ul>
-        
-        
+    </ul>
         
 </div>
 

@@ -3,22 +3,22 @@
  * Defines the Minisite page type
  */
 class HomePageTab extends Page {
-	static $defaults = array(
+	private static $defaults = array(
   		
 	);
 	
-   static $db = array(
+    private static $db = array(
 		'HomeLink' => 'Text'
    );
    
    
    
-	static $has_one = array(
+	private static $has_one = array(
 	'FeatureImage' => 'SizedImage'
 	);
 	function getCMSFields() {
 		$fields = parent::getCMSFields();
-		$fields->addFieldToTab('Root.Images', new UploadField('FeatureImage', 'Feature Box Image 486 x 323'));
+		$fields->addFieldToTab('Root.Images', new UploadField('FeatureImage', 'Feature Box Image 495 x 335'));
 		$fields->addFieldToTab('Root.Main', new TextField('HomeLink', 'External Link'));
 		#$fields->addFieldToTab('Root.Main', new TextField('ExLink', 'External Link'));
 		return $fields;

@@ -2,11 +2,11 @@
 
 class Page extends SiteTree {
 	
-	public static $db = array(
+	private static $db = array(
 		'FeaturedOnParent' => 'Boolean'
 	);
 	
-	public static $has_one = array(
+	private static $has_one = array(
 	);
 	
 

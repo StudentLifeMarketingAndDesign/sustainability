@@ -4,7 +4,7 @@
  */
  
 class InteriorPage extends Page {
- static $db = array(
+   private static $db = array(
    'ImageCaption' => 'Text',
    	'FlickrUsername' => 'Text',
 	'FlickrSetnumber' => 'Text',
@@ -15,7 +15,7 @@ class InteriorPage extends Page {
 	
   
 );
-   static $has_one = array(
+   private static $has_one = array(
    
 	'HeaderImage' => 'Image',
 

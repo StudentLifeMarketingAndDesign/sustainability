@@ -5,7 +5,7 @@ class EventsPage extends Page {
 	
 		
 	
-	public static $db = array(
+	private static $db = array(
 	
 	'EventLink' => 'Text',
 	"EventDate" => "Date",
@@ -29,7 +29,7 @@ class EventsPage extends Page {
 	
 	);
 	
-	public static $has_one = array(
+	private static $has_one = array(
 		'HeaderImage' => 'Image',
 		"SongFile" => "File"
 	

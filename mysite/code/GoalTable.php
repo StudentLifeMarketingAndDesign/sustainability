@@ -2,14 +2,14 @@
 
 class GoalTable extends Page {
 	
-	public static $db = array(
+	private static $db = array(
 		'Metric' => 'Text'
 	);
 	
-	public static $has_one = array(
+	private static $has_one = array(
 	);
 	
-	public static $allowed_children = array("GoalItemPage"
+	private static $allowed_children = array("GoalItemPage"
 	);
 	
 	function getCMSFields() {

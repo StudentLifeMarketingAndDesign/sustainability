@@ -2,13 +2,13 @@
 
 class GoalListPage extends Page {
 	
-	public static $db = array(
+	private static $db = array(
 	);
 	
-	public static $has_one = array(
+	private static $has_one = array(
 	);
 	
-	public static $allowed_children = array("GoalPage"
+	private static $allowed_children = array("GoalPage"
 	);
 	
 	function getCMSFields() {

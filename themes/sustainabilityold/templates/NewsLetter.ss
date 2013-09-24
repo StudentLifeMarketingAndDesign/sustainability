@@ -27,9 +27,9 @@ p,td,div {
 </tr>
 <tr bgcolor="#4A92A8">
 	<td colspan="2"><a href="$MainStoryLink">
-	<% control FeatureImage.SetWidth(580) %>
+	<% s FeatureImage.SetWidth(580) %>
 	<img src="$AbsoluteURL" alt="Main Story Image" border="0"/>
-	<% end_control %>
+	<% end_loop %>
 	</a>
 	<a href="$MainStoryLink"><font face="Gill Sans, Arial, Helvetica, sans-serif" size="4" color="#FFFFFF" style="text-decoration: none;"><h1>$MainHeader</h1></font></a>
 	
@@ -46,7 +46,7 @@ p,td,div {
 <!-- sub stories -->
 
 <% if Features %>
-<% control Features %>
+<% loop Features %>
 
 <tr>
 
@@ -59,9 +59,9 @@ p,td,div {
 <% if Image %>
 
 <td valign="top"><p><a href="$Link">
-<% control Image.SetWidth(100) %>
+<% loop Image.SetWidth(100) %>
 <img src="$AbsoluteURL" style="border: 5px solid #fff;" alt="$Title" align="center" valign="top" width="100">
-<% end_control %>
+<% end_loop %>
 </a></p></td>
 
 <% end_if %>
@@ -70,7 +70,7 @@ p,td,div {
 </table>
 </tr>
 
-<% end_control %>
+<% end_loop %>
 <% end_if %>
 
 <table width="580" cellpadding="10" bgcolor="#235361">

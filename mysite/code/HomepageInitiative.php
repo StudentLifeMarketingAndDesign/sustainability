@@ -3,18 +3,18 @@
  * Defines the Minisite page type
  */
 class HomepageInitiative extends DataObject {
-	static $defaults = array(
+	private static $defaults = array(
   		
 	);
 	
-   static $db = array(
+    private static $db = array(
    		'Label' => 'Text',
 		'Link' => 'Text'
    );
    
     public static $plural_name = "Homepage Initiatives";
    
-	static $has_one = array(
+	private static $has_one = array(
 	'Homepage' => 'HomePage'
 	);
 	

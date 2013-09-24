@@ -4,12 +4,12 @@
  */
  
 class TypeD extends Page {
- static $db = array(
+   private static $db = array(
 
   'ImageCaption' => 'Text',
   
 );
-   static $has_one = array(
+   private static $has_one = array(
    
 	'HeaderImage' => 'Image'
  
