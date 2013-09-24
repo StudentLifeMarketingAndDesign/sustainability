@@ -1505,17 +1505,17 @@ iframe.greendorm {
 }
 
 p.eventDate {
-	padding-left: 25px;
+	/*padding-left: 25px;*/
 	padding-right: 5px;
-	background-image: url('../images/iconmonstr-calendar-icon-5.png');
+	/*background-image: url('../images/iconmonstr-calendar-icon-5.png');
 	background-repeat: no-repeat;
 	background-size: 20px 20px;
-	font-style: italic;
+	font-style: italic;*/
 	font-weight: bold;
 	margin-top: 5px;
-	-webkit-box-shadow: 1px 1px 2px 3px #04a5b4;
+	/*-webkit-box-shadow: 1px 1px 2px 3px #04a5b4;
 	-moz-box-shadow: 1px 1px 2px 3px #04a5b4;
-	box-shadow: 1px 1px 2px 3px #04a5b4;
+	box-shadow: 1px 1px 2px 3px #04a5b4;*/
 	display: inline-block;
 	
 }
