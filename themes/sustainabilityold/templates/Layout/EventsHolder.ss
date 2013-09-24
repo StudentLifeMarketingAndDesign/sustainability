@@ -66,8 +66,13 @@ $Content
 		<% else %>
 		<h4><a href="$Link">$Title</a></h4>
 		<% end_if %>
-		
+		<% if EventDateRange %>
+			<p>$EventDateRange</p>
+		<% else %>
+			<p class="eventDate">$EventDate.Format("F d&#44 Y")</p>
+		<% end_if %>
 		<p>$Content.LimitWordCount(20)</p>
+		
 		<span class="more">
 		<% if NewsLink %><a href="$NewsLink" class="external-link" target="_blank">Read More</a>
 		<% else %>
