@@ -122,17 +122,32 @@ $EventDateRange
 	</script>
 	
 <% if HomepageInitiatives %>    
-<div id="sustainableInitiatives">
+<!--<div id="sustainableInitiatives">-->
+<div>
     <h3 class="sustain">Sustainable Initiatives</h3>
-	
+	<div id = "social-media">
         <ul>
 		<% loop HomepageInitiatives %>
 			
-			<li><a class="initiative{$Pos} left" href="{$Link}">$Label</a></li>
+			<!--<li><a class="initiative{$Pos} left" href="{$Link}">$Label</a></li>-->
+			<li><a class="initBlock{$Pos} left2" href="{$Link}"><img src="$ThemeDir/images/bike{$Pos}.png" width="92" height="81"/></a></li>
 			
 		<% end_loop %>
 		</ul>
+	</div>
 </div>
+<!--<div id="social-media">
+
+<ul>
+<li><a href="http://twitter.com/uisustainable" target="_blank"><img src="$ThemeDir/images/twitter.png" alt="Twitter" width="91" height="81" title="Follow us on Twitter"/></a></li>
+<li><a href="http://www.facebook.com/pages/The-University-of-Iowa-Office-of-Sustainability/251818755982" target="_blank"><img src="$ThemeDir/images/facebook.png" alt="Facebook" width="94" height="81" title="Find us on Facebook" /></a></li>
+<li><a href="{$BaseHref}home/rss" target="_blank"><img src="$ThemeDir/images/rss.png" alt="RSS" width="94" height="81" title="View our RSS feed"/></a></li>
+<li><a href="{$BaseHref}contact"><img src="$ThemeDir/images/email.png" alt="Email" width="92" height="81" title="Contact Us"/></a></li>
+</ul>
+</div>
+-->
+
+
 <% end_if %>
 <!--
 

@@ -149,7 +149,14 @@ $Layout
 
  
 
-
+<div id="footer-container2">
+	<div class="footer2">
+	<a href= "http://www.aashe.org"><img id = "logos1" src="$ThemeDir/images/Aashe.png" alt="Send Us Your Content" title="Send Us Your Content" class="submit-content" longdesc="http://sustainability.uiowa.edu" /></a>
+	<a href= "http://www.appa.org"><img id = "logos2" src="$ThemeDir/images/appa.png" alt="Send Us Your Content" title="Send Us Your Content" class="submit-content" longdesc="http://sustainability.uiowa.edu" /></a>
+	<a href= "http://www.usgbc.org"><img id = "logos3" src="$ThemeDir/images/usgbc.png" alt="Send Us Your Content" title="Send Us Your Content" class="submit-content" longdesc="http://sustainability.uiowa.edu" /></a>
+	<a href= "https://stars.aashe.org"><img id = "logos4" src="$ThemeDir/images/stars.png" alt="Send Us Your Content" title="Send Us Your Content" class="submit-content" longdesc="http://sustainability.uiowa.edu" /></a>
+	</div>
+</div>
 <div id="footer-container">    
 <div class="footer">
 <a href="$BaseHref/content-submission-form"><img src="$ThemeDir/images/contentbutton.png" alt="Send Us Your Content" title="Send Us Your Content" class="submit-content" longdesc="http://sustainability.uiowa.edu" /></a>	
