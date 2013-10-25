@@ -7,7 +7,7 @@
             });
 			jQuery("#ui-tabs-navx").tabs().tabs("option", "disabled", false);
         </script>  
-
+		
 <script type="text/javascript" src="$BaseHref/mysite/code/javascript/ui.tabs.js"></script>   
     
       
