@@ -27,9 +27,9 @@ p,td,div {
 </tr>
 <tr bgcolor="#4A92A8">
 	<td colspan="2"><a href="$MainStoryLink">
-	<% s FeatureImage.SetWidth(580) %>
+	<% with $FeatureImage.SetWidth(580) %>
 	<img src="$AbsoluteURL" alt="Main Story Image" border="0"/>
-	<% end_loop %>
+	<% end_with %>
 	</a>
 	<a href="$MainStoryLink"><font face="Gill Sans, Arial, Helvetica, sans-serif" size="4" color="#FFFFFF" style="text-decoration: none;"><h1>$MainHeader</h1></font></a>
 	
