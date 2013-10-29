@@ -891,18 +891,19 @@ font-size:12px;
 width: 990px;
 margin:0px auto 0px auto;
 
-#home-wrapper a {
-	color: black;
-}
+
 /*
 margin-top: 0px;
 margin-right: auto;
 margin-bottom:0px;
 margin-left: auto;*/
 padding-bottom:30px;
-background: url(../images/home-background.png) repeat-y -13px -150px;
+background: white;
 }
 
+#home-wrapper a {
+	color: black;
+}
 #interior-wrapper {
 width: 990px;
 margin:0px auto 0px auto;
@@ -1388,34 +1389,34 @@ clear: both;
 }
 
 
+
 .footer .menu {clear:left;}
 
 .footer img {
 float:left;
 clear:left;}
 
-#logos1{
+.footer2 a {
+	float: right;
+}
+#sponsor-logo1{
 	height: 139px;
-	float: right; 
 	padding-right: 83px;
 	padding-top: 11px;
 	padding-bottom: 18px; 
 }
-#logos2{
+#sponsor-logo2{
 	height: 139px;
-	float: right; 
 	padding-right: 88px;
 	padding-top: 15px;
 }
-#logos3{
+#sponsor-logo3{
 	height: 139px;
-	float: right; 
 	padding-right: 88px;
 	padding-top: 16px;
 }
-#logos4{
+#sponsor-logo4{
 	height: 139px;
-	float: right; 
 	padding-right: 88px;
 	padding-top: 16px;
 	padding-bottom: 14px;
