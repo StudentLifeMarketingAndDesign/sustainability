@@ -999,6 +999,10 @@ color: #900;
 font-size: 18pt;
 }
 
+h3.sustain { 
+	border-bottom: none;
+}
+
 /*h3.blog a {background: url(../images/ssblog.png) no-repeat 0px 0px;}
 
 h3.news a {background: url(../images/news.png) no-repeat 0px 0px;}
@@ -1131,15 +1135,7 @@ height:93px;
 border:1px solid #ccc;
 background: url(../images/media-background.png) repeat-x 0px 10px;}
 
-#social-media2 {
-margin-top:40px;
-clear:left;
-width:418px;
-padding-top:10px;
-margin-bottom: 22px; 
-height:93px;
-border:1px solid #ccc;
-background: url(../images/media-background.png) repeat-x 0px 10px;}
+
 
 #social-media p, #social-media-balloon li {
 font-weight:lighter;
@@ -1171,6 +1167,57 @@ padding-left: 22px;
 
 ul#twitter_update_list {
 margin-right:60px;}
+
+#initiatives {
+margin-top:40px;
+clear:left;
+width:418px;
+padding:10px;
+margin-bottom: 22px; 
+}
+
+#initiatives li {
+	display: block;
+	margin: 7px 0;
+	padding-bottom: 7px;
+	border-bottom: 1px solid #F0F0F0;
+}
+
+#initiatives li:not(:first-child){
+	padding: 7px 0;
+}
+
+#initiatives li:last-child {
+	border-bottom: none;
+}
+.initiative-image {
+	float: left;
+}
+
+.initiative-label {
+	float: left;
+	margin-left: 10px;
+}
+
+.initiative-label span {
+	display: block;
+	margin-top: 30px;
+	font-size: 1.5em;
+}
+
+#home-wrapper a.init-1 {
+	color: #2E3192;
+}
+#home-wrapper a.init-2 {
+	color: #059B85;
+}
+#home-wrapper a.init-3 {
+	color: #E9BD1E;
+}
+#home-wrapper a.init-4 {
+	color: #371D55;
+}
+
 
 #sustainableInitiatives a {
 display: block;
@@ -1366,7 +1413,7 @@ background-repeat: no-repeat;
 border-top:1px solid #999;
 clear: both;
 font-size: 10px;
-height: 330px;
+height: 350px;
 padding:0px 0px 20px 0px;
 text-align: left;
 margin-top:0px;

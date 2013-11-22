@@ -177,7 +177,7 @@ $Layout
             <% end_loop %>
       </ul>
 		
-<p class="copywright">&copy; <a href="http://www.uiowa.edu/">The University of Iowa</a> $Now.Year. All rights reserved.</p>
+<p class="copywright">&copy; <a href="http://www.uiowa.edu/">The University of Iowa</a> {$Now.Year}. All rights reserved.</p>
 </div>
 <!--/end footer div --></div></div>
 <!--/end container div -->
