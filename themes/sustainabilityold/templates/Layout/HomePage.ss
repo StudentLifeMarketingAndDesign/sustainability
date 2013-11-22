@@ -125,12 +125,12 @@ $EventDateRange
 <!--<div id="sustainableInitiatives">-->
 <div>
     <h3 class="sustain">Sustainable Initiatives</h3>
-	<div id = "social-media">
+	<div id = "social-media2">
         <ul>
 		<% loop HomepageInitiatives %>
 			
 			<!--<li><a class="initiative{$Pos} left" href="{$Link}">$Label</a></li>-->
-			<li><a class="initBlock{$Pos} left2" href="{$Link}"><img src="$ThemeDir/images/bike{$Pos}.png" width="92" height="81"/></a></li>
+			<li><a class="initBlock{$Pos} left2" href="{$Link}"><img src="$ThemeDir/images/bike{$Pos}.png" width="81" height="81"/></a></li>
 			
 		<% end_loop %>
 		</ul>

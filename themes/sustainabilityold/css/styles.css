@@ -1131,6 +1131,16 @@ height:93px;
 border:1px solid #ccc;
 background: url(../images/media-background.png) repeat-x 0px 10px;}
 
+#social-media2 {
+margin-top:40px;
+clear:left;
+width:418px;
+padding-top:10px;
+margin-bottom: 22px; 
+height:93px;
+border:1px solid #ccc;
+background: url(../images/media-background.png) repeat-x 0px 10px;}
+
 #social-media p, #social-media-balloon li {
 font-weight:lighter;
 padding:30px 40px 0px 30px;}
@@ -1149,8 +1159,15 @@ margin-left:11px;
 list-style:none;}
 
 #social-media ul li {
-padding-right:6px;
-float:left;}
+margin-right:6px;
+float:left;
+}
+
+#social-media2 ul li {
+margin-right:-9px;
+float:left;
+padding-left: 22px;
+}
 
 ul#twitter_update_list {
 margin-right:60px;}
