@@ -24,7 +24,8 @@ function getCMSFields() {
 }
 
 class NewsHolder_Controller extends Page_Controller {
-	
+	private static $allowed_actions = array('rss');
+
 		public function init() {
 			parent::init();
 			RSSFeed::linkToFeed($this->Link() . "rss", "RSS feed");
