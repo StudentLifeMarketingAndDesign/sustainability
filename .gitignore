@@ -12,3 +12,21 @@ _config.php
 _config
 
 blog/wp-config.php
+
+advancedworkflow/
+
+betterbuttons/
+
+googlesitemaps/
+
+mollom/
+
+recaptcha/
+
+spamprotection/
+
+userforms/
+
+vendor/autoload.php
+vendor/composer
+vendor/simplepie/simplepie/
