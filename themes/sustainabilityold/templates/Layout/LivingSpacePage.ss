@@ -98,13 +98,6 @@
 
 <h1>$Title</h1>
 
-
-
-<h3>Virtual Dorm Room</h3>
-Check out this virtual green dorm room and see how you can live green in the residence halls!
-<iframe class="greendorm" src="{$BaseHref}/greendorm" width="728" height="700"></iframe>
-
-
 $Content
 
 
