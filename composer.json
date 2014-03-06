@@ -9,11 +9,19 @@
 		"silverstripe/spamprotection": "*",
 		"silverstripe/userforms": "*",
 		"silverstripe/recaptcha": "*",
-		"silverstripe/mollom": "*",
 		"simplepie/simplepie": "*",
 		"silverstripe/googlesitemaps": "*",
+		"md/rss-display" : "*",
 		"silverstripe/advancedworkflow" : "*"
 	},
 
-	"minimum-stability": "dev"
+	"minimum-stability": "dev",
+	
+	 "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/StudentLifeMarketingAndDesign/rss-display"
+        }
+
+    ]
 }

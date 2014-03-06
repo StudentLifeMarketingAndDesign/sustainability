@@ -232,15 +232,33 @@ $EventDateRange
 </ul>
 
 <br /><br />
+
+<h3 class="blog" title="Blog"><a href="$BaseHref/blog">Climate Narrative Blog</a></h3>
+<p class="view-all"><a href="$BaseHref/blog">View All</a></p>
+<ul class="news">
+
+<% loop RSSDisplay(2,"http://sustainability.uiowa.edu/climatenarrative/?feed=rss2") %>
+<li>
+	<h4><a href="$Link">$Title</a></h4>
+	<p>$Description.LimitWordCount(10)</p>
+	<span class="more"><a href="$Link">Read More</a></span>
+</li>
+<% end_loop %>
+
+</ul>
+
+<br /><br />
+
 <h3 class="blog" title="Blog"><a href="$BaseHref/blog">Sustainability Blog</a></h3>
 <p class="view-all"><a href="$BaseHref/blog">View All</a></p>
 <ul class="news">
 
 <% loop RSSDisplay(2,"http://sustainability.uiowa.edu/blog/feed/") %>
 <li>
-<h4><a href="$Link">$Title</a></h4>
-<p>$Description.LimitWordCount(10)</p>
-<span class="more"><a href="$Link">Read More</a></span></li>
+	<h4><a href="$Link">$Title</a></h4>
+	<p>$Description.LimitWordCount(10)</p>
+	<span class="more"><a href="$Link">Read More</a></span>
+</li>
 <% end_loop %>
 
 </ul>
