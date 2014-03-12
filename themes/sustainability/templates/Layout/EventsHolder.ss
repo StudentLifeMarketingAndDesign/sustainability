@@ -56,63 +56,45 @@ $Content
 <div class="events-holder">
 <ul class="events">
 
-<% loop allEvents %>
-<li class="events$Pos">
-
-<% if EventLink %>
-	<h4><a href="$EventLink" target="_blank">$Title</a></h4>
-<% else %>
-	<% if Content %>
+<% loop getEvents %>
+	
+	<% if canView %>
+	
+		<li>
+		
+		<% if NewsLink %><h4><a href="$NewsLink" target="_blank">$Title</a></h4>
+		<% else %>
 		<h4><a href="$Link">$Title</a></h4>
-	<% else %>
-		<h4>$Title</h4>
-
+		<% end_if %>
+		<% if EventDateRange %>
+			<p>$EventDateRange</p>
+		<% else %>
+			<p class="eventDate">$EventDate.Format("F d&#44 Y")</p>
+		<% end_if %>
+		<p>$Content.LimitWordCount(20)</p>
+		
+		<span class="more">
+		<% if NewsLink %><a href="$NewsLink" class="external-link" target="_blank">Read More</a>
+		<% else %>
+		<a href="$Link">Read More</a>
+		<% end_if %>
+		</span></li>
+	
 	<% end_if %>
-<% end_if %>
-
-
-<p class="date">
-<% if EventDateRange %>
-$EventDateRange
-<% else_if EventDate %>
- $EventDate.Format("F d&#44 Y")
-<% end_if %>
- 
-<% if EventTime %>- $EventTime,<% end_if %><br />
-<% if EventLocation %>$EventLocation<% end_if %>
-
-</p>
-
-<% if EventSponsorLink %>
-<p class="sponsor"><a href="$EventSponsorLink" target="_blank">$EventSponsor</a></p>
-	<% else %>
-		<% if EventSponsor %>
-			<p class="sponsor">$EventSponsor</p>
-<% end_if %>
-<% end_if %>
-
-<span class="more">
-<% if EventLink %>
-	<a href="$EventLink" class="external-link" target="_blank">Read More</a>
-<% else %>
-<% if Content %>
-<a href="$Link">Read More</a>
-<% end_if %>
-<% end_if %>
-</span>
-</li>
+	
+			
 <% end_loop %>
+
 </ul>
 
-
-
-<li>  <% if allEvents.MoreThanOnePage %>
+<li>  <% if getEvents.MoreThanOnePage %>
 <p class="pageNumbers">
-<% if allEvents.PrevLink %>
-<a href="$allEvents.PrevLink"><< Prev</a> |
+<% if getEvents.NotFirstPage %>
+
+<a href="$getEvents.PrevLink"><< Prev</a> |
 <% end_if %>
 
-<% loop allEvents.Pages %>
+<% loop getEvents.Pages %>
 <% if CurrentBool %>
 <strong>$PageNum</strong>
 <% else %>
@@ -120,11 +102,11 @@ $EventDateRange
 <% end_if %>
 <% end_loop %>
 
-<% if allEvents.NextLink %>
-| <a href="$allEvents.NextLink">Next >></a>
+<% if getEvents.NotLastPage %>
+| <a href="$getEvents.NextLink">Next >></a>
 <% end_if %>
 </p>
-<% end_if %>  
+<% end_if %>
 
 
 

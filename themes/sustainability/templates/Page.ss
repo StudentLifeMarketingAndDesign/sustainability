@@ -1,8 +1,7 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
-<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
 <title>$Title - Sustainability at Iowa - The University of Iowa</title>
 $MetaTags(false)
@@ -14,11 +13,7 @@ $MetaTags(false)
 
 <link rel="stylesheet" href="$ThemeDir/css/ui.css" type="text/css" media="print, projection, screen"/>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
-<!--<script src="http://code.jquery.com/jquery-latest.min.js"
-        type="text/javascript"></script>-->
-        
 <script type="text/javascript" src="$BaseHref/mysite/code/javascript/shadowbox.js"></script>
-<link href='http://fonts.googleapis.com/css?family=Quattrocento:400,700' rel='stylesheet' type='text/css'>
 <script type="text/javascript">
 Shadowbox.init();
 </script>
@@ -41,24 +36,6 @@ $(document).ready(function leaveFrame() {
 </script> 
 
 <script type="text/javascript" src="$BaseHref/mysite/code/javascript/hoverIntent.js"></script>
-<link rel="stylesheet" href="{$ThemeDir}/anythingSlider/anythingslider.css">
-<script src="{$ThemeDir}/anythingSlider/jquery.anythingslider.min.js"></script>
-<script src="{$ThemeDir}/Slides/source/slides.jquery.js"></script>
-<link rel="stylesheet" href="{$ThemeDir}/craftyslide/css/craftyslide.css" />
-<script src="{$ThemeDir}/craftyslide/js/craftyslide.js"></script>
-
-
-<style type="text/css" media="screen">
-        .slides_container {
-            width:570px;
-            height:270px;
-        }
-        .slides_container div {
-            width:570px;
-            height:270px;
-            display:block;
-        }
-    </style>
 <!--<script type="text/javascript" src="$BaseHref/mysite/code/javascript/superfish.js"></script>
 <script type="text/javascript">
     $(document).ready(function(){   
@@ -172,7 +149,15 @@ $Layout
 
  
 
-
+<div id="footer-container2">
+	<div class="footer2">
+	<a href= "http://www.aashe.org"><img id = "sponsor-logo1" src="$ThemeDir/images/Aashe.png" alt="Send Us Your Content" longdesc="http://sustainability.uiowa.edu" /></a>
+	<a href= "http://www.appa.org"><img id = "sponsor-logo2" src="$ThemeDir/images/appa.png" longdesc="http://sustainability.uiowa.edu" /></a>
+	<a href= "http://www.usgbc.org"><img id = "sponsor-logo3" src="$ThemeDir/images/usgbc.png" longdesc="http://sustainability.uiowa.edu" /></a>
+	<a href= "https://stars.aashe.org"><img id = "sponsor-logo4" src="$ThemeDir/images/stars.png" longdesc="http://sustainability.uiowa.edu" /></a>
+	<div class="clear"></div>
+	</div>
+</div>
 <div id="footer-container">    
 <div class="footer">
 <a href="$BaseHref/content-submission-form"><img src="$ThemeDir/images/contentbutton.png" alt="Send Us Your Content" title="Send Us Your Content" class="submit-content" longdesc="http://sustainability.uiowa.edu" /></a>	
@@ -192,7 +177,7 @@ $Layout
             <% end_loop %>
       </ul>
 		
-<p class="copywright">&copy; <a href="http://www.uiowa.edu/">The University of Iowa</a> $Now.Year. All rights reserved.</p>
+<p class="copywright">&copy; <a href="http://www.uiowa.edu/">The University of Iowa</a> {$Now.Year}. All rights reserved.</p>
 </div>
 <!--/end footer div --></div></div>
 <!--/end container div -->

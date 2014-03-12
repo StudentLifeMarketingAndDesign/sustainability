@@ -1,5 +1,3 @@
-<!DOCTYPE html> 
-
 
 <div id="content-wrapper">
 <div id="middle-image">
@@ -50,18 +48,16 @@
 </div>
 <% end_if %> 
 
-<h1>News & Events</h1>
+<h1>$Title</h1>
 
 <div class="events-holder">
 
 <ul class="news">
 
-
-<% loop paginatedEventNews %>
-
-	<% if ClassName == 'NewsPage' %>
+<% loop getNews %>
 	
-		<% if canView %>
+	<% if canView %>
+	
 		<li>
 		
 		<% if NewsLink %><h4><a href="$NewsLink" target="_blank">$Title</a></h4>
@@ -76,63 +72,22 @@
 		<a href="$Link">Read More</a>
 		<% end_if %>
 		</span></li>
-		<% end_if %>
-			
-	<% else_if ClassName == 'EventsPage' %>
-			
-		<li class="events$Pos">
-
-		<% if EventLink %>
-			<h4><a href="$EventLink" target="_blank">$Title</a></h4>
-		<% else %>
-			<% if Content %>
-				<h4><a href="$Link">$Title</a></h4>
-			<% else %>
-				<h4>$Title</h4>
-		
-			<% end_if %>
-		<% end_if %>
-		
-		
-		<p class="date">
-		<% if EventDateRange %>
-		$EventDateRange
-		<% else_if EventDate %>
-		 $EventDate.Format("F d&#44 Y")
-		<% end_if %>
-		<% if EventTime %>- $EventTime,<% end_if %><br />
-		<% if EventLocation %>$EventLocation<% end_if %>
-		
-		</p>
-		
-		<p class="sponsor"><% if EventSponsor %><a href="$EventSponsorLink" target="_blank">$EventSponsor</a>
-		<% end_if %></p>
-		<span class="more">
-		<% if EventLink %><a href="$EventLink" class="external-link" target="_blank">Read More</a>
-		<% else %>
-		<% if Content %>
-		<a href="$Link">Read More</a>
-		<% end_if %>
-		<% end_if %>
-		</span></li>
-		
+	
 	<% end_if %>
-
-<% end_loop %>	
-
-
+	
+			
+<% end_loop %>
 
 </ul>
 
-
-<li>  <% if paginatedEventNews.MoreThanOnePage %>
+<li>  <% if getNews.MoreThanOnePage %>
 <p class="pageNumbers">
-<% if paginatedEventNews.NotFirstPage %>
+<% if getNews.NotFirstPage %>
 
-<a href="$paginatedEventNews.PrevLink"><< Prev</a> |
+<a href="$getNews.PrevLink"><< Prev</a> |
 <% end_if %>
 
-<% loop paginatedEventNews.Pages %>
+<% loop getNews.Pages %>
 <% if CurrentBool %>
 <strong>$PageNum</strong>
 <% else %>
@@ -140,15 +95,11 @@
 <% end_if %>
 <% end_loop %>
 
-<% if paginatedEventNews.NotLastPage %>
-| <a href="$paginatedEventNews.NextLink">Next >></a>
+<% if getNews.NotLastPage %>
+| <a href="$getNews.NextLink">Next >></a>
 <% end_if %>
 </p>
-<% end_if %>  
-
-
-
-
+<% end_if %>
 
 
 </div></div>

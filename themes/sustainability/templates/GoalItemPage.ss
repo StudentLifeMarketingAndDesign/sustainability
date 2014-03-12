@@ -71,19 +71,19 @@ strong {
 <h1>$Title</h1>
 <!--<div id="supplemental">
 <% if SupplementalImage %>
-	<img src="<% control SupplementalImage %><% control SetWidth(430) %> $URL <% end_control %><% end_control %>" alt="$Title"/>
+	<img src="<% loop SupplementalImage %><% loop SetWidth(430) %> $URL <% end_loop %><% end_loop %>" alt="$Title"/>
 <% end_if %>
 </div>-->
 $Description
 <div class="clear"></div>
 <div id="graph">
 <% if GraphImage %>
-	<img src="<% control GraphImage %><% control SetWidth(410) %> $URL <% end_control %><% end_control %>" alt="$Title"/>
+	<img src="<% loop GraphImage %><% loop SetWidth(410) %> $URL <% end_loop %><% end_loop %>" alt="$Title"/>
 <% end_if %>
 </div>
 <div id="goalitem">
 <br />
-<div class="goalitemrow"><span class="year"><strong>Year</strong></span> <span class="num"><% control Parent %><strong>$Title</strong><% end_control %></span><div class="clear"></div></div>
+<div class="goalitemrow"><span class="year"><strong>Year</strong></span> <span class="num"><% loop Parent %><strong>$Title</strong><% end_loop %></span><div class="clear"></div></div>
 <div class="goalitemrow"><span class="year">FY05</span> <span class="num">$FY05</span><div class="clear"></div></div>
 <div class="goalitemrow"><span class="year">FY06</span> <span class="num">$FY06</span><div class="clear"></div></div>
 <div class="goalitemrow"><span class="year">FY07</span> <span class="num">$FY07</span><div class="clear"></div></div>
@@ -92,11 +92,11 @@ $Description
 <div class="clear"></div>
 </div>
 
-<% control Parent %>
+<% loop Parent %>
 <div class="clear"></div>
 <br />
 <a href="#" onclick="javascript: window.parent.hideTopUp();return false;">Close</a><br />
-<% end_control %>
+<% end_loop %>
 
 $Content 
 $Form
