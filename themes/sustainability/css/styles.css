@@ -58,6 +58,11 @@ font-size:12px;}
 float:left;
 padding-right:20px;}
 
+label.left{
+float: none;
+	
+}
+
 .left2 {
 float:left;
 padding-right:3px;}
@@ -194,6 +199,10 @@ margin-bottom:15px;
 padding-left:10px;
 list-style-position: outside;
 list-style-image: url(../images/orange-dot.png);
+}
+
+.typography ul.optionset li{
+	list-style-image: none;
 }
 
 .typography p strong {font-weight:bold;}
@@ -1620,7 +1629,7 @@ background: white url(../images/formbg.gif) repeat-x left top;
 }
 
 #earthform label {
-  float: left; width: 100px;
+
 }
 
 .menuIndent {
