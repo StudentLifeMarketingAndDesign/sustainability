@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "5e735adbb5d62075aa67593f8a2f5b30",
+    "hash": "a4d90f67960fb2ec6a24efae61bedb59",
     "packages": [
         {
             "name": "composer/installers",
@@ -11,12 +11,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "848de789c66ac609e7b2862c3500dd708afb72ce"
+                "reference": "26d37e307f9aa6e2e81806a6525666f8ab5ba0ff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/848de789c66ac609e7b2862c3500dd708afb72ce",
-                "reference": "848de789c66ac609e7b2862c3500dd708afb72ce",
+                "url": "https://api.github.com/repos/composer/installers/zipball/26d37e307f9aa6e2e81806a6525666f8ab5ba0ff",
+                "reference": "26d37e307f9aa6e2e81806a6525666f8ab5ba0ff",
                 "shasum": ""
             },
             "replace": {
@@ -87,7 +87,7 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2014-03-04 04:29:18"
+            "time": "2014-04-09 16:12:43"
         },
         {
             "name": "md/rss-display",
@@ -95,12 +95,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/rss-display.git",
-                "reference": "697ac0e01906ebca415e0bd127633096b85ec18c"
+                "reference": "dd123c03f74ab764016d2de9bfaf4a3d533f1c62"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/rss-display/zipball/697ac0e01906ebca415e0bd127633096b85ec18c",
-                "reference": "697ac0e01906ebca415e0bd127633096b85ec18c",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/rss-display/zipball/dd123c03f74ab764016d2de9bfaf4a3d533f1c62",
+                "reference": "dd123c03f74ab764016d2de9bfaf4a3d533f1c62",
                 "shasum": ""
             },
             "require": {
@@ -119,7 +119,7 @@
                 "source": "https://github.com/StudentLifeMarketingAndDesign/rss-display/tree/master",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/rss-display/issues"
             },
-            "time": "2014-02-28 18:42:16"
+            "time": "2014-03-21 15:04:28"
         },
         {
             "name": "silverstripe/advancedworkflow",
@@ -127,12 +127,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe-australia/advancedworkflow.git",
-                "reference": "b36f754ccbe6b0b34e6020fc706c4ab21424d84f"
+                "reference": "1bff44515ef46618395573c41cd1daeccc9af32a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe-australia/advancedworkflow/zipball/b36f754ccbe6b0b34e6020fc706c4ab21424d84f",
-                "reference": "b36f754ccbe6b0b34e6020fc706c4ab21424d84f",
+                "url": "https://api.github.com/repos/silverstripe-australia/advancedworkflow/zipball/1bff44515ef46618395573c41cd1daeccc9af32a",
+                "reference": "1bff44515ef46618395573c41cd1daeccc9af32a",
                 "shasum": ""
             },
             "require": {
@@ -159,20 +159,20 @@
                 "silverstripe",
                 "workflow"
             ],
-            "time": "2014-02-18 21:30:02"
+            "time": "2014-04-02 23:48:24"
         },
         {
             "name": "silverstripe/cms",
-            "version": "3.1.2",
+            "version": "3.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-cms.git",
-                "reference": "e2fa3b7f2c208af4a33e7176c1a950396d423f19"
+                "reference": "7adbf81c74c6483d071d72c4359ac4903ee65db3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-cms/zipball/e2fa3b7f2c208af4a33e7176c1a950396d423f19",
-                "reference": "e2fa3b7f2c208af4a33e7176c1a950396d423f19",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-cms/zipball/7adbf81c74c6483d071d72c4359ac4903ee65db3",
+                "reference": "7adbf81c74c6483d071d72c4359ac4903ee65db3",
                 "shasum": ""
             },
             "require": {
@@ -206,20 +206,20 @@
                 "cms",
                 "silverstripe"
             ],
-            "time": "2013-11-07 23:59:07"
+            "time": "2014-03-31 19:36:16"
         },
         {
             "name": "silverstripe/framework",
-            "version": "3.1.2",
+            "version": "3.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-framework.git",
-                "reference": "054b35ded7674f13ccad4cec8fe38372e2a001df"
+                "reference": "81b14b43528d52a8219856f64454f7942ea60254"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-framework/zipball/054b35ded7674f13ccad4cec8fe38372e2a001df",
-                "reference": "054b35ded7674f13ccad4cec8fe38372e2a001df",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-framework/zipball/81b14b43528d52a8219856f64454f7942ea60254",
+                "reference": "81b14b43528d52a8219856f64454f7942ea60254",
                 "shasum": ""
             },
             "require": {
@@ -252,7 +252,7 @@
                 "framework",
                 "silverstripe"
             ],
-            "time": "2013-11-12 18:43:44"
+            "time": "2014-04-08 04:19:19"
         },
         {
             "name": "silverstripe/googlesitemaps",
@@ -338,12 +338,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-spamprotection.git",
-                "reference": "35a6ad160cab24820c3b755cfaabcbcfb0163c90"
+                "reference": "39f7f0be454af5f67f2789c6e7691221896fa313"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-spamprotection/zipball/35a6ad160cab24820c3b755cfaabcbcfb0163c90",
-                "reference": "35a6ad160cab24820c3b755cfaabcbcfb0163c90",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-spamprotection/zipball/39f7f0be454af5f67f2789c6e7691221896fa313",
+                "reference": "39f7f0be454af5f67f2789c6e7691221896fa313",
                 "shasum": ""
             },
             "require": {
@@ -367,7 +367,7 @@
                 "silverstripe",
                 "spamprotection"
             ],
-            "time": "2014-02-19 09:11:39"
+            "time": "2014-03-07 07:38:25"
         },
         {
             "name": "silverstripe/userforms",
@@ -375,12 +375,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-userforms.git",
-                "reference": "45e4b1c037b9ab1eaab03de4154a16f31856ea9d"
+                "reference": "d8295c2a27539b7d807dfd8113e13b8b57391797"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-userforms/zipball/45e4b1c037b9ab1eaab03de4154a16f31856ea9d",
-                "reference": "45e4b1c037b9ab1eaab03de4154a16f31856ea9d",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-userforms/zipball/d8295c2a27539b7d807dfd8113e13b8b57391797",
+                "reference": "d8295c2a27539b7d807dfd8113e13b8b57391797",
                 "shasum": ""
             },
             "require": {
@@ -404,7 +404,7 @@
                 "silverstripe",
                 "userforms"
             ],
-            "time": "2014-02-27 05:21:31"
+            "time": "2014-03-31 16:17:38"
         },
         {
             "name": "simplepie/simplepie",
@@ -466,12 +466,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/unclecheese/silverstripe-gridfield-betterbuttons.git",
-                "reference": "c9efbda464463fc1801b98e89c891808bcb45b9b"
+                "reference": "da68c6d38d04b85bbd2e8673a65fc6285d4b9c1f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/unclecheese/silverstripe-gridfield-betterbuttons/zipball/c9efbda464463fc1801b98e89c891808bcb45b9b",
-                "reference": "c9efbda464463fc1801b98e89c891808bcb45b9b",
+                "url": "https://api.github.com/repos/unclecheese/silverstripe-gridfield-betterbuttons/zipball/da68c6d38d04b85bbd2e8673a65fc6285d4b9c1f",
+                "reference": "da68c6d38d04b85bbd2e8673a65fc6285d4b9c1f",
                 "shasum": ""
             },
             "require": {
@@ -495,7 +495,7 @@
                 "gridfield",
                 "silverstripe"
             ],
-            "time": "2014-02-23 00:21:17"
+            "time": "2014-03-06 22:11:09"
         }
     ],
     "packages-dev": [
