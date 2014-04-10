@@ -209,6 +209,10 @@ ErrorDocument 500 /assets/error-500.html
 
   RewriteRule ^climatenarrative$ - [L]
   RewriteRule ^climatenarrative/.* - [L]
+
+  RewriteRule ^greendorm$ - [L]
+  RewriteRule ^greendorm/.* - [L]
+
 	
 	RewriteCond %{REQUEST_URI} ^(.*)$
 	RewriteCond %{REQUEST_FILENAME} !-f
