@@ -206,6 +206,9 @@ ErrorDocument 500 /assets/error-500.html
 	RewriteRule ^vendor(/|$) - [F,L,NC]
 	RewriteRule silverstripe-cache(/|$) - [F,L,NC]
 	RewriteRule composer\.(json|lock) - [F,L,NC]
+
+  RewriteRule ^climatenarrative$ - [L]
+  RewriteRule ^climatenarrative/.* - [L]
 	
 	RewriteCond %{REQUEST_URI} ^(.*)$
 	RewriteCond %{REQUEST_FILENAME} !-f
@@ -213,8 +216,5 @@ ErrorDocument 500 /assets/error-500.html
 	RewriteRule .* framework/main.php?url=%1&%{QUERY_STRING} [L]
 </IfModule>
 ### SILVERSTRIPE END ###
-
-RewriteRule ^climatenarrative$ - [L]
-RewriteRule ^climatenarrative/.* - [L]
 
 php_flag display_errors on
