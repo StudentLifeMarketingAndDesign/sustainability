@@ -4,7 +4,6 @@ framework/
 divisionbar/
 auth-external/
 GridFieldBulkEditingTools/
-mysite/_config.php
 SortableGridField/
 sqlite3/
 ss3Gallery/
@@ -20,3 +19,5 @@ vendor/autoload.php
 vendor/composer
 vendor/simplepie/simplepie/
 rss-display/
+
+mysite/recaptchaKeys.php
