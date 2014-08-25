@@ -1,244 +1,63 @@
 <?php
-
 class Page extends SiteTree {
-	
+
 	private static $db = array(
-		'FeaturedOnParent' => 'Boolean'
+		
 	);
-	
+
 	private static $has_one = array(
 	);
-	
 
-	function getCMSFields() {
-		$fields = parent::getCMSFields();
-   		if ($this->getParent()){
-			if(($this->getParent()->ClassName) == "TypeA"){
-				$fields->removeFieldFromTab('Root.Main', 'Content');
-				$fields->addFieldToTab('Root.Main', new CheckboxField('FeaturedOnParent', 'Is this featured on the page \''.$this->getParent()->MenuTitle.'\'?'));
-				$fields->addFieldToTab('Root.Main', new HTMLEditorField('Content', 'Content'));
-			}
-			
-		}return $fields;
+
+	private static $many_many = array (
+	);
+
+    private static $many_many_extraFields=array(
+      );
+
+    private static $plural_name = "Pages";
+
+	private static $defaults = array ();
+
+
+	public function getCMSFields(){
+		$f = parent::getCMSFields();
+		
+		return $f;
 	}
-	
-	  /*
-   * limits words to a number, but tries to validate the code
-   */
-   public function getSummaryHTML ($limit = 40){
-      $m = 0;
-      $addEplisis = '';
-      $returnstr = '';
-      $returnArray = array();
-      $html = array();
-      $chars = preg_split('/(<[^>]*[^\/]>| )/i', $this->Content, -1, PREG_SPLIT_NO_EMPTY | PREG_SPLIT_DELIM_CAPTURE);
-      foreach ($chars as $elemnt) {
-         // found start tag
-         if(preg_match('/^<(p|h1|h2|h3|h4|h5|h6|q|b|i|strong|em)(.*)>$/', $elemnt)){
-            preg_match('/^<(p|h1|h2|h3|h4|h5|h6|q|b|i|strong|em)(.*)>$/', $elemnt, $matches);
-            array_push($html, $matches[1]);// convert <p class=""> to p
-            array_push($returnArray, $elemnt);
-            // found end tag
-         } else if(preg_match('/^<\/(p|h1|h2|h3|h4|h5|h6|q|b|i|strong|em)(.*)>$/', $elemnt)){
-            preg_match('/^<\/(p|h1|h2|h3|h4|h5|h6|q|b|i|strong|em)(.*)>$/', $elemnt, $matches);
-            $testelement = array_pop ($html);
-            // match (ie: <p>etc</p>)
-            if($testelement==$elemnt[1]) array_pop($html);
-            array_push($returnArray, $elemnt);
-         } else {
-            // done
-            if($elemnt == ' ') continue;
-            array_push($returnArray, $elemnt);
-            $m++;
-            if($m > $limit) {
-               $addEplisis = '&hellip;';
-               break;
-            }
-         }
-      }
-      // convert start tags to end tags
-      $tmpr = '';
-      foreach ($html as $elemnt) {
-         $tmpr.='</'.$elemnt.'>';
-      }
-      return implode($returnArray, ' ') . $addEplisis . $tmpr;
-   }
+
 	
 }
-
 class Page_Controller extends ContentController {
-	
+
+	/**
+	 * An array of actions that can be accessed via a request. Each array element should be an action name, and the
+	 * permissions or conditions required to allow the user to access it.
+	 *
+	 * <code>
+	 * array (
+	 *     'action', // anyone can access this action
+	 *     'action' => true, // same as above
+	 *     'action' => 'ADMIN', // you must have ADMIN permissions to access this action
+	 *     'action' => '->checkAction' // you can only access this action if $this->checkAction() returns true
+	 * );
+	 * </code>
+	 *
+	 * @var array
+	 */
+	private static $allowed_actions = array (
+	);
+
 	public function init() {
 		parent::init();
 
 		// Note: you should use SS template require tags inside your templates
 		// instead of putting Requirements calls here.  However these are
 		// included so that our older themes still work
-		
 
+   
 	}
-	
-			function Home($limit=4) {
-		$set = DataObject::get("HomePageTab", null, null, null, $limit);
-		
-		return $set;
-	}
-	
-	function Events($limit=4) {
-       //$items = DataObject::get("EventsPage", "Expiry > NOW()", "EventDate", null, $limit);
-       $dateToday = SS_Datetime::now()->Format('m/d/Y');
-       $whereClause = 'EventDate >= ' . $dateToday;
-
-       /*
-       $items = EventsPage::get(); 
-       $otherItems = EventsPage::get()->filter(array('Expiration:LessThan' => $dateToday));
-       $items = $items->subtract($otherItems)->limit($limit);
-       $items = $items->sort('EventDate', 'DESC');
-       */
-       
-       $items = DataObject::get("EventsPage", 'Expiration > NOW()', "EventDate", null, $limit);
-       //$items = EventsPage::get()->filter(array('Expiration:GreaterThan' => $dateToday))->sort('EventDate', 'DESC')->limit($limit);
-
-          
-     		
-       return $items ? $items : false;
-	}
-	
-	function News($limit=3) {
-		$set = DataObject::get("NewsPage", null, null, null, $limit);
-		
-		return $set;
-	}
-	
-	function EventNews($limit=8){
-		
-		if (($limit % 2) == 0){
-			$eventLimit = $limit / 2;
-			$newsLimit = $limit / 2;
-		}
-		else {
-			$eventLimit = intval($limit / 2);
-			$newsLimit = intval($limit / 2) + 1;
-		}
-		$items = DataObject::get("EventsPage", null, null, null, $eventLimit);
-		$set = DataObject::get("NewsPage", null, null, null, $newsLimit);
-		$newarray = new ArrayList();
-
-		$newarray->merge($items);
-		$newarray->merge($set);
-		//Debug::show($newarray);
-
-		
-		return $newarray;
-
-		
-	}
-	
-		
-	function getEvents(){
-		return new PaginatedList(EventsPage::get()->sort('EventDate', 'DESC'), $this->request);
-	}
-	
-	function getNews(){
-		return new PaginatedList(NewsPage::get()->sort('NewsDate', 'DESC'), $this->request);
-	}
-	
-	function paginatedEventNews(){
-		$items = DataObject::get("EventsPage");
-
-		$set = DataObject::get("NewsPage");
-		$eventNewsArray = new ArrayList();
-		
-		$eventNewsArray->merge($items);
-		$eventNewsArray->merge($set);
-		
-		$paginatedList = new PaginatedList($eventNewsArray, $this->request);
-		
-		return $paginatedList;
-		
-	}
-	
-	
-		function Siblings() {/* Control structure that allows us to grab a list of 
-	"sibling" pages and display them in a template */
-		if($this->ParentID){
-			$whereStatement = "ParentID = ".$this->ParentID." and ShowInMenus = 1";
-			return DataObject::get("InteriorPage", $whereStatement);
-		}else{
-			return false;
-		}
- 	}
-	
-	
-	/**
-	 * Site search form 
-	 */ 
-	function SearchForm() {
-		$searchText = isset($_REQUEST['Search']) ? $_REQUEST['Search'] : 'Search';
-		$fields = new FieldSet(
-	      	new TextField("Search", "", $searchText)
-	  	);
-		$actions = new FieldSet(
-	      	new FormAction('results', 'Search')
-	  	);
-
-	  	return new SearchForm($this, "SearchForm", $fields, $actions);
-	}
-	
-	/**
-	 * Process and render search results
-	 */
-	function results($data, $form){
-	  	$data = array(
-	     	'Results' => $form->getResults(),
-	     	'Query' => $form->getSearchQuery(),
-	      	'Title' => 'Search Results'
-	  	);
-
-	  	return $this->customise($data)->renderWith(array('Page_results', 'Page'));
-	}
-	/*
-	function RSSFeedImport($numItems) {
-			
-		$feedURL= "feed://sustainability.uiowa.edu/blog/?feed=rss2";
-	  $output = new ArrayList();
-	  
-	  include_once(Director::getAbsFile(FRAMEWORK_DIR . '/thirdparty/simplepie/simplepie.inc'));
-	  
-	  $t1 = microtime(true);
 
 
-	  $feed = new SimplePie($feedURL, TEMP_FOLDER);
-	  $feed->init();
-	  if($items = $feed->get_items(0, $numItems)) {
-		 foreach($items as $item) {
-			
-			// Cast the Date
-			$date = new Date('Date');
-			$date->setValue($item->get_date());
-	
-			// Cast the Title
-			$title = new Text('Title');
-			$title->setValue($item->get_title());
-			
-			// Cast the description and strip
-			$desc = new Text('Description');
-			$desc->setValue(strip_tags($item->get_description()));
-	
-			$output->push(new ArrayData(array(
-			   'Title'         => $title,
-			   'Date'         => $date,
-			   'Link'         => $item->get_link(),
-			   'Description'   => $desc
-			)));
-		 }
-		 
-
-		 return $output;
-	  }
-	  
-}*/
 	
 }
-
-?>
