@@ -1,1 +1,0 @@
-<%-- This should be overwritten in themes/[yourtheme]/templates/Includes/GoogleAnalytics.ss --%>
