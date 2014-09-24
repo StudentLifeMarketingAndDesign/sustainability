@@ -111,7 +111,7 @@ float:right;}
 
 .typography h1 {
 border-bottom:1px solid #ccc;
-font-family:"Gill Sans",Arial,Helvetica,sans-serif;
+font-family:"freight-sans-pro",Arial,Helvetica,sans-serif;
 font-size:32px;
 line-height:33px;
 letter-spacing:.5px;
@@ -138,7 +138,7 @@ margin:10px 0px 15px 20px;
 }
 
 .typography h2 {
-font-family:"Gill Sans", Arial, Helvetica, sans-serif;
+font-family:"freight-sans-pro", Arial, Helvetica, sans-serif;
 font-size:26px;
 color:#4a92a8;
 line-height:24px;
@@ -148,14 +148,14 @@ margin-bottom:10px;
 .typography h2 a {color:#4a92a8;}
 
 .typography h3  {
-font-family:"Gill Sans", Arial, Helvetica, sans-serif;
+font-family:"freight-sans-pro", Arial, Helvetica, sans-serif;
 font-size:21px;
 color:#824208;
 margin-bottom:4px;
 }
 
 .typography h3 a {
-font-family:"Gill Sans", Arial, Helvetica, sans-serif;
+font-family:"freight-sans-pro", Arial, Helvetica, sans-serif;
 font-size:21px;
 color:#824208;
 }
@@ -208,7 +208,7 @@ list-style-image: url(../images/orange-dot.png);
 .typography p strong {font-weight:bold;}
 
 h4 a, .typography h4, ul.events h4, ul.news h4 {
-font-family: "Gill Sans", Arial, Helvetica, sans-serif;
+font-family: "freight-sans-pro", Arial, Helvetica, sans-serif;
 font-size:18px;
 color:black;
 margin-bottom:3px;
@@ -218,7 +218,7 @@ line-height:19px;
 .typography h4 {margin-bottom:13px;}
 
 .typography h5, .typography h5 a {
-font-family: "Gill Sans", Arial, Helvetica, sans-serif;
+font-family: "freight-sans-pro", Arial, Helvetica, sans-serif;
 font-size:14px;
 color:#666;
 font-weight:lighter;
@@ -228,7 +228,7 @@ line-height:17px;
 }
 
 .typography h6, .typography h6 a {
-font-family: "Gill Sans", Arial, Helvetica, sans-serif;
+font-family: "freight-sans-pro", Arial, Helvetica, sans-serif;
 font-size:15px;
 color:#666;
 font-weight:lighter;
@@ -265,7 +265,7 @@ overflow:hidden;}
 #search {float:right;}
 
 #search input.submit  {
-font-family: "Gill Sans", Arial, Helvetica, sans-serif;
+font-family: "freight-sans-pro", Arial, Helvetica, sans-serif;
 font-size:14px;
 color:#666;
 text-transform:uppercase;
@@ -350,7 +350,7 @@ border: 0;
 border-left: 1px solid #CCC;
 color:black;
 display: block;
-font-family: "Gill Sans Light","GillSans-Light", "Gill Sans", Arial, Helvetica, sans-serif;
+font-family:  "freight-sans-pro", Arial, Helvetica, sans-serif;
 font-size:19px;
 font-weight:lighter;
 padding: 14px 20px;
@@ -1101,7 +1101,7 @@ font-size:12px;}
 /*  home page feature box typography */
 
 #rotate .ui-tabs-panel h2  
-{font-family: "Gill Sans Light","GillSans-Light", "Gill Sans", Arial, Helvetica, sans-serif;
+{font-family:  "freight-sans-pro", Arial, Helvetica, sans-serif;
 font-weight:100;
 font-size:34px;
 color:white;
@@ -1240,7 +1240,7 @@ border-radius: 5px;
 box-shadow: 1px 1px 2px 0px inset;
 margin-top: 10px;
 margin-right: 10px;
-font-family: 'Gill Sans Light', GillSans-Light, 'Gill Sans', Arial, Helvetica, sans-serif;
+font-family: "freight-sans-pro", Arial, Helvetica, sans-serif;
 text-transform: uppercase;
 
 }
@@ -1289,7 +1289,7 @@ border-bottom-style: dotted;
 
 #sustainableInitiatives li {
 	text-align: center;
-	font-family: 'Gill Sans Light', GillSans-Light, 'Gill Sans', Arial, Helvetica, sans-serif;;
+	font-family: "freight-sans-pro", Arial, Helvetica, sans-serif;;
 	text-transform: uppercase;
 	padding-left: 40px;
 	font-size: 13pt;
@@ -1500,7 +1500,7 @@ padding-right:20px;
 float:right;}
 
 .footer .menu li a {
-font-family:"Gill Sans", Arial, Helvetica, sans-serif;
+font-family:"freight-sans-pro", Arial, Helvetica, sans-serif;
 text-transform:uppercase;
 font-size:16px;
 color:white;

@@ -6,7 +6,8 @@
 <title>$Title - Sustainability at Iowa - The University of Iowa</title>
 $MetaTags(false)
 <% base_tag %>
-
+<script src="//use.typekit.net/usb3cui.js"></script>
+<script>try{Typekit.load();}catch(e){}</script>
 <link rel="stylesheet" type="text/css" href="$ThemeDir/css/reset.css" />
 <link rel="stylesheet" type="text/css" href="$ThemeDir/css/styles.css" />
 <link rel="stylesheet" type="text/css" href="$ThemeDir/css/shadowbox.css" />

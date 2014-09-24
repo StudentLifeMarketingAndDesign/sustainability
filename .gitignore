@@ -19,5 +19,7 @@ vendor/autoload.php
 vendor/composer
 vendor/simplepie/simplepie/
 rss-display/
-
 mysite/recaptchaKeys.php
+blog/
+blog/wp-content/uploads
+blog/wp-content/uploads/*
