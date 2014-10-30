@@ -1,0 +1,30 @@
+.breadcrumb {
+	font-size: 14px;
+	list-style:none;
+	margin: 0 0 1em;
+	overflow: hidden;
+}
+.breadcrumb li {
+	float: left;
+	list-style: none;
+	margin: 0;
+	position: relative;
+	& a {
+		padding-left: 5px;
+	}
+}
+.breadcrumb li:first-child a {
+	padding-left: 0;
+}
+.breadcrumb li:after {
+	color: $link;
+	content: "\25B8";
+	display: inline-block;
+	padding: 0 6px 0 10px;
+}
+.breadcrumb li:last-child:after {
+	content: "";
+}
+.breadcrumb .active {
+	padding-left: 5px;
+}

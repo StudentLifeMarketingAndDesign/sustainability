@@ -1,0 +1,224 @@
+/* ---------------------------------------------------------------
+Base styles
+--------------------------------------------------------------- */
+html {
+	font-size: 15px;
+	line-height: 1.5;
+	@media screen and (min-width: $break-small) {
+		font-size: 17px;
+		line-height: 1.5;
+	}
+}
+body {
+	background: #fff;
+	color: #444;
+	font-family: $body-font;
+	margin: 0;
+	padding: 0;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* ---------------------------------------------------------------
+Division Bar
+--------------------------------------------------------------- */
+.division-topbar {
+	box-shadow: 0 2px 2px rgba(0,0,0,.1);
+	z-index: 30;
+}
+.division-topbar .wrapper {
+	max-width: 1040px;
+	@media screen and (min-width: $break-medium) {
+		padding-left: 1em;
+		padding-right: 1em;
+	}
+}
+
+/* ---------------------------------------------------------------
+Layout
+--------------------------------------------------------------- */
+.container {
+	max-width: $break-large;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 0;
+	position: relative;
+}
+
+/* ---------------------------------------------------------------
+Navigation
+--------------------------------------------------------------- */
+.mainnav {
+	list-style: none;
+	margin: 0 0 1em -5.5em;
+	padding: 0;
+	position: relative;
+	z-index: 100;
+	& > li {
+		display: block;
+		float: left;
+		margin-left: 5.5em;
+		position: relative;
+		& > a {
+			display: block;
+		}
+	}
+}
+.mainnav .active {
+	font-weight: bold;
+}
+.mainnav-drop {
+	background-color: #fff;
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+	display: none;
+	font-size: 15px;
+	list-style: none;
+	margin: 0;
+	padding: 20px;
+	width: 300px;
+	font-weight: normal;
+	& li {
+		border-bottom: 1px solid #ddd;
+	}
+	& a {
+		display: block;
+		padding: 10px;
+	}
+}
+.mainnav > li:hover .mainnav-drop {
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 100%;
+}
+.mainnav > li:last-child:hover .mainnav-drop {
+	left: auto;
+	right: 0;
+}
+
+/* ---------------------------------------------------------------
+Subnavigation
+--------------------------------------------------------------- */
+.subnavigation .active {
+	font-weight: bold;
+	& li {
+		font-weight: normal;
+	}
+}
+.subnavigation ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	& li {
+
+		& a {
+			display: block;
+			padding: 5px 10px;
+		}
+	}
+}
+.subnavigation ul ul a {
+	padding-left: 20px;
+}
+
+
+
+/* ---------------------------------------------------------------
+Justify
+--------------------------------------------------------------- */
+.justify {
+	font-size: 0.1px;
+	overflow: hidden;
+	text-align: justify;
+}
+.justify:after {
+	content: '';
+	display: inline-block;
+	width: 100%;
+}
+.justify-item {
+	vertical-align: top;
+	width: 100%;
+	text-align: left;
+	display: inline-block;
+}
+.justify-2 .justify-item {
+	@media screen and (min-width: $break-small) {
+	 width: 48%;
+	}
+}
+.justify-3 .justify-item {
+	@media screen and (min-width: $break-small) {
+	 width: 48%;
+	}
+	@media screen and (min-width: $break-medium) {
+	 width: 32%;
+	}
+}
+.justify-4 .justify-item {
+	@media screen and (min-width: $break-small) {
+	 width: 48%;
+	}
+	@media screen and (min-width: $break-medium) {
+	 width: 24%;
+	}
+}
+.justify .filler {
+	height: 0 !important;
+	margin: 0 !important;
+}
+
+
+/* ---------------------------------------------------------------
+Admin Login form fields
+--------------------------------------------------------------- */
+#MemberLoginForm_LoginForm fieldset {
+	width: 50%;
+}
+#MemberLoginForm_LoginForm .field .text {
+	display: block;
+	width: 100%;
+	height: 34px;
+	padding: 6px 12px;
+	font-size: 14px;
+	line-height: 1.428571429;
+	color: #555555;
+	vertical-align: middle;
+	background-color: #ffffff;
+	border: 1px solid #cccccc;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	-webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+	transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+#MemberLoginForm_LoginForm #Remember label.right {
+	float: left;
+}
+#MemberLoginForm_LoginForm .Actions .action {
+	display: inline-block;
+	padding: 6px 12px;
+	margin-bottom: 0;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 1.428571429;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	cursor: pointer;
+	color: #333;
+	background-image: none;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+	text-decoration: none;
+
+	&:hover {
+		background-color: #eee;
+		border-color: #adadad;
+	}
+}

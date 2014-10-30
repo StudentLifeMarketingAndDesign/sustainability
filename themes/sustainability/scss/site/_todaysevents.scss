@@ -1,0 +1,126 @@
+/* ---------------------------------------------------------------
+Today's Events
+--------------------------------------------------------------- */
+.todays-events {
+	background: #e9e9e5 url(../images/bg-patterned.png);
+	border-top: 1px solid rgba(0,0,0,.11);
+	box-shadow: inset 0 1px 0 rgba(255,255,255,.5);
+	border-bottom: 1px solid rgba(0,0,0,.05);
+	padding: 2px 1em;
+	@media screen and (min-width: $break-large) {
+		margin-top: -25px;
+		padding: 2px 0;
+	}
+}
+.todays-events .container {
+	padding-top: 2em;
+	padding-bottom: 2em;
+	@media screen and (min-width: $break-large) {
+		padding-top: 4em;
+		padding-bottom: 6em;
+	}
+}
+.todays-events .title {
+	font-size: 20px;
+	margin-top: 0;
+	margin-bottom: 2em;
+	text-align: center;
+	text-transform: uppercase;
+}
+.todays-events .title span {
+	display: inline-block;
+	position: relative;
+	&:before, &:after {
+		content: "";
+		position: absolute;
+		height: 2px;
+		border-top: 1px solid rgba(0,0,0,.12);
+		border-bottom: 1px solid rgba(255,255,255,.6);
+		top: 47%;
+		width: 70px;
+		@media screen and (min-width: $break-small) {
+			width: 130px;
+		}
+		@media screen and (min-width: $break-medium) {
+			width: 280px;
+		}
+	}
+	&:before {
+		right: 100%;
+		margin-right: 15px;
+	}
+	&:after {
+		left: 100%;
+		margin-left: 15px;
+	}
+}
+.todays-events ul {
+	list-style:none;
+	margin: 0;
+	padding: 2px 0;
+}
+.todays-events ul li {
+	background-color: #fff;
+	border-bottom: 4px solid $yellow;
+	font-size: 13px;
+	margin-bottom: 1em;
+	overflow: hidden;
+	@media screen and (min-width: $break-medium) {
+		margin-bottom: 0;
+		width: 32%;
+	}
+}
+.today-imgwrapper {
+	display: block;
+	overflow: hidden;
+	position: relative;
+	& img {
+		display: block;
+		width: 100%;
+		-webkit-transition: all 2s ease-in-out;
+		-webkit-transform: scale(1);
+	}
+}
+.todays-events a:hover .today-imgwrapper img {
+	-webkit-transform: scale(1.05);
+}
+.today-imgwrapper:before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.3);
+	-webkit-transition: all .25s ease-in-out;
+	z-index: 1;
+}
+.todays-events a:hover .today-imgwrapper:before {
+	background-color: rgba(0,0,0,0);
+}
+.today-content {
+	padding: 25px 15px;
+}
+.today-date {
+	color: #666;
+	font-size: 14px;
+	margin: 0 0 5px;
+	text-transform: uppercase;
+}
+.today-title {
+	color: #1a1a1a;
+	font-size: 25px;
+	line-height: 1.4;
+	margin: 0;
+}
+.todays-events a {
+	display: block;
+	text-decoration: none;
+	&:hover {
+		text-decoration: none;
+	}
+	@media (min-width: $break-medium) {
+		min-height: 385px;
+	}
+}
+.todays-events .filler {
+	border: 0;
+}
