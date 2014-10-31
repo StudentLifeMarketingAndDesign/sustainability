@@ -28,6 +28,7 @@ userforms/
 widgets/
 framework/
 googlesitemaps/
+assets/
 division-project/
 division-bar
 vendor/composer/
@@ -36,5 +37,3 @@ vendor/autoload.php
 node_modules
 npm-debug.log
 tagfield/
-
-ac-json-events/
