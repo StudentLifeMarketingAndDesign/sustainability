@@ -2,6 +2,7 @@
 
 <% if Menu(4) %>
 	<nav class="sub-current">
+		<h2>This Section</h2>
 		<% with Level(3) %>
 			<% if $LinkOrCurrent = "current" %>
 				<h4 class="active">$MenuTitle</h4>
@@ -37,6 +38,7 @@
 	<hr>
 <% else_if Menu(3) %>
 	<nav class="sub-current">
+		<h2>This Section</h2>
 		<% with Level(2) %>
 			<% if $LinkOrCurrent = "current" %>
 				<h4 class="active">$MenuTitle</h4>
@@ -69,12 +71,13 @@
 			<% end_loop %>
 		</ul>
 	</nav>
-	<hr>
+	<hr><br>
 <% end_if %>
 
 
 <% if Menu(3) %>
 	<nav class="sub-siblings">
+		<h2>Related Sections</h2>
 		<ul class="first-level">
 			<% loop Menu(2) %>
 				<li><a href="$Link">$MenuTitle</a></li>
@@ -83,6 +86,7 @@
 	</nav>
 <% else %>
 	<nav class="sub-siblings">
+		<h2>This Section</h2>
 		<% with Level(1) %>
 			<% if $LinkOrCurrent = "current" %>
 				<h4 class="active">$MenuTitle</h4>

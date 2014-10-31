@@ -5,12 +5,12 @@ html {
 	font-size: 15px;
 	line-height: 1.5;
 	@media screen and (min-width: $break-small) {
-		font-size: 17px;
-		line-height: 1.5;
+		font-size: 18px;
+		line-height: 1.6;
 	}
 }
 body {
-	background: #fff;
+	background: #f2efe9;
 	color: #444;
 	font-family: $body-font;
 	margin: 0;
@@ -40,7 +40,8 @@ Layout
 	max-width: $break-large;
 	margin-right: auto;
 	margin-left: auto;
-	padding: 0;
+	padding-left: 1em;
+	padding-right: 1em;
 	position: relative;
 }
 
@@ -49,19 +50,23 @@ Navigation
 --------------------------------------------------------------- */
 .mainnav {
 	list-style: none;
-	margin: 0 0 1em -5.5em;
+	margin: 0 0 1em -3.5em;
 	padding: 0;
 	position: relative;
 	z-index: 100;
 	& > li {
 		display: block;
 		float: left;
-		margin-left: 5.5em;
+		margin-left: 3.5em;
 		position: relative;
 		& > a {
 			display: block;
+			padding: .5em;
 		}
 	}
+}
+.mainnav >li:hover {
+	background-color: #fff;
 }
 .mainnav .active {
 	font-weight: bold;
@@ -98,6 +103,14 @@ Navigation
 /* ---------------------------------------------------------------
 Subnavigation
 --------------------------------------------------------------- */
+.subnavigation h2 {
+	font-size: 16px;
+	font-weight: normal;
+	margin: 0 0 10px;
+	text-transform: uppercase;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
 .subnavigation .active {
 	font-weight: bold;
 	& li {
@@ -112,12 +125,12 @@ Subnavigation
 
 		& a {
 			display: block;
-			padding: 5px 10px;
+			padding: 5px 0;
 		}
 	}
 }
 .subnavigation ul ul a {
-	padding-left: 20px;
+
 }
 
 
