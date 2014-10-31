@@ -36,3 +36,5 @@ vendor/autoload.php
 node_modules
 npm-debug.log
 tagfield/
+
+ac-json-events/
