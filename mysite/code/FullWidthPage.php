@@ -1,5 +1,5 @@
 <?php
-class StyleGuide extends Page {
+class FullWidthPage extends Page {
 
 	private static $db = array(
 
@@ -12,7 +12,7 @@ class StyleGuide extends Page {
 	public function getCMSFields(){
 		$fields = parent::getCMSFields();
 
-		$fields->removeByName("Content");
+		// $fields->removeByName("Content");
 		$fields->removeByName("Metadata");
 
 
@@ -21,7 +21,7 @@ class StyleGuide extends Page {
 	}
 
 }
-class StyleGuide_Controller extends Page_Controller {
+class FullWidthPage_Controller extends Page_Controller {
 
 	/**
 	 * An array of actions that can be accessed via a request. Each array element should be an action name, and the

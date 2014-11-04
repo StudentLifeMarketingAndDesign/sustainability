@@ -69,6 +69,10 @@
     border-top: 1px solid #ddd;
     border-bottom: 1px solid #fff;
 }
+.typography .left {float: left;}
+.typography .right{float: right;}
+.typography img.left  {margin-right: 1em; margin-bottom: 1em;}
+.typography img.right {margin-left: 1em; margin-bottom: 1em;}
 
 
 /* ---------------------------------------------------------------
@@ -81,38 +85,38 @@ Tables
 .typography th {
 	text-align: left;
 }
-.typography .table {
+.typography table {
 	width: 100%;
 	margin-bottom: 20px;
 }
-.typography .table thead > tr > th,
-.typography .table tbody > tr > th,
-.typography .table tfoot > tr > th,
-.typography .table thead > tr > td,
-.typography .table tbody > tr > td,
-.typography .table tfoot > tr > td {
+.typography table thead > tr > th,
+.typography table tbody > tr > th,
+.typography table tfoot > tr > th,
+.typography table thead > tr > td,
+.typography table tbody > tr > td,
+.typography table tfoot > tr > td {
 	padding: 8px;
 	font-size: 15px;
 	line-height: 1.428571429;
 	vertical-align: top;
 	border-top: 1px solid #dddddd;
 }
-.typography .table thead > tr > th {
+.typography table thead > tr > th {
 	vertical-align: bottom;
 	border-bottom: 2px solid #dddddd;
 }
-.table caption + thead tr:first-child th,
-.table colgroup + thead tr:first-child th,
-.table thead:first-child tr:first-child th,
-.table caption + thead tr:first-child td,
-.table colgroup + thead tr:first-child td,
-.table thead:first-child tr:first-child td {
+table caption + thead tr:first-child th,
+table colgroup + thead tr:first-child th,
+table thead:first-child tr:first-child th,
+table caption + thead tr:first-child td,
+table colgroup + thead tr:first-child td,
+table thead:first-child tr:first-child td {
 	border-top: 0;
 }
-.table tbody + tbody {
+table tbody + tbody {
 	border-top: 2px solid #dddddd;
 }
-.table .table {
+table table {
 	background-color: #ffffff;
 }
 .table-condensed thead > tr > th,
