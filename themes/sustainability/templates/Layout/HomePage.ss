@@ -132,7 +132,7 @@ $EventDateRange
 			<li>
 				<div class="initiative-image">
 					<a class="initBlock{$Pos}" href="{$Link}">
-						<img src="$ThemeDir/images/bike{$Pos}.png" width="81" height="81"/>
+						<img src="$ThemeDir/images/bike{$Pos}.png" alt="Initiative buttons" width="81" height="81"/>
 					</a> 
 				</div>
 				<div class="initiative-label">
