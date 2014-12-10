@@ -153,9 +153,9 @@ $Layout
 <div id="footer-container2">
 	<div class="footer2">
 	<a href= "http://www.aashe.org"><img id = "sponsor-logo1" src="$ThemeDir/images/Aashe.png" alt="Send Us Your Content" longdesc="http://sustainability.uiowa.edu" /></a>
-	<a href= "http://www.appa.org"><img id = "sponsor-logo2" src="$ThemeDir/images/appa.png" longdesc="http://sustainability.uiowa.edu" /></a>
-	<a href= "http://www.usgbc.org"><img id = "sponsor-logo3" src="$ThemeDir/images/usgbc.png" longdesc="http://sustainability.uiowa.edu" /></a>
-	<a href= "https://stars.aashe.org"><img id = "sponsor-logo4" src="$ThemeDir/images/stars.png" longdesc="http://sustainability.uiowa.edu" /></a>
+	<a href= "http://www.appa.org"><img id = "sponsor-logo2" src="$ThemeDir/images/appa.png" alt="APPA Logo" longdesc="http://sustainability.uiowa.edu" /></a>
+	<a href= "http://www.usgbc.org"><img id = "sponsor-logo3" src="$ThemeDir/images/usgbc.png" alt="USGBC Logo" longdesc="http://sustainability.uiowa.edu" /></a>
+	<a href= "https://stars.aashe.org"><img id = "sponsor-logo4" src="$ThemeDir/images/stars.png" alt="Stars Logo" longdesc="http://sustainability.uiowa.edu" /></a>
 	<div class="clear"></div>
 	</div>
 </div>
