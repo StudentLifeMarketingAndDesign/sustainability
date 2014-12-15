@@ -44,11 +44,17 @@ MMMMMMMM               MMMMMMMM                               DDDDDDDDDDDDD
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 <!-- <link href="{$ThemeDir}/css/jquery.fs.shifter.css" rel="stylesheet" type="text/css" media="all"> -->
 <script src="{$ThemeDir}/js/jquery.fs.shifter.js"></script>
+<script src="{$ThemeDir}/js/jquery.fs.naver.js"></script>
+
 <script>
 	$(document).ready(function() {
+		// Shifter
 		$.shifter({
 			maxWidth: "767px"
 		});
+
+		// Naver
+		$(".naver").naver();
 	});
 </script>
 
