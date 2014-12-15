@@ -1,18 +1,63 @@
+<% if $PagePhoto %>
+	<div style="background-image: url($PagePhoto.URL);" class="mainimg-container"></div>
+<% end_if %>
 <div class="container">
 	<div class="row">
-		<div class="col-md-12">
-			<h1>$Title</h1>
-			$Breadcrumbs
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-md-8">
+		<div class="col-lg-8">
 			<article class="article">
+
+				<% include AdditionalNav %>
+
+				$Breadcrumbs
+
+				<h1>$Title</h1>
 				$Content
 				$Form
 			</article>
+
+			<!-- Loop Children -->
+			<% if $Children %>
+				<% loop $Children %>
+					<article class="child-block ">
+						<a href="$Link">
+							<% if $SummaryPhoto %>
+								<img src="$SummaryPhoto.CroppedImage(250,230).URL" alt="$Title">
+							<% end_if %>
+							<div class="wrapper">
+								<h3>$Title</h3>
+								<% if $Summary %>
+									$Summary.LimitCharacters(120)
+								<% else %>
+									<p>$Content.LimitCharacters(120)</p>
+									<span class="button bordered">Learn More</span>
+								<% end_if %>
+							</div>
+						</a>
+					</article>
+				<% end_loop %>
+			<% end_if %>
+			<!-- end Loop Children -->
+
+			<!-- Gallery -->
+			<aside>
+				<% if Gallerys %>
+					<h2>Gallery</h2>
+					<ul class="unstyled">
+						<% loop Gallerys %>
+							<li>
+								<a href="">
+									<img src="$Image.CroppedImage(250,220).URL" alt="$Title">
+								</a>
+							</li>
+						<% end_loop %>
+					</ul>
+				<% end_if %>
+			</aside>
+
 		</div>
-		<div class="col-md-4">
+
+		<!-- Side Bar -->
+		<div class="col-lg-4">
 			<% include SideNav %>
 		</div>
 	</div>

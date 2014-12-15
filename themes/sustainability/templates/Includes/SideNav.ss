@@ -1,7 +1,7 @@
-<div class="subnavigation">
+<div class="subnavigation tablet-hide">
 
 <% if Menu(4) %>
-	<nav class="sub-current">
+	<nav class="block current">
 		<h2>This Section</h2>
 		<% with Level(3) %>
 			<% if $LinkOrCurrent = "current" %>
@@ -35,9 +35,8 @@
 			<% end_loop %>
 		</ul>
 	</nav>
-	<hr>
 <% else_if Menu(3) %>
-	<nav class="sub-current">
+	<nav class="block current">
 		<h2>This Section</h2>
 		<% with Level(2) %>
 			<% if $LinkOrCurrent = "current" %>
@@ -71,12 +70,11 @@
 			<% end_loop %>
 		</ul>
 	</nav>
-	<hr><br>
 <% end_if %>
 
 
 <% if Menu(3) %>
-	<nav class="sub-siblings">
+	<nav class="block siblings">
 		<h2>Related Sections</h2>
 		<ul class="first-level">
 			<% loop Menu(2) %>
@@ -85,7 +83,7 @@
 		</ul>
 	</nav>
 <% else %>
-	<nav class="sub-siblings">
+	<nav class="block siblings">
 		<h2>This Section</h2>
 		<% with Level(1) %>
 			<% if $LinkOrCurrent = "current" %>
@@ -101,7 +99,6 @@
 		</ul>
 	</nav>
 <% end_if %>
-
 
 
 </div><!-- end .subnavigation -->

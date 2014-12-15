@@ -1,8 +1,12 @@
+
 .breadcrumb {
 	font-size: 14px;
 	list-style:none;
 	margin: 0 0 1em;
 	overflow: hidden;
+	@media (max-width: $break-medium - 1) {
+		display: none;
+	}
 }
 .breadcrumb li {
 	float: left;

@@ -15,7 +15,6 @@ class FullWidthPage extends Page {
 		// $fields->removeByName("Content");
 		$fields->removeByName("Metadata");
 
-
 		return $fields;
 
 	}

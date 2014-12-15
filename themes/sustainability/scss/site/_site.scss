@@ -17,19 +17,40 @@ body {
 	padding: 0;
 	-webkit-font-smoothing: antialiased;
 }
+.mobile-hide {
+	@media (max-width: $break-medium - 1 ) {
+		display: none;
+	}
+}
+.tablet-hide {
+	@media (max-width: $break-large - 1 ) {
+		display: none;
+	}
+}
 
 /* ---------------------------------------------------------------
 Division Bar
 --------------------------------------------------------------- */
 .division-topbar {
-	box-shadow: 0 2px 2px rgba(0,0,0,.1);
 	z-index: 30;
 }
 .division-topbar .wrapper {
-	max-width: 1040px;
-	@media screen and (min-width: $break-medium) {
+	max-width: $break-xlarge;
+	@media (min-width: $break-medium) {
+		width: $break-medium - 20;
 		padding-left: 1em;
 		padding-right: 1em;
+	}
+	@media (min-width: $break-large) {
+		width: $break-large - 20;
+	}
+	@media (min-width: $break-xlarge) {
+		width: $break-xlarge - 20;
+	}
+}
+.directory-toggle:after {
+	@media only screen and (min-width: 601px) {
+		left: 0;
 	}
 }
 
@@ -37,103 +58,89 @@ Division Bar
 Layout
 --------------------------------------------------------------- */
 .container {
-	max-width: $break-large;
+	max-width: $break-xlarge;
 	margin-right: auto;
 	margin-left: auto;
 	padding-left: 1em;
 	padding-right: 1em;
 	position: relative;
+	@media (min-width: $break-medium) {
+		width: $break-medium - 20;
+	}
+	@media (min-width: $break-large) {
+		width: $break-large - 20;
+	}
+	@media (min-width: $break-xlarge) {
+		width: $break-xlarge - 20;
+	}
 }
 
-/* ---------------------------------------------------------------
-Navigation
---------------------------------------------------------------- */
-.mainnav {
-	list-style: none;
-	margin: 0 0 1em -3.5em;
-	padding: 0;
-	position: relative;
-	z-index: 100;
-	& > li {
-		display: block;
-		float: left;
-		margin-left: 3.5em;
-		position: relative;
-		& > a {
-			display: block;
-			padding: .5em;
-		}
+/* Headings */
+h1 {
+	@media screen and (min-width: $break-large) {
+		font-size: 60px;
 	}
 }
-.mainnav >li:hover {
-	background-color: #fff;
+
+.mainimg-container {
+	background-color: #000;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 300px;
+	@media (min-width: $break-xlarge) {
+		height: 400px;
+	}
 }
-.mainnav .active {
-	font-weight: bold;
-}
-.mainnav-drop {
-	background-color: #fff;
-	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
-	display: none;
-	font-size: 15px;
-	list-style: none;
+
+
+.child-block {
+	border-top: 1px solid #d0cdc3;
 	margin: 0;
-	padding: 20px;
-	width: 300px;
-	font-weight: normal;
-	& li {
-		border-bottom: 1px solid #ddd;
-	}
-	& a {
-		display: block;
-		padding: 10px;
-	}
+	overflow: hidden;
+	padding: 30px 0 10px;
 }
-.mainnav > li:hover .mainnav-drop {
+
+.child-block img {
 	display: block;
-	position: absolute;
-	left: 0;
-	top: 100%;
-}
-.mainnav > li:last-child:hover .mainnav-drop {
-	left: auto;
-	right: 0;
-}
 
-/* ---------------------------------------------------------------
-Subnavigation
---------------------------------------------------------------- */
-.subnavigation h2 {
-	font-size: 16px;
-	font-weight: normal;
-	margin: 0 0 10px;
-	text-transform: uppercase;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-.subnavigation .active {
-	font-weight: bold;
-	& li {
-		font-weight: normal;
+	margin: 0 auto 20px;
+	@media (min-width: $break-small) {
+		max-width: 40%;
+		float: right;
+	}
+	@media (min-width: $break-medium) {
+		float: left;
+		margin: 0 30px 20px 0;
 	}
 }
-.subnavigation ul {
-	list-style: none;
+.child-block h3 {
 	margin: 0;
-	padding: 0;
-	& li {
-
-		& a {
-			display: block;
-			padding: 5px 0;
-		}
-	}
+	padding-top: 10px;
 }
-.subnavigation ul ul a {
-
+.button {
+	background: #36302a;
+	border: none;
+	color: #ffffff;
+	display: block;
+	float: left;
+	font-family: $heading-font;
+	font-style: normal;
+	font-size: 13px;
+	font-size: 0.8125rem;
+	font-weight: 500;
+	line-height: 1.2;
+	/* letter-spacing: 0.02em; */
+	padding: 12px 20px;
+	text-transform: uppercase;
 }
-
-
+.button.bordered {
+	background: none;
+	border-bottom: 4px solid #f0b336;
+	color: #36302a;
+	margin: 0 15px 20px 0;
+	padding: 5px 0;
+}
 
 /* ---------------------------------------------------------------
 Justify
@@ -234,4 +241,49 @@ Admin Login form fields
 		background-color: #eee;
 		border-color: #adadad;
 	}
+}
+
+/* ---------------------------------------------------------------
+Justify
+--------------------------------------------------------------- */
+.justify {
+	font-size: 0.1px;
+	overflow: hidden;
+	text-align: justify;
+}
+.justify:after {
+	content: '';
+	display: inline-block;
+	width: 100%;
+}
+.justify-item {
+	vertical-align: top;
+	width: 100%;
+	text-align: left;
+	display: inline-block;
+}
+.justify-2 .justify-item {
+	@media screen and (min-width: $break-small) {
+	 width: 48%;
+	}
+}
+.justify-3 .justify-item {
+	@media screen and (min-width: $break-small) {
+	 width: 48%;
+	}
+	@media screen and (min-width: $break-medium) {
+	 width: 32%;
+	}
+}
+.justify-4 .justify-item {
+	@media screen and (min-width: $break-small) {
+	 width: 48%;
+	}
+	@media screen and (min-width: $break-medium) {
+	 width: 24%;
+	}
+}
+.justify .filler {
+	height: 0 !important;
+	margin: 0 !important;
 }

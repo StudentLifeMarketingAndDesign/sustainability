@@ -1,0 +1,107 @@
+/* ---------------------------------------------------------------
+Subnavigation
+--------------------------------------------------------------- */
+.subnavigation h2 {
+	font-size: 16px;
+	font-weight: normal;
+	margin: 0 0 10px;
+	text-transform: uppercase;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.subnavigation .active {
+	font-weight: bold;
+	& li {
+		font-weight: normal;
+	}
+}
+.subnavigation ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	& li {
+		& a {
+			display: block;
+			font-size: 16px;
+			padding: 5px 10px;
+		}
+	}
+}
+
+.subnavigation .block {
+	background: #fbfaf5;
+	border-top: 4px solid #cfc8b2;
+	margin-top: 20px;
+	padding: 30px;
+}
+/* Current */
+.subnavigation .current {
+	background: #fff;
+}
+.subnavigation .current li a {
+	border-bottom: 1px solid #ece9e0;
+	padding: 8px 10px;
+}
+.subnavigation .current li:last-child a {
+	border-bottom: none;
+}
+
+
+/* ---------------------------------------------------------------
+Initiatives
+--------------------------------------------------------------- */
+.energy-climate .subnavigation .current {
+	border-color: $energy;
+	& a {
+		color: $energy;
+	}
+}
+.recycling-and-waste-reduction .subnavigation .current {
+	border-color: $recycling;
+	& a {
+		color: $recycling;
+	}
+}
+.biomass-fuel-project .subnavigation .current {
+	border-color: $biomass;
+	& a {
+		color: darken($biomass, 10%);
+	}
+}
+.leed-building-at-ui .subnavigation .current {
+	border-color: $leed;
+	& a {
+		color: $leed;
+	}
+}
+.transportation .subnavigation .current {
+	border-color: $transportation;
+	& a {
+		color: $transportation;
+	}
+}
+.food .subnavigation .current {
+	border-color: $food;
+	& a {
+		color: $food;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

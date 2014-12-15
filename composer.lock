@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "0466a376d7c56f467f312f9925c8d76f",
+    "hash": "3f72d59f3d78f8f640debca8194b9554",
     "packages": [
         {
             "name": "composer/installers",
@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "27697a73b7a68b4a834e45fe560bea23ec3b3435"
+                "reference": "8024be9aa3ee446272937f46a8807fa52b337767"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/27697a73b7a68b4a834e45fe560bea23ec3b3435",
-                "reference": "27697a73b7a68b4a834e45fe560bea23ec3b3435",
+                "url": "https://api.github.com/repos/composer/installers/zipball/8024be9aa3ee446272937f46a8807fa52b337767",
+                "reference": "8024be9aa3ee446272937f46a8807fa52b337767",
                 "shasum": ""
             },
             "replace": {
@@ -96,7 +96,41 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2014-10-25 22:13:47"
+            "time": "2014-11-01 17:51:50"
+        },
+        {
+            "name": "frankmullenger/gallery",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/frankmullenger/silverstripe-gallery.git",
+                "reference": "31067e9e86e14e5d7d7ade1f9c4d24a30e7e1be7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/frankmullenger/silverstripe-gallery/zipball/31067e9e86e14e5d7d7ade1f9c4d24a30e7e1be7",
+                "reference": "31067e9e86e14e5d7d7ade1f9c4d24a30e7e1be7",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/cms": "3.*",
+                "silverstripe/framework": "3.*"
+            },
+            "type": "silverstripe-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Frank Mullenger",
+                    "email": "frankmullenger@gmail.com"
+                }
+            ],
+            "description": "SilverStripe Gallery Module",
+            "keywords": [
+                "gallery",
+                "image gallery",
+                "silverstripe"
+            ],
+            "time": "2013-08-23 04:46:41"
         },
         {
             "name": "md/ac-json-events",
@@ -104,12 +138,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events.git",
-                "reference": "9b4ad63163bf93125690d03614a9e825526e96f7"
+                "reference": "05313a3eb585dd32d5530438a3173acc5dbd980c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/ac-json-events/zipball/9b4ad63163bf93125690d03614a9e825526e96f7",
-                "reference": "9b4ad63163bf93125690d03614a9e825526e96f7",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/ac-json-events/zipball/05313a3eb585dd32d5530438a3173acc5dbd980c",
+                "reference": "05313a3eb585dd32d5530438a3173acc5dbd980c",
                 "shasum": ""
             },
             "require": {
@@ -128,7 +162,7 @@
                 "source": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events/tree/master",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events/issues"
             },
-            "time": "2014-10-19 06:19:38"
+            "time": "2014-11-10 19:01:47"
         },
         {
             "name": "md/division-bar",
@@ -136,12 +170,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/division-bar.git",
-                "reference": "586402c87fac3b917fe8593560e88dcdcbe84e8c"
+                "reference": "3f07eea2e1a31bf61e2d28f62e6d8c84232f724b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-bar/zipball/586402c87fac3b917fe8593560e88dcdcbe84e8c",
-                "reference": "586402c87fac3b917fe8593560e88dcdcbe84e8c",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-bar/zipball/3f07eea2e1a31bf61e2d28f62e6d8c84232f724b",
+                "reference": "3f07eea2e1a31bf61e2d28f62e6d8c84232f724b",
                 "shasum": ""
             },
             "require": {
@@ -160,7 +194,7 @@
                 "source": "https://github.com/StudentLifeMarketingAndDesign/division-bar/tree/master",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/division-bar/issues"
             },
-            "time": "2014-10-20 19:41:10"
+            "time": "2014-10-31 17:52:50"
         },
         {
             "name": "silverstripe/blog",
@@ -168,12 +202,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-blog.git",
-                "reference": "638b309b699950e943b3d2c65197c8e39e3fbf29"
+                "reference": "1bd26052c92b7f7a36e9c9b083ec7840fe6820c5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-blog/zipball/638b309b699950e943b3d2c65197c8e39e3fbf29",
-                "reference": "638b309b699950e943b3d2c65197c8e39e3fbf29",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-blog/zipball/1bd26052c92b7f7a36e9c9b083ec7840fe6820c5",
+                "reference": "1bd26052c92b7f7a36e9c9b083ec7840fe6820c5",
                 "shasum": ""
             },
             "require": {
@@ -201,7 +235,7 @@
                 "blog",
                 "silverstripe"
             ],
-            "time": "2014-10-07 19:59:23"
+            "time": "2014-11-03 01:09:18"
         },
         {
             "name": "silverstripe/cms",
@@ -307,7 +341,6 @@
         "md/ac-json-events": 20,
         "md/division-bar": 20
     },
-    "prefer-stable": false,
     "platform": {
         "php": ">=5.3.2"
     },

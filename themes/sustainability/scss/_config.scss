@@ -3,6 +3,12 @@
 -------------------------------------------*/
 $link: #0088cc;
 $yellow: #ffce39;
+$energy: #f12421;
+$recycling: #9bc347;
+$biomass: #f1cb0f;
+$leed: #ffaf0f;
+$transportation: #47a0d6;
+$food: #b29f4b;
 
 
 /*-------------------------------------------
@@ -16,6 +22,7 @@ $base-font-size: 18px;
     Fonts
 -------------------------------------------*/
 $heading-font: "chaparral-pro",sans-serif;
+// $heading-font: "proxima-nova-alt-condensed";
 $body-font: "proxima-nova",sans-serif;
 
 
@@ -24,6 +31,5 @@ $body-font: "proxima-nova",sans-serif;
 -------------------------------------------*/
 $break-small: 480px;
 $break-medium: 768px;
-$break-large: 1040px;
-$break-xlarge: 1140px;
-$break-xxlarge: 1280px;
+$break-large: 980px;
+$break-xlarge: 1200px;

@@ -2,31 +2,52 @@
 class Page extends SiteTree {
 
 	private static $db = array(
-		
+		"Summary" => "Text",
 	);
 
 	private static $has_one = array(
+		"PagePhoto" => "Image",
+		"SummaryPhoto" => "Image"
 	);
 
 
 	private static $many_many = array (
+		'GalleryImages' => 'Image'
 	);
 
-    private static $many_many_extraFields=array(
-      );
+	private static $many_many_extraFields=array(
+	);
 
-    private static $plural_name = "Pages";
+	private static $plural_name = "Pages";
 
 	private static $defaults = array ();
 
 
 	public function getCMSFields(){
-		$f = parent::getCMSFields();
-		
-		return $f;
+		$fields = parent::getCMSFields();
+		$fields->removeByName("Metadata");
+
+		$fields->addFieldToTab("Root.Main", new UploadField("PagePhoto", "Main Header Photo"));
+		$fields->addFieldToTab('Root.PageSummary', $myEditorField = new TextareaField('Summary', 'Short Page Description'));
+		$myEditorField->setRows(3);
+
+		$fields->addFieldToTab("Root.PageSummary", new UploadField("SummaryPhoto", "Page Summary Photo"));
+
+		// Gallery
+		$fields->addFieldToTab(
+		   'Root.Gallery',
+			$uploadField = new UploadField(
+		       $name = 'GalleryImages',
+		       $title = 'Upload one or more images (max 10 in total)'
+		   )
+		);
+		$uploadField->setConfig('allowedMaxFileNumber', 10);
+
+
+		return $fields;
 	}
 
-	
+
 }
 class Page_Controller extends ContentController {
 
@@ -55,9 +76,9 @@ class Page_Controller extends ContentController {
 		// instead of putting Requirements calls here.  However these are
 		// included so that our older themes still work
 
-   
+
 	}
 
 
-	
+
 }
