@@ -87,12 +87,7 @@ MMMMMMMM               MMMMMMMM                               DDDDDDDDDDDDD
 		</div>
 		<hr>
 		<div class="address">
-			<div class="contain">
-				<h2>Open 365 Days A Year</h2>
-				<time datetime="2014-12-10T00:00:00-0500" class="time">9:00 am – 4:00 pm</time>
-				<p>3200 Mount Vernon Memorial Highway<br />Mount Vernon, Virginia 22121</p>
-				<p>1680 University Capitol Centre<br />200 South Clinton St.<br />Iowa City, IA 52242</p>
-			</div>
+
 			<ul class="unstyled mobile-contact">
 				<li>
 					<a href="tel:3193355516" class="link phone">
@@ -103,14 +98,7 @@ MMMMMMMM               MMMMMMMM                               DDDDDDDDDDDDD
 				<li><a href="mailgo:sustainability@uiowa.edu">Sustainability@uiowa.edu</a></li>
 				<li><a href="#">Directions</a></li>
 			</ul>
-			<div class="contact">
-				<a href="#" class="link mail">tickets@mountvernon.org</a>
-				<a href="tel:3193355516" class="link phone">
-					<svg class="icon-phone"><use xlink:href="#icon-phone"></use></svg>
-					(319) 335-5516</a>
-				<a href="#" class="link directions">Directions &amp; Parking</a>
-				<a href="#" class="link more">Contact Us</a>
-			</div>
+
 		</div>
 	</div>
 
