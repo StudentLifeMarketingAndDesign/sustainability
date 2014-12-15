@@ -2,7 +2,8 @@
 Subnavigation
 --------------------------------------------------------------- */
 .subnavigation h2 {
-	font-size: 16px;
+	font-size: 15px;
+	font-family: $body-font;
 	font-weight: normal;
 	margin: 0 0 10px;
 	text-transform: uppercase;
@@ -23,27 +24,62 @@ Subnavigation
 		& a {
 			display: block;
 			font-size: 16px;
-			padding: 5px 10px;
+			padding: 5px 0;
 		}
 	}
 }
 
+.subnavigation h4 {
+	font-size: 20px;
+}
+.subnavigation a {
+	text-decoration: none;
+}
 .subnavigation .block {
 	background: #fbfaf5;
 	border-top: 4px solid #cfc8b2;
 	margin-top: 20px;
 	padding: 30px;
+	@media (max-width: $break-large) {
+		margin-top: 0;
+	}
+}
+.subnavigation .first-level {
+	border-top: 1px solid #ece9e0;
+	margin-top: 15px;
+	padding-top: 15px;
 }
 /* Current */
 .subnavigation .current {
 	background: #fff;
 }
 .subnavigation .current li a {
-	border-bottom: 1px solid #ece9e0;
-	padding: 8px 10px;
+	xborder-bottom: 1px solid #ece9e0;
+	padding: 8px 0;
 }
 .subnavigation .current li:last-child a {
 	border-bottom: none;
+}
+
+
+/* ---------------------------------------------------------------
+Mobile Styles (Naver)
+--------------------------------------------------------------- */
+.naver.enabled .naver-container {
+	padding: 0;
+}
+.subnavigation .block {
+	@media (max-width: $break-large -1) {
+		margin-top: 0;
+	}
+}
+.naver-handle {
+	background: #008c9c;
+	color: #fff;
+}
+.naver-handle:after {
+	background: #fff;
+	box-shadow: 0 5px 0 #fff, 0 -5px 0 #fff;
 }
 
 

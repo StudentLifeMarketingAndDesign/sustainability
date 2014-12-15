@@ -1,9 +1,9 @@
 /* /scss/imports/typography.scss
 ========================================================================== */
 a {color: $link; outline:none; text-decoration: underline;}
-a:hover {text-decoration: none;}
-a:active {color:#0088cc;}
-a:focus {outline:thin dotted;}
+a:hover {color: darken( $link, 10% );}
+a:active {color:#0088cc; color: darken( $link, 10% );}
+a:focus {outline:thin dotted; color: darken( $link, 10% );}
 
 p, pre, blockquote, ul, ol, dl, figure, table, fieldset {
 	margin: 1em 0;
