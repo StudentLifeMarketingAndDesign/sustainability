@@ -85,20 +85,31 @@ MMMMMMMM               MMMMMMMM                               DDDDDDDDDDDDD
 			<a href="#" class="link highlight">News &amp; Events</a>
 			<a href="#" class="link highlight">Blog</a>
 		</div>
-		<hr>
-		<div class="address">
-
-			<ul class="unstyled mobile-contact">
-				<li>
-					<a href="tel:3193355516" class="link phone">
-						<svg class="icon-phone"><use xlink:href="#icon-phone"></use></svg>
-						(319) 335-5516
-					</a>
-				</li>
-				<li><a href="mailgo:sustainability@uiowa.edu">Sustainability@uiowa.edu</a></li>
-				<li><a href="#">Directions</a></li>
-			</ul>
-
+		<hr />
+		<div class="shifter-address">
+			<div class="contain">
+				<h3>Sustainability at Iowa</h3>
+				<p>1680 University Capitol Centre<br />200 South Clinton St.<br />Iowa City, IA 52242</p>
+			</div>
+		</div>
+		<hr />
+		<div class="contact">
+			<div>
+				<a href="mailgo:sustainability@uiowa.edu" class="link">
+					<svg class="icon-envelope"><use xlink:href="#icon-envelope"></use></svg>
+					<span>Sustainability@uiowa.edu</span>
+				</a>
+			</div>
+			<div>
+				<svg class="icon-phone"><use xlink:href="#icon-phone"></use></svg>
+				<span>(319) 335-5516</span>
+			</div>
+			<div>
+				<a href="#" class="link">
+					<svg class="icon-location"><use xlink:href="#icon-location"></use></svg>
+					<span>Directions</span>
+				</a>
+			</div>
 		</div>
 	</div>
 
