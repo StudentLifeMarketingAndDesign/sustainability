@@ -3,10 +3,14 @@
 <% end_if %>
 <div class="container">
 	<div class="row">
-		<div class="col-lg-8">
-			<article class="article">
 
-				<% include AdditionalNav %>
+		<!-- Side Bar -->
+		<div class="col-lg-4 col-lg-push-8">
+			<% include SideNav %>
+		</div>
+
+		<div class="col-lg-8 col-lg-pull-4">
+			<article class="article">
 
 				$Breadcrumbs
 
@@ -54,11 +58,6 @@
 				<% end_if %>
 			</aside>
 
-		</div>
-
-		<!-- Side Bar -->
-		<div class="col-lg-4">
-			<% include SideNav %>
-		</div>
-	</div>
-</div>
+		</div><!-- end .col -->
+	</div><!-- end .row -->
+</div><!-- end .container -->
