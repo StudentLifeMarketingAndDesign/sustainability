@@ -1,27 +1,37 @@
 /* Configuration */
-$nav-margin-medium: 14px;
-$nav-margin-large: 53px;
-$nav-margin-xlarge: 53px;
+$nav-padding-medium: 8px;
+$nav-margin-medium: 16px;
+
+$nav-padding-large: 12px;
+$nav-margin-large: 46px;
+
+$nav-padding-xlarge: 20px;
+$nav-margin-xlarge: 63px;
+
 
 /* ---------------------------------------------------------------
 Navigation
 --------------------------------------------------------------- */
 .nav-wrapper {
-	background-color: #008d9d;
+	xbackground-color: #008d9d;
+	background-color: #0a98a8;
 	border-top: 1px solid rgba(255,255,255,.15);
-	box-shadow: 0 1px 1px rgba(0,0,0,.4);
+	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
 	@media (max-width: $break-medium - 1) {
 		display: none;
 	}
 }
 .main-nav {
 	list-style: none;
-	margin: 0 0 0 (-$nav-margin-medium - 8);
+	margin: 0 0 0 (-$nav-margin-medium - $nav-padding-medium);
 	padding: 0;
 	position: relative;
 	z-index: 100;
 	@media (min-width: $break-large) {
-		margin-left: (-$nav-margin-large - 8);
+		margin-left: (-$nav-margin-large - $nav-padding-large);
+	}
+	@media (min-width: $break-xlarge) {
+		margin-left: (-$nav-margin-xlarge - $nav-padding-xlarge);
 	}
 }
 .main-nav > li {
@@ -32,21 +42,30 @@ Navigation
 	@media (min-width: $break-large) {
 		margin-left: $nav-margin-large;
 	}
+	@media (min-width: $break-xlarge) {
+		margin-left: $nav-margin-xlarge;
+	}
 }
 .main-nav > li > a {
 	/*border-right: 1px solid rgba(255,255,255,.15);*/
 	color: #fff;
 	display: block;
-	padding: 10px 8px;
-}
-.main-nav li a {
 	font-family: "proxima-nova-alt-condensed";
 	font-size: 16px;
 	font-weight: 600;
-	letter-spacing: 1px;
+	letter-spacing: .05em;
+	padding: 14px $nav-padding-medium;
 	text-transform: uppercase;
-	text-decoration: none;
 	text-shadow: 1px 1px 1px rgba(0,0,0,.15);
+	@media (min-width: $break-large) {
+		padding: 14px $nav-padding-large;
+	}
+	@media (min-width: $break-xlarge) {
+		padding: 14px $nav-padding-xlarge;
+	}
+}
+.main-nav li a {
+	text-decoration: none;
 	@media (min-width: $break-large) {
 		font-size: 17px;
 	}
@@ -54,40 +73,93 @@ Navigation
 		font-size: 18px;
 	}
 }
-.main-nav >li:hover {
-	background-color: #fff;
+.main-nav >li:hover, .main-nav >li:focus {
+	// background-color: #fff;
 }
 .main-nav .active {
 	font-weight: bold;
 }
-.main-navdrop {
-	background-color: #fff;
+
+/* ---------------------------------------------------------------
+Dropdown
+--------------------------------------------------------------- */
+.dropdown {
+	background: #fafafa;
+	border-top: 4px solid #00626d;
 	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
-	display: none;
-	font-size: 15px;
-	list-style: none;
-	margin: 0;
-	padding: 20px;
-	width: 300px;
-	font-weight: normal;
-	& li {
-		border-bottom: 1px solid #ddd;
-	}
-	& a {
-		display: block;
-		padding: 10px;
-	}
-}
-.main-nav > li:hover .main-navdrop {
-	display: block;
-	position: absolute;
 	left: 0;
-	top: 100%;
+	list-style: none;
+	margin: -4px 0 0;
+	opacity: 0;
+	pointer-events: none;
+	position: absolute;
+	padding: 20px 30px;
+	top: 53px;
+	width: 300px;
+	-webkit-transition: none;
+	transition: none;
+	-webkit-transform: translateY(10px);
+	-ms-transform: translateY(10px);
+	transform: translateY(10px);
+	@media (min-width: $break-large) {
+		top: 55px;
+	}
+	@media (min-width: $break-xlarge) {
+		top: 56px;
+	}
 }
-.main-nav > li:last-child:hover .main-navdrop {
+.main-nav > li:hover .dropdown {
+	opacity: 1;
+	pointer-events: all;
+	-webkit-transition: -webkit-transform 0.15s ease, opacity 0.15s linear;
+	transition: -ms-transform 0.15s ease, opacity 0.15s linear;
+	transition: transform 0.15s ease, opacity 0.15s linear;
+	-webkit-transform: translateY(0);
+	-ms-transform: translateY(0);
+	transform: translateY(0);
+}
+.main-nav > li:last-of-type .dropdown {
 	left: auto;
 	right: 0;
 }
+.dropdown:before {
+	content: "";
+	display: block;
+	height: 10px;
+	left: 50px;
+	position: absolute;
+	top: -10px;
+	width: 10px;
+	z-index: -1;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 10px solid #00626d;
+}
+.main-nav > li:last-of-type .dropdown:before {
+	left: auto;
+	right: 50px;
+}
+.dropdown li a {
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #eee;
+	color: #333;
+	display: block;
+	font-size: 16px;
+	font-weight: normal;
+	padding: 10px 0;
+	text-align: left;
+}
+.dropdown li:first-of-type a {
+	border-top: none;
+}
+.dropdown li a:hover, .dropdown li a:focus {
+	color: $link;
+}
+.dropdown li.active a {
+	font-weight: bold;
+}
+
+
 
 /* Toggle */
 .menu-icon {

@@ -59,7 +59,7 @@
 				<li <% if $LinkOrSection = "section" %>class="active"<% end_if %>><a href="$Link">$MenuTitle</a>
 					<!-- Dropdown Menu -->
 					<% if Children %>
-						<ul class="main-navdrop">
+						<ul class="dropdown">
 						<% loop Children %>
 							<li <% if $LinkOrCurrent = "current" %>class="active"<% end_if %>><a href="$Link">$MenuTitle</a></li>
 						<% end_loop %>
