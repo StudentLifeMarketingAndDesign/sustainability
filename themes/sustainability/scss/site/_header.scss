@@ -1,6 +1,6 @@
 .header {
 	background-color: #0a98a8;
-	border-bottom: 1px solid rgba(0,0,0,.15);
+	border-bottom: 1px solid rgba(0,0,0,.1);
 	padding: 20px 0;
 	position: relative;
 	@media (min-width: $break-medium) {
@@ -63,7 +63,7 @@ Top Nav
 .top-nav {
 	float: right;
 	margin-top: 28px;
-	margin-left: 20px;
+	margin-left: 30px;
 	@media (max-width: $break-medium - 1) {
 		display: none;
 	}

@@ -6,17 +6,18 @@ $nav-padding-large: 12px;
 $nav-margin-large: 46px;
 
 $nav-padding-xlarge: 20px;
-$nav-margin-xlarge: 63px;
+$nav-margin-xlarge: 51px;
 
 
 /* ---------------------------------------------------------------
 Navigation
 --------------------------------------------------------------- */
 .nav-wrapper {
-	xbackground-color: #008d9d;
 	background-color: #0a98a8;
 	border-top: 1px solid rgba(255,255,255,.15);
 	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+	position: relative;
+	z-index: 100;
 	@media (max-width: $break-medium - 1) {
 		display: none;
 	}
@@ -70,7 +71,7 @@ Navigation
 		font-size: 17px;
 	}
 	@media (min-width: $break-xlarge) {
-		font-size: 18px;
+		font-size: 20px;
 	}
 }
 .main-nav >li:hover, .main-nav >li:focus {
@@ -84,7 +85,7 @@ Navigation
 Dropdown
 --------------------------------------------------------------- */
 .dropdown {
-	background: #fafafa;
+	background: #fff;
 	border-top: 4px solid #00626d;
 	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
 	left: 0;
@@ -105,7 +106,7 @@ Dropdown
 		top: 55px;
 	}
 	@media (min-width: $break-xlarge) {
-		top: 56px;
+		top: 59px;
 	}
 }
 .main-nav > li:hover .dropdown {
