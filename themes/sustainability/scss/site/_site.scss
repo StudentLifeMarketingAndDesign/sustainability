@@ -75,12 +75,6 @@ Layout
 	}
 }
 
-/* Headings */
-h1 {
-	@media screen and (min-width: $break-large) {
-		font-size: 60px;
-	}
-}
 
 .mainimg-container {
 	background-color: #000;
@@ -91,6 +85,10 @@ h1 {
 	@media (min-width: $break-xlarge) {
 		height: 400px;
 	}
+}
+
+.article {
+	margin-top: 30px;
 }
 
 
