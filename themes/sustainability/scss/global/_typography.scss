@@ -28,7 +28,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 h1 {
 	font-size: 40px;
-	margin: .75em 0 .5em;
+	margin: .5em 0;
 	@media screen and (min-width: $break-medium) {
 		font-size: 50px;
 	}
@@ -63,7 +63,7 @@ h3 + h4,
 h4 + h5,
 h5 + h6 {margin-top:0;}
 
-.lede {
+.article h1:first-of-type + p:first-of-type {
 	font-size: ($base-font * 1.2) + px;
 }
 

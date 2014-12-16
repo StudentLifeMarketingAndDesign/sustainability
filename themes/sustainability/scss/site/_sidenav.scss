@@ -38,7 +38,7 @@ Subnavigation
 .subnavigation .block {
 	background: #fbfaf5;
 	border-top: 4px solid #cfc8b2;
-	margin-top: 20px;
+	margin-top: 30px;
 	padding: 30px;
 	@media (max-width: $break-large) {
 		margin-top: 0;
@@ -74,12 +74,12 @@ Mobile Styles (Naver)
 	}
 }
 .naver-handle {
-	background: #008c9c;
-	color: #fff;
+	xbackground: #008c9c;
+	xcolor: #fff;
 }
 .naver-handle:after {
-	background: #fff;
-	box-shadow: 0 5px 0 #fff, 0 -5px 0 #fff;
+	xbackground: #fff;
+	xbox-shadow: 0 5px 0 #fff, 0 -5px 0 #fff;
 }
 
 
