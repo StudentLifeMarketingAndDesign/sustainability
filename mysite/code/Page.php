@@ -12,7 +12,7 @@ class Page extends SiteTree {
 
 
 	private static $many_many = array (
-		'GalleryImages' => 'Image'
+		'GalleryImages' => 'GalleryImage'
 	);
 
 	private static $many_many_extraFields=array(
@@ -36,11 +36,12 @@ class Page extends SiteTree {
 		// Gallery
 		$fields->addFieldToTab(
 		   'Root.Gallery',
-			$uploadField = new UploadField(
+			$uploadField = new SortableUploadField(
 		       $name = 'GalleryImages',
 		       $title = 'Upload one or more images (max 10 in total)'
 		   )
 		);
+		$uploadField->setFolderName($this->URLSegment);
 		$uploadField->setConfig('allowedMaxFileNumber', 10);
 
 

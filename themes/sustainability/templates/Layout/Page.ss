@@ -17,6 +17,7 @@
 				<h1>$Title</h1>
 				$Content
 				$Form
+				<% include Gallery %>
 			</div>
 
 			<!-- Loop Children -->
