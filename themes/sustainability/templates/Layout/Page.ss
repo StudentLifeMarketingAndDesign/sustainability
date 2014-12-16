@@ -1,7 +1,7 @@
 <% if $PagePhoto %>
 	<div style="background-image: url($PagePhoto.URL);" class="mainimg-container"></div>
 <% end_if %>
-<div class="container">
+<article class="container">
 	<div class="row">
 
 		<!-- Side Bar -->
@@ -10,19 +10,19 @@
 		</div>
 
 		<div class="col-lg-8 col-lg-pull-4">
-			<article class="article">
+			<div class="article">
 
 				$Breadcrumbs
 
 				<h1>$Title</h1>
 				$Content
 				$Form
-			</article>
+			</div>
 
 			<!-- Loop Children -->
 			<% if $Children %>
 				<% loop $Children %>
-					<article class="child-block ">
+					<section class="child-block ">
 						<a href="$Link">
 							<% if $SummaryPhoto %>
 								<img src="$SummaryPhoto.CroppedImage(250,230).URL" alt="$Title">
@@ -37,7 +37,7 @@
 								<% end_if %>
 							</div>
 						</a>
-					</article>
+					</section>
 				<% end_loop %>
 			<% end_if %>
 			<!-- end Loop Children -->
@@ -60,4 +60,4 @@
 
 		</div><!-- end .col -->
 	</div><!-- end .row -->
-</div><!-- end .container -->
+</article><!-- end .container -->
