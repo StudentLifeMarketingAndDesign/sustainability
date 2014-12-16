@@ -38,7 +38,7 @@ class Page extends SiteTree {
 		   'Root.Gallery',
 			$uploadField = new SortableUploadField(
 		       $name = 'GalleryImages',
-		       $title = 'Upload one or more images (max 10 in total)'
+		       $title = 'Upload one or more images (max 10 in total, drag and drop to sort)'
 		   )
 		);
 		$uploadField->setFolderName($this->URLSegment);
