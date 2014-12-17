@@ -102,6 +102,8 @@
 		</nav>
 	<% end_if %>
 
+	<% include SideBarItems %>
+
 
 	</div><!-- end .subnavigation -->
 </div><!-- end Naver -->

@@ -12,12 +12,8 @@ class Page extends SiteTree {
 
 
 	private static $many_many = array (
-<<<<<<< HEAD
-		'GalleryImages' => 'Image',
-		"SidebarItems" => "SidebarItem"
-=======
+		"SidebarItems" => "SidebarItem",
 		'GalleryImages' => 'GalleryImage'
->>>>>>> FETCH_HEAD
 	);
 
 	private static $many_many_extraFields=array(
@@ -55,17 +51,17 @@ class Page extends SiteTree {
 
 		$gridFieldConfig = GridFieldConfig_RelationEditor::create();
 			
-			$row = "SortOrder";
-			$gridFieldConfig->addComponent($sort = new GridFieldSortableRows(stripslashes($row))); 
+		$row = "SortOrder";
+		$gridFieldConfig->addComponent($sort = new GridFieldSortableRows(stripslashes($row))); 
 
-			$sort->table = 'Page_SidebarItems'; 
-			$sort->parentField = 'PageID'; 
-			$sort->componentField = 'SidebarItemID'; 
+		$sort->table = 'Page_SidebarItems'; 
+		$sort->parentField = 'PageID'; 
+		$sort->componentField = 'SidebarItemID'; 
 
-			$gridField = new GridField("SidebarItems", "Sidebar Items", $this->SidebarItems(), $gridFieldConfig);
-			$fields->addFieldToTab("Root.Sidebar", new LabelField("SidebarLabel", "<h2>Add sidebar items below</h2>"));
-			$fields->addFieldToTab("Root.Sidebar", new LiteralField("SidebarManageLabel", '<p><a href="admin/sidebar-items" target="_blank">View and Manage Sidebar Items &raquo;</a></p>'));
-			$fields->addFieldToTab("Root.Sidebar", $gridField); // add the grid field to a tab in the CMS
+		$gridField = new GridField("SidebarItems", "Sidebar Items", $this->SidebarItems(), $gridFieldConfig);
+		$fields->addFieldToTab("Root.Sidebar", new LabelField("SidebarLabel", "<h2>Add sidebar items below</h2>"));
+		$fields->addFieldToTab("Root.Sidebar", new LiteralField("SidebarManageLabel", '<p><a href="admin/sidebar-items" target="_blank">View and Manage Sidebar Items &raquo;</a></p>'));
+		$fields->addFieldToTab("Root.Sidebar", $gridField); // add the grid field to a tab in the CMS
 
 		return $fields;
 	}
