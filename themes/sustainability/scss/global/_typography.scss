@@ -1,6 +1,14 @@
 /* /scss/imports/typography.scss
 ========================================================================== */
-a {color: $link; outline:none; text-decoration: underline;}
+a {
+	color: $link;
+	outline:none;
+	text-decoration: underline;
+	-ms-transition: .15s ease-in-out;
+	-moz-transition:.15s ease-in-out;
+	-webkit-transition: .15s ease-in-out;
+	transition: .15s ease-in-out;
+}
 a:hover {color: darken( $link, 10% );}
 a:active {color:#0088cc; color: darken( $link, 10% );}
 a:focus {outline:thin dotted; color: darken( $link, 10% );}
@@ -20,7 +28,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 h1 {
 	font-size: 40px;
-	margin: .75em 0 .5em;
+	margin: .5em 0;
 	@media screen and (min-width: $break-medium) {
 		font-size: 50px;
 	}
@@ -55,7 +63,7 @@ h3 + h4,
 h4 + h5,
 h5 + h6 {margin-top:0;}
 
-.lede {
+.article h1:first-of-type + p:first-of-type {
 	font-size: ($base-font * 1.2) + px;
 }
 

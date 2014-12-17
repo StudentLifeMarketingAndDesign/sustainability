@@ -29,7 +29,7 @@
 		private static $summary_fields = array (
 			"Title",
 		);
-		
+		private static $plural_name = "SidebarItems";
 		
 		function getCMSFields() { 
 			$fields = new FieldList(); 

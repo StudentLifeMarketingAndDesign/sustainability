@@ -7,7 +7,8 @@
         "silverstripe/framework": "3.1.6",
         "md/ac-json-events" : "dev-master",
         "md/division-bar" : "dev-master",
-        "silverstripe/blog" : "*"
+        "silverstripe/blog" : "*",
+        "undefinedoffset/sortablegridfield" : "*"
     },
     "config": {
         "process-timeout": 600
