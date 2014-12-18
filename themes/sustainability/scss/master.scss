@@ -14,22 +14,24 @@
 
 /* Element Imports
 -------------------------------------------*/
-@import "elements/_button-bootstrap";
-@import "elements/_form-bootstrap";
+// @import "elements/_button-bootstrap";
+// @import "elements/_form-bootstrap";
 @import "elements/_grid-bootstrap";
 @import "elements/_tables";
-// @import "elements/_glyphicons-bootstrap";
 
 
 /* Plugins
 -------------------------------------------*/
-
-
+@import "plugins/_shifter";
+@import "plugins/_naver";
+@import "plugins/_boxer";
+@import "plugins/_roller";
 
 /* Layout
 -------------------------------------------*/
-@import "site/_shifter";
-@import "site/_naver";
+@import "site/_staff";
+@import "site/_sidebaritem";
+@import "site/_gallery";
 @import "site/_home";
 @import "site/_header";
 @import "site/_footer";
