@@ -102,7 +102,7 @@
 		</nav>
 	<% end_if %>
 
-	<% include SideBarItems %>
+
 
 
 	</div><!-- end .subnavigation -->
@@ -110,7 +110,7 @@
 
 
 <div class="tablet-hide">
-	<!-- modules go here -->
+	<% include SideBarItems %>
 </div>
 
 

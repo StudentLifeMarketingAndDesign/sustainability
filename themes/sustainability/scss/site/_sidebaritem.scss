@@ -1,0 +1,80 @@
+
+.sidebaritem {
+	background: #008d9d;
+	margin: 30px 0 0;
+	overflow: hidden;
+	position: relative;
+}
+.leed-building-at-ui .sidebaritem {background: $leed;}
+.energy-climate .sidebaritem {background: $energy;}
+.recycling-and-waste-reduction .sidebaritem {background: $recycling;}
+.biomass-fuel-project .sidebaritem {background: $biomass;}
+.leed-building-at-ui .sidebaritem {background: $leed;}
+.transportation .sidebaritem {background: $transportation;}
+.food .sidebaritem {background: $food;}
+
+.sidebaritem:nth-child(2) {background-color: #83a869;}
+.sidebaritem:nth-child(3) {background-color: #595959;}
+
+.sidebaritem .title {
+	color: #fff;
+	line-height: 1.2;
+	margin-top: 0;
+	margin-bottom: .5em;
+}
+.sidebaritem .inner {
+	color: #fff;
+	font-size: 16px;
+	line-height: 1.4;
+	padding: 30px;
+}
+.sidebaritem.photo .inner {
+	@media (min-width: $break-small) and (max-width: $break-large - 1) {
+		margin-left: 45%;
+	}
+}
+.sidebaritem a {
+	color: #fff;
+}
+.sidebaritem-img {
+	display: block;
+	@media (min-width: $break-small) and (max-width: $break-large - 1) {
+		width: 45%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		background-size: cover;
+		background-position: center center;
+	}
+	@media (min-width: $break-large) {
+		background-image: none !important;
+	}
+}
+.sidebaritem-img img {
+	display: block;
+	width: 100%;
+	@media (min-width: $break-small) and (max-width: $break-large - 1) {
+		visibility: hidden;
+	}
+}
+
+
+.sidebaritem h1 {color: #fff;font-size: 28px;margin-top: .5em;}
+.sidebaritem h2 {color: #fff;font-size: 28px;margin-top: .5em;}
+.sidebaritem h3 {color: #fff;font-size: 24px;margin-top: .5em;}
+.sidebaritem h4 {color: #fff;font-size: 20px;margin-top: .5em;}
+.sidebaritem h5 {color: #fff;font-size: 18px;margin-top: .5em;}
+
+
+.morelink {
+	display: block;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+.sidebaritem hr {
+	border-top: 1px solid rgba(0,0,0,.1);
+	border-bottom: 1px solid rgba(255,255,255,.3);
+}

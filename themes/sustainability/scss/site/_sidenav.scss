@@ -24,6 +24,7 @@ Subnavigation
 		& a {
 			display: block;
 			font-size: 16px;
+			line-height: 1.4;
 			padding: 5px 0;
 		}
 	}
@@ -45,7 +46,7 @@ Subnavigation
 	}
 }
 .subnavigation .first-level {
-	border-top: 1px solid #ece9e0;
+	border-top: 1px solid #ddd;
 	margin-top: 15px;
 	padding-top: 15px;
 }
@@ -54,8 +55,8 @@ Subnavigation
 	background: #fff;
 }
 .subnavigation .current li a {
-	xborder-bottom: 1px solid #ece9e0;
-	padding: 8px 0;
+	border-bottom: 1px dashed #ece9e0;
+	padding: 10px 0;
 }
 .subnavigation .current li:last-child a {
 	border-bottom: none;

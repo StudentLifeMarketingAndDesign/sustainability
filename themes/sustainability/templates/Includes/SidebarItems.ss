@@ -1,28 +1,34 @@
 <% if SidebarItems %>
 	<% loop $SidebarItems %>
-		<div class="mod <% if $Image %>photo<% end_if %>">
-			<% if $ShowHeading %> 
-			    <div>
-			    	<% if $Link %>
-						<a href="$Link">
-							
-					        <h3>$Title</h3>
-					    
-					        <% if $Image %>
-					        	<img src="$Image.SetWidth(279).URL" alt="An image representing $Title">
-					        <% end_if %>
-				    	</a>
-			    	<% else %>
-					
-				        <h3>$Title</h3>
-				        
-				        <% if $Image %>
-				        	<img src="$Image.URL" alt="An image representing $Title">
-				        <% end_if %>
-			    	<% end_if %>
-			    </div>
+		<div class="sidebaritem <% if $Image %>photo<% end_if %>">
+			<% if $Image %>
+				<% if $Link %>
+					<a href="$Link" class="sidebaritem-img" style="background-image: url($Image.URL);">
+						<img src="$Image.SetWidth(360).URL" alt="$Title">
+					</a>
+				<% else %>
+					<div class="sidebaritem-img" style="background-image: url($Image.URL);">
+						<img src="$Image.SetWidth(360).URL" alt="$Title" class="sidebaritem-img">
+					</div>
+				<% end_if %>
+				<div class="inner">
+					<h3 class="title">$Title</h3>
+					$Content
+					<% if $Link %>
+						<hr>
+						<a href="$Link" class="morelink">Learn More</a>
+					<% end_if %>
+				</div>
+			<% else %>
+				<div class="inner">
+					<h3 class="title">$Title</h3>
+					$Content
+					<% if $Link %>
+						<hr>
+						<a href="$Link" class="morelink">Learn More</a>
+					<% end_if %>
+				</div>
 			<% end_if %>
-			    $Content
-			</div>
+		</div>
 	<% end_loop %>
 <% end_if %>
