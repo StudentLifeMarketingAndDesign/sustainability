@@ -36,27 +36,8 @@ MMMMMMMM               MMMMMMMM                               DDDDDDDDDDDDD
 <link rel="stylesheet" href="{$ThemeDir}/css/master.css">
 <!-- JS -->
 <!--[if lt IE 9]>
-   <script src="{$ThemeDir}/js/plugins/html5shiv.js"></script>
-   <script src="{$ThemeDir}/js/plugins/respond.min.js"></script>
+   <script src="{$ThemeDir}/js/html5shiv.js"></script>
 <![endif]-->
-
-<!-- Nav Shifter -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-<!-- <link href="{$ThemeDir}/css/jquery.fs.shifter.css" rel="stylesheet" type="text/css" media="all"> -->
-<script src="{$ThemeDir}/js/jquery.fs.shifter.js"></script>
-<script src="{$ThemeDir}/js/jquery.fs.naver.js"></script>
-
-<script>
-	$(document).ready(function() {
-		// Shifter
-		$.shifter({
-			maxWidth: "767px"
-		});
-
-		// Naver
-		$(".naver").naver();
-	});
-</script>
 
 </head>
 
@@ -116,10 +97,14 @@ MMMMMMMM               MMMMMMMM                               DDDDDDDDDDDDD
 
 	<!-- JS -->
 
-	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-	<script src="{$ThemeDir}/js/min/production-min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<!-- <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
+	<script src="{$ThemeDir}/js/build/production.min.js"></script>
 	<script src="division-bar/js/division-bar.js"></script>
 	<% include GoogleAnalytics %>
 
 </body>
 </html>
+
+
+
