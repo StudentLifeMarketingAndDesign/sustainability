@@ -14,6 +14,7 @@ body {
 	color: #444;
 	font-family: $body-font;
 	margin: 0;
+	overflow-x: hidden;
 	padding: 0;
 	-webkit-font-smoothing: antialiased;
 }
@@ -24,6 +25,11 @@ body {
 }
 .tablet-hide {
 	@media (max-width: $break-large - 1 ) {
+		display: none;
+	}
+}
+.tablet-show {
+	@media (min-width: $break-large) {
 		display: none;
 	}
 }
@@ -61,9 +67,12 @@ Layout
 	max-width: $break-xlarge;
 	margin-right: auto;
 	margin-left: auto;
-	padding-left: 1em;
-	padding-right: 1em;
+	padding-left: 1.5em;
+	padding-right: 1.5em;
 	position: relative;
+	/*@media (min-width: $break-small) {
+		width: $break-small - 20;
+	}*/
 	@media (min-width: $break-medium) {
 		width: $break-medium - 20;
 	}
@@ -74,8 +83,6 @@ Layout
 		width: $break-xlarge - 20;
 	}
 }
-
-
 .mainimg-container {
 	background-color: #000;
 	background-position: center center;
@@ -86,65 +93,75 @@ Layout
 		height: 600px;
 	}
 }
-
 .article {
 	margin-top: 30px;
 }
 
 
+/* ---------------------------------------------------------------
+Child Page Summary
+--------------------------------------------------------------- */
 .child-block {
-	border-top: 1px solid #d0cdc3;
+	border-bottom: 1px solid #cfc8b2;
+	border-top: 1px solid rgba(255,255,255,.8);
 	margin: 0;
-	overflow: hidden;
 	padding: 30px 0 10px;
 }
-
-.child-block img {
+.child-block:first-of-type {
+	border-top: 1px solid #cfc8b2;
+}
+.child-block:last-of-type {
+	border-bottom: none;
+}
+.blocklink {
 	display: block;
-
-	margin: 0 auto 20px;
-	@media (min-width: $break-small) {
-		max-width: 40%;
-		float: right;
-	}
+	overflow: hidden;
+	text-decoration: none;
+}
+.child-block-img {
+	display: block;
+	float: right;
+	margin: 0 0 15px 15px;
+	width: 40%;
 	@media (min-width: $break-medium) {
 		float: left;
 		margin: 0 30px 20px 0;
 	}
 }
-.child-block h3 {
+.child-block .title {
 	margin: 0;
-	padding-top: 10px;
 }
-.button {
-	background: #36302a;
-	border: none;
-	color: #ffffff;
+.child-block p {
+	color: #444;
+	@media (min-width: $break-small) {
+		font-size: 16px;
+	}
+}
+.child-block .link {
+	border-bottom: 4px solid $link;
+	color: #36302a;
 	display: block;
 	float: left;
-	font-family: $heading-font;
-	font-style: normal;
 	font-size: 13px;
-	font-size: 0.8125rem;
-	font-weight: 500;
-	line-height: 1.2;
-	/* letter-spacing: 0.02em; */
-	padding: 12px 20px;
-	text-transform: uppercase;
-}
-.button.bordered {
-	background: none;
-	border-bottom: 4px solid #f0b336;
-	color: #36302a;
+	font-weight: bold;
+	letter-spacing: 0.05em;
 	margin: 0 15px 20px 0;
 	padding: 5px 0;
+	text-transform: uppercase;
+	transition: .15s ease-in-out;
 }
+.blocklink:hover .link, .blocklink:focus .link {
+	border-color: $orange;
+}
+
 
 /* ---------------------------------------------------------------
 Justify
 --------------------------------------------------------------- */
 .justify {
 	font-size: 0.1px;
+	list-style: none;
+	margin: 1em 0;
 	overflow: hidden;
 	text-align: justify;
 }
@@ -154,30 +171,32 @@ Justify
 	width: 100%;
 }
 .justify-item {
+	display: inline-block;
+	font-size: $base-font-size;
+	margin-bottom: 1em;
+	text-align: left;
 	vertical-align: top;
 	width: 100%;
-	text-align: left;
-	display: inline-block;
 }
 .justify-2 .justify-item {
 	@media screen and (min-width: $break-small) {
-	 width: 48%;
+		width: 48%;
 	}
 }
 .justify-3 .justify-item {
 	@media screen and (min-width: $break-small) {
-	 width: 48%;
+		width: 48%;
 	}
 	@media screen and (min-width: $break-medium) {
-	 width: 32%;
+		width: 32%;
 	}
 }
 .justify-4 .justify-item {
 	@media screen and (min-width: $break-small) {
-	 width: 48%;
+		width: 48%;
 	}
 	@media screen and (min-width: $break-medium) {
-	 width: 24%;
+		width: 24%;
 	}
 }
 .justify .filler {
@@ -239,49 +258,4 @@ Admin Login form fields
 		background-color: #eee;
 		border-color: #adadad;
 	}
-}
-
-/* ---------------------------------------------------------------
-Justify
---------------------------------------------------------------- */
-.justify {
-	font-size: 0.1px;
-	overflow: hidden;
-	text-align: justify;
-}
-.justify:after {
-	content: '';
-	display: inline-block;
-	width: 100%;
-}
-.justify-item {
-	vertical-align: top;
-	width: 100%;
-	text-align: left;
-	display: inline-block;
-}
-.justify-2 .justify-item {
-	@media screen and (min-width: $break-small) {
-	 width: 48%;
-	}
-}
-.justify-3 .justify-item {
-	@media screen and (min-width: $break-small) {
-	 width: 48%;
-	}
-	@media screen and (min-width: $break-medium) {
-	 width: 32%;
-	}
-}
-.justify-4 .justify-item {
-	@media screen and (min-width: $break-small) {
-	 width: 48%;
-	}
-	@media screen and (min-width: $break-medium) {
-	 width: 24%;
-	}
-}
-.justify .filler {
-	height: 0 !important;
-	margin: 0 !important;
 }
