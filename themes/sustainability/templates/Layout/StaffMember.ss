@@ -6,44 +6,27 @@
 			<% include SideNav %>
 		</div>
 
+		<!-- Main Content -->
 		<div class="col-lg-8 col-lg-pull-4">
 			<div class="article">
 
 				$Breadcrumbs
 
+				<img src="$Photo.SetWidth(500).URL" alt="$Name">
 				<h1>$Title</h1>
-				<img src="$Photo.SetWidth(400).URL" alt="$Name">
-				<h2>$Position</h2>
+				<% if $Position %><h3>$Position</h3><% end_if %>
+				<% if $EmailAddress || $PhoneNumber %>
 				<ul>
-					<li>Email: <a href="mailto:$EmailAddress">$EmailAddress</a></li>
-					<li>Phone: $Phone</li>
+					<% if $EmailAddress %><li>Email: <a href="mailto:$EmailAddress">$EmailAddress</a></li><% end_if %>
+					<% if $PhoneNumber %><li>Phone: $PhoneNumber</li><% end_if %>
 				</ul>
+				<% end_if %>
 				$Content
 				$Form
 			</div>
 
-			<!-- Loop Children -->
-			<% if $Children %>
-				<% loop $Children %>
-					<section class="child-block ">
-						<a href="$Link">
-							<% if $SummaryPhoto %>
-								<img src="$SummaryPhoto.CroppedImage(250,230).URL" alt="$Title">
-							<% end_if %>
-							<div class="wrapper">
-								<h3>$Title</h3>
-								<% if $Summary %>
-									$Summary.LimitCharacters(120)
-								<% else %>
-									<p>$Content.LimitCharacters(120)</p>
-									<span class="button bordered">Learn More</span>
-								<% end_if %>
-							</div>
-						</a>
-					</section>
-				<% end_loop %>
-			<% end_if %>
-			<!-- end Loop Children -->
+			<!-- Loop Sub Pages -->
+			<% include ChildPages %>
 
 		</div><!-- end .col -->
 	</div><!-- end .row -->
