@@ -28,6 +28,10 @@ class NewsEntry extends BlogEntry {
 		$fields->removeByName("Summary");
 		$fields->removeByName("GalleryImages");
 		$fields->removeByName("PagePhoto");
+		$fields->removeByName("PageSummary");
+		$fields->removeByName("Gallery");
+
+		$fields->renameField("Tags", "Tags (biomass, energy, food, leed, recycling, transportation) comma sep.");
 
 
 		$fields->addFieldToTab("Root.Main", new UploadField("Photo", "Photo"));
