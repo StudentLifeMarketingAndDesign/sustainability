@@ -13,7 +13,7 @@
 .breadcrumb .inner {
 	border-top: 1px solid #fff;
 	border-bottom: 1px solid #dcd7c8;
-	padding: 20px 0;
+	padding: 15px 0;
 }
 .breadcrumb ol {
 	list-style: none;
@@ -24,9 +24,6 @@
 		margin: 0;
 		position: relative;
 		text-transform: uppercase;
-		& a {
-			padding-left: 5px;
-		}
 	}
 }
 .breadcrumb li:first-child a {
@@ -36,13 +33,10 @@
 	color: #444;
 	content: "\25B8";
 	display: inline-block;
-	padding: 0 6px 0 10px;
+	padding: 0 10px 0 10px;
 }
 .breadcrumb li:last-child:after {
 	content: "";
-}
-.breadcrumb .active {
-	padding-left: 5px;
 }
 .breadcrumb li a {
 	color: #666;

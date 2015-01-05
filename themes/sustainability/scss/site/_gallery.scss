@@ -1,6 +1,11 @@
 .gallery {
-	background-color: #fff;
+	background-color: rgba(0,0,0,.04);
+	border-top: 1px solid rgba(0,0,0,.1);
 	margin-top: 30px;
 	overflow: hidden;
-	padding: 30px 0;
+	padding: 50px 0 40px;
+}
+.gallery h2 {
+	font-size: 50px;
+	margin-top: 0;
 }

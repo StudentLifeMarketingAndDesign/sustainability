@@ -10,7 +10,8 @@ html {
 	}
 }
 body {
-	background: #f2efe9 url(../images/body.jpg);
+	background: #f2efe9 url(../images/texture.jpg);
+	background-attachment: fixed;
 	color: #444;
 	font-family: $body-font;
 	margin: 0;
@@ -51,7 +52,7 @@ Division Bar
 		width: $break-large - 20;
 	}
 	@media (min-width: $break-xlarge) {
-		width: $break-xlarge - 20;
+		width: $break-xlarge - 40;
 	}
 }
 .directory-toggle:after {
@@ -80,17 +81,7 @@ Layout
 		width: $break-large - 20;
 	}
 	@media (min-width: $break-xlarge) {
-		width: $break-xlarge - 20;
-	}
-}
-.mainimg-container {
-	background-color: #000;
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	height: 500px;
-	@media (min-width: $break-large) {
-		height: 600px;
+		width: $break-xlarge - 40;
 	}
 }
 .article {
@@ -110,9 +101,6 @@ Child Page Summary
 .child-block:first-of-type {
 	border-top: 1px solid #cfc8b2;
 }
-.child-block:last-of-type {
-	border-bottom: none;
-}
 .blocklink {
 	display: block;
 	overflow: hidden;
@@ -125,7 +113,13 @@ Child Page Summary
 	width: 40%;
 	@media (min-width: $break-medium) {
 		float: left;
-		margin: 0 30px 20px 0;
+		margin: 0 0 20px 0;
+	}
+}
+.withphoto .child-block-content {
+	@media (min-width: $break-medium) {
+		margin-left: 45%;
+		overflow: hidden;
 	}
 }
 .child-block .title {
@@ -154,6 +148,19 @@ Child Page Summary
 	border-color: $orange;
 }
 
+/* ---------------------------------------------------------------
+Interior Large Photo
+--------------------------------------------------------------- */
+.mainimg-container {
+	background-color: #000;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 300px;
+	@media (min-width: $break-large) {
+		height: 600px;
+	}
+}
 
 /* ---------------------------------------------------------------
 Justify

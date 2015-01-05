@@ -2,7 +2,7 @@
 <% if $Children %>
 	<br />
 	<% loop $Children %>
-		<section class="child-block">
+		<section class="child-block <% if $SummaryPhoto %>withphoto<% end_if %>">
 			<a href="$Link" class="blocklink">
 				<% if $SummaryPhoto %>
 					<img src="$SummaryPhoto.CroppedImage(280,250).URL" alt="$Title" class="child-block-img">

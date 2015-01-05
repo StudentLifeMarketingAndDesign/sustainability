@@ -29,7 +29,6 @@ Subnavigation
 		}
 	}
 }
-
 .subnavigation h4 {
 	font-size: 20px;
 }
@@ -73,14 +72,6 @@ Mobile Styles (Naver)
 	@media (max-width: $break-large -1) {
 		margin-top: 0;
 	}
-}
-.naver-handle {
-	xbackground: #008c9c;
-	xcolor: #fff;
-}
-.naver-handle:after {
-	xbackground: #fff;
-	xbox-shadow: 0 5px 0 #fff, 0 -5px 0 #fff;
 }
 
 

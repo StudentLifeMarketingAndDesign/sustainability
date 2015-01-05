@@ -6,7 +6,7 @@ $nav-padding-large: 12px;
 $nav-margin-large: 43px;
 
 $nav-padding-xlarge: 20px;
-$nav-margin-xlarge: 48px;
+$nav-margin-xlarge: 44px;
 
 
 /* ---------------------------------------------------------------
@@ -86,7 +86,7 @@ Dropdown
 --------------------------------------------------------------- */
 .dropdown {
 	background: #fff;
-	border-top: 4px solid #00626d;
+	border-top: 4px solid $orange;
 	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
 	left: 0;
 	list-style: none;
@@ -134,7 +134,7 @@ Dropdown
 	z-index: -1;
 	border-left: 10px solid transparent;
 	border-right: 10px solid transparent;
-	border-bottom: 10px solid #00626d;
+	border-bottom: 10px solid $orange;
 }
 .main-nav > li:last-of-type .dropdown:before {
 	left: auto;
