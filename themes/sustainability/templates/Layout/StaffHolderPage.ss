@@ -28,9 +28,6 @@
 
 			</div>
 
-			<!-- Loop Sub Pages -->
-			<% include ChildPages %>
-
 		</div><!-- end .col -->
 	</div><!-- end .row -->
 </article><!-- end .container -->
