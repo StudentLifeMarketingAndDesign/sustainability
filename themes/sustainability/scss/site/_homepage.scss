@@ -1,0 +1,160 @@
+/* ---------------------------------------------------------------
+Carousel
+--------------------------------------------------------------- */
+.your-class {
+	height: 300px;
+	overflow: hidden;
+	@media (min-width: $break-small) {
+		height: 600px;
+	}
+}
+.hero-img {
+	background-size: cover;
+	background-position: center top;
+	position: relative;
+	width: 100%;
+	height: 300px;
+	@media (min-width: $break-small) {
+		height: 600px;
+	}
+}
+.your-class .inner {
+	background: rgba(0,0,0,.5);
+	position: absolute;
+	width: 300px;
+	margin-left: -150px;
+	bottom: 100px;
+	left: 50%;
+	padding: 20px;
+	color: #fff;
+}
+.your-class .inner h3 {
+	color: #fff;
+}
+.slick-slider {
+	margin-bottom: 0;
+}
+
+
+/* ---------------------------------------------------------------
+Initiatives
+--------------------------------------------------------------- */
+.home-initiatives {
+	background: rgba(255,255,255,.5);
+	border-bottom: 1px solid rgba(0,0,0,.1);
+	padding: 60px 0;
+}
+.home-initiatives .init-list {
+	list-style: none;
+	margin: 30px 0 0;
+	padding: 0;
+}
+.init-list li {
+	margin-bottom: 20px;
+	margin-right: 10px;
+	width: 46%;
+	@media (min-width: 400px) {
+		margin-right: 10px;
+	}
+	@media (min-width: $break-small) {
+		margin-right: 10px;
+		width: 30%;
+	}
+	@media (min-width: $break-medium) {
+		margin-right: 20px;
+		width: 211px;
+	}
+	@media (min-width: $break-large) {
+		margin-right: 13px;
+		width: 140px;
+	}
+	@media (min-width: $break-xlarge) {
+		margin-right: 20px;
+		width: 167px;
+	}
+}
+.init-list li.food {
+
+	@media (min-width: $break-large) {
+		margin-right: 0;
+		padding-right: 2px;
+	}
+}
+.init-list .init-link {
+	background: #fff;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.2);
+	display: block;
+	height: 240px;
+	padding: 30px 15px;
+	text-align: center;
+	text-decoration: none;
+	@media (min-width: 400px) {
+		height: 260px;
+		padding: 30px 25px;
+	}
+	@media (min-width: $break-small) {
+		height: 270px;
+	}
+	@media (min-width: $break-medium) {
+		padding: 30px 40px;
+	}
+	@media (min-width: $break-large) {
+		height: 234px;
+		padding: 30px 20px;
+	}
+}
+.init-imgwrapper {
+	padding: 5px;
+	border-radius: 50%;
+	display: block;
+	box-shadow: 0 1px 1px rgba(0,0,0,.15);
+}
+.init-imgwrapper span {
+	display: block;
+	padding: 15px;
+	background-color: #000;
+	border-radius: 50%;
+	box-shadow: inset 0 0 0 4px rgba(255,255,255,.2);
+	@media (min-width: 600px) {
+		padding: 25px;
+	}
+	@media (min-width: $break-large) {
+		padding: 15px;
+	}
+	@media (min-width: $break-xlarge) {
+		padding: 25px;
+	}
+}
+.energy .init-imgwrapper span {background-color: $energy;}
+.recycling .init-imgwrapper span {background-color: $recycling;}
+.biomass .init-imgwrapper span {background-color: $biomass;}
+.leed .init-imgwrapper span {background-color: $leed;}
+.transportation .init-imgwrapper span {background-color: $transportation;}
+.food .init-imgwrapper span {background-color: $food;}
+
+.init-img {
+	display: block;
+	width: 100%;
+}
+.init-title {
+	font-family: $body-font;
+	font-size: 15px;
+	font-weight: normal;
+	line-height: 1.5;
+	margin: 20px 0 0;
+}
+
+
+
+
+
+
+
+/* ---------------------------------------------------------------
+News & Events
+--------------------------------------------------------------- */
+
+
+
+
+

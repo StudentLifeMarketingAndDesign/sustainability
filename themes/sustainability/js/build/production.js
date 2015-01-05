@@ -2704,9 +2704,11 @@ $(document).ready(function() {
 	// Boxer
 	$(".boxer").boxer();
 
+	// Roller
 	$(".target").roller({
-			paged: true,
-			pagination: false
-		});
+		paged: true,
+		pagination: false
+	});
+
 
 });
