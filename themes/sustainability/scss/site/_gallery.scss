@@ -1,11 +1,68 @@
-.gallery {
+.gallerysection {
 	background-color: rgba(0,0,0,.04);
 	border-top: 1px solid rgba(0,0,0,.1);
 	margin-top: 30px;
 	overflow: hidden;
 	padding: 50px 0 40px;
 }
-.gallery h2 {
+.gallerysection h2 {
 	font-size: 50px;
 	margin-top: 0;
+}
+.boxer {
+	display: block;
+	overflow: hidden;
+}
+.boxer img {
+	-webkit-transition: -webkit-transform 0.6s ease 0s !important;
+	transition: -ms-transform 0.6s ease 0s !important;
+	transition: transform 0.6s ease 0s !important;
+}
+.boxer:hover img {
+	-webkit-transition-delay: 0.25s !important;
+	transition-delay: 0.25s !important;
+	-webkit-transform: scale(1.05);
+	-ms-transform: scale(1.05);
+	transform: scale(1.05);
+}
+.roller-control {
+	background: #000000;
+	background: rgba(0, 0, 0, 0.6);
+	display: none;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	width: 65px;
+	z-index: 2;
+	overflow: hidden;
+	text-indent: 200%;
+	white-space: nowrap;
+}
+.roller-control.enabled {
+	display: block;
+}
+.roller-control.next {
+	right: 0;
+}
+.roller-control.previous {
+	left: 0;
+}
+.roller-control:after {
+	content: "";
+	background: url(../images/roller-controls.png) center center no-repeat;
+	display: block;
+	height: 24px;
+	width: 20px;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.roller-control.next:after {
+	background-position: right center;
+}
+.roller-control.previous:after {
+	background-position: left center;
 }

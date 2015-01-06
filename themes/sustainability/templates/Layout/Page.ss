@@ -1,6 +1,7 @@
 <% if $PagePhoto %>
 	<div style="background-image: url($PagePhoto.URL);" class="mainimg-container"></div>
 <% end_if %>
+
 <article class="container">
 	<div class="row">
 

@@ -2701,10 +2701,10 @@ $(document).ready(function() {
 	// Naver
 	$(".naver").naver();
 
-	// Boxer
+	// Boxer - Lightbox
 	$(".boxer").boxer();
 
-	// Roller
+	// Roller - Carousel
 	$(".target").roller({
 		paged: true,
 		pagination: false
