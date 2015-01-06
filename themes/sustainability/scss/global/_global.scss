@@ -17,8 +17,8 @@ object,embed { height: 100%; }
 
 .left {float: left;}
 .right{float: right;}
-img.left  {margin-right: 1em; margin-bottom: 1em;}
-img.right {margin-left: 1em; margin-bottom: 1em;}
+img.left  {margin-right: 1em; margin-bottom: 1em; box-shadow: 5px 5px 0 #cfc8b2;}
+img.right {margin-left: 1em; margin-bottom: 1em; box-shadow: -5px 5px 0 #cfc8b2;}
 
 .text-left	  {text-align: left;}
 .text-right	  {text-align: right;}
