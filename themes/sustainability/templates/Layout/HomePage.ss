@@ -92,54 +92,102 @@
 	<!-- $Content -->
 	$Form
 
-	<!-- News -->
-	<% with Page(news) %>
-		<% if $Entries %>
-			<h2>News</h2>
-			<% loop $Entries(6) %>
-				<h4><a href="$Link">$Title</a></h4>
-				<% if $Date %><small>$Date.Format('M. j')</small><% end_if %>
-				<% if TagsCollection %>
-					<div class="tags">
-						<% _t('BlogSummary_ss.TAGS','Tags') %>:
-						<% loop TagsCollection %>
-							<a href="$Link" title="View all posts tagged '$Tag'" rel="tag">$Tag</a><% if not Last %>,<% end_if %>
-						<% end_loop %>
-					</div>
-				<% end_if %>
-			<% end_loop %>
-			<a href="$Link">View all News</a>
-		<% end_if %>
-	<% end_with %>
+	<!-- Tabs -->
+	<h2 class="tabber-title">Sustainability At UI</h2>
+	<div class="tabbed">
+		<menu class="tabber-menu clearfix">
+			<a href="#tab-1" class="tabber-handle">News</a>
+			<a href="#tab-2" class="tabber-handle">Upcoming Events</a>
+			<a href="#tab-3" class="tabber-handle">Climate Narative Blog</a>
+			<a href="#tab-4" class="tabber-handle">Videos</a>
+		</menu>
+		<div class="tabber-tab" id="tab-1">
+			<div class="tabber-tab-inner">
+				<ul class="clearfix">
+					<!-- News -->
+					<% with Page(news) %>
+						<% if $Entries %>
+							<% loop $Entries(4) %>
+								<li>
+								<h4><a href="$Link">$Title</a></h4>
+								<% if $Date %><small>$Date.Format('M. j')</small><% end_if %>
+								<% if TagsCollection %>
+									<div class="tags">
+										<% _t('BlogSummary_ss.TAGS','Tags') %>:
+										<% loop TagsCollection %>
+											<a href="$Link" title="View all posts tagged '$Tag'" rel="tag">$Tag</a><% if not Last %>,<% end_if %>
+										<% end_loop %>
+									</div>
+								<% end_if %>
+								</li>
+							<% end_loop %>
+						<% end_if %>
+					<% end_with %>
+				</ul>
+			</div>
+		</div>
+		<div class="tabber-tab" id="tab-2">
+			<div class="tabber-tab-inner">
+				<!-- Events -->
+				<% with LocalistCalendar %>
+					<!-- Loop Events -->
+					<% loop $EventList(4) %>
+						<% if $Title %><a href="$Link">$Title</a><% end_if %>
+						<% if $Location %><br />$Location<% end_if %>
+						<% if $LocalistLink %><br />$LocalistLink<% end_if %>
+						<% if $MoreInfoLink %><br />$MoreInfoLink<% end_if %>
+						<% if $Image %><br /><img src="$Image.URL" alt="$Title" style="width:180px;"><% end_if %>
+						<% if $Tags %>
+							<br />
+							Tags:
+							<% loop $Tags %>
+								<a href="$Link" class="">$Title</a>
+							<% end_loop %></p>
+						<% end_if %>
+						<% if $Types %>
+							<div>
+								<p><strong>Categorized under:</strong>
+								<% loop $Types %>
+									<a href="$Link">$Title</a>
+								<% end_loop %></p>
+							</div>
+						<% end_if %>
+						<hr>
+					<% end_loop %>
+					<a href="$Link">View all Events</a>
+					<!-- end Loop -->
+				<% end_with %>
+			</div>
+		</div>
+		<div class="tabber-tab" id="tab-3">
+			<div class="tabber-tab-inner">
+				<!-- Blog -->
+				<% loop $RSSDisplay("4", "http://sustainability.uiowa.edu/climatenarrative/?feed=rss2") %>
+					<article class="news-entry $EvenOdd">
+						<% if $ThumbnailURL %><a href="$Link"><img class="" src="$ThumbnailURL" /></a><% end_if %>
+						<h3><a href="$Link" target="_blank">$Title</a></h3>
+						<div class="news-text">
+							<p>$Description.Summary(30) <a href="$Link">Continue Reading</a></p>
+						</div>
+					</article>
+					<!-- end news-entry -->
+				<% end_loop %>
+			</div>
+		</div>
+		<div class="tabber-tab" id="tab-4">
+			<div class="tabber-tab-inner">
+				<p>Maecenas faucibus mollis interdum. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+			</div>
+		</div>
+	</div>
+	<!-- end Tabs -->
 
-	<!-- Events -->
-	<h2>Events</h2>
-	<% with LocalistCalendar %>
-		<!-- Loop Events -->
-		<% loop $EventList(6) %>
-			<% if $Title %><a href="$Link">$Title</a><% end_if %>
-			<% if $Location %><br />$Location<% end_if %>
-			<% if $LocalistLink %><br />$LocalistLink<% end_if %>
-			<% if $MoreInfoLink %><br />$MoreInfoLink<% end_if %>
-			<% if $Image %><br /><img src="$Image.URL" alt="$Title" style="width:180px;"><% end_if %>
-			<% if $Tags %>
-				<br />
-				Tags:
-				<% loop $Tags %>
-					<a href="$Link" class="">$Title</a>
-				<% end_loop %></p>
-			<% end_if %>
-			<% if $Types %>
-				<div>
-					<p><strong>Categorized under:</strong>
-					<% loop $Types %>
-						<a href="$Link">$Title</a>
-					<% end_loop %></p>
-				</div>
-			<% end_if %>
-			<hr>
-		<% end_loop %>
-		<a href="$Link">View all Events</a>
-		<!-- end Loop -->
-	<% end_with %>
+
+
+
+
+
+
+
+
 </div><!-- end .container -->

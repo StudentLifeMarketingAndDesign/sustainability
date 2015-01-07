@@ -20,5 +20,8 @@ $(document).ready(function() {
 		pagination: false
 	});
 
+	// Tabber - Tabs
+	$(".tabbed").tabber();
+
 
 });
