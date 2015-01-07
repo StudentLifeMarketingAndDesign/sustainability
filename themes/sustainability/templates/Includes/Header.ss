@@ -8,8 +8,8 @@
 		</h1>
 		<nav role="navigation" class="top-nav">
 			<ul>
-				<li><a href="/sustainability/news/">News &amp; Events</a></li>
-				<li><a href="#">Blog</a></li>
+				<li><a href="{$BaseHref}news/">News &amp; Events</a></li>
+				<li><a href="http://sustainability.uiowa.edu/climatenarrative/">Blog</a></li>
 			</ul>
 		</nav>
 		<ul class="webicons">

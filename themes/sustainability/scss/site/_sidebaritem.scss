@@ -1,17 +1,10 @@
 
 .sidebaritem {
-	background: #008d9d;
+	background: $link;
 	margin: 30px 0 0;
 	overflow: hidden;
 	position: relative;
 }
-.leed-building-at-ui .sidebaritem {background: $leed;}
-.energy-climate .sidebaritem {background: $energy;}
-.recycling-and-waste-reduction .sidebaritem {background: $recycling;}
-.biomass-fuel-project .sidebaritem {background: $biomass;}
-.leed-building-at-ui .sidebaritem {background: $leed;}
-.transportation .sidebaritem {background: $transportation;}
-.food .sidebaritem {background: $food;}
 
 .sidebaritem:nth-child(2) {background-color: #83a869;}
 .sidebaritem:nth-child(3) {background-color: #595959;}

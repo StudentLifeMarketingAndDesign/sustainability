@@ -30,10 +30,10 @@ Carousel
 }
 .your-class .inner {
 	position: absolute;
-	width: 80%;
+	width: 76%;
 	bottom: 0;
 	left: 50%;
-	margin-left: -40%;
+	margin-left: -38%;
 	color: #fff;
 	z-index: 100;
 	padding-bottom: 100px;
@@ -42,7 +42,8 @@ Carousel
 .your-class .inner h3 {
 	color: #fff;
 	font-size: 60px;
-	margin: 0 0 5px;
+	line-height: 1.1;
+	margin: 0 0 10px;
 	font-family: $body-font;
 	text-transform: uppercase;
 	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75);
@@ -60,11 +61,11 @@ Carousel
 }
 .your-class-btn {
 	display: inline-block;
-	border-radius: 3px;
-	background-color: $recycling;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.7);
+	border-radius: 1px;
+	background-color: $orange;
+	box-shadow: 0 0 2px rgba(0,0,0,.4), inset 0 1px 0 rgba(255,255,255,.4);
 	color: #fff;
-	text-shadow: 1px 1px 0 rgba(0,0,0,.1);
+	text-shadow: 1px 1px 0 rgba(0,0,0,.15);
 	text-align: center;
 	text-transform: uppercase;
 	font-size: 13px;
@@ -73,11 +74,23 @@ Carousel
 	padding:15px 25px;
 	line-height: 1;
 	text-decoration: none;
-	margin-top: 25px;
+	margin-top: 30px;
+	position: relative;
+}
+.your-class-btn:after {
+	content: "";
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	background-image: -webkit-linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 100%);
+	background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 100%);
 }
 .your-class-btn:hover, .your-class-btn:focus {
 	color: #fff;
 	text-decoration: none;
+	background-color: darken( $orange, 10% );
 }
 
 
@@ -85,7 +98,7 @@ Carousel
 Initiatives
 --------------------------------------------------------------- */
 .home-initiatives {
-	background: rgba(255,255,255,.5);
+	background: url(../images/wave.jpg);
 	border-bottom: 1px solid rgba(0,0,0,.1);
 	padding: 60px 0;
 }
@@ -127,6 +140,8 @@ Initiatives
 .init-list .init-link {
 	background: #fff;
 	box-shadow: 1px 1px 1px rgba(0,0,0,.2);
+	border-top: 4px solid #000;
+	border-radius: 2px;
 	display: block;
 	height: 240px;
 	padding: 30px 15px;
@@ -147,6 +162,16 @@ Initiatives
 		padding: 30px 20px;
 	}
 }
+.init-list .init-link:hover, .init-list .init-link:focus {
+	background: #fafafa;
+}
+.energy .init-link{border-color: $energy;}
+.recycling .init-link {border-color: $recycling;}
+.biomass .init-link {border-color: $biomass;}
+.leed .init-link {border-color: $leed;}
+.transportation .init-link {border-color: $transportation;}
+.food .init-link {border-color: $food;}
+
 .init-imgwrapper {
 	padding: 5px;
 	border-radius: 50%;
@@ -169,6 +194,7 @@ Initiatives
 		padding: 25px;
 	}
 }
+
 .energy .init-imgwrapper span {background-color: $energy;}
 .recycling .init-imgwrapper span {background-color: $recycling;}
 .biomass .init-imgwrapper span {background-color: $biomass;}

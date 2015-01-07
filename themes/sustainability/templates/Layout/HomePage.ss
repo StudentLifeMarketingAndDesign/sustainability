@@ -1,24 +1,18 @@
+<% if CarouselItems %>
 <div class="your-class">
-	<div style="background-image:url({$ThemeDir}/images/leed-hero.jpg);" class="hero-img">
-		<div class="inner">
-			<h3>8 LEED certified buildings</h3>
-			<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec ullamcorper nulla non metus auctor fringilla. Fusce dapibus commodo, tortor mauris risus.</p>
-			<a href="#" class="your-class-btn">Learn More</a>
+	<% loop CarouselItems %>
+		<div style="background-image:url($Image.URL);" class="hero-img">
+			<div class="inner">
+				<h3>$Title</h3>
+				<p>$SubTitle</p>
+				<% if $AssociatedPageID %><a href="$AssociatedPage.Link" class="your-class-btn">Learn More</a><% end_if %>
+			</div>
 		</div>
-	</div>
-	<div style="background-image:url({$ThemeDir}/images/hero-2.jpg);" class="hero-img">
-		<div class="inner">
-			<h3>Ornare Egestas Parturient</h3>
-			<p>Duis mollis, est non commodo luctus, nisi erat porttitor.</p>
-		</div>
-	</div>
-	<div style="background-image:url({$ThemeDir}/images/hero-3.jpg);" class="hero-img">
-		<div class="inner">
-			<h3>Vehicula Tellus Inceptos</h3>
-			<p>Morbi leo risus, porta ac vestibulum at eros.</p>
-		</div>
-	</div>
+	<% end_loop %>
 </div>
+<% end_if %>
+
+
 
 <!-- Initiatives -->
 <section class="home-initiatives">
@@ -27,7 +21,7 @@
 		<p class="text-center">Just a few of the topics within sustainability are presented here. It's a dynamic list that we anticipate will evolve as the University community strives to be good stewards and advocates for sustainability.</p>
 		<ul class="init-list justify clearfix">
 			<li class="justify-item energy">
-				<a href="#" class="init-link">
+				<a href="{$BaseHref}initiatives/energy-climate/" class="init-link">
 					<span class="init-imgwrapper">
 						<span>
 							<img src="{$ThemeDir}/images/icon-energy-128.png" alt="Energy &amp; Climate" class="init-img">
@@ -37,7 +31,7 @@
 				</a>
 			</li>
 			<li class="justify-item recycling">
-				<a href="#" class="init-link">
+				<a href="{$BaseHref}initiatives/recycling-and-waste-reduction/" class="init-link">
 					<span class="init-imgwrapper">
 						<span>
 							<img src="{$ThemeDir}/images/icon-recycle-128.png" alt="Recycling" class="init-img">
@@ -47,7 +41,7 @@
 				</a>
 			</li>
 			<li class="justify-item biomass">
-				<a href="#" class="init-link">
+				<a href="{$BaseHref}initiatives/biomass-fuel-project/" class="init-link">
 					<span class="init-imgwrapper">
 						<span>
 							<img src="{$ThemeDir}/images/icon-biomass.png" alt="Biomass" class="init-img">
@@ -57,7 +51,7 @@
 				</a>
 			</li>
 			<li class="justify-item leed">
-				<a href="#" class="init-link">
+				<a href="{$BaseHref}initiatives/leed-building-at-ui/" class="init-link">
 					<span class="init-imgwrapper">
 						<span>
 							<img src="{$ThemeDir}/images/icon-building-128.png" alt="LEED Building" class="init-img">
@@ -67,7 +61,7 @@
 				</a>
 			</li>
 			<li class="justify-item transportation">
-				<a href="#" class="justify-item init-link">
+				<a href="{$BaseHref}initiatives/transportation/" class="justify-item init-link">
 					<span class="init-imgwrapper">
 						<span>
 							<img src="{$ThemeDir}/images/icon-transportation-128.png" alt="Alternative Transportation" class="init-img">
@@ -77,7 +71,7 @@
 				</a>
 			</li>
 			<li class="justify-item food">
-				<a href="#" class="justify-item init-link">
+				<a href="{$BaseHref}initiatives/food/" class="justify-item init-link">
 					<span class="init-imgwrapper">
 						<span>
 							<img src="{$ThemeDir}/images/icon-food-128.png" alt="Food" class="init-img">

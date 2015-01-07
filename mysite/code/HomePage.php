@@ -21,6 +21,17 @@ class HomePage extends Page {
 		$fields->removeByName("PageSummary");
 		$fields->removeByName("Sidebar");
 
+		$gridFieldConfig = GridFieldConfig_RecordEditor::create();
+		$gridFieldConfig->addComponent(new GridFieldSortableRows('SortOrder'));
+
+		if(!Permission::check('ADMIN')){
+			$gridFieldConfig->removeComponentsByType('GridFieldAddNewButton');
+			$gridFieldConfig->removeComponentsByType('GridFieldDeleteAction');
+		}
+
+		$CarouselItem = new GridField("CarouselItem", "Carousel Items", CarouselItem::get(), $gridFieldConfig);
+		$fields->addFieldToTab("Root.Carousel", $CarouselItem);
+
 		return $fields;
 
 	}
@@ -48,6 +59,11 @@ class HomePage_Controller extends Page_Controller {
 		parent::init();
 		// You can include any CSS or JS required by your project here.
 		// See: http://doc.silverstripe.org/framework/en/reference/requirements
+	}
+
+	public function CarouselItems() {
+		$features = CarouselItem::get();
+		return $features;
 	}
 
 }
