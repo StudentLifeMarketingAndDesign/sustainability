@@ -1,8 +1,9 @@
 <div class="your-class">
 	<div style="background-image:url({$ThemeDir}/images/leed-hero.jpg);" class="hero-img">
 		<div class="inner">
-			<h3>Lorem ipsum dolor</h3>
-			<p>Duis mollis, est non commodo luctus, nisi erat porttitor.</p>
+			<h3>8 LEED certified buildings</h3>
+			<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec ullamcorper nulla non metus auctor fringilla. Fusce dapibus commodo, tortor mauris risus.</p>
+			<a href="#" class="your-class-btn">Learn More</a>
 		</div>
 	</div>
 	<div style="background-image:url({$ThemeDir}/images/hero-2.jpg);" class="hero-img">
@@ -126,7 +127,7 @@
 			<% if $Location %><br />$Location<% end_if %>
 			<% if $LocalistLink %><br />$LocalistLink<% end_if %>
 			<% if $MoreInfoLink %><br />$MoreInfoLink<% end_if %>
-			<% if $Image %><br /><img src="$Image.URL" alt="$Title" style="width:80px;"><% end_if %>
+			<% if $Image %><br /><img src="$Image.URL" alt="$Title" style="width:180px;"><% end_if %>
 			<% if $Tags %>
 				<br />
 				Tags:
