@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "14f5bb03fb0dc7fcfe10fccf014ce6d7",
+    "hash": "05c7748baa5dcdb2504e6fd186197c2e",
     "packages": [
         {
             "name": "composer/installers",
@@ -162,6 +162,38 @@
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/division-bar/issues"
             },
             "time": "2014-12-11 17:54:52"
+        },
+        {
+            "name": "md/rss-display",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/StudentLifeMarketingAndDesign/rss-display.git",
+                "reference": "202bb37f2a049639f8fa7361f90aebb67c0fa152"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/rss-display/zipball/202bb37f2a049639f8fa7361f90aebb67c0fa152",
+                "reference": "202bb37f2a049639f8fa7361f90aebb67c0fa152",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2",
+                "silverstripe/cms": "3.*",
+                "silverstripe/framework": "3.*"
+            },
+            "type": "silverstripe-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.3.x-dev"
+                }
+            },
+            "description": "MD RSS Display Module",
+            "support": {
+                "source": "https://github.com/StudentLifeMarketingAndDesign/rss-display/tree/master",
+                "issues": "https://github.com/StudentLifeMarketingAndDesign/rss-display/issues"
+            },
+            "time": "2014-12-29 20:24:53"
         },
         {
             "name": "silverstripe/blog",
@@ -346,7 +378,8 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "md/ac-json-events": 20,
-        "md/division-bar": 20
+        "md/division-bar": 20,
+        "md/rss-display": 20
     },
     "prefer-stable": false,
     "platform": {
