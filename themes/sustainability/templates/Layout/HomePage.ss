@@ -49,7 +49,7 @@
 				<a href="#" class="init-link">
 					<span class="init-imgwrapper">
 						<span>
-							<img src="{$ThemeDir}/images/energy-icon.png" alt="Biomass" class="init-img">
+							<img src="{$ThemeDir}/images/icon-biomass.png" alt="Biomass" class="init-img">
 						</span>
 					</span>
 					<h4 class="init-title">Biomass Fuel Project</h4>

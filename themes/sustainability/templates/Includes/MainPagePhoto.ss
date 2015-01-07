@@ -36,7 +36,7 @@
 	<% if $URLSegment = biomass-fuel-project %>
 		<span class="init-icon">
 			<span>
-				<img src="{$ThemeDir}/images/energy-icon.png" alt="Biomass" class="init-img">
+				<img src="{$ThemeDir}/images/icon-biomass.png" alt="Biomass" class="init-img">
 			</span>
 		</span>
 	<% end_if %>
