@@ -23,6 +23,7 @@ class StaffMember extends Page {
 		$fields->removeByName("SummaryPhoto");
 		$fields->removeByName("GalleryImages");
 		$fields->removeByName("Summary");
+		$fields->removeByName("PageSummary");
 
 		$fields->addFieldToTab("Root.Main", new TextField("Position", "Position"));
 		$fields->addFieldToTab("Root.Main", new TextField("EmailAddress", "Email address"));

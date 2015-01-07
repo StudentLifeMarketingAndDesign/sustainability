@@ -17,6 +17,8 @@ class StaffHolderPage extends Page {
 		$fields->removeByName("PagePhoto");
 		$fields->removeByName("PagePhoto");
 		$fields->removeByName("GalleryImages");
+		$fields->removeByName("Sidebar");
+		$fields->removeByName("Gallery");
 
 		return $fields;
 

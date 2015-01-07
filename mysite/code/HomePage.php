@@ -18,6 +18,8 @@ class HomePage extends Page {
 		$fields->removeByName("Summary");
 		$fields->removeByName("Gallery");
 		$fields->removeByName("PagePhoto");
+		$fields->removeByName("PageSummary");
+		$fields->removeByName("Sidebar");
 
 		return $fields;
 
