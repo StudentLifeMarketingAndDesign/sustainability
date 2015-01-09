@@ -193,7 +193,7 @@
 								<!-- begin content -->
 								<div class="panel-content">
 									<h4 class="panel-title"><a href="$Link">$Title</a></h4>
-									<p>$Content.Summary()</p>
+									<p>$SummaryContent.ContextSummary(150)</p>
 								</div>
 								<a href="$Link" class="read">Read More</a>
 							</div>
