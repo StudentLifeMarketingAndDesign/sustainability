@@ -170,7 +170,7 @@ Initiatives
 	}
 }
 .init-list .init-link:hover, .init-list .init-link:focus {
-	background: #fafafa;
+	background: #f4f4f4;
 }
 .energy .init-link{border-color: $energy;}
 .recycling .init-link {border-color: $recycling;}
@@ -413,11 +413,13 @@ Pulse
 /* photos for events */
 .panel-photo-event {
 	display: block;
-	& div {
-		height: 200px;
-		background-size: cover;
-		background-position: center center;
-	}
+	height: 200px;
+	overflow: hidden;
+}
+.panel-photo-event img {
+	display: block;
+	max-width: none;
+	max-height: 200px;
 }
 
 /* Tagged Icons */
@@ -445,6 +447,7 @@ Pulse
 /* Panel Content */
 .pulse-panel .panel-content {
 	border-left: 1px solid #eee;
+	overflow: hidden;
 	padding: 25px 15px 45px;
 	position: relative;
 	@media (min-width: $break-small) {

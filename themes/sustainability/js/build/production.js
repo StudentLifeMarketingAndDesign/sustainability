@@ -2952,6 +2952,7 @@ $(document).ready(function() {
 	});
 
 	$('.pulse-panel').slick({
+		lazyLoad: 'ondemand',
 		infinite: false,
 		slidesToShow: 4,
 		slidesToScroll: 4,
