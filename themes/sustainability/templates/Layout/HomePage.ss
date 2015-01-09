@@ -123,11 +123,11 @@
 										<div class="panel-photo">
 											<% if $ExternalLink %>
 												<a href="$ExternalLink" target="_blank">
-													<img src="$Photo.CroppedImage(300,270).URL" alt="$Title">
+													<img data-lazy="$Photo.CroppedImage(300,270).URL" alt="$Title">
 												</a>
 											<% else %>
 												<a href="$Link">
-													<img src="$Photo.CroppedImage(300,270).URL" alt="$Title">
+													<img data-lazy="$Photo.CroppedImage(300,270).URL" alt="$Title">
 												</a>
 											<% end_if %>
 											<!-- Display icon if tagged with initiative -->
@@ -186,8 +186,7 @@
 								<!-- Photo goes here -->
 								<% if $Image %>
 									<a href="$Link" class="panel-photo-event">
-										<div style="background-image: url($Image.URL);">
-										</div>
+										<img data-lazy="$Image.URL" alt="$Title">
 									</a>
 								<% end_if %>
 								<!-- end Photo -->
@@ -204,15 +203,24 @@
 				</div>
 			</div>
 			<div role="tabpanel" class="tab-pane fade" id="blog">
-				<% loop $RSSDisplay("4", "http://sustainability.uiowa.edu/climatenarrative/?feed=rss2") %>
-					<article class="news-entry $EvenOdd">
-						<% if $ThumbnailURL %><a href="$Link"><img class="" src="$ThumbnailURL" /></a><% end_if %>
-						<h3><a href="$Link" target="_blank">$Title</a></h3>
-						<div class="news-text">
-							<p>$Description.Summary(30) <a href="$Link">Continue Reading</a></p>
+				<div class="pulse-panel">
+					<% loop $RSSDisplay("8", "http://sustainability.uiowa.edu/climatenarrative/?feed=rss2") %>
+						<div>
+							<% if $ThumbnailURL %>
+								<div class="panel-photo">
+									<a href="$Link" target="_blank">
+										<img data-lazy="$ThumbnailURL" />
+									</a>
+								</div>
+							<% end_if %>
+							<div class="panel-content">
+								<h4 class="panel-title"><a href="$Link"target="_blank">$Title</a></h4>
+								<p>$Description.LimitCharacters(100)</p>
+							</div>
+							<a href="$Link" class="read" target="_blank">Read More</a>
 						</div>
-					</article>
-				<% end_loop %>
+					<% end_loop %>
+				</div>
 			</div>
 			<div role="tabpanel" class="tab-pane fade" id="videos">
 
