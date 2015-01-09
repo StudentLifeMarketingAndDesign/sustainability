@@ -7,8 +7,6 @@ silverstripe-cache
 .settings
 .idea
 .DS_Store
-
-
 .sass-cache/*
 *.scssc
 html/*
@@ -33,15 +31,11 @@ division-project/
 division-bar
 vendor/composer/
 vendor/autoload.php
-
 node_modules
 npm-debug.log
 tagfield/
-
 ac-json-events/
-
 advancedworkflow/
-
 rss-display/
-
 vendor/simplepie/simplepie/
+cache/
