@@ -2,8 +2,8 @@
 class NewsEntry extends BlogEntry {
 
 	private static $db = array(
-
 		'IsFeatured' => 'Boolean',
+		'ExternalLink' => 'Text',
 	);
 
 	private static $has_one = array(
@@ -32,9 +32,9 @@ class NewsEntry extends BlogEntry {
 		$fields->removeByName("Gallery");
 
 		$fields->renameField("Tags", "Tags (biomass, energy, food, leed, recycling, transportation) comma sep.");
+		$fields->addFieldToTab("Root.Main", new TextField("ExternalLink", "External Link - Enter a link here if you want to link to an exernal news article"));
 
-
-		$fields->addFieldToTab("Root.Main", new UploadField("Photo", "Photo"));
+		$fields->addFieldToTab("Root.Main", new UploadField("Photo", "Photo for News Article"));
 		$fields->addFieldToTab('Root.Main', new CheckboxField('IsFeatured','Feature this Article? (Yes)'));
 
 		return $fields;
