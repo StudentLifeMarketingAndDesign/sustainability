@@ -113,6 +113,7 @@
 		<!-- Tab panes -->
 		<div class="tab-content">
 			<div role="tabpanel" class="tab-pane fade in active" id="news">
+				<h3 class="mobiletitle">News</h3>
 				<div class="pulse-panel">
 					<% with Page(news) %>
 						<% if $Entries %>
@@ -178,6 +179,7 @@
 				</div>
 			</div>
 			<div role="tabpanel" class="tab-pane fade" id="events">
+				<h3 class="mobiletitle">Upcoming Events</h3>
 				<div class="pulse-panel">
 					<% with LocalistCalendar %>
 						<!-- Loop Events -->
@@ -203,6 +205,7 @@
 				</div>
 			</div>
 			<div role="tabpanel" class="tab-pane fade" id="blog">
+				<h3 class="mobiletitle">Climate Narrative Blog</h3>
 				<div class="pulse-panel">
 					<% loop $RSSDisplay("8", "http://sustainability.uiowa.edu/climatenarrative/?feed=rss2") %>
 						<div>

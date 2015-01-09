@@ -262,11 +262,14 @@ Pulse
 
 /* Tab Menu Links ---------------------------------------------- */
 .pulse-tabs {
-	display: table;
-	list-style: none;
-	margin: 0 auto 20px;
-	overflow: hidden;
-	text-align: center;
+	display: none;
+	@media (min-width: 600px) {
+		display: table;
+		list-style: none;
+		margin: 0 auto 20px;
+		overflow: hidden;
+		text-align: center;
+	}
 }
 .pulse-tabs li {
 	display: table-cell;
@@ -328,19 +331,25 @@ Pulse
 
 /* Tab Content Show/Hide ---------------------------------------------- */
 .tab-content > .tab-pane {
-  display: block !important;
-  height: 0px;
-  overflow: hidden;
+	@media (min-width: 600px) {
+		display: block !important;
+		height: 0px;
+		overflow: hidden;
+	}
 }
 .tab-content > .active {
-  display: block !important;
-  height: auto;
+	@media (min-width: 600px) {
+		display: block !important;
+		height: auto;
+	}
 }
 .fade {
-  opacity: 0;
-  -webkit-transition: opacity 0.15s linear;
-  -o-transition: opacity 0.15s linear;
-  transition: opacity 0.15s linear;
+	@media (min-width: 600px) {
+		opacity: 0;
+		-webkit-transition: opacity 0.15s linear;
+		-o-transition: opacity 0.15s linear;
+		transition: opacity 0.15s linear;
+	}
 }
 .fade.in {
   opacity: 1;
@@ -398,16 +407,17 @@ Pulse
 .pulse-panel .slick-slide {
 	position: relative;
 }
-
 /* Photos */
 .pulse-panel .panel-photo {
 	position: relative;
 	& a {
 		display: block;
+		max-height: 250px;
 		overflow: hidden;
 	}
 }
 .slick-slider .panel-photo img {
+	display: block;
 	width: 100%;
 }
 /* photos for events */
@@ -418,6 +428,7 @@ Pulse
 }
 .panel-photo-event img {
 	display: block;
+	margin: 0 auto;
 	max-width: none;
 	max-height: 200px;
 }
@@ -496,4 +507,15 @@ Pulse
 .pulse-panel .read.external {
 	background: url(../images/external-link.png) no-repeat right 2px;
 	padding-right: 17px;
+}
+
+/* Mobile Styles -------------------------------------------- */
+.tab-pane .mobiletitle {
+	border-bottom: 4px solid #ccc;
+	color: #8c7e71;
+	font-family: $condensed-font;
+	font-weight: 600;
+	@media (min-width: 600px) {
+		display: none;
+	}
 }

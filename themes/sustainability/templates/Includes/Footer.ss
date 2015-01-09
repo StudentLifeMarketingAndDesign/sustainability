@@ -79,7 +79,7 @@
 			<div class="row">
 				<div class="col-xs-12">
 					<hr>
-					<p class="copyright">&copy; $Now.Year <a href="http://www.uiowa.edu/" target="_blank">The University of Iowa</a>. All Rights Reserved. <a href="style-guide/">Styleguide</p>
+					<p class="copyright">&copy; $Now.Year <a href="http://www.uiowa.edu/" target="_blank">The University of Iowa</a>. All Rights Reserved.</p>
 				</div>
 			</div>
 
