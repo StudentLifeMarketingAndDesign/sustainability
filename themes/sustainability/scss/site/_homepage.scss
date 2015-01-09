@@ -283,7 +283,7 @@ Pulse
 	font-size: 16px;
 	overflow: hidden;
 	letter-spacing: 1px;
-	padding: 15px 30px;
+	padding: 15px 12px;
 	position: relative;
 	text-decoration: none;
 	text-transform: uppercase;
@@ -292,6 +292,12 @@ Pulse
 	-ms-transition: .15s ease-in-out;
 	-o-transition: .15s ease-in-out;
 	transition: .15s ease-in-out;
+	@media (min-width: 700px) {
+		padding: 15px 24px;
+	}
+	@media (min-width: $break-large) {
+		padding: 15px 44px;
+	}
 }
 .pulse-tabs li a:hover, .pulse-tabs li a:focus {
 	color: #564e45;
@@ -346,14 +352,12 @@ Pulse
 .fade {
 	@media (min-width: 600px) {
 		opacity: 0;
-		-webkit-transition: opacity 0.15s linear;
-		-o-transition: opacity 0.15s linear;
-		transition: opacity 0.15s linear;
+		-webkit-transition: opacity 0.3s linear;
+		-o-transition: opacity 0.3s linear;
+		transition: opacity 0.3s linear;
 	}
 }
-.fade.in {
-  opacity: 1;
-}
+.fade.in {opacity: 1;}
 
 /* Prev/Next Arrows-------------------------------------------- */
 .pulse .slick-prev,
@@ -482,7 +486,10 @@ Pulse
 .pulse-panel .panel-content p {
 	font-size: 14px;
 	line-height: 1.4;
-	margin: 0;
+	margin: 0 0 5px;
+}
+.pulse-panel .panel-content .date {
+
 }
 
 /* Read More Link */

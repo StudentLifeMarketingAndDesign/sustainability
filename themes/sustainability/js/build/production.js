@@ -2968,7 +2968,7 @@ $(document).ready(function() {
 	      }
 	    },
 	    {
-	      breakpoint: 600,
+	      breakpoint: 700,
 	      settings: {
 				lazyLoad: 'ondemand',
 				slidesToShow: 2,

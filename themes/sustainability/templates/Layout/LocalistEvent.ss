@@ -11,6 +11,10 @@
 			<div class="article">
 				$Breadcrumbs
 				<h1>$Title</h1>
+
+				<% loop $Venue %>
+					$Title
+				<% end_loop %>
 				<% if $Location %>Location: $Location<% end_if %>
 				<% if $URLSegment %><br />URL: $URLSegment<% end_if %>
 				<% if $Cost %><br />Cost: $Cost<% end_if %>

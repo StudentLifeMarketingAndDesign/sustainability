@@ -195,7 +195,32 @@
 								<!-- begin content -->
 								<div class="panel-content">
 									<h4 class="panel-title"><a href="$Link">$Title</a></h4>
-									<p>$SummaryContent.ContextSummary(100)</p>
+									<% loop $Dates %>
+										<p class="date-time">
+											<% with $StartDateTime %>
+												<time itemprop="startDate" datetime="$Format(c)">
+													$Format(l), $Format(F) $Format(j)
+												</time>
+												 <br />$Format("g:i A")
+											<% end_with %>
+											<% if $EndTime %>
+												<% with $EndTime %>
+													- $Format("g:i A")
+												<% end_with %>
+											<% end_if %>
+											<% if $EndDate %>
+												until
+												<% with $EndDate %>
+													<time itemprop="endDate" datetime="$Format(c)">
+														$Format(l), $Format(F) $Format(j)
+													</time>
+													<br />$Format("g:i A")
+												<% end_with %>
+											<% end_if %>
+										</p>
+									<% end_loop %>
+									<p>$Venue.Title</p>
+									<!-- <p>$SummaryContent.ContextSummary(100)</p> -->
 								</div>
 								<a href="$Link" class="read">Read More</a>
 							</div>
