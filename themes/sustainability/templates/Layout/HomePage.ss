@@ -88,80 +88,122 @@
 </section>
 
 <div class="container">
-
 	<!-- $Content -->
 	$Form
 
-	<!-- Tabs -->
-	<h2 class="tabber-title">Sustainability At UI</h2>
-	<div class="tabbed">
-		<menu class="tabber-menu clearfix">
-			<a href="#tab-1" class="tabber-handle">News</a>
-			<a href="#tab-2" class="tabber-handle">Upcoming Events</a>
-			<a href="#tab-3" class="tabber-handle">Climate Narative Blog</a>
-			<a href="#tab-4" class="tabber-handle">Videos</a>
-		</menu>
-		<div class="tabber-tab" id="tab-1">
-			<div class="tabber-tab-inner">
-				<ul class="clearfix">
-					<!-- News -->
+	<div class="pulse">
+		<h2 class="pulse-title">Sustainability At UI</h2>
+
+		<!-- Tab Menu Links -->
+		<ul class="pulse-tabs clearfix" role="tablist">
+			<li role="presentation" class="active">
+				<a href="#news" aria-controls="news" role="tab" data-toggle="tab">News</a>
+			</li>
+			<li role="presentation">
+				<a href="#events" aria-controls="events" role="tab" data-toggle="tab">Upcoming Events</a>
+			</li>
+			<li role="presentation">
+				<a href="#blog" aria-controls="blog" role="tab" data-toggle="tab">Climate Narrative Blog</a>
+			</li>
+			<li role="presentation">
+				<a href="#videos" aria-controls="videos" role="tab" data-toggle="tab">Videos</a>
+			</li>
+		</ul>
+
+		<!-- Tab panes -->
+		<div class="tab-content">
+			<div role="tabpanel" class="tab-pane fade in active" id="news">
+				<div class="pulse-panel">
 					<% with Page(news) %>
 						<% if $Entries %>
-							<% loop $Entries(4) %>
-								<li>
-								<h4><a href="$Link">$Title</a></h4>
-								<% if $Date %><small>$Date.Format('M. j')</small><% end_if %>
-								<% if TagsCollection %>
-									<div class="tags">
-										<% _t('BlogSummary_ss.TAGS','Tags') %>:
-										<% loop TagsCollection %>
-											<a href="$Link" title="View all posts tagged '$Tag'" rel="tag">$Tag</a><% if not Last %>,<% end_if %>
-										<% end_loop %>
+							<% loop $Entries(8) %>
+								<div>
+									<!-- Photo goes here -->
+									<% if $Photo %>
+										<div class="panel-photo">
+											<% if $ExternalLink %>
+												<a href="$ExternalLink" target="_blank">
+													<img src="$Photo.CroppedImage(300,270).URL" alt="$Title">
+												</a>
+											<% else %>
+												<a href="$Link">
+													<img src="$Photo.CroppedImage(300,270).URL" alt="$Title">
+												</a>
+											<% end_if %>
+											<!-- Display icon if tagged with initiative -->
+											<% if TagsCollection %>
+												<% loop TagsCollection %>
+													<% if $Tag = leed %>
+														<span class="tagicon leed"><img src="{$ThemeDir}/images/icon-building-128.png" alt="LEED Building" class="init-img"></span>
+													<% end_if %>
+													<% if $Tag = energy %>
+														<span class="tagicon energy"><img src="{$ThemeDir}/images/icon-energy-128.png" alt="Energy &amp; Climate" class="init-img"></span>
+													<% end_if %>
+													<% if $Tag = recycling %>
+														<span class="tagicon recycling"><img src="{$ThemeDir}/images/icon-recycle-128.png" alt="Recycling" class="init-img"></span>
+													<% end_if %>
+													<% if $Tag = biomass %>
+														<span class="tagicon biomass"><img src="{$ThemeDir}/images/icon-biomass.png" alt="Biomass" class="init-img"></span>
+													<% end_if %>
+													<% if $Tag = transportation %>
+														<span class="tagicon transportation"><img src="{$ThemeDir}/images/icon-transportation-128.png" alt="Alternative Transportation" class="init-img"></span>
+													<% end_if %>
+													<% if $Tag = food %>
+														<span class="tagicon food"><img src="{$ThemeDir}/images/icon-food-128.png" alt="Food" class="init-img"></span>
+													<% end_if %>
+												<% end_loop %>
+											<% end_if %>
+											<!-- end tagged icons -->
+										</div>
+									<% end_if %>
+									<!-- end Photo -->
+
+									<div class="panel-content">
+										<% if $ExternalLink %>
+											<h4 class="panel-title"><a href="$ExternalLink" target="_blank">$Title</a></h4>
+										<% else %>
+											<h4 class="panel-title"><a href="$Link">$Title</a></h4>
+										<% end_if %>
+										<p>$Content.LimitCharacters(100)</p>
 									</div>
-								<% end_if %>
-								</li>
+									<% if $ExternalLink %>
+										<a href="$ExternalLink" class="read external" target="_blank">Read More</a>
+									<% else %>
+										<a href="$Link" class="read">Read More</a>
+									<% end_if %>
+								</div>
 							<% end_loop %>
 						<% end_if %>
 					<% end_with %>
-				</ul>
+				</div>
 			</div>
-		</div>
-		<div class="tabber-tab" id="tab-2">
-			<div class="tabber-tab-inner">
-				<!-- Events -->
-				<% with LocalistCalendar %>
-					<!-- Loop Events -->
-					<% loop $EventList(4) %>
-						<% if $Title %><a href="$Link">$Title</a><% end_if %>
-						<% if $Location %><br />$Location<% end_if %>
-						<% if $LocalistLink %><br />$LocalistLink<% end_if %>
-						<% if $MoreInfoLink %><br />$MoreInfoLink<% end_if %>
-						<% if $Image %><br /><img src="$Image.URL" alt="$Title" style="width:180px;"><% end_if %>
-						<% if $Tags %>
-							<br />
-							Tags:
-							<% loop $Tags %>
-								<a href="$Link" class="">$Title</a>
-							<% end_loop %></p>
-						<% end_if %>
-						<% if $Types %>
+			<div role="tabpanel" class="tab-pane fade" id="events">
+				<div class="pulse-panel">
+					<% with LocalistCalendar %>
+						<!-- Loop Events -->
+						<% loop $EventList(8) %>
 							<div>
-								<p><strong>Categorized under:</strong>
-								<% loop $Types %>
-									<a href="$Link">$Title</a>
-								<% end_loop %></p>
+								<!-- Photo goes here -->
+								<% if $Image %>
+									<a href="$Link" class="panel-photo-event">
+										<div style="background-image: url($Image.URL);">
+										</div>
+									</a>
+								<% end_if %>
+								<!-- end Photo -->
+								<!-- begin content -->
+								<div class="panel-content">
+									<h4 class="panel-title"><a href="$Link">$Title</a></h4>
+									<p>$Content.Summary()</p>
+								</div>
+								<a href="$Link" class="read">Read More</a>
 							</div>
-						<% end_if %>
-						<hr>
-					<% end_loop %>
-					<a href="$Link">View all Events</a>
-					<!-- end Loop -->
-				<% end_with %>
+						<% end_loop %>
+						<!-- end Loop Events -->
+					<% end_with %>
+				</div>
 			</div>
-		</div>
-		<div class="tabber-tab" id="tab-3">
-			<div class="tabber-tab-inner">
-				<!-- Blog -->
+			<div role="tabpanel" class="tab-pane fade" id="blog">
 				<% loop $RSSDisplay("4", "http://sustainability.uiowa.edu/climatenarrative/?feed=rss2") %>
 					<article class="news-entry $EvenOdd">
 						<% if $ThumbnailURL %><a href="$Link"><img class="" src="$ThumbnailURL" /></a><% end_if %>
@@ -170,19 +212,14 @@
 							<p>$Description.Summary(30) <a href="$Link">Continue Reading</a></p>
 						</div>
 					</article>
-					<!-- end news-entry -->
 				<% end_loop %>
 			</div>
-		</div>
-		<div class="tabber-tab" id="tab-4">
-			<div class="tabber-tab-inner">
-				<p>Maecenas faucibus mollis interdum. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+			<div role="tabpanel" class="tab-pane fade" id="videos">
+
 			</div>
 		</div>
+
 	</div>
-	<!-- end Tabs -->
-
-
 
 
 

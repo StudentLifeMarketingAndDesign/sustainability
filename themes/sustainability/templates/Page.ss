@@ -112,6 +112,7 @@ MMMMMMMM               MMMMMMMM                               DDDDDDDDDDDDD
 			});
 		});
 	</script>
+	<script src="{$ThemeDir}/js/tabs.js"></script>
 	<script src="{$ThemeDir}/js/build/production.min.js"></script>
 	<script src="division-bar/js/division-bar.js"></script>
 	<% include GoogleAnalytics %>

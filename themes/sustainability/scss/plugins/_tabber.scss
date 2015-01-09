@@ -19,8 +19,15 @@
 	.tabber .tabber-handle.active { color: #333; }
 	.tabber .tabber-handle.mobile { display: none; float: none; }
 
-	.tabber .tabber-tab { clear: both; display: none; }
-	.tabber .tabber-tab.active { display: block; }
+	.tabber .tabber-tab {
+		display: block !important;
+		height: 0px;
+		overflow: hidden;
+	}
+	.tabber .tabber-tab.active {
+		display: block !important;
+		height: auto;
+	}
 
 
 	/* Mobile */

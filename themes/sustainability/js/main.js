@@ -20,8 +20,38 @@ $(document).ready(function() {
 		pagination: false
 	});
 
-	// Tabber - Tabs
-	$(".tabbed").tabber();
+	$('.pulse-panel').slick({
+		infinite: false,
+		slidesToShow: 4,
+		slidesToScroll: 4,
+		speed: 900,
+		responsive: [
+	    {
+	      breakpoint: 980,
+	      settings: {
+	      	infinite: false,
+				slidesToShow: 3,
+				slidesToScroll: 3
+	      }
+	    },
+	    {
+	      breakpoint: 600,
+	      settings: {
+	        slidesToShow: 2,
+	        slidesToScroll: 2,
+	        infinite: true
+	      }
+	    },
+	    {
+	      breakpoint: 480,
+	      settings: {
+	        slidesToShow: 1,
+	        slidesToScroll: 1,
+	        infinite: true
+	      }
+	    }
+	  ]
+	});
 
 
 });

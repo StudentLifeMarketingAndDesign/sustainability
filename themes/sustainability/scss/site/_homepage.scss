@@ -1,5 +1,5 @@
 /* ---------------------------------------------------------------
-Carousel
+Header Carousel
 --------------------------------------------------------------- */
 .your-class {
 	height: 300px;
@@ -41,11 +41,11 @@ Carousel
 }
 .your-class .inner h3 {
 	color: #fff;
-	font-size: 60px;
+	font-size: 65px;
 	line-height: 1.1;
 	margin: 0 0 10px;
-	font-family: $body-font;
-	text-transform: uppercase;
+	xfont-family: $body-font;
+	xtext-transform: uppercase;
 	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75);
 }
 .your-class .inner p {
@@ -56,7 +56,7 @@ Carousel
 	color: #fff;
 	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75);
 }
-.slick-slider {
+.pulse-panel {
 	margin-bottom: 0;
 }
 .your-class-btn {
@@ -101,6 +101,13 @@ Initiatives
 	background: url(../images/wave.jpg);
 	border-bottom: 1px solid rgba(0,0,0,.1);
 	padding: 60px 0;
+}
+.home-initiatives h2 {
+	font-size: 35px;
+	font-family: $condensed-font;
+	margin: 0 0 1.4em;
+	text-align: center;
+	position: relative;
 }
 .home-initiatives .init-list {
 	list-style: none;
@@ -216,46 +223,82 @@ Initiatives
 
 
 
-
-
 /* ---------------------------------------------------------------
-News & Event Tabs
+Pulse
 --------------------------------------------------------------- */
-.tabber-title {
-	margin: 2em 0 1em 0;
+.pulse {
+	padding: 4em 0;
+}
+.pulse-title {
+	font-size: 35px;
+	font-family: $condensed-font;
+	margin: 0 0 1.4em;
 	text-align: center;
-}
-.tabber {
-	text-align: center;
-}
-.tabber .tabber-menu {
-	display: inline-block;
-}
-.tabber .tabber-menu a {
-	display: inline-block;
-	font-weight: bold;
-	font-size: 16px;
-	text-transform: uppercase;
-	color: #8c7e71;
 	overflow: hidden;
+	position: relative;
+	&:before, &:after {
+		background-color: #ded8cf;
+		content: "";
+		display: inline-block;
+		height: 2px;
+		position: relative;
+		vertical-align: middle;
+		width: 20%;
+	}
+	&:before {
+		right: 0.5em;
+		margin-left: -50%;
+	}
+	&:after {
+		left: 0.5em;
+		margin-right: -50%;
+	}
+}
+.pulse .pulse-panel {
+	list-style: none;
+ 	margin: 0;
+	padding-bottom: 31px;
+}
+
+/* Tab Menu Links ---------------------------------------------- */
+.pulse-tabs {
+	display: table;
+	list-style: none;
+	margin: 0 auto 20px;
+	overflow: hidden;
+	text-align: center;
+}
+.pulse-tabs li {
+	display: table-cell;
+	position: relative;
+}
+.pulse-tabs li a {
+	color: #8c7e71;
+	display: block;
+	font-family: $condensed-font;
+	font-weight: 600;
+	font-size: 16px;
+	overflow: hidden;
+	letter-spacing: 1px;
 	padding: 15px 30px;
 	position: relative;
 	text-decoration: none;
+	text-transform: uppercase;
 	-webkit-transition: .15s ease-in-out;
 	-moz-transition: .15s ease-in-out;
 	-ms-transition: .15s ease-in-out;
 	-o-transition: .15s ease-in-out;
 	transition: .15s ease-in-out;
 }
-.tabber .tabber-menu a:hover, .tabber .tabber-menu a:focus {
+.pulse-tabs li a:hover, .pulse-tabs li a:focus {
 	color: #564e45;
 	outline: none;
 	text-decoration: none;
 }
-.tabber .tabber-handle.active {
+.pulse-tabs li.active {
 	color: #564e45;
 }
-.tabber .tabber-menu a:before {
+.pulse-tabs li:before {
 	position: absolute;
 	bottom: 0px;
 	left: 0;
@@ -264,7 +307,7 @@ News & Event Tabs
 	background: #ccc;
 	content: '';
 }
-.tabber .tabber-menu a:after {
+.pulse-tabs li:after {
 	position: absolute;
 	bottom: 0;
 	left: 0;
@@ -277,25 +320,177 @@ News & Event Tabs
 	-webkit-transform: translate3d(0,150%,0);
 	transform: translate3d(0,150%,0);
 }
-.tabber .tabber-menu a.active:after {
+.pulse-tabs li.active:after {
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
 }
-.tabber .tabber-tab {
+
+
+/* Tab Content Show/Hide ---------------------------------------------- */
+.tab-content > .tab-pane {
+  display: block !important;
+  height: 0px;
+  overflow: hidden;
+}
+.tab-content > .active {
+  display: block !important;
+  height: auto;
+}
+.fade {
+  opacity: 0;
+  -webkit-transition: opacity 0.15s linear;
+  -o-transition: opacity 0.15s linear;
+  transition: opacity 0.15s linear;
+}
+.fade.in {
+  opacity: 1;
+}
+
+/* Prev/Next Arrows-------------------------------------------- */
+.pulse .slick-prev,
+.pulse .slick-next {
+	background: url(../images/tab-prevnext.gif) 0 0 no-repeat;
+	bottom: 0;
+	top: auto;
+	width: 31px;
+	height: 31px;
+	left: 50%;
+	margin-left: -29px;
+}
+.pulse .slick-next {
+	background-position: right top;
+	margin-left: 1px;
+}
+
+/* hover state */
+.pulse .slick-prev:hover,
+.pulse .slick-next:hover {
+	background-position: left -62px;
+}
+.pulse .slick-next:hover {
+	background-position: right -62px;
+}
+.pulse .slick-disabled.slick-next:hover {
+	background-position: right -31px;
+}
+.tab-content .slick-list {
 	background-color: #fff;
-	text-align: left;
-	@media (min-width: $break-medium) {
-		margin-top: 30px;
+}
+
+/* disabled state */
+.pulse .slick-disabled {
+	background-position: left -31px;
+	cursor: default;
+}
+.pulse .slick-disabled:hover {
+	background-position: left -31px;
+	cursor: default;
+}
+.pulse .slick-disabled.slick-next {
+	background-position: right -31px;
+}
+.pulse .slick-disabled.slick-next:hover {
+	background-position: right -31px;
+}
+
+
+/* Tab Content Panels -------------------------------------------- */
+.pulse-panel .slick-slide {
+	position: relative;
+}
+
+/* Photos */
+.pulse-panel .panel-photo {
+	position: relative;
+	& a {
+		display: block;
+		overflow: hidden;
+	}
+}
+.slick-slider .panel-photo img {
+	width: 100%;
+}
+/* photos for events */
+.panel-photo-event {
+	display: block;
+	& div {
+		height: 200px;
+		background-size: cover;
+		background-position: center center;
 	}
 }
 
+/* Tagged Icons */
+.tagicon {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	background-color: #000;
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	margin-left: -20px;
+	margin-bottom: -20px;
+	padding: 7px;
+	box-shadow: 0 0 0 5px rgba(0,0,0,.1);
+}
+.tagicon.leed {background-color: $leed;}
+.tagicon.energy {background-color: $energy;}
+.tagicon.recycling {background-color: $recycling;}
+.tagicon.biomass {background-color: $biomass;}
+.tagicon.food {background-color: $food;}
+.tagicon.transportation {background-color: $transportation;}
 
 
-.tabber-tab-inner ul {
-	list-style: none;
+/* Panel Content */
+.pulse-panel .panel-content {
+	border-left: 1px solid #eee;
+	padding: 25px 15px 45px;
+	position: relative;
+	@media (min-width: $break-small) {
+		min-height: 270px;
+	}
+}
+#news .pulse-panel .panel-content {
+	padding: 35px 15px 45px;
+}
+.slick-slide:first-of-type .pulse-panel .panel-content {
+	border-left: none;
+}
+.pulse-panel .panel-content .panel-title {
+	font-size: 19px;
+	line-height: 1.2;
+	margin: 0 0 10px;
+	& a {
+		text-decoration: none;
+	}
+}
+.pulse-panel .panel-content p {
+	font-size: 14px;
+	line-height: 1.4;
 	margin: 0;
 }
-.tabber-tab-inner ul li {
-	float: left;
-	width: 25%;
+
+/* Read More Link */
+.pulse-panel .read {
+	color: #444;
+	font-family: $condensed-font;
+	display: block;
+	text-decoration: none;
+	border-bottom: 4px solid $link;
+	xwidth: 100px;
+	position: absolute;
+	left:15px;
+	bottom: 15px;
+	font-size: 12px;
+	text-transform: uppercase;
+	font-weight: 600;
+	letter-spacing: 1px;
+}
+.pulse-panel .read:hover, .pulse-panel .read:focus {
+	border-bottom-color: $orange;
+}
+.pulse-panel .read.external {
+	background: url(../images/external-link.png) no-repeat right 2px;
+	padding-right: 17px;
 }

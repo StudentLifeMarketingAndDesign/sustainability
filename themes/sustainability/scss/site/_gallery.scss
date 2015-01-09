@@ -25,7 +25,7 @@
 	-ms-transform: scale(1.05);
 	transform: scale(1.05);
 }
-.roller-control {
+.gallerysection .roller-control {
 	background: #000000;
 	background: rgba(0, 0, 0, 0.6);
 	display: none;
@@ -38,16 +38,16 @@
 	text-indent: 200%;
 	white-space: nowrap;
 }
-.roller-control.enabled {
+.gallerysection .roller-control.enabled {
 	display: block;
 }
-.roller-control.next {
+.gallerysection .roller-control.next {
 	right: 0;
 }
-.roller-control.previous {
+.gallerysection .roller-control.previous {
 	left: 0;
 }
-.roller-control:after {
+.gallerysection .roller-control:after {
 	content: "";
 	background: url(../images/roller-controls.png) center center no-repeat;
 	display: block;
@@ -60,9 +60,9 @@
 	right: 0;
 	top: 0;
 }
-.roller-control.next:after {
+.gallerysection .roller-control.next:after {
 	background-position: right center;
 }
-.roller-control.previous:after {
+.gallerysection .roller-control.previous:after {
 	background-position: left center;
 }
