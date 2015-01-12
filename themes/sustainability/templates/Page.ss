@@ -7,6 +7,8 @@
 <meta name="description" content="$Content.LimitCharacters(150)">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <title>Home | Sustainability at Iowa</title>
+<link rel="shortcut icon" href="{$BaseHref}favicon.ico" type="image/x-icon">
+<link rel="icon" href="{$BaseHref}favicon.ico" type="image/x-icon">
 <!--
 
 MMMMMMMM               MMMMMMMM                               DDDDDDDDDDDDD
