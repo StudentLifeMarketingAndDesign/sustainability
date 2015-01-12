@@ -4144,6 +4144,15 @@ $(document).ready(function() {
 		cssEase: 'linear'
 	});
 
+	// Featured News Articles
+	$('.featured-articles').slick({
+		dots: true,
+		arrows: false,
+		lazyLoad: 'ondemand',
+		slidesToShow: 1,
+		slidesToScroll: 1
+	});
+
 	// Homepage carousel tabs
 	$('.pulse-panel').slick({
 		lazyLoad: 'ondemand',
