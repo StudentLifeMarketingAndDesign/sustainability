@@ -15,34 +15,42 @@
 				<div class="col-md-3">
 					<!-- Social Media -->
 					<ul class="webicons unstyled clearfix">
+						<% if $SiteConfig.FacebookLink %>
 						<li>
-							<a href="#" title="Facebook">
+							<a href="$SiteConfig.FacebookLink" title="Facebook" target="_blank">
 								<svg class="icon-facebook">
 									<use xlink:href="#icon-facebook"></use>
 								</svg><span class="visuallyhidden">Facebook</span>
 							</a>
 						</li>
+						<% end_if %>
+						<% if $SiteConfig.TwitterLink %>
 						<li>
-							<a href="#" title="Twitter">
+							<a href="$SiteConfig.TwitterLink" title="Twitter" target="_blank">
 								<svg class="icon-twitter">
 									<use xlink:href="#icon-twitter"></use>
 								</svg><span class="visuallyhidden">Twitter</span>
 							</a>
 						</li>
+						<% end_if %>
+						<% if $SiteConfig.FlickrLink %>
 						<li>
-							<a href="#" title="Flickr">
+							<a href="$SiteConfig.FlickrLink" title="Flickr" target="_blank">
 								<svg class="icon-flickr">
 									<use xlink:href="#icon-flickr"></use>
 								</svg><span class="visuallyhidden">Flickr</span>
 							</a>
 						</li>
+						<% end_if %>
+						<% if $SiteConfig.InstagramLink %>
 						<li>
-							<a href="#" title="Instagram">
+							<a href="$SiteConfig.InstagramLink" title="Instagram" target="_blank">
 								<svg class="icon-instagram">
 									<use xlink:href="#icon-instagram"></use>
 								</svg><span class="visuallyhidden">Instagram</span>
 							</a>
 						</li>
+						<% end_if %>
 					</ul>
 				</div><!-- end col -->
 			</div><!-- end .row -->
