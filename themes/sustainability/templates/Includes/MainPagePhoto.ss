@@ -68,9 +68,6 @@
 			<!-- Loop Sub Pages -->
 			<% include ChildPages %>
 
-			<!-- Show Related News -->
-			<% include RelatedNews %>
-
 
 		</div><!-- end .col -->
 	</div><!-- end .row -->
