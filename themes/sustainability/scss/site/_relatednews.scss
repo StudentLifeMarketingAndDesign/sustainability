@@ -1,0 +1,39 @@
+.relatednews {
+	background: url(../images/wave.jpg);
+	border-top: 1px solid rgba(0,0,0,.1);
+	margin-top: 30px;
+	overflow: hidden;
+	padding: 50px 0 40px;
+}
+.relatednews-item {
+	border-top: 1px solid #ddd;
+	border-top: 1px solid rgba(0,0,0,.1);
+	margin-top: 20px;
+}
+.relatednews-item:first-of-type {
+	border-top: none;
+	margin-top: 0;
+	padding-top: 0;
+}
+.relatednews h2 {
+	font-size: 28px;
+	margin-top: 0;
+	@media (min-width: $break-medium) {
+		font-size: 45px;
+	}
+}
+.relatednews h4 {
+	margin-bottom: 5px;
+}
+.relatednews p {
+	margin: 0;
+}
+.relatednews .read {
+	font-size: 12px;
+	position: relative;
+	text-transform: uppercase;
+}
+.relatednews .read.external {
+	background: url(../images/external-link.png) no-repeat right 0;
+	padding-right: 17px;
+}
