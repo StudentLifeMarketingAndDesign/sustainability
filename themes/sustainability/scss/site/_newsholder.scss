@@ -1,0 +1,72 @@
+.newsholder-entries {
+
+}
+.newsholder-entries .newsblock {
+	border-top: 1px solid #ddd;
+	border-bottom: 0;
+	margin: 15px 0 0;
+	padding: 15px 0 0 0;
+	position: relative;
+}
+.newsblock-info {
+	padding: 0 0 6px;
+}
+.newsblock-info .newsblock-title {
+	margin: 0 0 10px;
+}
+.newsblock-info p {
+	font-size: 14px;
+	line-height: 1.4;
+	margin: 0;
+}
+
+/* ----------------------------------------------------
+Featured Articles
+------------------------------------------------------- */
+.featured-articles {
+	padding-bottom: 30px;
+}
+.featured-articles .slick-list {
+	background-color: #fff;
+	box-shadow: 0 0 5px rgba(0,0,0,.1);
+	border-radius: 1px;
+}
+.featured-articles .featured-content {
+	font-size: 15px;
+	padding: 30px;
+	@media (min-width: $break-medium) {
+		height: 340px;
+		overflow: hidden;
+		padding: 30px 0 30px 30px;
+	}
+}
+.featured-articles h2 {
+	color: #666;
+	font-family: $condensed-font;
+	font-size: 14px;
+	font-weight: normal;
+	letter-spacing: .05em;
+	margin-top: 0;
+	text-transform: uppercase;
+}
+.featured-articles h1 {
+	font-size: 20px;
+	line-height: 1.2;
+	@media (min-width: $break-medium) {
+		font-size: 25px;
+	}
+	& a {
+		text-decoration: none;
+	}
+}
+.featured-content .continue {
+	font-weight: bold;
+}
+/* Pagination Dots */
+.featured-articles .slick-dots {
+	bottom: 0;
+	margin: 0;
+}
+.featured-articles .slick-dots li button:before {
+	color: #333;
+}

@@ -1,0 +1,15 @@
+.newsentry .entry-title {
+	font-size: 35px;
+	margin: 0.5em 0 0.25em;
+	line-height: 1;
+	@media (min-width: $break-medium) {
+		font-size: 45px;
+	}
+}
+.newsentry .entry-date {
+	font-size: 14px !important;
+}
+.newsentry-related ul {
+	list-style: none;
+	margin: 0;
+}
