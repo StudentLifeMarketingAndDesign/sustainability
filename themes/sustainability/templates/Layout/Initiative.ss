@@ -21,15 +21,13 @@
 				<!-- Loop Sub Pages -->
 				<% include ChildPages %>
 
-				<!-- Show Related News -->
-				<% include RelatedNews %>
-
 			</div><!-- end .col -->
 		</div><!-- end .row -->
 	</article><!-- end .container -->
 <% end_if %>
 
+<!-- Show Related News -->
+<% include RelatedNews %>
 
-<br />
 <!-- Gallery Carousel -->
 <% include Gallery %>
