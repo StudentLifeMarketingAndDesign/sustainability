@@ -1,0 +1,61 @@
+/* ---------------------------------------------------------------
+Child Page Summary
+--------------------------------------------------------------- */
+.child-block {
+	border-bottom: 1px solid #cfc8b2;
+	border-top: 1px solid rgba(255,255,255,.8);
+	margin: 0;
+	padding: 30px 0 10px;
+}
+.child-block:first-of-type {
+	border-top: 1px solid #cfc8b2;
+}
+.child-block:last-of-type {
+	border-bottom: none;
+}
+.blocklink {
+	display: block;
+	overflow: hidden;
+	text-decoration: none;
+}
+.child-block-img {
+	display: block;
+	float: right;
+	margin: 0 0 15px 15px;
+	width: 40%;
+	@media (min-width: $break-medium) {
+		float: left;
+		margin: 0 0 20px 0;
+	}
+}
+.withphoto .child-block-content {
+	@media (min-width: $break-medium) {
+		margin-left: 45%;
+		overflow: hidden;
+	}
+}
+.child-block .title {
+	margin: 0;
+}
+.child-block p {
+	color: #444;
+	@media (min-width: $break-small) {
+		font-size: 16px;
+	}
+}
+.child-block .link {
+	border-bottom: 4px solid $link;
+	color: #36302a;
+	display: block;
+	float: left;
+	font-size: 13px;
+	font-weight: bold;
+	letter-spacing: 0.05em;
+	margin: 0 15px 20px 0;
+	padding: 5px 0;
+	text-transform: uppercase;
+	transition: .15s ease-in-out;
+}
+.blocklink:hover .link, .blocklink:focus .link {
+	border-color: $orange;
+}
