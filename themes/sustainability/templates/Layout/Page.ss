@@ -18,7 +18,7 @@
 				$Content
 				$Form
 			</div>
-
+			<br />
 			<!-- Loop Sub Pages -->
 			<% include ChildPages %>
 
@@ -30,7 +30,7 @@
 	</div><!-- end .row -->
 </article><!-- end .container -->
 
-<br />
+
 <!-- Gallery Carousel -->
 <% include Gallery %>
 
