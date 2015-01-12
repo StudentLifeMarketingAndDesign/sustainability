@@ -16,7 +16,6 @@ $(document).ready(function() {
 
 	// Roller - Carousel
 	$(".target").roller({
-		paged: true,
 		pagination: false
 	});
 
@@ -68,5 +67,37 @@ $(document).ready(function() {
 	  ]
 	});
 
+	// Gallery Carousel
+	$('.gallery-carousel').slick({
+		lazyLoad: 'ondemand',
+		infinite: true,
+		speed: 300,
+		arrows: true;
+		slidesToShow: 1,
+		centerMode: true,
+		dots: false,
+		variableWidth: true
+		responsive: [
+	    {
+	      breakpoint: 768,
+	      settings: {
+				lazyLoad: 'ondemand',
+				infinite: true,
+				slidesToShow: 1,
+				dots: true,
+				arrows: false
+	      }
+	    },
+	    {
+      breakpoint: 480,
+	      settings: {
+	        arrows: false,
+	        centerMode: true,
+	        centerPadding: '40px',
+	        slidesToShow: 1,
+	        variableWidth: true
+	      }
+	    }
+	});
 
 });
