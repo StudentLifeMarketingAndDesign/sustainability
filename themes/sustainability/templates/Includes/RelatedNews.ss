@@ -1,5 +1,5 @@
 <% if URLSegment = leed-building-at-ui %>
-	<% with Page(news) %>
+	<% with Page(news-and-events) %>
 		<% if $Entries('','leed') %>
 			<div class="relatednews">
 				<div class="container">
@@ -27,7 +27,7 @@
 <% end_if %>
 
 <% if URLSegment = food %>
-	<% with Page(news) %>
+	<% with Page(news-and-events) %>
 		<% if $Entries('','food') %>
 			<div class="relatednews">
 				<div class="container">
@@ -55,7 +55,7 @@
 <% end_if %>
 
 <% if URLSegment = transportation %>
-	<% with Page(news) %>
+	<% with Page(news-and-events) %>
 		<% if $Entries('','transportation') %>
 			<div class="relatednews">
 				<div class="container">
@@ -83,7 +83,7 @@
 <% end_if %>
 
 <% if URLSegment = biomass-fuel-project %>
-	<% with Page(news) %>
+	<% with Page(news-and-events) %>
 		<% if $Entries('','biomass') %>
 			<div class="relatednews">
 				<div class="container">
@@ -111,7 +111,7 @@
 <% end_if %>
 
 <% if $URLSegment = energy-climate %>
-	<% with Page(news) %>
+	<% with Page(news-and-events) %>
 		<% if $Entries('','energy') %>
 			<div class="relatednews">
 				<div class="container">
@@ -139,7 +139,7 @@
 <% end_if %>
 
 <% if $URLSegment = recycling-and-waste-reduction %>
-	<% with Page(news) %>
+	<% with Page(news-and-events) %>
 		<% if $Entries('','recycling') %>
 			<div class="relatednews">
 				<div class="container">

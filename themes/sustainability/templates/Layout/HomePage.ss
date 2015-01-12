@@ -115,7 +115,7 @@
 			<div role="tabpanel" class="tab-pane fade in active" id="news">
 				<h3 class="mobiletitle">News</h3>
 				<div class="pulse-panel">
-					<% with Page(news) %>
+					<% with Page(news-and-events) %>
 						<% if $Entries %>
 							<% loop $Entries(8) %>
 								<div>
