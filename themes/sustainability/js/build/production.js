@@ -4132,10 +4132,7 @@ $(document).ready(function() {
 	// Boxer - Lightbox
 	$(".boxer").boxer();
 
-	// Roller - Carousel
-	$(".target").roller({
-		pagination: false
-	});
+
 
 	// Homepage main carousel
 	$('.your-class').slick({
@@ -4190,11 +4187,11 @@ $(document).ready(function() {
 		lazyLoad: 'ondemand',
 		infinite: true,
 		speed: 300,
-		arrows: true;
+		arrows: true,
 		slidesToShow: 1,
 		centerMode: true,
 		dots: false,
-		variableWidth: true
+		variableWidth: true,
 		responsive: [
 	    {
 	      breakpoint: 768,
@@ -4216,6 +4213,6 @@ $(document).ready(function() {
 	        variableWidth: true
 	      }
 	    }
+	   ]
 	});
-
 });
