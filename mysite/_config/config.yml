@@ -11,4 +11,4 @@ SSViewer:
   theme: 'simple'
 Page:
   extensions:
-    - WidgetExtension
+    - WidgetPageExtension
