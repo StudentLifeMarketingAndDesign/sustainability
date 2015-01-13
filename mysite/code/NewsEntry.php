@@ -64,11 +64,11 @@ class NewsEntry_Controller extends BlogEntry_Controller {
 
 	public function RelatedNewsEntries(){
 		$holder = NewsHolder::get()->First();
-		$tags = $this->TagsCollection()->sort("RAND()")->limit(6);
+		$tags = $this->TagsCollection()->sort('Date', 'ASC')->limit(6);
 		$entries = new ArrayList();
 
 		foreach($tags as $tag){
-			$taggedEntries = $holder->Entries(5, $tag->Tag)->exclude(array("ID"=>$this->ID))->sort("RAND()")->First();
+			$taggedEntries = $holder->Entries(5, $tag->Tag)->exclude(array("ID"=>$this->ID))->sort('Date', 'ASC')->First();
 			if($taggedEntries){
 				foreach($taggedEntries as $taggedEntry){
 					if($taggedEntry->ID){
