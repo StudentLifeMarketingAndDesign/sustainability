@@ -105,9 +105,6 @@
 			<li role="presentation">
 				<a href="#blog" aria-controls="blog" role="tab" data-toggle="tab">Climate Narrative Blog</a>
 			</li>
-			<li role="presentation">
-				<a href="#videos" aria-controls="videos" role="tab" data-toggle="tab">Videos</a>
-			</li>
 		</ul>
 
 		<!-- Tab panes -->
@@ -249,9 +246,6 @@
 						</div>
 					<% end_loop %>
 				</div>
-			</div>
-			<div role="tabpanel" class="tab-pane fade" id="videos">
-
 			</div>
 		</div>
 
