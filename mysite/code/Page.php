@@ -6,7 +6,6 @@ class Page extends SiteTree {
 	);
 
 	private static $has_one = array(
-		"PagePhoto" => "Image",
 		"SummaryPhoto" => "Image"
 	);
 
@@ -31,7 +30,6 @@ class Page extends SiteTree {
 		$fields = parent::getCMSFields();
 		$fields->removeByName("Metadata");
 
-		$fields->addFieldToTab("Root.Main", new UploadField("PagePhoto", "Main Header Photo"));
 		$fields->addFieldToTab('Root.PageSummary', $myEditorField = new TextareaField('Summary', 'Short Page Description'));
 		$myEditorField->setRows(3);
 
@@ -50,13 +48,13 @@ class Page extends SiteTree {
 
 
 		$gridFieldConfig = GridFieldConfig_RelationEditor::create();
-			
-		$row = "SortOrder";
-		$gridFieldConfig->addComponent($sort = new GridFieldSortableRows(stripslashes($row))); 
 
-		$sort->table = 'Page_SidebarItems'; 
-		$sort->parentField = 'PageID'; 
-		$sort->componentField = 'SidebarItemID'; 
+		$row = "SortOrder";
+		$gridFieldConfig->addComponent($sort = new GridFieldSortableRows(stripslashes($row)));
+
+		$sort->table = 'Page_SidebarItems';
+		$sort->parentField = 'PageID';
+		$sort->componentField = 'SidebarItemID';
 
 		$gridField = new GridField("SidebarItems", "Sidebar Items", $this->SidebarItems(), $gridFieldConfig);
 		$fields->addFieldToTab("Root.Sidebar", new LabelField("SidebarLabel", "<h2>Add sidebar items below</h2>"));
@@ -65,7 +63,7 @@ class Page extends SiteTree {
 
 		return $fields;
 	}
-	
+
 
     public function SidebarItems() {
         return $this->owner->getManyManyComponents('SidebarItems')->sort('SortOrder');
