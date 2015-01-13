@@ -86,11 +86,16 @@
 				<h2 class="">Latest News</h2>
 				<!-- Loop News -->
 				<div class="newsholder-entries">
-					<% loop PaginatedNewsEntries(10) %>
+					<% loop PaginatedNewsEntries(7) %>
 						<div class="newsblock clearfix <% if $Photo %>withphoto<% end_if %>">
 							<div class="newsblock-info">
+								<% if $Photo %>
+									<a href="$Link">
+										<img src="$Photo.CroppedImage(120,120).URL" alt="$Title" class="right">
+									</a>
+								<% end_if %>
 								<h4 class="newsblock-title"><a href="$Link">$Title</a></h4>
-								<p>$Content.LimitCharacters(100)</p>
+								<p>$Content.LimitCharacters(150)</p>
 							</div>
 						</div>
 					<% end_loop %>
@@ -101,37 +106,47 @@
 			<h2>Upcoming Events</h2>
 			<% with LocalistCalendar %>
 				<!-- Loop Events -->
-				<% loop $EventList(10) %>
-					<% if $Title %><a href="$Link">$Title</a><% end_if %>
-					<% if $Location %><br />$Location<% end_if %>
-					<% if $URLSegment %><br />$URLSegment<% end_if %>
-					<% if $Cost %><br />$Cost<% end_if %>
-					<% if $LocalistLink %><br />$LocalistLink<% end_if %>
-					<% if $MoreInfoLink %><br />$MoreInfoLink<% end_if %>
-					<% if $ContactName %><br />$ContactName<% end_if %>
-					<% if $ContactEmail %><br />$ContactEmail<% end_if %>
-					<% if $Sponsor %><br />$Sponsor<% end_if %>
-					<% if $Image %><br /><img src="$Image.URL" alt="$Title" style="width:80px;"><% end_if %>
-					<% if $Tags %>
-						<br />
-						Tags:
-						<% loop $Tags %>
-							<a href="$Link" class="">$Title</a>
-						<% end_loop %></p>
-					<% end_if %>
-					<% if $Types %>
-						<div>
-							<p><strong>Categorized under:</strong>
-							<% loop $Types %>
-								<a href="$Link">$Title</a>
-							<% end_loop %></p>
+				<div class="newsholder-entries">
+					<% loop $EventList(7) %>
+						<div class="newsblock clearfix <% if $Photo %>withphoto<% end_if %>">
+							<div class="newsblock-info">
+								<% if $Image %>
+									<a href="$Link">
+										<img src="$Image.URL" alt="$Title" style="width: 120px;" class="right">
+									</a>
+								<% end_if %>
+								<h4 class="newsblock-title"><a href="$Link">$Title</a></h4>
+								<% loop $Dates %>
+									<p class="date-time">
+										<% with $StartDateTime %>
+											<time itemprop="startDate" datetime="$Format(c)">
+												$Format(l), $Format(F) $Format(j)
+											</time>
+											 <br />$Format("g:i A")
+										<% end_with %>
+										<% if $EndTime %>
+											<% with $EndTime %>
+												- $Format("g:i A")
+											<% end_with %>
+										<% end_if %>
+										<% if $EndDate %>
+											until
+											<% with $EndDate %>
+												<time itemprop="endDate" datetime="$Format(c)">
+													$Format(l), $Format(F) $Format(j)
+												</time>
+												<br />$Format("g:i A")
+											<% end_with %>
+										<% end_if %>
+									</p>
+								<% end_loop %>
+								<p>$Venue.Title</p>
+							</div>
 						</div>
-					<% end_if %>
-
-					<hr>
-				<% end_loop %>
-				<!-- end Loop -->
+					<% end_loop %>
+				</div>
 			<% end_with %>
+			<br />
 		</div>
 	</div>
 </div><!-- end .container -->

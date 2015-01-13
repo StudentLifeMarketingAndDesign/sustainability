@@ -1,20 +1,18 @@
 <div class="container">
 	<div class="row">
 
-		<!-- Side Bar -->
-		<div class="col-lg-4 col-lg-push-8">
-			<% include SideNav %>
-		</div>
-
 		<!-- Main Content -->
-		<div class="col-lg-8 col-lg-pull-4">
+		<div class="col-sm-12">
 			<div class="article newsentry">
 				$Breadcrumbs
 				<h1 class="entry-title">$Title</h1>
 				<p class="entry-date">
 					Posted on <time datetime="$Date.format(c)" itemprop="datePublished">$Date.format(F d Y)</time>
 				</p>
-				<p><img src="$Photo.CroppedImage(800,500).URL" alt=""></p>
+				<hr />
+				<% if $Photo %>
+					<img src="$Photo.SetWidth(400).URL" alt="" class="right entryphoto">
+				<% end_if %>
 
 				$Content
 				$Form
@@ -29,30 +27,40 @@
 					</div>
 				<% end_if %>
 
-				<!-- Show news articles with similar tags -->
-				<% if $RelatedNewsEntries %>
-					<hr>
-					<aside class="">
-						<h3>Related News</h3>
-						<ul class="unstyled">
-							<% loop $RelatedNewsEntries(5) %>
-								<li class="">
-									<!--<% if $Photo %>
-										<a href="$Link">
-											<img src="$Photo.CroppedImage(240,160).URL" alt="$Title">
-										</a>
-									<% end_if %>
-									-->
-									<h5><a href="$Link">$Title</a></h5>
-								</li>
-							<% end_loop %>
-						</ul>
-					</aside>
-				<% end_if %>
-				<!-- end related news -->
 
 			</div>
 		</div><!-- end .col -->
 	</div><!-- end .row -->
+
 </div><!-- end .container -->
-<br />
+
+<!-- Show news articles with similar tags -->
+<% if $RelatedNewsEntries %>
+<div class="relatednews">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<aside>
+					<h2>Related News</h2>
+					<% loop $RelatedNewsEntries(3) %>
+						<div class="relatednews-item">
+							<% if $ExternalLink %>
+								<h4><a href="$ExternalLink" target="_blank">$Title</a></h4>
+							<% else %>
+								<h4><a href="$Link">$Title</a></h4>
+							<% end_if %>
+							<p>$Content.LimitCharacters(180)</p>
+							<% if $ExternalLink %>
+								<p><a href="$ExternalLink" class="read external" target="_blank">Read Article</a></p>
+							<% else %>
+								<p><a href="$Link" class="read">Read Article</a></p>
+							<% end_if %>
+							<!--<% if $Date %><small>$Date.Format('M. j')</small><% end_if %>-->
+						</div>
+					<% end_loop %>
+				</aside>
+			</div>
+		</div>
+	</div>
+</div>
+<% end_if %><!-- end related news -->

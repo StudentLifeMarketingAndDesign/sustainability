@@ -1,45 +1,23 @@
 <article class="container">
 	<div class="row">
-		<!-- Side Bar -->
-		<div class="col-lg-4 col-lg-push-8">
-			<% include SideNav %>
-		</div>
-
 
 		<!-- Main Content -->
-		<div class="col-lg-8 col-lg-pull-4">
+		<div class="col-sm-12">
 			<div class="article">
 				$Breadcrumbs
 				<h1>$Title</h1>
-
-				<% loop $Venue %>
-					$Title
-				<% end_loop %>
-				<% if $Location %>Location: $Location<% end_if %>
-				<% if $URLSegment %><br />URL: $URLSegment<% end_if %>
-				<% if $Cost %><br />Cost: $Cost<% end_if %>
-				<% if $LocalistLink %><br />Locallist Link: $LocalistLink<% end_if %>
-				<% if $MoreInfoLink %><br />More info: $MoreInfoLink<% end_if %>
-				<% if $ContactName %>
-					<br />
-					<% if $ContactEmail %>
-						<a href="mailto:$ContactEmail">$ContactName</a>
-					<% else %>
-						Contact: $ContactName
-					<% end_if %>
-
+				<hr>
+				<% if $Image %>
+					<img src="$Image.URL" alt="$Title" style="max-width:400px;" class="right">
 				<% end_if %>
-				<% if $Sponsor %><br />Sponsor: $Sponsor<% end_if %>
-				<% if $Image %><br /><img src="$Image.URL" alt="$Title" style="width:80px;"><% end_if %>
 
 				<% loop $Dates %>
-					<li>
+					<p class="date-time">
 						<% with $StartDateTime %>
-							<a href="$Up.Link" class="">
-								<time itemprop="startDate" datetime="$Format(c)">
-									$Format(l), $Format(F) $Format(j)
-								</time>
-							</a> $Format("g:i A")
+							<time itemprop="startDate" datetime="$Format(c)">
+								$Format(l), $Format(F) $Format(j)
+							</time>
+							 <br />$Format("g:i A")
 						<% end_with %>
 						<% if $EndTime %>
 							<% with $EndTime %>
@@ -52,32 +30,32 @@
 								<time itemprop="endDate" datetime="$Format(c)">
 									$Format(l), $Format(F) $Format(j)
 								</time>
-								$Format("g:i A")
+								<br />$Format("g:i A")
 							<% end_with %>
 						<% end_if %>
-					</li>
+					</p>
 				<% end_loop %>
 
-				<% if $Tags %>
-					<br />
-					Tags:
-					<% loop $Tags %>
-						<a href="$Link" class="">$Title</a>
-					<% end_loop %></p>
+				<p><strong>Venue:</strong><br>$Venue.Title</p>
+
+				<% if $Content %>
+					$Content
 				<% end_if %>
 
-				<% if $Types %>
-					<div>
-						<p><strong>Categorized under:</strong>
-						<% loop $Types %>
-							<a href="$Link">$Title</a>
-						<% end_loop %></p>
-					</div>
+
+				<% if $Cost %><p><strong>Cost:</strong> $Cost </p><% end_if %>
+				<% if $ContactName %>
+					<p><strong>Contact Information:</strong><br>
+					<% if $ContactEmail %>
+						<a href="mailto:$ContactEmail">$ContactName</a>
+					<% else %>
+						$ContactName
+					<% end_if %>
+					</p>
 				<% end_if %>
-
-				<% if $Content %>$Content<% end_if %>
-
-
+				<% if $Sponsor %>
+					<p><strong>Sponsor:</strong><br> $Sponsor </p><% end_if %>
+				<% if $MoreInfoLink %><a href="$MoreInfoLink" target="_blank">More information</a> <br /><% end_if %>
 
 			</div>
 		</div><!-- end .col -->
