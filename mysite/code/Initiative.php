@@ -6,7 +6,7 @@ class Initiative extends Page {
 	);
 
 	private static $has_one = array(
-
+		"PagePhoto" => "Image"
 	);
 
 	public function getCMSFields(){
@@ -14,6 +14,8 @@ class Initiative extends Page {
 
 		// $fields->removeByName("Content");
 		$fields->removeByName("Metadata");
+
+		$fields->addFieldToTab("Root.Main", new UploadField("PagePhoto", "Main Header Photo"));
 
 		return $fields;
 
