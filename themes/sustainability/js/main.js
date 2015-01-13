@@ -18,12 +18,22 @@ $(document).ready(function() {
 
 	// Homepage main carousel
 	$('.your-class').slick({
-		dots: true,
+		dots: false,
 		infinite: true,
 		speed: 500,
 		fade: true,
 		slide: 'div',
-		cssEase: 'linear'
+		cssEase: 'linear',
+		responsive: [
+	    {
+	      breakpoint: 768,
+	      settings: {
+	      	arrows: false,
+	      	dots: true,
+	      	fade: false
+	      }
+	    }
+	   ]
 	});
 
 	// Featured News Articles

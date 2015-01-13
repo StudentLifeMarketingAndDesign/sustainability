@@ -2,9 +2,13 @@
 Header Carousel
 --------------------------------------------------------------- */
 .your-class {
-	height: 300px;
-	overflow: hidden;
+	height: 330px;
+	padding-bottom: 30px;
 	@media (min-width: $break-small) {
+		height: 530px;
+	}
+	@media (min-width: $break-medium) {
+		padding-bottom: 0;
 		height: 600px;
 	}
 }
@@ -15,6 +19,9 @@ Header Carousel
 	width: 100%;
 	height: 300px;
 	@media (min-width: $break-small) {
+		height: 500px;
+	}
+	@media (min-width: $break-medium) {
 		height: 600px;
 	}
 }
@@ -36,25 +43,40 @@ Header Carousel
 	margin-left: -38%;
 	color: #fff;
 	z-index: 100;
-	padding-bottom: 100px;
+	padding-bottom: 30px;
 	text-align: center;
+	@media (min-width: $break-small) {
+		padding-bottom: 80px;
+	}
+	@media (min-width: $break-medium) {
+		padding-bottom: 100px;
+	}
 }
 .your-class .inner h3 {
 	color: #fff;
-	font-size: 65px;
+	font-size: 30px;
 	line-height: 1.1;
 	margin: 0 0 10px;
 	xfont-family: $body-font;
 	xtext-transform: uppercase;
 	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75);
+	@media (min-width: $break-small) {
+		font-size: 45px;
+	}
+	@media (min-width: $break-medium) {
+		font-size: 65px;
+	}
 }
 .your-class .inner p {
 	margin: 0;
-	font-size: 22px;
+	font-size: 15px;
 	font-weight: bold;
 	line-height: 1.3;
 	color: #fff;
 	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75);
+	@media (min-width: $break-small) {
+		font-size: 22px;
+	}
 }
 .pulse-panel {
 	margin-bottom: 0;
@@ -71,11 +93,14 @@ Header Carousel
 	font-size: 13px;
 	letter-spacing: 1px;
 	font-weight: bold;
-	padding:15px 25px;
+	padding: 10px 15px;
 	line-height: 1;
 	text-decoration: none;
 	margin-top: 30px;
 	position: relative;
+	@media (min-width: $break-small) {
+		padding:15px 25px;
+	}
 }
 .your-class-btn:after {
 	content: "";
@@ -91,6 +116,19 @@ Header Carousel
 	color: #fff;
 	text-decoration: none;
 	background-color: darken( $orange, 10% );
+}
+.your-class .slick-dots {
+	margin: 0;
+	bottom: 0;
+	@media (min-width: $break-medium) {
+		margin: 0 0 30px;
+	}
+}
+.your-class .slick-dots li button:before {
+	color: #333;
+	@media (min-width: $break-medium) {
+		color: #fff;
+	}
 }
 
 
