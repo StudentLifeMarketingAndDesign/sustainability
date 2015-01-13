@@ -6,27 +6,25 @@ class Page extends SiteTree {
 	);
 
 	private static $has_one = array(
-		"SummaryPhoto" => "Image"
+		"SummaryPhoto" => "Image",
 	);
 
-
-	private static $many_many = array (
+	private static $many_many = array(
 		"SidebarItems" => "SidebarItem",
-		'GalleryImages' => 'GalleryImage'
+		'GalleryImages' => 'GalleryImage',
 	);
 
-	private static $many_many_extraFields=array(
-		'SidebarItems'=>array(
-            'SortOrder'=>'Int'
-            )
+	private static $many_many_extraFields = array(
+		'SidebarItems' => array(
+			'SortOrder' => 'Int',
+		),
 	);
 
 	private static $plural_name = "Pages";
 
-	private static $defaults = array ();
+	private static $defaults = array();
 
-
-	public function getCMSFields(){
+	public function getCMSFields() {
 		$fields = parent::getCMSFields();
 		$fields->removeByName("Metadata");
 
@@ -37,15 +35,14 @@ class Page extends SiteTree {
 
 		// Gallery
 		$fields->addFieldToTab(
-		   'Root.Gallery',
+			'Root.Gallery',
 			$uploadField = new SortableUploadField(
-		       $name = 'GalleryImages',
-		       $title = 'Upload one or more images (max 10 in total, drag and drop to sort)'
-		   )
+				$name = 'GalleryImages',
+				$title = 'Upload one or more images (max 10 in total, drag and drop to sort)'
+			)
 		);
 		$uploadField->setFolderName($this->URLSegment);
 		$uploadField->setConfig('allowedMaxFileNumber', 10);
-
 
 		$gridFieldConfig = GridFieldConfig_RelationEditor::create();
 
@@ -64,10 +61,9 @@ class Page extends SiteTree {
 		return $fields;
 	}
 
-
-    public function SidebarItems() {
-        return $this->owner->getManyManyComponents('SidebarItems')->sort('SortOrder');
-    }
+	public function SidebarItems() {
+		return $this->owner->getManyManyComponents('SidebarItems')->sort('SortOrder');
+	}
 
 }
 class Page_Controller extends ContentController {
@@ -87,7 +83,7 @@ class Page_Controller extends ContentController {
 	 *
 	 * @var array
 	 */
-	private static $allowed_actions = array (
+	private static $allowed_actions = array(
 	);
 
 	public function init() {
@@ -97,9 +93,6 @@ class Page_Controller extends ContentController {
 		// instead of putting Requirements calls here.  However these are
 		// included so that our older themes still work
 
-
 	}
-
-
 
 }
