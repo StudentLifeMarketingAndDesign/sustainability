@@ -3,13 +3,14 @@
     "description": "Sustainability Website",
     "require": {
         "php": ">=5.3.2",
-        "silverstripe/cms": "3.1.6",
-        "silverstripe/framework": "3.1.6",
+        "silverstripe/cms": "3.1.8",
+        "silverstripe/framework": "3.1.8",
         "md/ac-json-events" : "dev-master",
         "md/division-bar" : "dev-master",
         "md/rss-display" : "dev-master",
         "silverstripe/blog" : "*",
-        "undefinedoffset/sortablegridfield" : "*"
+        "undefinedoffset/sortablegridfield" : "*",
+        "silverstripe/widgets": "*"
     },
     "config": {
         "process-timeout": 600
