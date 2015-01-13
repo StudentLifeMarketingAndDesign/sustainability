@@ -107,7 +107,7 @@
 			<% with LocalistCalendar %>
 				<!-- Loop Events -->
 				<div class="newsholder-entries">
-					<% loop $EventList(7) %>
+					<% loop $EventList.Limit(7) %>
 						<div class="newsblock clearfix <% if $Photo %>withphoto<% end_if %>">
 							<div class="newsblock-info">
 								<% if $Image %>

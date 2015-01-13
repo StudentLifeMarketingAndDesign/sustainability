@@ -180,7 +180,7 @@
 				<div class="pulse-panel">
 					<% with LocalistCalendar %>
 						<!-- Loop Events -->
-						<% loop $EventList(8) %>
+						<% loop $EventList.Limit(8) %>
 							<div>
 								<!-- Photo goes here -->
 								<% if $Image %>
