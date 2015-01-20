@@ -37,8 +37,12 @@
 			<h1>$Title</h1>
 			$Content
 			$Form
+
+
+
 			<!-- Featured News Article -->
 			<div class="featured-articles">
+				<!-- loop featured news articles -->
 				<% loop $allChildren %>
 					<% if $IsFeatured %>
 						<div class="row">
@@ -68,22 +72,75 @@
 							</div>
 						</div>
 					<% end_if %>
-				<% end_loop %>
+				<% end_loop %><!-- end loop children -->
+				<% with LocalistCalendar %>
+					<% if $FeaturedEvents %>
+						<% loop $FeaturedEvents.Limit(3) %>
+							<div class="row">
+								<div class="col-md-6 col-md-push-6">
+									<% if $Image %>
+										<a href="$Link">
+											<img src="$Image.URL" alt="$Title" style="width: 600px;">
+										</a>
+									<% end_if %>
+								</div>
+								<div class="col-md-6 col-md-pull-6">
+									<div class="featured-content">
+										<h2>Featured Events</h2>
+										<h1><a href="$Link">$Title</a></h1>
+										<!-- Venue -->
+										<% if $Venue %>
+											<p>$Venue.Title</p>
+										<% end_if %>
+										<!-- Dates -->
+										<% if $Dates %>
+											<% if $Dates.Count > "1" %>
+													<p>multiple dates available</p>
+												<% else %>
+													<% loop $Dates %>
+														<p class="date-time">
+															<% with $StartDateTime %>
+																<time itemprop="startDate" datetime="$Format(c)">
+																	$Format(l), $Format(F) $Format(j)
+																</time>
+																 <br />$Format("g:i A")
+															<% end_with %>
+															<% if $EndTime %>
+																<% with $EndTime %>
+																	- $Format("g:i A")
+																<% end_with %>
+															<% end_if %>
+															<% if $EndDate %>
+																until
+																<% with $EndDate %>
+																	<time itemprop="endDate" datetime="$Format(c)">
+																		$Format(l), $Format(F) $Format(j)
+																	</time>
+																	<br />$Format("g:i A")
+																<% end_with %>
+															<% end_if %>
+														</p>
+													<% end_loop %>
+												<% end_if %>
+										<% end_if %>
+
+										<p><a href="$Link" class="continue">View Event</a></p>
+									</div>
+								</div>
+							</div>
+						<% end_loop %>
+					<% end_if %>
+				<% end_with %>
+
 			</div>
 		</div>
 	</div>
 
 	<div class="row">
 		<!-- Side Bar -->
-		<div class="col-lg-4 col-lg-push-8">
-			<% include SideNav %>
-		</div>
-
-		<!-- Main Content -->
-		<div class="col-lg-8 col-lg-pull-4">
+		<div class="col-lg-6">
 			<div class="article">
-
-				<h2 class="">Latest News</h2>
+			<h2 class="">Latest News</h2>
 				<!-- Loop News -->
 				<div class="newsholder-entries">
 					<% loop PaginatedNewsEntries(7) %>
@@ -102,51 +159,55 @@
 				</div>
 				<% include NewsPagination %>
 			</div>
-			<hr>
-			<h2>Upcoming Events</h2>
-			<% with LocalistCalendar %>
-				<!-- Loop Events -->
-				<div class="newsholder-entries">
-					<% loop $EventList.Limit(7) %>
-						<div class="newsblock clearfix <% if $Photo %>withphoto<% end_if %>">
-							<div class="newsblock-info">
-								<% if $Image %>
-									<a href="$Link">
-										<img src="$Image.URL" alt="$Title" style="width: 120px;" class="right">
-									</a>
-								<% end_if %>
-								<h4 class="newsblock-title"><a href="$Link">$Title</a></h4>
-								<% loop $Dates %>
-									<p class="date-time">
-										<% with $StartDateTime %>
-											<time itemprop="startDate" datetime="$Format(c)">
-												$Format(l), $Format(F) $Format(j)
-											</time>
-											 <br />$Format("g:i A")
-										<% end_with %>
-										<% if $EndTime %>
-											<% with $EndTime %>
-												- $Format("g:i A")
-											<% end_with %>
-										<% end_if %>
-										<% if $EndDate %>
-											until
-											<% with $EndDate %>
-												<time itemprop="endDate" datetime="$Format(c)">
+		</div>
+
+		<!-- Main Content -->
+		<div class="col-lg-6">
+			<div class="article">
+				<h2>Upcoming Events</h2>
+					<% with LocalistCalendar %>
+					<!-- Loop Events -->
+					<div class="newsholder-entries">
+						<% loop $EventList.Limit(7) %>
+							<div class="newsblock clearfix <% if $Photo %>withphoto<% end_if %>">
+								<div class="newsblock-info">
+									<% if $Image %>
+										<a href="$Link">
+											<img src="$Image.URL" alt="$Title" style="width: 120px;" class="right">
+										</a>
+									<% end_if %>
+									<h4 class="newsblock-title"><a href="$Link">$Title</a></h4>
+									<% loop $Dates %>
+										<p class="date-time">
+											<% with $StartDateTime %>
+												<time itemprop="startDate" datetime="$Format(c)">
 													$Format(l), $Format(F) $Format(j)
 												</time>
-												<br />$Format("g:i A")
+												 <br />$Format("g:i A")
 											<% end_with %>
-										<% end_if %>
-									</p>
-								<% end_loop %>
-								<p>$Venue.Title</p>
+											<% if $EndTime %>
+												<% with $EndTime %>
+													- $Format("g:i A")
+												<% end_with %>
+											<% end_if %>
+											<% if $EndDate %>
+												until
+												<% with $EndDate %>
+													<time itemprop="endDate" datetime="$Format(c)">
+														$Format(l), $Format(F) $Format(j)
+													</time>
+													<br />$Format("g:i A")
+												<% end_with %>
+											<% end_if %>
+										</p>
+									<% end_loop %>
+									<p>$Venue.Title</p>
+								</div>
 							</div>
-						</div>
-					<% end_loop %>
-				</div>
-			<% end_with %>
-			<br />
+						<% end_loop %>
+					</div>
+				<% end_with %>
+			</div>
 		</div>
 	</div>
 </div><!-- end .container -->
