@@ -6,7 +6,7 @@
 	<div class="row">
 
 		<!-- Side Bar -->
-		<div class="col-lg-4 col-lg-push-8">
+		<div class="col-lg-4 col-lg-push-8 sidebar">
 			<% include SideNav %>
 		</div>
 

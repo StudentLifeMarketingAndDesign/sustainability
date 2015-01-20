@@ -89,6 +89,11 @@ Layout
 .main-container {
 	min-height: 500px;
 }
+.sidebar {
+	@media (min-width: $break-medium) {
+		margin-bottom: 30px;
+	}
+}
 
 
 
