@@ -70,3 +70,36 @@ Featured Articles
 .featured-articles .slick-dots li button:before {
 	color: #333;
 }
+
+/* ----------------------------------------------------
+Browse By Date
+------------------------------------------------------- */
+.browsebydate {
+	background: #fff;
+	border-top: 4px solid #cfc8b2;
+	margin-top: 30px;
+	padding: 30px;
+}
+.browsebydate h3 {
+	font-size: 15px;
+	font-family: $body-font;
+	font-weight: normal;
+	margin: 0 0 10px;
+	text-transform: uppercase;
+	-webkit-font-smoothing: antialiased;
+}
+.browsebydate ul {
+	list-style: none;
+	margin: 0;
+}
+.browsebydate li {
+
+}
+.browsebydate li a {
+	border-bottom: 1px solid #ddd;
+	color: #333;
+	font-size: 16px;
+	display: block;
+	padding: 10px 0;
+	text-decoration: none;
+}

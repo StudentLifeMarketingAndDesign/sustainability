@@ -109,13 +109,14 @@
 </div><!-- end Naver -->
 
 
-<div class="tablet-hide">
-	<% include SideBarItems %>
-</div>
+<% include SideBarItems %>
 
 
-
-
+<% if SideBarView %>
+	<div id="Sidebar" class="browsebydate tablet-hide">
+		$SideBarView
+	</div>
+<% end_if %>
 
 
 

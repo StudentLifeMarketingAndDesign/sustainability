@@ -138,9 +138,16 @@
 
 	<div class="row">
 		<!-- Side Bar -->
-		<div class="col-lg-6">
+		<div class="col-lg-4 col-lg-push-8">
+			<% include SideNav %>
+		</div>
+
+
+
+		<!-- Main Content -->
+		<div class="col-lg-8 col-lg-pull-4">
 			<div class="article">
-			<h2 class="">Latest News</h2>
+				<h2 class="">Latest News</h2>
 				<!-- Loop News -->
 				<div class="newsholder-entries">
 					<% loop PaginatedNewsEntries(7) %>
@@ -158,12 +165,7 @@
 					<% end_loop %>
 				</div>
 				<% include NewsPagination %>
-			</div>
-		</div>
-
-		<!-- Main Content -->
-		<div class="col-lg-6">
-			<div class="article">
+				<hr>
 				<h2>Upcoming Events</h2>
 					<% with LocalistCalendar %>
 					<!-- Loop Events -->
