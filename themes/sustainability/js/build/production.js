@@ -4136,7 +4136,7 @@ $(document).ready(function() {
 
 	// Homepage main carousel
 	$('.your-class').slick({
-		dots: false,
+		dots: true,
 		infinite: true,
 		speed: 500,
 		fade: true,
