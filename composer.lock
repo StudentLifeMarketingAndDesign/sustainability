@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "521b06ad88f7d7c512970f5c103ac412",
+    "hash": "ba9eb1ea55aca4c7639b7dc0ba597360",
     "packages": [
         {
             "name": "composer/installers",
@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "89d77bfbee79e16653f7162c86e602cc188471db"
+                "reference": "1bff8aa77a18f3616f468ed8000cf86a5725bac3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/89d77bfbee79e16653f7162c86e602cc188471db",
-                "reference": "89d77bfbee79e16653f7162c86e602cc188471db",
+                "url": "https://api.github.com/repos/composer/installers/zipball/1bff8aa77a18f3616f468ed8000cf86a5725bac3",
+                "reference": "1bff8aa77a18f3616f468ed8000cf86a5725bac3",
                 "shasum": ""
             },
             "replace": {
@@ -59,6 +59,7 @@
                 "Hurad",
                 "MODX Evo",
                 "OXID",
+                "SMF",
                 "Thelia",
                 "WolfCMS",
                 "agl",
@@ -97,7 +98,7 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2014-11-29 01:29:17"
+            "time": "2015-01-11 03:51:11"
         },
         {
             "name": "md/ac-json-events",
@@ -333,6 +334,50 @@
             "time": "2015-01-14 22:56:46"
         },
         {
+            "name": "silverstripe/userforms",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/silverstripe/silverstripe-userforms.git",
+                "reference": "99ac1a3e20f60dc226e7b7166afd1ad81b7b06c3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-userforms/zipball/99ac1a3e20f60dc226e7b7166afd1ad81b7b06c3",
+                "reference": "99ac1a3e20f60dc226e7b7166afd1ad81b7b06c3",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/cms": ">=3.1.0",
+                "silverstripe/framework": ">=3.1.0"
+            },
+            "suggest": {
+                "colymba/gridfield-bulk-editing-tools": "Allows for bulk management of form submissions"
+            },
+            "type": "silverstripe-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Will Rossiter",
+                    "email": "will@fullscreen.io"
+                }
+            ],
+            "description": "UserForms enables CMS users to create dynamic forms via a drag and drop interface and without getting involved in any PHP code",
+            "keywords": [
+                "silverstripe",
+                "userforms"
+            ],
+            "time": "2015-01-06 03:59:34"
+        },
+        {
             "name": "silverstripe/widgets",
             "version": "dev-master",
             "source": {
@@ -372,12 +417,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/UndefinedOffset/SortableGridField.git",
-                "reference": "946ca8dc9b32a039f9bcedc774af96dd3871c758"
+                "reference": "9d60a5834323a00af49960b3eb3d080fa8878122"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UndefinedOffset/SortableGridField/zipball/946ca8dc9b32a039f9bcedc774af96dd3871c758",
-                "reference": "946ca8dc9b32a039f9bcedc774af96dd3871c758",
+                "url": "https://api.github.com/repos/UndefinedOffset/SortableGridField/zipball/9d60a5834323a00af49960b3eb3d080fa8878122",
+                "reference": "9d60a5834323a00af49960b3eb3d080fa8878122",
                 "shasum": ""
             },
             "require": {
@@ -404,7 +449,7 @@
                 "gridfield",
                 "silverstripe"
             ],
-            "time": "2014-10-27 13:14:05"
+            "time": "2015-01-17 16:46:20"
         }
     ],
     "packages-dev": [],
@@ -416,7 +461,6 @@
         "md/rss-display": 20
     },
     "prefer-stable": false,
-    "prefer-lowest": false,
     "platform": {
         "php": ">=5.3.2"
     },

@@ -10,7 +10,9 @@
         "md/rss-display" : "dev-master",
         "silverstripe/blog" : "*",
         "undefinedoffset/sortablegridfield" : "*",
-        "silverstripe/widgets": "*"
+        "silverstripe/widgets": "*",
+        "silverstripe/userforms": "*"
+
     },
     "config": {
         "process-timeout": 600
