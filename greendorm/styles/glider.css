@@ -1,0 +1,59 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	width: 728px;
+	margin:0 auto;
+	/*text-align:center;*/
+	background:top;
+	background-color: #FFFFFF;
+	/*background-image: url(../images/bg.jpg);*/
+	background-repeat:no-repeat;
+}
+div.scroller {
+	/* modify width and height of scrolling section if necessary	*/		
+	width: 728px;
+	margin:0 auto;
+	height: 408px;
+	overflow: hidden;
+	
+	
+}
+/*div.scroller div.section {
+	 modify width and height of each section as needed (should match the size of the scroller window)			
+	width:728px;
+	height:408px;
+	margin:0 0 0 0;
+	overflow:hidden;
+}
+div.scroller div.content {
+	width: 10000px;
+}*/
+
+div.scroller div.section {
+	/* modify width and height of each section as needed (should match the size of the scroller window)	*/		
+	width:728px;
+	height:408px;
+	overflow:hidden;
+	float:left;
+	padding:1em;		
+	}
+div.scroller div.content {
+	width: 10000px;
+	}
+#section1 {
+	background-repeat: no-repeat;
+}
+
+div#section2 {
+	background-repeat: no-repeat;
+}
+.button {
+	margin-top:100;
+	margin-left:100;
+}
+.buttonTwo {
+	margin-top:60;
+	margin-left:300;
+}
+
+

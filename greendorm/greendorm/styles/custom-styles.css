@@ -1,0 +1,57 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#thriftShop{
+	
+	font:12px Verdana, Helvetica, sans-serif;
+	color:#333333; 
+	line-height:1.4em;
+	display:none;
+	width:450px; 
+	height:480px;
+}
+
+#microFridge{
+font:12px Verdana, Helvetica, sans-serif;
+	color:#333333; 
+	line-height:1.4em;
+	display:none;
+	width:300px; 
+	height:600px;	
+}
+
+#getInvolved{
+	font:12px Verdana, Helvetica, sans-serif;
+	color:#333333; 
+	line-height:1.4em;
+	display:none;
+	width:300px; 
+	height:600px;	
+}
+
+#thermostat{
+	font:12px Verdana, Helvetica, sans-serif;
+	color:#333333; 
+	line-height:1.4em;
+	display:none;
+	width:425px; 
+	height:380px;	
+}
+
+#bike{
+	font:12px Verdana, Helvetica, sans-serif;
+	color:#333333; 
+	line-height:1.4em;
+	display:none;
+	width:450px; 
+	height:440px;	
+}
+
+#recycleBins{
+	font:12px Verdana, Helvetica, sans-serif;
+	color:#333333; 
+	line-height:1.4em;
+	display:none;
+	width:200px; 
+	height:400px;
+}
