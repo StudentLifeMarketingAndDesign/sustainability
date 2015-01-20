@@ -30,6 +30,7 @@ class NewsEntry extends BlogEntry {
 		$fields->removeByName("PagePhoto");
 		$fields->removeByName("PageSummary");
 		$fields->removeByName("Gallery");
+		$fields->removeByName("Author");
 
 		$fields->renameField("Tags", "Tags (biomass, energy, food, leed, recycling, transportation) comma sep.");
 		$fields->addFieldToTab("Root.Main", new TextField("ExternalLink", "External Link - Enter a link here if you want to link to an exernal news article"));
