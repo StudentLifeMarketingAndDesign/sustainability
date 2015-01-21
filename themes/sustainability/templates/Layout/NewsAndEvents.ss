@@ -38,8 +38,6 @@
 			$Content
 			$Form
 
-
-
 			<!-- Featured News Article -->
 			<div class="featured-articles">
 				<!-- loop featured news articles -->
@@ -171,7 +169,7 @@
 				</div>
 				<% end_with %>
 				<hr>
-				<h2>Upcoming Events</h2>
+				<h2>Upcoming Events <a href="{$BaseHref}events" class="all-link">View all events</a></h2>
 					<% with LocalistCalendar %>
 					<!-- Loop Events -->
 					<div class="newsholder-entries">
@@ -215,6 +213,16 @@
 					</div>
 				<% end_with %>
 			</div>
+
+			<div class="tablet-show">
+				<% include SideBarItems %>
+			</div>
+
+			<% if SideBarView %>
+				<div id="Sidebar" class="browsebydate tablet-show">
+					$SideBarView
+				</div>
+			<% end_if %>
 		</div>
 	</div>
 </div><!-- end .container -->

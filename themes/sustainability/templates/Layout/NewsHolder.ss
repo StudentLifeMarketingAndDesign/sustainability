@@ -64,6 +64,16 @@
 				</div>
 				<% include NewsPagination %>
 			</div>
+
+			<div class="tablet-show">
+				<% include SideBarItems %>
+			</div>
+
+			<% if SideBarView %>
+				<div id="Sidebar" class="browsebydate tablet-show">
+					$SideBarView
+				</div>
+			<% end_if %>
 		</div>
 	</div>
 </div><!-- end .container -->

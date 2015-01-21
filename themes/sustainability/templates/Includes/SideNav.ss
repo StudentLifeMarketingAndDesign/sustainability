@@ -108,8 +108,9 @@
 	</div><!-- end .subnavigation -->
 </div><!-- end Naver -->
 
-
-<% include SideBarItems %>
+<div class="tablet-hide">
+	<% include SideBarItems %>
+</div>
 
 
 <% if SideBarView %>

@@ -21,6 +21,11 @@
 				<!-- Loop Sub Pages -->
 				<% include ChildPages %>
 
+				<!-- show sidebar items if on table or mobile -->
+				<div class="tablet-show">
+					<% include SideBarItems %>
+				</div>
+
 			</div><!-- end .col -->
 		</div><!-- end .row -->
 	</article><!-- end .container -->
