@@ -1,5 +1,5 @@
 <?php
-class NewsHolder extends BlogHolder {
+class NewsAndEvents extends Page {
 
 	private static $db = array(
 
@@ -8,30 +8,22 @@ class NewsHolder extends BlogHolder {
 	private static $has_one = array(
 
 	);
-	private static $belongs_many_many = array (
-	);
-	private static $has_many = array(
-	);
-
-	private static $allowed_children = array(
-		'NewsEntry'
-	);
-
-	private static $singular_name = 'News Holder';
-
-	private static $plural_name = 'News Holders';
 
 	public function getCMSFields(){
 		$fields = parent::getCMSFields();
-		$fields->removeByName("Content");
+
+		// $fields->removeByName("Content");
 		$fields->removeByName("Metadata");
+		$fields->removeByName("Gallery");
+		$fields->removeByName("PageSummary");
+
 
 		return $fields;
+
 	}
 
-
 }
-class NewsHolder_Controller extends BlogHolder_Controller {
+class NewsAndEvents_Controller extends Page_Controller {
 
 	/**
 	 * An array of actions that can be accessed via a request. Each array element should be an action name, and the
@@ -48,17 +40,11 @@ class NewsHolder_Controller extends BlogHolder_Controller {
 	 *
 	 * @var array
 	 */
-	private static $allowed_actions = array (
-	);
 
 	public function init() {
 		parent::init();
-
-	}
-
-	public function PaginatedNewsEntries($pageLength = 5){
-		$entries = $this->BlogEntries();
-		return $entries->setPageLength($pageLength);
+		// You can include any CSS or JS required by your project here.
+		// See: http://doc.silverstripe.org/framework/en/reference/requirements
 	}
 
 }
