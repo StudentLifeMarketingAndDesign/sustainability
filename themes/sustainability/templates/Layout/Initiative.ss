@@ -27,7 +27,7 @@
 <% end_if %>
 
 <!-- Show Related News -->
-<% include RelatedNews %>
+<% include RelatedNewsInitiative %>
 
 <!-- Gallery Carousel -->
 <% include Gallery %>
