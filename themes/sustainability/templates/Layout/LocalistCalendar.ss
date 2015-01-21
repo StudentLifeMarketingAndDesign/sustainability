@@ -1,47 +1,60 @@
-<article class="container">
+<article class="container main-container">
 	<div class="row">
-		<div class="col-md-12">
+
+		<!-- Side Bar -->
+		<div class="col-lg-4 col-lg-push-8 sidebar">
+			<% include SideNav %>
+		</div>
+
+		<!-- Main Content -->
+		<div class="col-lg-8 col-lg-pull-4">
 			<div class="article">
-
 				$Breadcrumbs
-
 				<h1>$Title</h1>
 				$Content
 				$Form
-			</div>
 
-			<!-- Loop Events -->
-			<% loop $EventList(4) %>
-				<% if $Title %><a href="$Link">$Title</a><% end_if %>
-				<% if $Location %><br />$Location<% end_if %>
-				<% if $URLSegment %><br />$URLSegment<% end_if %>
-				<% if $Cost %><br />$Cost<% end_if %>
-				<% if $LocalistLink %><br />$LocalistLink<% end_if %>
-				<% if $MoreInfoLink %><br />$MoreInfoLink<% end_if %>
-				<% if $ContactName %><br />$ContactName<% end_if %>
-				<% if $ContactEmail %><br />$ContactEmail<% end_if %>
-				<% if $Sponsor %><br />$Sponsor<% end_if %>
-				<% if $Image %><br /><img src="$Image.URL" alt="$Title" style="width:80px;"><% end_if %>
-				<% if $Tags %>
-					<br />
-					Tags:
-					<% loop $Tags %>
-						<a href="$Link" class="">$Title</a>
-					<% end_loop %></p>
-				<% end_if %>
-				<% if $Types %>
-					<div>
-						<p><strong>Categorized under:</strong>
-						<% loop $Types %>
-							<a href="$Link">$Title</a>
-						<% end_loop %></p>
+				<!-- Loop Events -->
+					<div class="newsholder-entries">
+						<% loop $EventList %>
+							<div class="newsblock clearfix <% if $Photo %>withphoto<% end_if %>">
+								<div class="newsblock-info">
+									<% if $Image %>
+										<a href="$Link">
+											<img src="$Image.URL" alt="$Title" style="width: 120px;" class="right">
+										</a>
+									<% end_if %>
+									<h4 class="newsblock-title"><a href="$Link">$Title</a></h4>
+									<% loop $Dates %>
+										<p class="date-time">
+											<% with $StartDateTime %>
+												<time itemprop="startDate" datetime="$Format(c)">
+													$Format(l), $Format(F) $Format(j)
+												</time>
+												 <br />$Format("g:i A")
+											<% end_with %>
+											<% if $EndTime %>
+												<% with $EndTime %>
+													- $Format("g:i A")
+												<% end_with %>
+											<% end_if %>
+											<% if $EndDate %>
+												until
+												<% with $EndDate %>
+													<time itemprop="endDate" datetime="$Format(c)">
+														$Format(l), $Format(F) $Format(j)
+													</time>
+													<br />$Format("g:i A")
+												<% end_with %>
+											<% end_if %>
+										</p>
+									<% end_loop %>
+									<p>$Venue.Title</p>
+								</div>
+							</div>
+						<% end_loop %>
 					</div>
-				<% end_if %>
-
-				<hr>
-			<% end_loop %>
-			<!-- end Loop -->
-
+			</div>
 		</div><!-- end .col -->
 	</div><!-- end .row -->
 </article><!-- end .container -->
