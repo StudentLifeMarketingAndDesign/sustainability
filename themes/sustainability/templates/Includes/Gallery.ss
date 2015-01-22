@@ -9,7 +9,7 @@
 						<% loop GalleryImages %>
 							<div class="" style="width: {$SetHeight(250).Width}px;height: {$SetHeight(250).Height}px;">
 								<a href="$SetRatioSize(800,800).URL" title="$Caption" data-gallery="gallery" class="boxer">
-	 								<img data-lazy="$SetHeight(250).URL" alt="$Caption">
+	 								<img src="$SetHeight(250).URL" alt="$Caption">
 	 								<% if $Caption %><span class="thumb-caption">$Caption</span><% end_if %>
 	 							</a>
 	 						</div>
