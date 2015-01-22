@@ -138,92 +138,79 @@
 
 	<div class="row">
 		<!-- Side Bar -->
-		<div class="col-lg-4 col-lg-push-8">
-			<% include SideNav %>
+		<div class="col-lg-6">
+			<h2 class="">Latest News <a href="{$BaseHref}news" class="all-link">View all news</a></h2>
+			<% with Page(news) %>
+			<!-- Loop News -->
+			<div class="newsholder-entries">
+				<% if $Entries %>
+					<% loop $Entries(8) %>
+						<div class="newsblock clearfix <% if $Photo %>withphoto<% end_if %>">
+							<div class="newsblock-info">
+								<% if $Photo %>
+									<a href="$Link">
+										<img src="$Photo.CroppedImage(120,120).URL" alt="$Title" class="right">
+									</a>
+								<% end_if %>
+								<h5 class="newsblock-title"><a href="$Link">$Title</a></h5>
+								<p>$Content.LimitCharacters(150)</p>
+							</div>
+						</div>
+					<% end_loop %>
+				<% end_if %>
+			</div>
+			<% end_with %>
 		</div>
 
 
 
 		<!-- Main Content -->
-		<div class="col-lg-8 col-lg-pull-4">
-			<div class="article">
-				<h2 class="">Latest News <a href="{$BaseHref}news" class="all-link">View all news</a></h2>
-				<% with Page(news) %>
-				<!-- Loop News -->
-				<div class="newsholder-entries">
-					<% if $Entries %>
-						<% loop $Entries(8) %>
-							<div class="newsblock clearfix <% if $Photo %>withphoto<% end_if %>">
-								<div class="newsblock-info">
-									<% if $Photo %>
-										<a href="$Link">
-											<img src="$Photo.CroppedImage(120,120).URL" alt="$Title" class="right">
-										</a>
-									<% end_if %>
-									<h4 class="newsblock-title"><a href="$Link">$Title</a></h4>
-									<p>$Content.LimitCharacters(150)</p>
-								</div>
-							</div>
-						<% end_loop %>
-					<% end_if %>
-				</div>
-				<% end_with %>
-				<hr>
+		<div class="col-lg-6">
 				<h2>Upcoming Events <a href="{$BaseHref}events" class="all-link">View all events</a></h2>
-					<% with LocalistCalendar %>
-					<!-- Loop Events -->
-					<div class="newsholder-entries">
-						<% loop $EventList.Limit(8) %>
-							<div class="newsblock clearfix <% if $Photo %>withphoto<% end_if %>">
-								<div class="newsblock-info">
-									<% if $Image %>
-										<a href="$Link">
-											<img src="$Image.URL" alt="$Title" style="width: 120px;" class="right">
-										</a>
-									<% end_if %>
-									<h4 class="newsblock-title"><a href="$Link">$Title</a></h4>
-									<% loop $Dates %>
-										<p class="date-time">
-											<% with $StartDateTime %>
-												<time itemprop="startDate" datetime="$Format(c)">
+				<% with LocalistCalendar %>
+				<!-- Loop Events -->
+				<div class="newsholder-entries">
+					<% loop $EventList.Limit(8) %>
+						<div class="newsblock clearfix <% if $Photo %>withphoto<% end_if %>">
+							<div class="newsblock-info">
+								<% if $Image %>
+									<a href="$Link">
+										<img src="$Image.URL" alt="$Title" style="width: 120px;" class="right">
+									</a>
+								<% end_if %>
+								<h5 class="newsblock-title"><a href="$Link">$Title</a></h5>
+								<% loop $Dates %>
+									<p class="date-time">
+										<% with $StartDateTime %>
+											<time itemprop="startDate" datetime="$Format(c)">
+												$Format(l), $Format(F) $Format(j)
+											</time>
+											 <br />$Format("g:i A")
+										<% end_with %>
+										<% if $EndTime %>
+											<% with $EndTime %>
+												- $Format("g:i A")
+											<% end_with %>
+										<% end_if %>
+										<% if $EndDate %>
+											until
+											<% with $EndDate %>
+												<time itemprop="endDate" datetime="$Format(c)">
 													$Format(l), $Format(F) $Format(j)
 												</time>
-												 <br />$Format("g:i A")
+												<br />$Format("g:i A")
 											<% end_with %>
-											<% if $EndTime %>
-												<% with $EndTime %>
-													- $Format("g:i A")
-												<% end_with %>
-											<% end_if %>
-											<% if $EndDate %>
-												until
-												<% with $EndDate %>
-													<time itemprop="endDate" datetime="$Format(c)">
-														$Format(l), $Format(F) $Format(j)
-													</time>
-													<br />$Format("g:i A")
-												<% end_with %>
-											<% end_if %>
-										</p>
-									<% end_loop %>
-									<p>$Venue.Title</p>
-								</div>
+										<% end_if %>
+									</p>
+								<% end_loop %>
+								<p>$Venue.Title</p>
 							</div>
-						<% end_loop %>
-					</div>
-				<% end_with %>
-			</div>
-
-			<div class="tablet-show">
-				<% include SideBarItems %>
-			</div>
-
-			<% if SideBarView %>
-				<div id="Sidebar" class="browsebydate tablet-show">
-					$SideBarView
+						</div>
+					<% end_loop %>
 				</div>
-			<% end_if %>
+			<% end_with %>
 		</div>
 	</div>
 </div><!-- end .container -->
 <% end_if %>
+<br />
