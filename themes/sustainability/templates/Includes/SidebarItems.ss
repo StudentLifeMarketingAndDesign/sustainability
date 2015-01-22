@@ -21,9 +21,10 @@
 					<% if $UseExternalLink && $ExternalLink%>
 						<hr>
 						<a href="$ExternalLink" class="morelink">Learn More</a>
-					<% else %>
+					<% else_if $Link %>
 						<hr>
 						<a href="$Link" class="morelink">Learn More</a>
+					<% else %>
 					<% end_if %>
 				</div>
 			<% else %>
@@ -33,9 +34,10 @@
 					<% if $UseExternalLink && $ExternalLink%>
 						<hr>
 						<a href="$ExternalLink" class="morelink">Learn More</a>
-					<% else %>
+					<% else_if $Link %>
 						<hr>
 						<a href="$Link" class="morelink">Learn More</a>
+					<% else %>
 					<% end_if %>
 				</div>
 			<% end_if %>
