@@ -12,3 +12,6 @@ SSViewer:
 Page:
   extensions:
     - WidgetPageExtension
+Controller:
+  extensions:
+    - SS_MinifiedResponseExtension
