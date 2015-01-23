@@ -232,15 +232,14 @@ $slick-opacity-not-active: .50 !default;
 				}
 
 				&:before {
+					 background-color: #fff;
+					 border-radius: 50%;
 					 position: absolute;
 					 top: 0;
 					 left: 0;
-					 content: $slick-dot-character;
-					 width: 20px;
-					 height: 20px;
-					 font-family: $slick-font-family;
-					 font-size: $slick-dot-size;
-					 line-height: 20px;
+					 content: '';
+					 width: 10px;
+					 height: 10px;
 					 text-align: center;
 					 color: $slick-dot-color;
 					 opacity: $slick-opacity-not-active;

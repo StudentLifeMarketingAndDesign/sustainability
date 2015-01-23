@@ -2,27 +2,23 @@
 Header Carousel
 --------------------------------------------------------------- */
 .your-class {
-	height: 330px;
 	padding-bottom: 30px;
-	@media (min-width: $break-small) {
-		height: 530px;
-	}
 	@media (min-width: $break-medium) {
 		padding-bottom: 0;
-		height: 600px;
 	}
 }
 .hero-img {
-	background-size: cover;
-	background-position: center top;
 	position: relative;
-	width: 100%;
-	height: 300px;
-	@media (min-width: $break-small) {
-		height: 500px;
-	}
+	z-index: 1;
 	@media (min-width: $break-medium) {
-		height: 600px;
+		-webkit-clip-path: ellipse(100% 50% at 50% 43%);
+		box-shadow: 0 0 30px rgba(0,0,0,.3);
+	}
+}
+.hero-img img {
+	width: 100%;
+	@media (min-width: $break-medium) {
+		x-webkit-clip-path: ellipse(100% 50% at 50% 43%);
 	}
 }
 .hero-img:after {
@@ -32,8 +28,9 @@ Header Carousel
 	position: absolute;
 	top: 0;
 	width: 100%;
-	background-image: -webkit-linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%);
-	background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%);
+	z-index: 2;
+	background-image: -webkit-linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
+	background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
 }
 .your-class .inner {
 	position: absolute;
@@ -45,11 +42,11 @@ Header Carousel
 	z-index: 100;
 	padding-bottom: 30px;
 	text-align: center;
+	z-index: 3;
 	@media (min-width: $break-small) {
-		padding-bottom: 80px;
 	}
 	@media (min-width: $break-medium) {
-		padding-bottom: 100px;
+		bottom: 80px;
 	}
 }
 .your-class .inner h3 {
@@ -57,8 +54,9 @@ Header Carousel
 	font-size: 30px;
 	line-height: 1.1;
 	margin: 0 0 10px;
-	xfont-family: $body-font;
-	xtext-transform: uppercase;
+	font-family: $condensed-font;
+	font-weight: 600;
+	text-transform: uppercase;
 	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75);
 	@media (min-width: $break-small) {
 		font-size: 45px;
@@ -113,7 +111,6 @@ Header Carousel
 	background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 100%);
 }
 .your-class-btn:hover, .your-class-btn:focus {
-	color: #fff;
 	text-decoration: none;
 	background-color: darken( $orange, 10% );
 }
@@ -121,13 +118,13 @@ Header Carousel
 	margin: 0;
 	bottom: 0;
 	@media (min-width: $break-medium) {
-		margin: 0 0 30px;
+		bottom: 35px;
 	}
 }
 .your-class .slick-dots li button:before {
-	color: #333;
+	background-color: #333;
 	@media (min-width: $break-medium) {
-		color: #fff;
+		background-color: #fff;
 	}
 }
 
@@ -139,6 +136,10 @@ Initiatives
 	background: url(../images/wave.jpg);
 	border-bottom: 1px solid rgba(0,0,0,.1);
 	padding: 60px 0;
+}
+.home-initiatives {
+	padding-top: 100px;
+	margin-top: -50px;
 }
 .home-initiatives h2 {
 	font-size: 35px;
@@ -153,33 +154,22 @@ Initiatives
 	padding: 0;
 }
 .init-list li {
-	margin-bottom: 20px;
-	margin-right: 10px;
+	margin: 0 2% 20px 2%;
 	width: 46%;
-	@media (min-width: 400px) {
-		margin-right: 10px;
-	}
 	@media (min-width: $break-small) {
-		margin-right: 10px;
-		width: 30%;
+		margin: 0 1% 20px 1%;
+		width: 31%;
 	}
 	@media (min-width: $break-medium) {
-		margin-right: 20px;
-		width: 211px;
+		margin: 0 10px 20px 10px;
+		width: 210px;
 	}
 	@media (min-width: $break-large) {
-		margin-right: 13px;
-		width: 140px;
+		width: 131px;
 	}
 	@media (min-width: $break-xlarge) {
-		margin-right: 20px;
+		margin: 0 15px 20px 15px;
 		width: 167px;
-	}
-}
-.init-list li.food {
-	@media (min-width: $break-large) {
-		margin-right: 0;
-		padding-right: 2px;
 	}
 }
 .init-list .init-link {
@@ -203,8 +193,11 @@ Initiatives
 		padding: 30px 40px;
 	}
 	@media (min-width: $break-large) {
-		height: 234px;
+		height: 244px;
 		padding: 30px 20px;
+	}
+	@media (min-width: $break-xlarge) {
+		height: 270px;
 	}
 }
 .init-list .init-link:hover, .init-list .init-link:focus {

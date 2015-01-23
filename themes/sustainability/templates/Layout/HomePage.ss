@@ -1,7 +1,8 @@
 <% if CarouselItems %>
 <div class="your-class">
 	<% loop CarouselItems %>
-		<div style="background-image:url($Image.URL);" class="hero-img">
+		<div class="hero-img">
+			<img data-lazy="$Image.URL" alt="">
 			<div class="inner">
 				<h3>$Title</h3>
 				<p>$SubTitle</p>
