@@ -34,7 +34,6 @@ MMMMMMMM               MMMMMMMM                               DDDDDDDDDDDDD
 <!-- Typekit Fonts -->
 <% include Typekit %>
 <!-- CSS -->
-<link rel="stylesheet" href="division-bar/css/_division-bar.css" />
 <link rel="stylesheet" href="{$ThemeDir}/css/master.css">
 <!-- JS -->
 <!--[if lt IE 9]>
@@ -49,7 +48,7 @@ MMMMMMMM               MMMMMMMM                               DDDDDDDDDDDDD
 
 
 	<div class="shifter-page">
-		<% include DivisionBar %>
+		<% include DivisionBarCopy %>
 		<% include Header %>
 		$Layout
 		<% include Footer %>
