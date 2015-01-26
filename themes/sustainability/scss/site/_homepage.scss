@@ -58,6 +58,7 @@ Header Carousel
 }
 .your-class .inner h3 {
 	display: none;
+	text-transform: uppercase;
 	@media (min-width: $break-small) {
 		color: #fff;
 		display: block;
