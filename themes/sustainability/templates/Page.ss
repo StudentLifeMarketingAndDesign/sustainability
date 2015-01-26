@@ -62,7 +62,6 @@ MMMMMMMM               MMMMMMMM                               DDDDDDDDDDDDD
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 	<!-- <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
 	<script src="{$ThemeDir}/js/build/production.min.js"></script>
-	<script src="division-bar/js/division-bar.js"></script>
 	<% include GoogleAnalytics %>
 
 </body>

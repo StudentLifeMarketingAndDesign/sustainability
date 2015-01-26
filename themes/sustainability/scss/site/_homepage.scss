@@ -10,9 +10,9 @@ Header Carousel
 .hero-img {
 	position: relative;
 	z-index: 1;
-	@media (min-width: $break-medium) {
-		-webkit-clip-path: ellipse(100% 50% at 50% 43%);
-		box-shadow: 0 0 30px rgba(0,0,0,.3);
+	@media (min-width: $break-small) {
+		-webkit-clip-path: ellipse(80% 52% at 50% 43%);
+		box-shadow: 0 0 18px rgba(0,0,0,.3);
 	}
 }
 .hero-img img {
@@ -173,8 +173,8 @@ Initiatives
 	padding: 60px 0;
 }
 .home-initiatives {
-	padding-top: 100px;
-	margin-top: -50px;
+	padding-top: 130px;
+	margin-top: -80px;
 }
 .home-initiatives h2 {
 	font-size: 35px;

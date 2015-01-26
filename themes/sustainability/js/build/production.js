@@ -4121,6 +4121,13 @@ $(document).ready(function() {
 	// add js class to body if javascript enabled
 	$('html').removeClass('no-js');
 
+	// For small screens - show/hide the search on division bar
+    $('.search-toggle').click(function() {
+        $(this).toggleClass('active');
+        $('.division-search').slideToggle();
+        return false;
+    });
+
 	// Shifter
 	$.shifter({
 		maxWidth: "767px"
@@ -4131,7 +4138,6 @@ $(document).ready(function() {
 
 	// Boxer - Lightbox
 	$(".boxer").boxer();
-
 
 
 	// Homepage main carousel
