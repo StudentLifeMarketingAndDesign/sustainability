@@ -19,9 +19,9 @@ $(document).ready(function() {
 	// Homepage main carousel
 	$('.your-class').slick({
 		dots: true,
+		arrows: false,
 		infinite: true,
 		speed: 500,
-		lazyLoad: 'ondemand',
 		fade: true,
 		slide: 'div',
 		cssEase: 'linear',
@@ -29,9 +29,21 @@ $(document).ready(function() {
 	    {
 	      breakpoint: 768,
 	      settings: {
+	      	lazyLoad: 'ondemand',
 	      	arrows: false,
 	      	dots: true,
 	      	fade: false
+	      }
+	    },
+	    {
+	      breakpoint: 480,
+	      settings: {
+				lazyLoad: 'ondemand',
+				arrows: false,
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				infinite: true,
+				fade: false
 	      }
 	    }
 	   ]
