@@ -48,9 +48,9 @@
 							<div class="col-md-6 col-md-push-6">
 								<!-- display photo -->
 								<% if $ExternalLink %>
-									<a href="$ExternalLink" target="_blank"><img data-lazy="$Photo.CroppedImage(500,400).URL" alt="$Title"></a>
+									<a href="$ExternalLink" target="_blank" class="featured-photo"><img data-lazy="$Photo.CroppedImage(500,400).URL" alt="$Title"></a>
 								<% else %>
-									<a href="$Link"><img data-lazy="$Photo.CroppedImage(600,500).URL" alt="$Title"></a>
+									<a href="$Link" class="featured-photo"><img data-lazy="$Photo.CroppedImage(600,500).URL" alt="$Title"></a>
 								<% end_if %>
 							</div>
 							<div class="col-md-6 col-md-pull-6">
