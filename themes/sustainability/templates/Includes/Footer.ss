@@ -61,15 +61,15 @@
 			<div class="row">
 				<div class="col-sm-12 col-md-5 col-md-push-7">
 					<ul class="sponsors clearfix">
-						<li><a href="https://stars.aashe.org/"><img src="{$ThemeDir}/images/stars.png" alt="AASHA Stars"></a></li>
-						<li><a href="http://www.usgbc.org/" title="U.S. Green Building Council"><img src="{$ThemeDir}/images/usgbc.png" alt="U.S. Green Building Council"></a></li>
-						<li><a href="http://www.appa.org/"><img src="{$ThemeDir}/images/aapa.png" alt="AAPA Logo"></a></li>
-						<li><a href="http://www.aashe.org/"><img src="{$ThemeDir}/images/aashe.png" alt="Association for the Advancement of Sustainability in Higher Education"></a></li>
+						<li><a href="https://stars.aashe.org/"><img src="{$ThemeDir}/images/stars.png" alt="AASHA Stars" width="75"></a></li>
+						<li><a href="http://www.usgbc.org/" title="U.S. Green Building Council"><img src="{$ThemeDir}/images/usgbc.png" alt="U.S. Green Building Council" width="75"></a></li>
+						<li><a href="http://www.appa.org/"><img src="{$ThemeDir}/images/aapa.png" alt="AAPA Logo" width="75"></a></li>
+						<li><a href="http://www.aashe.org/"><img src="{$ThemeDir}/images/aashe.png" alt="Association for the Advancement of Sustainability in Higher Education" width="75"></a></li>
 					</ul>
 				</div><!-- end col -->
 				<div class="col-xs-6 col-md-4 col-md-pull-5">
-					<a href="http://studentlife.uiowa.edu/" class="dosl-logo">
-						<img src="{$ThemeDir}/images/dosl-logo.png" alt="University of Iowa Division of Student Life">
+					<a href="http://uiowa.edu" class="dosl-logo">
+						<img src="{$ThemeDir}/images/uiowaDome.png" alt="University of Iowa" width="266">
 					</a>
 				</div><!-- end col -->
 				<div class="col-xs-6 col-md-3 col-md-pull-5">
