@@ -23,7 +23,7 @@ $(document).ready(function() {
 
 
 	// Homepage main carousel
-	$('.your-class').slick({
+	$('.slickcarousel').slick({
 		dots: true,
 		arrows: false,
 		infinite: true,
@@ -35,16 +35,15 @@ $(document).ready(function() {
 	    {
 	      breakpoint: 768,
 	      settings: {
-	      	lazyLoad: 'ondemand',
 	      	arrows: false,
-	      	dots: true,
-	      	fade: false
+	      	slidesToShow: 1,
+				slidesToScroll: 1,
+	      	dots: true
 	      }
 	    },
 	    {
 	      breakpoint: 480,
 	      settings: {
-				lazyLoad: 'ondemand',
 				arrows: false,
 				slidesToShow: 1,
 				slidesToScroll: 1,

@@ -1,12 +1,19 @@
 <% if CarouselItems %>
-<div class="your-class">
+<div class="slickcarousel">
 	<% loop CarouselItems %>
 		<div class="hero-img">
-			<img data-lazy="$Image.URL" alt="">
+			<picture>
+				<!--[if IE 9]><video style="display: none;"><![endif]-->
+				<source srcset="$Image.URL" media="(min-width: 768px)">
+				<source srcset="$Image.SetWidth(768).URL" media="(min-width: 480px)">
+				<!--[if IE 9]></video><![endif]-->
+				<img srcset="$Image.SetWidth(480).URL" alt="A giant stone face at The Bayon temple in Angkor Thom, Cambodia">
+			</picture>
+			<!-- <img data-lazy="$Image.URL" alt=""> -->
 			<div class="inner">
 				<h3>$Title</h3>
 				<p>$SubTitle</p>
-				<% if $AssociatedPageID %><a href="$AssociatedPage.Link" class="your-class-btn">Learn More</a><% end_if %>
+				<% if $AssociatedPageID %><a href="$AssociatedPage.Link" class="slickcarousel-btn">Learn More</a><% end_if %>
 			</div>
 		</div>
 	<% end_loop %>

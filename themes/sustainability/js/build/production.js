@@ -1252,7 +1252,7 @@
 		customClass: "",
 		label: true,
 		labels: {
-			closed: "Additional Navigation",
+			closed: "Page Navigation",
 			open: "Close"
 		},
 		maxWidth: "980px"
@@ -1821,7 +1821,7 @@
                 centerPadding: '50px',
                 cssEase: 'ease',
                 customPaging: function(slider, i) {
-                    return '<button type="button" data-role="none">' + (i + 1) + '</button>';
+                    return '<a href="#">' + (i + 1) + '</a>';
                 },
                 dots: false,
                 dotsClass: 'slick-dots',
@@ -4141,7 +4141,7 @@ $(document).ready(function() {
 
 
 	// Homepage main carousel
-	$('.your-class').slick({
+	$('.slickcarousel').slick({
 		dots: true,
 		arrows: false,
 		infinite: true,
@@ -4153,16 +4153,15 @@ $(document).ready(function() {
 	    {
 	      breakpoint: 768,
 	      settings: {
-	      	lazyLoad: 'ondemand',
 	      	arrows: false,
-	      	dots: true,
-	      	fade: false
+	      	slidesToShow: 1,
+				slidesToScroll: 1,
+	      	dots: true
 	      }
 	    },
 	    {
 	      breakpoint: 480,
 	      settings: {
-				lazyLoad: 'ondemand',
 				arrows: false,
 				slidesToShow: 1,
 				slidesToScroll: 1,
