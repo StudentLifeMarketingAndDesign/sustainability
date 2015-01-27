@@ -30,7 +30,7 @@
 			$fields->push( new TextField( 'Title', 'Heading' ));
 			$fields->push( new TextField( 'SubTitle', 'Subheading' ));
 			$fields->push( new TreeDropdownField("AssociatedPageID", "Link to this page", "SiteTree"));
-			$fields->push( new UploadField( 'Image', 'Image' ));
+			$fields->push( new UploadField( 'Image', 'Image (width: 1200px, height: 600px' ));
 
 
 			return $fields;
