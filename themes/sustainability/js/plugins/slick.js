@@ -55,7 +55,7 @@
                 centerPadding: '50px',
                 cssEase: 'ease',
                 customPaging: function(slider, i) {
-                    return '<button type="button" data-role="none">' + (i + 1) + '</button>';
+                    return '<a href="#">' + (i + 1) + '</a>';
                 },
                 dots: false,
                 dotsClass: 'slick-dots',

@@ -1,7 +1,7 @@
 /* ---------------------------------------------------------------
 Header Carousel
 --------------------------------------------------------------- */
-.your-class {
+.slickcarousel {
 	padding-bottom: 40px;
 	@media (min-width: $break-medium) {
 		padding-bottom: 0;
@@ -11,15 +11,13 @@ Header Carousel
 	position: relative;
 	z-index: 1;
 	@media (min-width: $break-small) {
+		background-size: cover;
 		-webkit-clip-path: ellipse(80% 52% at 50% 43%);
 		box-shadow: 0 0 18px rgba(0,0,0,.3);
 	}
 }
 .hero-img img {
 	width: 100%;
-	@media (min-width: $break-medium) {
-		x-webkit-clip-path: ellipse(100% 50% at 50% 43%);
-	}
 }
 .hero-img:after {
 	content: "";
@@ -30,11 +28,16 @@ Header Carousel
 	width: 100%;
 	z-index: 2;
 	@media (min-width: $break-small) {
-		background-image: -webkit-linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
-		background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
+		background: -moz-linear-gradient(top,  rgba(0,0,0,0) 20%, rgba(0,0,0,0.6) 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(20%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.6))); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 20%,rgba(0,0,0,0.6) 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top,  rgba(0,0,0,0) 20%,rgba(0,0,0,0.6) 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top,  rgba(0,0,0,0) 20%,rgba(0,0,0,0.6) 100%); /* IE10+ */
+		background: linear-gradient(to bottom,  rgba(0,0,0,0) 20%,rgba(0,0,0,0.6) 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#99000000',GradientType=0 ); /* IE6-9 */
 	}
 }
-.your-class .inner {
+.slickcarousel .inner {
 	background: #fff;
 	padding: 20px 40px;
 	text-align: center;
@@ -53,10 +56,15 @@ Header Carousel
 		padding-bottom: 30px;
 	}
 	@media (min-width: $break-medium) {
+		bottom: 60px;
+	}
+	@media (min-width: $break-large) {
 		bottom: 80px;
+		width: 80%;
+		margin-left: -40%;
 	}
 }
-.your-class .inner h3 {
+.slickcarousel .inner h3 {
 	display: none;
 	text-transform: uppercase;
 	@media (min-width: $break-small) {
@@ -74,10 +82,10 @@ Header Carousel
 	}
 	@media (min-width: $break-medium) {
 		font-size: 65px;
-
+		text-transform: uppercase;
 	}
 }
-.your-class .inner p {
+.slickcarousel .inner p {
 	margin: 0;
 	font-size: 15px;
 	line-height: 1.3;
@@ -94,7 +102,7 @@ Header Carousel
 .pulse-panel {
 	margin-bottom: 0;
 }
-.your-class-btn {
+.slickcarousel-btn {
 	display: inline-block;
 		border-radius: 1px;
 		background-color: $orange;
@@ -118,7 +126,7 @@ Header Carousel
 		padding: 15px 25px;
 	}
 }
-.your-class-btn:after {
+.slickcarousel-btn:after {
 	content: "";
 	height: 100%;
 	left: 0;
@@ -128,41 +136,37 @@ Header Carousel
 	background-image: -webkit-linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 100%);
 	background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 100%);
 }
-.your-class-btn:hover, .your-class-btn:focus {
+.slickcarousel-btn:hover, .slickcarousel-btn:focus {
 	color: #fff;
 	text-decoration: none;
 	background-color: darken( $orange, 10% );
 }
-.your-class .slick-dots {
+/* Carousel Dots Navigation */
+.slickcarousel .slick-dots {
 	margin: 0;
 	bottom: 0;
 	@media (min-width: $break-medium) {
 		bottom: 35px;
 	}
+	@media (min-width: $break-large) {
+		bottom: 45px;
+	}
 }
-.your-class .slick-dots li button:before {
-	background-color: #333;
+.slickcarousel .slick-dots li.slick-active {
+	@media (min-width: $break-medium) {
+		-webkit-box-shadow: 0 0 0 2px #fff;
+		-moz-box-shadow: 0 0 0 2px #fff;
+		box-shadow: 0 0 0 2px #fff;
+	}
+}
+.slickcarousel .slick-dots li.slick-active a {
 	@media (min-width: $break-medium) {
 		background-color: #fff;
 	}
 }
-/* Prev/Next Arrows */
-.your-class .slick-next {
-	background: url(../images/arrow-right.gif) no-repeat center center;
-	width: 12px;
-	height: 26px;
-	padding: 30px 20px;
-	bottom: 7%;
-	top: auto;
-}
-.your-class .slick-prev {
-	background: url(../images/arrow-left.gif) no-repeat center center;
-	width: 12px;
-	height: 26px;
-	padding: 30px 20px;
-	bottom: 7%;
-	top: auto;
-}
+
+
+
 
 
 /* ---------------------------------------------------------------
