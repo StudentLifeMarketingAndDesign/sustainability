@@ -45,8 +45,6 @@ MMMMMMMM               MMMMMMMM                               DDDDDDDDDDDDD
 <body class="$ClassName  $Level(2).URLSegment shifter">
 	<% include Svg %>
 
-
-
 	<div class="shifter-page">
 		<% include DivisionBarCopy %>
 		<% include Header %>
@@ -54,11 +52,10 @@ MMMMMMMM               MMMMMMMM                               DDDDDDDDDDDDD
 		<% include Footer %>
 	</div>
 
+	<!-- Mobile Navigation Slideout -->
 	<% include ShifterNavigation %>
 
-
 	<!-- JS -->
-
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 	<!-- <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
 	<script src="{$ThemeDir}/js/build/production.min.js"></script>

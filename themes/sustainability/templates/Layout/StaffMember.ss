@@ -9,7 +9,6 @@
 		<!-- Main Content -->
 		<div class="col-lg-8 col-lg-pull-4">
 			<div class="article">
-
 				$Breadcrumbs
 				<div class="staffmember <% if $Position %>position<% end_if %>">
 					<h1 class="title">$Title</h1>
