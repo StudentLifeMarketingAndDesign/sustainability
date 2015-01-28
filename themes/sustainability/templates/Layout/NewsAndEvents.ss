@@ -38,48 +38,15 @@
 			$Content
 			$Form
 
-			<!-- Featured News Article -->
+			<!-- Featured Events -->
 			<div class="featured-articles">
-				<!-- loop featured news articles -->
-				<% with Page(news) %>
-				<% loop $Entries %>
-					<% if $IsFeatured %>
-						<div class="row">
-							<div class="col-md-6 col-md-push-6">
-								<!-- display photo -->
-								<% if $ExternalLink %>
-									<a href="$ExternalLink" target="_blank" class="featured-photo"><img data-lazy="$Photo.CroppedImage(500,400).URL" alt="$Title"></a>
-								<% else %>
-									<a href="$Link" class="featured-photo"><img data-lazy="$Photo.CroppedImage(600,500).URL" alt="$Title"></a>
-								<% end_if %>
-							</div>
-							<div class="col-md-6 col-md-pull-6">
-								<div class="featured-content">
-									<h2>Featured News</h2>
-									<% if $ExternalLink %>
-										<h1><a href="$ExternalLink">$Title</a></h1>
-									<% else %>
-										<h1><a href="$Link">$Title</a></h1>
-									<% end_if %>
-									<p>$Content.LimitCharacters(100)</p>
-									<% if $ExternalLink %>
-										<p><a href="$ExternalLink" class="continue">Continue Reading</a></p>
-									<% else %>
-										<p><a href="$Link" class="continue">Continue Reading</a></p>
-									<% end_if %>
-								</div>
-							</div>
-						</div>
-					<% end_if %>
-				<% end_loop %><!-- end loop children -->
-				<% end_with %>
 				<% with LocalistCalendar %>
 					<% if $FeaturedEvents %>
 						<% loop $FeaturedEvents.Limit(3) %>
 							<div class="row">
 								<div class="col-md-6 col-md-push-6">
 									<% if $Image %>
-										<a href="$Link">
+										<a href="$Link" class="featured-photo">
 											<img src="$Image.URL" alt="$Title" style="width: 600px;">
 										</a>
 									<% end_if %>
@@ -130,6 +97,39 @@
 							</div>
 						<% end_loop %>
 					<% end_if %>
+				<% end_with %>
+				<!-- loop featured news articles -->
+				<% with Page(news) %>
+					<% loop $Entries %>
+						<% if $IsFeatured %>
+							<div class="row">
+								<div class="col-md-6 col-md-push-6">
+									<!-- display photo -->
+									<% if $ExternalLink %>
+										<a href="$ExternalLink" target="_blank" class="featured-photo"><img data-lazy="$Photo.CroppedImage(500,400).URL" alt="$Title"></a>
+									<% else %>
+										<a href="$Link" class="featured-photo"><img data-lazy="$Photo.CroppedImage(600,500).URL" alt="$Title"></a>
+									<% end_if %>
+								</div>
+								<div class="col-md-6 col-md-pull-6">
+									<div class="featured-content">
+										<h2>Featured News</h2>
+										<% if $ExternalLink %>
+											<h1><a href="$ExternalLink">$Title</a></h1>
+										<% else %>
+											<h1><a href="$Link">$Title</a></h1>
+										<% end_if %>
+										<p>$Content.LimitCharacters(100)</p>
+										<% if $ExternalLink %>
+											<p><a href="$ExternalLink" class="continue">Continue Reading</a></p>
+										<% else %>
+											<p><a href="$Link" class="continue">Continue Reading</a></p>
+										<% end_if %>
+									</div>
+								</div>
+							</div>
+						<% end_if %>
+					<% end_loop %><!-- end loop children -->
 				<% end_with %>
 
 			</div>
