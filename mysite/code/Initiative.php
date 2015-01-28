@@ -15,7 +15,7 @@ class Initiative extends Page {
 		// $fields->removeByName("Content");
 		$fields->removeByName("Metadata");
 
-		$fields->addFieldToTab("Root.Main", new UploadField("PagePhoto", "Main Header Photo"));
+		$fields->addFieldToTab("Root.Main", new UploadField("PagePhoto", "Header Photo (width:1200px, height: 500px)"));
 
 		return $fields;
 
