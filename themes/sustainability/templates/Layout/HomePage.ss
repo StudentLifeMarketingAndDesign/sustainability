@@ -26,7 +26,7 @@
 <section class="home-initiatives">
 	<div class="container">
 		<h2 class="text-center">Explore Our Initiatives</h2>
-		<p class="text-center">Just a few of the topics within sustainability are presented here. It's a dynamic list that we anticipate will evolve as the University community strives to be good stewards and advocates for sustainability.</p>
+		<p class="text-center">Sustainability is a central priority of all aspects of our university enterprise &ndash; our operations, our academic mission, and our responsibilities to the greater society.</p>
 		<ul class="init-list justify clearfix">
 			<li class="justify-item energy">
 				<a href="{$BaseHref}initiatives/energy-climate/" class="init-link">
@@ -96,11 +96,11 @@
 </section>
 
 <div class="container">
-	<!-- $Content -->
+
 	$Form
 
 	<div class="pulse">
-		<h2 class="pulse-title">Sustainability At UI</h2>
+		<h2 class="pulse-title">Sustainability at Iowa</h2>
 
 		<!-- Tab Menu Links -->
 		<ul class="pulse-tabs clearfix" role="tablist">
