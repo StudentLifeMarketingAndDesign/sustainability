@@ -8,7 +8,6 @@
         text-shadow: none !important;
     }
     a, a:visited {text-decoration: underline;}
-    a[href]:after { content: " (" attr(href) ")"; }
     abbr[title]:after { content: " (" attr(title) ")";}
     .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }
     pre, blockquote {border: 1px solid #999;page-break-inside: avoid;}
@@ -18,4 +17,5 @@
     @page {margin: 0.5cm;}
     p,h2,h3 {orphans: 3; widows: 3;}
     h2,h3 {page-break-after: avoid;}
+    .no-print, .no-print * {display: none !important;}
 }

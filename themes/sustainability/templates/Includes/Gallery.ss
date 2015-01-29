@@ -1,5 +1,5 @@
 <% if $GalleryImages %>
-	<div class="gallerysection">
+	<div class="gallerysection no-print">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">

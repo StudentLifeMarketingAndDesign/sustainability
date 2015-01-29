@@ -1,6 +1,6 @@
 <!-- Footer -->
 <footer class="footer clearfix" role="contentinfo">
-	<div class="footer-top">
+	<div class="footer-top no-print">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-9">
@@ -58,7 +58,7 @@
 	</div>
 	<div class="footer-bottom">
 		<div class="container">
-			<div class="row">
+			<div class="row no-print">
 				<div class="col-sm-12 col-md-5 col-md-push-7">
 					<ul class="sponsors clearfix">
 						<li><a href="https://stars.aashe.org/"><img src="{$ThemeDir}/images/stars.png" alt="AASHA Stars" width="75"></a></li>
@@ -90,10 +90,6 @@
 					<p class="copyright">&copy; $Now.Year <a href="http://www.uiowa.edu/" target="_blank">The University of Iowa</a>. All Rights Reserved.</p>
 				</div>
 			</div>
-
-
-
 		</div><!-- end .container -->
 	</div>
-
 </footer>

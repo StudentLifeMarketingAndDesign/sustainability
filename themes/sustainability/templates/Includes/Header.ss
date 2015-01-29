@@ -6,13 +6,13 @@
 				<img src="{$ThemeDir}/images/sustainability-logo.png" alt="Sustainability at Iowa">
 			</a>
 		</h1>
-		<nav role="navigation" class="top-nav">
+		<nav role="navigation" class="top-nav no-print">
 			<ul>
 				<li><a href="{$BaseHref}news-and-events/">News &amp; Events</a></li>
 				<li><a href="http://sustainability.uiowa.edu/climatenarrative/" target="_blank">Blog</a></li>
 			</ul>
 		</nav>
-		<ul class="webicons">
+		<ul class="webicons no-print">
 			<% if $SiteConfig.FacebookLink %>
 			<li>
 				<a href="$SiteConfig.FacebookLink" title="Facebook" target="_blank">

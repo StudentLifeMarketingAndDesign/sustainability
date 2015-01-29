@@ -1,4 +1,4 @@
-<nav role="navigation" class="nav-wrapper">
+<nav role="navigation" class="nav-wrapper no-print">
 	<div class="container">
 		<ul class="main-nav clearfix">
 			<% loop Menu(1) %>

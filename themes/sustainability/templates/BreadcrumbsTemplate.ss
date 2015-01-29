@@ -1,7 +1,7 @@
 <% if Pages %>
-	<nav role="navigation" class="breadcrumb">
+	<nav role="navigation" class="breadcrumb no-print">
 		<div class="inner">
-			<p class="breadcrumblabel visuallyhidden">You are here:</p>
+			<p id="breadcrumblabel" class="breadcrumblabel visuallyhidden">You are here:</p>
 			<ol aria-labelledby="breadcrumblabel" class="clearfix">
 				<li><a href="$Baseref">Home</a></li>
 				<% loop Pages %>

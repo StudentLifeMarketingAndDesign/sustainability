@@ -1,5 +1,5 @@
 <!-- This file overwrites /division-bar/templates/DivisionBar.ss -->
-<div class="division-topbar">
+<div class="division-topbar no-print">
 	<div class="wrapper">
 		<div class="clearfix">
 			<a href="http://www.uiowa.edu/" class="uiowa" target="_blank">
