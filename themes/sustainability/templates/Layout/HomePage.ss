@@ -179,6 +179,7 @@
 									<% end_if %>
 								</div>
 							<% end_loop %>
+							<a href="{$BaseHref}news" class="seeall">See all news</a>
 						<% end_if %>
 					<% end_with %>
 				</div>
@@ -231,6 +232,7 @@
 							</div>
 						<% end_loop %>
 						<!-- end Loop Events -->
+						<a href="{$BaseHref}events" class="seeall">See all events</a>
 					<% end_with %>
 				</div>
 			</div>

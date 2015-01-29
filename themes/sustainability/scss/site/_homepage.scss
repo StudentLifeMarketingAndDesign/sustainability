@@ -331,6 +331,13 @@ Pulse
  	margin: 0;
 	padding-bottom: 31px;
 }
+.pulse-panel .seeall {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	font-size: 14px;
+	text-decoration: none;
+}
 
 /* Tab Menu Links ---------------------------------------------- */
 .pulse-tabs {
@@ -594,6 +601,7 @@ Pulse
 	color: #8c7e71;
 	font-family: $condensed-font;
 	font-weight: 600;
+	margin-top: 1.5em;
 	@media (min-width: 600px) {
 		display: none;
 	}
