@@ -2,7 +2,6 @@
 	<div class="mainimg-content">
 		<div class="container">
 			<h1 class="maintitle">$Title</h1>
-
 		</div>
 	</div>
 	<% if $URLSegment = energy-climate %>

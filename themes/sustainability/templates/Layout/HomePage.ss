@@ -7,7 +7,7 @@
 				<source srcset="$Image.URL" media="(min-width: 768px)">
 				<source srcset="$Image.SetWidth(768).URL" media="(min-width: 480px)">
 				<!--[if IE 9]></video><![endif]-->
-				<img srcset="$Image.SetWidth(480).URL" alt="A giant stone face at The Bayon temple in Angkor Thom, Cambodia">
+				<img srcset="$Image.SetWidth(480).URL" alt="$Title">
 			</picture>
 			<!-- <img data-lazy="$Image.URL" alt=""> -->
 			<div class="inner">
@@ -247,7 +247,7 @@
 								</div>
 							<% end_if %>
 							<div class="panel-content">
-								<h4 class="panel-title"><a href="$Link"target="_blank">$Title</a></h4>
+								<h4 class="panel-title"><a href="$Link" target="_blank">$Title</a></h4>
 								<p>$Description.LimitCharacters(100)</p>
 							</div>
 							<a href="$Link" class="read" target="_blank">Read More</a>
