@@ -1,0 +1,204 @@
+/* Configuration */
+$nav-padding-medium: 8px;
+$nav-margin-medium: 13px;
+
+$nav-padding-large: 12px;
+$nav-margin-large: 42px;
+
+$nav-padding-xlarge: 20px;
+$nav-margin-xlarge: 44px;
+
+
+/* ---------------------------------------------------------------
+Navigation
+--------------------------------------------------------------- */
+.nav-wrapper {
+	background-color: #0a98a8;
+	border-top: 1px solid rgba(255,255,255,.15);
+	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+	position: relative;
+	z-index: 100;
+	@media (max-width: $break-medium - 1) {
+		display: none;
+	}
+}
+.main-nav {
+	list-style: none;
+	margin: 0 0 0 (-$nav-margin-medium - $nav-padding-medium);
+	padding: 0;
+	position: relative;
+	z-index: 100;
+	@media (min-width: $break-large) {
+		margin-left: (-$nav-margin-large - $nav-padding-large);
+	}
+	@media (min-width: $break-xlarge) {
+		margin-left: (-$nav-margin-xlarge - $nav-padding-xlarge);
+	}
+}
+.main-nav > li {
+	display: block;
+	float: left;
+	margin-left: $nav-margin-medium;
+	position: relative;
+	@media (min-width: $break-large) {
+		margin-left: $nav-margin-large;
+	}
+	@media (min-width: $break-xlarge) {
+		margin-left: $nav-margin-xlarge;
+	}
+}
+.main-nav > li > a {
+	/*border-right: 1px solid rgba(255,255,255,.15);*/
+	color: #fff;
+	display: block;
+	font-family: $condensed-font;
+	font-size: 16px;
+	font-weight: 600;
+	letter-spacing: .05em;
+	padding: 14px $nav-padding-medium;
+	text-transform: uppercase;
+	text-shadow: 1px 1px 1px rgba(0,0,0,.15);
+	@media (min-width: $break-large) {
+		padding: 14px $nav-padding-large;
+	}
+	@media (min-width: $break-xlarge) {
+		padding: 14px $nav-padding-xlarge;
+	}
+}
+.main-nav li a {
+	text-decoration: none;
+	@media (min-width: $break-large) {
+		font-size: 17px;
+	}
+	@media (min-width: $break-xlarge) {
+		font-size: 20px;
+	}
+}
+.main-nav >li:hover, .main-nav >li:focus {
+	// background-color: #fff;
+}
+.main-nav .active {
+	font-weight: bold;
+}
+
+/* ---------------------------------------------------------------
+Dropdown
+--------------------------------------------------------------- */
+.dropdown {
+	background: #fff;
+	border-top: 4px solid $orange;
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+	left: 0;
+	list-style: none;
+	margin: -4px 0 0;
+	opacity: 0;
+	pointer-events: none;
+	position: absolute;
+	padding: 20px 30px;
+	top: 53px;
+	width: 300px;
+	-webkit-transition: none;
+	transition: none;
+	-webkit-transform: translateY(10px);
+	-ms-transform: translateY(10px);
+	transform: translateY(10px);
+	@media (min-width: $break-large) {
+		top: 55px;
+	}
+	@media (min-width: $break-xlarge) {
+		top: 59px;
+	}
+}
+.main-nav > li:hover .dropdown {
+	opacity: 1;
+	pointer-events: all;
+	-webkit-transition: -webkit-transform 0.15s ease, opacity 0.15s linear;
+	transition: -ms-transform 0.15s ease, opacity 0.15s linear;
+	transition: transform 0.15s ease, opacity 0.15s linear;
+	-webkit-transform: translateY(0);
+	-ms-transform: translateY(0);
+	transform: translateY(0);
+}
+.main-nav > li:last-of-type .dropdown {
+	left: auto;
+	right: 0;
+}
+.dropdown:before {
+	content: "";
+	display: block;
+	height: 10px;
+	left: 50px;
+	position: absolute;
+	top: -10px;
+	width: 10px;
+	z-index: -1;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 10px solid $orange;
+}
+.main-nav > li:last-of-type .dropdown:before {
+	left: auto;
+	right: 50px;
+}
+.dropdown li a {
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #eee;
+	color: #333;
+	display: block;
+	font-size: 16px;
+	font-weight: normal;
+	padding: 10px 0;
+	text-align: left;
+}
+.dropdown li:first-of-type a {
+	border-top: none;
+}
+.dropdown li a:hover, .dropdown li a:focus {
+	color: $link;
+}
+.dropdown li.active a {
+	font-weight: bold;
+}
+
+
+
+/* Toggle */
+.menu-icon {
+	text-indent: 38px;
+	width: 50px;
+	height: 50px;
+	display: block;
+	line-height: 50px;
+	padding: 0;
+	color: white;
+	transform: translate3d(0, 0, 0);
+	text-decoration: none;
+	cursor: pointer;
+	position: absolute;
+	top: 16px;
+	right: 50px;
+}
+.menu-icon span::after {
+	content: "";
+	position: absolute;
+	display: block;
+	height: 0;
+	top: 50%;
+	margin-top: -7px;
+	left: 13px;
+	box-shadow: 0 0px 0 1px white, 0 7px 0 1px white, 0 14px 0 1px white;
+	width: 17px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

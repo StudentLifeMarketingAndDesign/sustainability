@@ -1,0 +1,139 @@
+/* ---------------------------------------------------------------
+Subnavigation
+--------------------------------------------------------------- */
+.subnavigation h2 {
+	font-size: 15px;
+	font-family: $body-font;
+	font-weight: normal;
+	margin: 0 0 10px;
+	text-transform: uppercase;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.subnavigation .active {
+	font-weight: bold;
+	& li {
+		font-weight: normal;
+	}
+}
+.subnavigation ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	& li {
+		& a {
+			display: block;
+			font-size: 16px;
+			line-height: 1.4;
+			padding: 5px 0;
+		}
+	}
+}
+.subnavigation h4 {
+	font-size: 20px;
+	& a {
+		color: #444;
+	}
+}
+.subnavigation a {
+	text-decoration: none;
+}
+.subnavigation .block {
+	background: #fbfaf5;
+	border-top: 4px solid #cfc8b2;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	padding: 30px;
+	@media (max-width: $break-large) {
+		margin-top: 0;
+	}
+}
+.subnavigation .first-level {
+	border-top: 1px solid #ddd;
+	margin-top: 15px;
+	padding-top: 15px;
+}
+/* Current */
+.subnavigation .current {
+	background: #fff;
+}
+.subnavigation .current li a {
+	border-bottom: 1px dashed #ece9e0;
+	padding: 10px 0;
+}
+.subnavigation .current li:last-child a {
+	border-bottom: none;
+}
+
+
+/* ---------------------------------------------------------------
+Mobile Styles (Naver)
+--------------------------------------------------------------- */
+.naver.enabled .naver-container {
+	padding: 0;
+}
+.subnavigation .block {
+	@media (max-width: $break-large -1) {
+		margin-top: 0;
+	}
+}
+
+
+/* ---------------------------------------------------------------
+Initiatives
+--------------------------------------------------------------- */
+.energy-climate .subnavigation .current {
+	border-color: $energy;
+	& a {
+		color: $energy;
+	}
+}
+.recycling-and-waste-reduction .subnavigation .current {
+	border-color: $recycling;
+	& a {
+		color: $recycling;
+	}
+}
+.biomass-fuel-project .subnavigation .current {
+	border-color: $biomass;
+	& a {
+		color: darken($biomass, 10%);
+	}
+}
+.leed-building-at-ui .subnavigation .current {
+	border-color: $leed;
+	& a {
+		color: $leed;
+	}
+}
+.transportation .subnavigation .current {
+	border-color: $transportation;
+	& a {
+		color: $transportation;
+	}
+}
+.food .subnavigation .current {
+	border-color: $food;
+	& a {
+		color: $food;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

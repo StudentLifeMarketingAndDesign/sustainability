@@ -1,289 +1,270 @@
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
-<script src="$BaseHref/mysite/code/javascript/ui_002.js" type="text/javascript"></script>
-<script src="$BaseHref/mysite/code/javascript/ui.js" type="text/javascript"></script>
-<script type="text/javascript">
-            $(function() {
-               $('#ui-tabs-navx').tabs({ fx: { opacity: 'toggle' } }).tabs('rotate', 8000);
-            });
-			jQuery("#ui-tabs-navx").tabs().tabs("option", "disabled", false);
-        </script>  
-		
-<script type="text/javascript" src="$BaseHref/mysite/code/javascript/ui.tabs.js"></script>   
-    
-      
-<div id="content-wrapper">
-<div id="middle-image">
-
-<div id="feature-wrapper">
-
-<div id="feature-container">
-
-
-<% include Navigation %>
-
-<div class="clear"></div>
-<div id="rotate">
-
-
-
-<% loop Home %>
-	<div <% if First %>class="ui-tabs-panel" <% else %> class="ui-tabs-panel ui-tabs-hide"<% end_if %> id="tab$Pos">
-		<div class="feature-image" style="background: url('$FeatureImage.URL') no-repeat 0px 0px;">
-		<div class="feature-mask"></div></div>
-		<h2><a href="$Link">$Title</a></h2><br />
-		<div class="summary">$getSummaryHTML</div>
-		<% if HomeLink %>
-			<span class="more"><a href="$HomeLink" class="external-link" target="_blank">Read More</a></span>
-		<% else %>
-			<span class="more"><a href="$Link">Read More</a></span>
-		<% end_if %>
-	</div>
-<% end_loop %>
-
-<ul class="ui-tabs-nav" id="ui-tabs-navx">
-<% loop Home %>
-<li id="menu$Pos" <% if First %>class="ui-tabs-selected"<% end_if %>><a href="#tab$Pos">$Title</a></li>
-<% end_loop %>
-</ul>
-
-
-
-
-
-
-
-</div></div>
-</div><!--/end bodywrap div -->
- 
-<div id="home-wrapper"> 
-  
-<div id="events-column">
-
-
-<h3 class="events" title="Events"><a href="{$BaseHref}events">Events</a></h3>
-<p class="view-all"><a href="$BaseHref/events">View All</a></p>
-<ul class="events">
-
-<% loop Events %>
-
-
-<li class="events$Pos">
-
-<% if EventLink %>
-	<h4><a href="$EventLink" target="_blank">$Title</a></h4>
-<% else %>
-	<% if Content %>
-		<h4><a href="$Link">$Title</a></h4>
-	<% else %>
-		<h4>$Title</h4>
-
-	<% end_if %>
+<% if CarouselItems %>
+<div class="slickcarousel">
+	<% loop CarouselItems %>
+		<div class="hero-img">
+			<picture>
+				<!--[if IE 9]><video style="display: none;"><![endif]-->
+				<source srcset="$Image.URL" media="(min-width: 768px)">
+				<source srcset="$Image.SetWidth(768).URL" media="(min-width: 480px)">
+				<!--[if IE 9]></video><![endif]-->
+				<img srcset="$Image.SetWidth(480).URL" alt="$Title">
+			</picture>
+			<!-- <img data-lazy="$Image.URL" alt=""> -->
+			<div class="inner">
+				<h3>$Title</h3>
+				<p>$SubTitle</p>
+				<% if $AssociatedPageID %><a href="$AssociatedPage.Link" class="slickcarousel-btn">Learn More</a><% end_if %>
+			</div>
+		</div>
+	<% end_loop %>
+</div>
 <% end_if %>
 
 
-<p class="date">
-<% if EventDateRange %>
-$EventDateRange
-<% else_if EventDate %>
- $EventDate.Format("F d&#44 Y")
-<% end_if %>
-<% if EventTime %>- $EventTime,<% end_if %><br />
-<% if EventLocation %>$EventLocation<% end_if %>
 
-</p>
-
-<% if EventSponsor %>
-<p class="sponsor"><a href="$EventSponsorLink" target="_blank">$EventSponsor</a></p>
-<% end_if %>
-<span class="more">
-<% if EventLink %><a href="$EventLink" class="external-link" target="_blank">Read More</a>
-<% else %>
-<% if Content %>
-<a href="$Link">Read More</a>
-<% end_if %>
-<% end_if %>
-</span></li>
-<% end_loop %>
-
-</ul>
-
-
-
-
-<script type="text/javascript" src="/mysite/code/javascript/tabs_ui_002.js"></script>
-<script type="text/javascript" src="/mysite/code/javascript/tabs_ui.js"></script>
-<script type="text/javascript">
-	$(function() {
-		//$("#tabs").tabs({
-		//	event: 'mouseover'
-		//});
-		jQuery("#tabs").tabs();
-	});
-	</script>
-	
-<% if HomepageInitiatives %>    
-<!--<div id="sustainableInitiatives">-->
-<div>
-    <h3 class="sustain">Sustainable Initiatives</h3>
-	<div id = "initiatives">
-        <ul>
-		<% loop HomepageInitiatives %>
-			<!--<li><a class="initiative{$Pos} left" href="{$Link}">$Label</a></li>-->
-			<li>
-				<div class="initiative-image">
-					<a class="initBlock{$Pos}" href="{$Link}">
-						<img src="$ThemeDir/images/bike{$Pos}.png" alt="Initiative buttons" width="81" height="81"/>
-					</a> 
-				</div>
-				<div class="initiative-label">
-					<span><a href="{$Link}" class="init-{$Pos}">$Label</a></span>
-				</div>
-				<div class="clear"></div>
+<!-- Initiatives -->
+<section class="home-initiatives">
+	<div class="container">
+		<h2 class="text-center">Explore Our Initiatives</h2>
+		<p class="text-center">Sustainability is a central priority of all aspects of our university enterprise &ndash; our operations, our academic mission, and our responsibilities to the greater society.</p>
+		<ul class="init-list justify clearfix">
+			<li class="justify-item energy">
+				<a href="{$BaseHref}initiatives/energy-climate/" class="init-link">
+					<span class="init-imgwrapper">
+						<span>
+							<img src="{$ThemeDir}/images/icon-energy-128.png" alt="Energy &amp; Climate" class="init-img">
+						</span>
+					</span>
+					<h4 class="init-title">Energy &amp; Climate</h4>
+				</a>
 			</li>
-		<% end_loop %>
+			<li class="justify-item recycling">
+				<a href="{$BaseHref}initiatives/recycling-and-waste-reduction/" class="init-link">
+					<span class="init-imgwrapper">
+						<span>
+							<img src="{$ThemeDir}/images/icon-recycle-128.png" alt="Recycling" class="init-img">
+						</span>
+					</span>
+					<h4 class="init-title">Recyling and Waste Reduction</h4>
+				</a>
+			</li>
+			<li class="justify-item biomass">
+				<a href="{$BaseHref}initiatives/biomass-fuel-project/" class="init-link">
+					<span class="init-imgwrapper">
+						<span>
+							<img src="{$ThemeDir}/images/icon-biomass.png" alt="Biomass" class="init-img">
+						</span>
+					</span>
+					<h4 class="init-title">Biomass Fuel Project</h4>
+				</a>
+			</li>
+			<li class="justify-item leed">
+				<a href="{$BaseHref}initiatives/leed-building-at-ui/" class="init-link">
+					<span class="init-imgwrapper">
+						<span>
+							<img src="{$ThemeDir}/images/icon-building-128.png" alt="LEED Building" class="init-img">
+						</span>
+					</span>
+					<h4 class="init-title">LEED Building at Uiowa</h4>
+				</a>
+			</li>
+			<li class="justify-item transportation">
+				<a href="{$BaseHref}initiatives/transportation/" class="justify-item init-link">
+					<span class="init-imgwrapper">
+						<span>
+							<img src="{$ThemeDir}/images/icon-transportation-128.png" alt="Alternative Transportation" class="init-img">
+						</span>
+					</span>
+					<h4 class="init-title">Alternative Transportation</h4>
+				</a>
+			</li>
+			<li class="justify-item food">
+				<a href="{$BaseHref}initiatives/food/" class="justify-item init-link">
+					<span class="init-imgwrapper">
+						<span>
+							<img src="{$ThemeDir}/images/icon-food-128.png" alt="Food" class="init-img">
+						</span>
+					</span>
+					<h4 class="init-title">Food</h4>
+				</a>
+			</li>
+			<li class="justify-item filler"></li>
+			<li class="justify-item filler"></li>
+			<li class="justify-item filler"></li>
 		</ul>
 	</div>
-</div>
-<!--<div id="social-media">
+</section>
 
-<ul>
-<li><a href="http://twitter.com/uisustainable" target="_blank"><img src="$ThemeDir/images/twitter.png" alt="Twitter" width="91" height="81" title="Follow us on Twitter"/></a></li>
-<li><a href="http://www.facebook.com/pages/The-University-of-Iowa-Office-of-Sustainability/251818755982" target="_blank"><img src="$ThemeDir/images/facebook.png" alt="Facebook" width="94" height="81" title="Find us on Facebook" /></a></li>
-<li><a href="{$BaseHref}home/rss" target="_blank"><img src="$ThemeDir/images/rss.png" alt="RSS" width="94" height="81" title="View our RSS feed"/></a></li>
-<li><a href="{$BaseHref}contact"><img src="$ThemeDir/images/email.png" alt="Email" width="92" height="81" title="Contact Us"/></a></li>
-</ul>
-</div>
--->
+<div class="container">
+
+	$Form
+
+	<div class="pulse">
+		<h2 class="pulse-title">Sustainability at Iowa</h2>
+
+		<!-- Tab Menu Links -->
+		<ul class="pulse-tabs clearfix" role="tablist">
+			<li role="presentation" class="active">
+				<a href="#news" aria-controls="news" role="tab" data-toggle="tab">News</a>
+			</li>
+			<li role="presentation">
+				<a href="#events" aria-controls="events" role="tab" data-toggle="tab">Upcoming Events</a>
+			</li>
+			<li role="presentation">
+				<a href="#blog" aria-controls="blog" role="tab" data-toggle="tab">Climate Narrative Blog</a>
+			</li>
+		</ul>
+
+		<!-- Tab panes -->
+		<div class="tab-content">
+			<div role="tabpanel" class="tab-pane fade in active" id="news">
+				<h3 class="mobiletitle">News</h3>
+				<div class="pulse-panel">
+					<% with Page(news) %>
+						<% if $Entries %>
+							<% loop $Entries(8) %>
+								<div>
+									<!-- Photo goes here -->
+									<% if $Photo %>
+										<div class="panel-photo">
+											<% if $ExternalLink %>
+												<a href="$ExternalLink" target="_blank">
+													<img data-lazy="$Photo.CroppedImage(300,270).URL" alt="$Title">
+												</a>
+											<% else %>
+												<a href="$Link">
+													<img data-lazy="$Photo.CroppedImage(300,270).URL" alt="$Title">
+												</a>
+											<% end_if %>
+											<!-- Display icon if tagged with initiative -->
+											<% if TagsCollection %>
+												<% loop TagsCollection %>
+													<% if $Tag = leed %>
+														<span class="tagicon leed"><img src="{$ThemeDir}/images/icon-building-128.png" alt="LEED Building" class="init-img"></span>
+													<% end_if %>
+													<% if $Tag = energy %>
+														<span class="tagicon energy"><img src="{$ThemeDir}/images/icon-energy-128.png" alt="Energy &amp; Climate" class="init-img"></span>
+													<% end_if %>
+													<% if $Tag = recycling %>
+														<span class="tagicon recycling"><img src="{$ThemeDir}/images/icon-recycle-128.png" alt="Recycling" class="init-img"></span>
+													<% end_if %>
+													<% if $Tag = biomass %>
+														<span class="tagicon biomass"><img src="{$ThemeDir}/images/icon-biomass.png" alt="Biomass" class="init-img"></span>
+													<% end_if %>
+													<% if $Tag = transportation %>
+														<span class="tagicon transportation"><img src="{$ThemeDir}/images/icon-transportation-128.png" alt="Alternative Transportation" class="init-img"></span>
+													<% end_if %>
+													<% if $Tag = food %>
+														<span class="tagicon food"><img src="{$ThemeDir}/images/icon-food-128.png" alt="Food" class="init-img"></span>
+													<% end_if %>
+												<% end_loop %>
+											<% end_if %>
+											<!-- end tagged icons -->
+										</div>
+									<% end_if %>
+									<!-- end Photo -->
+
+									<div class="panel-content">
+										<% if $ExternalLink %>
+											<h4 class="panel-title"><a href="$ExternalLink" target="_blank">$Title</a></h4>
+										<% else %>
+											<h4 class="panel-title"><a href="$Link">$Title</a></h4>
+										<% end_if %>
+										<p>$Content.LimitCharacters(100)</p>
+									</div>
+									<% if $ExternalLink %>
+										<a href="$ExternalLink" class="read external" target="_blank">Read More</a>
+									<% else %>
+										<a href="$Link" class="read">Read More</a>
+									<% end_if %>
+								</div>
+							<% end_loop %>
+							<a href="{$BaseHref}news" class="seeall">See all news</a>
+						<% end_if %>
+					<% end_with %>
+				</div>
+			</div>
+			<div role="tabpanel" class="tab-pane fade" id="events">
+				<h3 class="mobiletitle">Upcoming Events</h3>
+				<div class="pulse-panel">
+					<% with LocalistCalendar %>
+						<!-- Loop Events -->
+						<% loop $EventList.Limit(8) %>
+							<div>
+								<!-- Photo goes here -->
+								<% if $Image %>
+									<a href="$Link" class="panel-photo-event">
+										<img data-lazy="$Image.URL" alt="$Title">
+									</a>
+								<% end_if %>
+								<!-- end Photo -->
+								<!-- begin content -->
+								<div class="panel-content">
+									<h4 class="panel-title"><a href="$Link">$Title</a></h4>
+									<% loop $Dates %>
+										<p class="date-time">
+											<% with $StartDateTime %>
+												<time itemprop="startDate" datetime="$Format(c)">
+													$Format(l), $Format(F) $Format(j)
+												</time>
+												 <br />$Format("g:i A")
+											<% end_with %>
+											<% if $EndTime %>
+												<% with $EndTime %>
+													- $Format("g:i A")
+												<% end_with %>
+											<% end_if %>
+											<% if $EndDate %>
+												until
+												<% with $EndDate %>
+													<time itemprop="endDate" datetime="$Format(c)">
+														$Format(l), $Format(F) $Format(j)
+													</time>
+													<br />$Format("g:i A")
+												<% end_with %>
+											<% end_if %>
+										</p>
+									<% end_loop %>
+									<p>$Venue.Title</p>
+									<!-- <p>$SummaryContent.ContextSummary(100)</p> -->
+								</div>
+								<a href="$Link" class="read">Read More</a>
+							</div>
+						<% end_loop %>
+						<!-- end Loop Events -->
+						<a href="{$BaseHref}events" class="seeall">See all events</a>
+					<% end_with %>
+				</div>
+			</div>
+			<div role="tabpanel" class="tab-pane fade" id="blog">
+				<h3 class="mobiletitle">Climate Narrative Blog</h3>
+				<div class="pulse-panel">
+					<% loop $RSSDisplay("8", "http://sustainability.uiowa.edu/climatenarrative/?feed=rss2") %>
+						<div>
+							<% if $ThumbnailURL %>
+								<div class="panel-photo">
+									<a href="$Link" target="_blank">
+										<img data-lazy="$ThumbnailURL" />
+									</a>
+								</div>
+							<% end_if %>
+							<div class="panel-content">
+								<h4 class="panel-title"><a href="$Link" target="_blank">$Title</a></h4>
+								<p>$Description.LimitCharacters(100)</p>
+							</div>
+							<a href="$Link" class="read" target="_blank">Read More</a>
+						</div>
+					<% end_loop %>
+				</div>
+			</div>
+		</div>
+
+	</div>
 
 
-<% end_if %>
-<!--
-
-<div id="what">
-<div id="demo">
 
 
 
-<div class="ui-tabs ui-widget ui-widget-content ui-corner-all" id="tabs">
-<ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">
-<% loop ChildrenOf(what-you-can-do) %>
-<li id="list$Pos" <% if First %>class="ui-corner-top ui-tabs-selected ui-state-active" <% else %> class="ui-corner-top ui-state-default"<% end_if %>><a href="#tabs-$Pos">$MenuTitle</a></li>
-<% end_loop %>
-</ul>
 
 
-<div class="ui-tabs-panel ui-widget-content ui-corner-bottom" id="tabs-1">
-<div class="link-block1"> 
-<ul>
-<% loop ChildrenOf(students) %>
-<li><a href="$Link">$Title</a></li>
-<% end_loop %>
-</ul>
-</div></div>
-
-<div class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide" id="tabs-2">
-<div class="link-block1"> 
-<ul>
-<% loop ChildrenOf(faculty-staff) %>
-<li><a href="$Link">$Title</a></li>
-<% end_loop %>
-</ul>
-</div></div>
-
-<div class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide" id="tabs-3">
-<div class="link-block1"> 
-<ul>
-<% loop ChildrenOf(outreach) %>
-<li><a href="$Link">$Title</a></li>
-<% end_loop %>
-</ul>
-</div></div>
-
-
-</div>
-</div>
-</div>
--->
-</div>
-    
-<div id="news-column">
-
-<h3 class="news" title="News"><a href="{$BaseHref}news">News</a></h3>
-<p class="view-all"><a href="{$BaseHref}news">View All</a></p>
-<ul class="news">
-<% loop News %>
-<% if canView %>
-<li>
-
-<% if NewsLink %><h4><a href="$NewsLink" target="_blank">$Title</a></h4>
-<% else %>
-<h4><a href="$Link">$Title</a></h4>
-<% end_if %>
-
-<p>$Content.LimitWordCount(20)</p>
-<span class="more">
-<% if NewsLink %><a href="$NewsLink" class="external-link" target="_blank">Read More</a>
-<% else %>
-<a href="$Link">Read More</a>
-<% end_if %>
-</span></li>
-<% end_if %>
-<% end_loop %>
-</ul>
-
-<br /><br />
-
-<h3 class="blog" title="Blog"><a href="/climatenarrative">Climate Narrative Blog</a></h3>
-<p class="view-all"><a href="/climatenarrative">View All</a></p>
-<ul class="news">
-
-<% loop RSSDisplay(3,"http://sustainability.uiowa.edu/climatenarrative/?feed=rss2") %>
-<li>
-	<h4><a href="$Link">$Title</a></h4>
-	<p>$Description.LimitWordCount(10)</p>
-	<span class="more"><a href="$Link">Read More</a></span>
-</li>
-<% end_loop %>
-
-</ul>
-
-<br /><br />
-
-<h3 class="blog" title="Blog"><a href="/blog">Sustainability Blog</a></h3>
-<p class="view-all"><a href="/blog">View All</a></p>
-<ul class="news">
-
-<% loop RSSDisplay(2,"http://sustainability.uiowa.edu/blog/feed/") %>
-<li>
-	<h4><a href="$Link">$Title</a></h4>
-	<p>$Description.LimitWordCount(10)</p>
-	<span class="more"><a href="$Link">Read More</a></span>
-</li>
-<% end_loop %>
-
-</ul>
-
-
-
-<div id = "twitFeed">
-	<a class="twitter-timeline" href="https://twitter.com/UIsustainable" data-widget-id="382534614020927488">Tweets by @UIsustainable</a>
-	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-</div>
-
-<div id="social-media">
-
-<ul>
-<li><a href="http://twitter.com/uisustainable" target="_blank"><img src="$ThemeDir/images/twitter.png" alt="Twitter" width="91" height="81" title="Follow us on Twitter"/></a></li>
-<li><a href="http://www.facebook.com/pages/The-University-of-Iowa-Office-of-Sustainability/251818755982" target="_blank"><img src="$ThemeDir/images/facebook.png" alt="Facebook" width="94" height="81" title="Find us on Facebook" /></a></li>
-<li><a href="{$BaseHref}home/rss" target="_blank"><img src="$ThemeDir/images/rss.png" alt="RSS" width="94" height="81" title="View our RSS feed"/></a></li>
-<li><a href="{$BaseHref}contact"><img src="$ThemeDir/images/email.png" alt="Email" width="92" height="81" title="Contact Us"/></a></li>
-</ul>
-</div>
-    
-</div>
-<div class="clear"></div>
-</div> <!--end home wrapper -->
-<div class="clear"></div>
-<div id="bottom-shadow"></div></div></div>
-
-
+</div><!-- end .container -->

@@ -1,0 +1,142 @@
+.footer {
+	background-color: #006c78;
+	color: #fff;
+}
+.footer a {
+	color: #fff;
+}
+.footer-top {
+	background-color: #008d9c;
+}
+.footer-bottom {
+	@media (min-width: $break-medium) {
+		padding-top: 30px;
+	}
+}
+
+.footer-sect {
+	padding: 20px 0;
+	border-bottom: 1px dotted rgba(255,255,255,.2);
+}
+
+/* -------------------------------------------------------------------
+Footer Navigation
+----------------------------------------------------------------------*/
+.footer-nav {
+	display: none;
+	@media (min-width: $break-medium) {
+		display: block;
+	}
+}
+.footer-nav {
+
+}
+.footer-nav ul {
+	font-size: 15px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.footer-nav ul li {
+	float: left;
+	width: 33%;
+	@media (min-width: $break-large) {
+		float: none;
+		display: inline;
+		width: auto;
+	}
+}
+.footer-nav li a {
+	color: #fff;
+	display: inline-block;
+	padding: 20px 15px;
+	text-decoration: none;
+	&:hover {
+		background-color: rgba(255,255,255,.2);
+	}
+	@media (min-width: $break-large) {
+		padding: 30px 15px;
+	}
+	@media (min-width: $break-xlarge) {
+		padding: 30px 29px;
+	}
+}
+
+/* -------------------------------------------------------------------
+Social Media Icons
+----------------------------------------------------------------------*/
+.footer .webicons {
+	text-align: center;
+}
+.footer .webicons li {
+	display: inline-block;
+	float: none;
+	width: 23%;
+	@media (min-width: $break-medium) {
+		width: 48%;
+	}
+	@media (min-width: $break-large) {
+		width: 23%;
+	}
+}
+.footer .webicons li a {
+	display: block;
+	line-height: 64px;
+	@media (min-width: $break-large) {
+		line-height: 84px;
+	}
+}
+.footer .webicons [class^="icon-"] {
+	height: 15px;
+	width: 15px;}
+
+/* -------------------------------------------------------------------
+Sponsors
+----------------------------------------------------------------------*/
+.sponsors {
+	border-bottom: 1px solid rgba(255,255,255,.2);
+	list-style: none;
+	padding: 20px 0;
+	margin: 0 0 20px;
+	overflow: hidden;
+	text-align: center;
+	@media (min-width: $break-medium) {
+		border: none;
+		margin: 0;
+		padding: 0;
+	}
+
+}
+.sponsors li {
+	display: inline-block;
+	width: 23%;
+	vertical-align: middle;
+}
+.sponsors li a {
+	display: block;
+}
+.sponsors img {
+	display: block;
+	margin: 0 auto;
+}
+
+
+
+.footer .dosl-logo {
+	display: block;
+}
+.footer .address {
+	font-size: 12px;
+	line-height: 1.3;
+}
+.copyright {
+	font-size: 12px;
+	margin: 10px 0 20px;
+}
+.footer hr {
+	border-top: 1px solid rgba(0,0,0,.3);
+	border-bottom: 1px solid rgba(255,255,255,.2);
+}
+
+
+

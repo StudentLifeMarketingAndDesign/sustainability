@@ -1,0 +1,21 @@
+#SearchResults {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	& li {
+		border-bottom: 1px solid #ddd;
+		padding: 1px 10px 20px;
+	}
+	& li:nth-child(even) {
+		background-color: #f2f1ec;
+	}
+	& li p {
+		font-size: 15px;
+	}
+}
+#PageNumbers {
+	text-align: center;
+	& .pagination a {
+		padding: 0 10px;
+	}
+}
