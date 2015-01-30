@@ -73,7 +73,7 @@
 	<% end_with %>
 <% end_if %>
 
-<% if $URLSegment = recycling-and-waste-reduction %>
+<% if $URLSegment = recycling %>
 	<% with Page(news) %>
 		<% if $Entries('','recycling') %>
 			<div class="relatednews">

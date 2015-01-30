@@ -39,7 +39,7 @@
 				</a>
 			</li>
 			<li class="justify-item recycling">
-				<a href="{$BaseHref}initiatives/recycling-and-waste-reduction/" class="init-link">
+				<a href="{$BaseHref}initiatives/recycling/" class="init-link">
 					<span class="init-imgwrapper">
 						<span>
 							<img src="{$ThemeDir}/images/icon-recycle-128.png" alt="Recycling" class="init-img">
