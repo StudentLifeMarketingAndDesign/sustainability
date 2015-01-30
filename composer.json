@@ -1,27 +1,36 @@
 {
-	"name": "silverstripe/installer",
-	"description": "The SilverStripe Framework Installer",
-	"require": {
-		"php": ">=5.3.2",
-		"silverstripe/cms": "3.1.6",
-		"silverstripe/framework": "3.1.6",
-		"unclecheese/betterbuttons": "*",
-		"silverstripe/spamprotection": "*",
-		"silverstripe/userforms": "*",
-		"silverstripe/recaptcha": "*",
-		"simplepie/simplepie": "*",
-		"silverstripe/googlesitemaps": "*",
-		"md/rss-display" : "*",
-		"silverstripe/advancedworkflow" : "*"
-	},
+    "name": "md/sustainability",
+    "description": "Sustainability Website",
+    "require": {
+        "php": ">=5.3.2",
+        "silverstripe/cms": "3.1.9",
+        "silverstripe/framework": "3.1.9",
+        "md/ac-json-events" : "dev-master",
+        "md/division-bar" : "dev-master",
+        "md/rss-display" : "dev-master",
+        "silverstripe/blog" : "*",
+        "undefinedoffset/sortablegridfield" : "*",
+        "silverstripe/widgets": "*",
+        "silverstripe/userforms": "*"
 
-	"minimum-stability": "dev",
-	
-	 "repositories": [
+    },
+    "config": {
+        "process-timeout": 600
+    },
+    "minimum-stability": "dev",
+
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events"
+        },
         {
             "type": "vcs",
             "url": "https://github.com/StudentLifeMarketingAndDesign/rss-display"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/StudentLifeMarketingAndDesign/division-bar"
         }
-
     ]
 }

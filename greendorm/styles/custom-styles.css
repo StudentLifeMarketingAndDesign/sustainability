@@ -1,0 +1,106 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#thriftShop,#microFridge,#getInvolved,#thermostat,#bike,#recycleBins,#laptop,#bedding,#bulbs,#plants,#window,#radiator,#eatware,#bags,#lights,#tv,#fan,#powerStrip{
+	font:12px Verdana, Helvetica, sans-serif;
+	color:#333333; 
+	line-height:1.4em;
+	display:none;
+}
+
+#thriftShop{
+	width:450px; 
+	height:480px;
+}
+
+#microFridge{
+
+	width:300px; 
+	height:600px;	
+}
+
+#getInvolved{
+	width:300px; 
+	height:600px;	
+}
+
+#thermostat{
+	width:425px; 
+	height:380px;	
+}
+
+#bike{
+	width:450px; 
+	height:450px;	
+}
+
+#recycleBins{
+	width:200px; 
+	height:400px;
+}
+
+#laptop{
+	
+	width:450px; 
+	height:400px;
+}
+
+#bedding{
+	
+	width:450px; 
+	height:300px;
+}
+
+#bulbs{
+	
+	width:450px; 
+	height:350px;
+}
+
+#plants{
+	
+	width:250px; 
+	height:525px;
+}
+
+#window{
+	
+	width:450px; 
+	height:400px;
+}
+
+#radiator{
+	
+	width:405px; 
+	height:300px;
+}
+
+#eatware{
+	width:450px; 
+	height:400px;
+}
+
+#bags{
+	width:300px; 
+	height:425px;
+}
+
+#lights{
+	width:405px; 
+	height:300px;
+}
+
+#tv{
+	width:450px; 
+	height:350px;
+}
+
+#fan{
+	width:405px; 
+	height:300px;
+}
+
+#powerStrip{
+	width:450px; 
+	height:350px;
+}

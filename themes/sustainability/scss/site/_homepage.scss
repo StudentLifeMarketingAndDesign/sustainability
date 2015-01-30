@@ -1,0 +1,608 @@
+/* ---------------------------------------------------------------
+Header Carousel
+--------------------------------------------------------------- */
+.slickcarousel {
+	padding-bottom: 40px;
+	@media (min-width: $break-medium) {
+		padding-bottom: 0;
+	}
+}
+.hero-img {
+	position: relative;
+	z-index: 1;
+	@media (min-width: $break-small) {
+		background-size: cover;
+		-webkit-clip-path: ellipse(80% 52% at 50% 43%);
+		box-shadow: 0 0 18px rgba(0,0,0,.3);
+	}
+}
+.hero-img img {
+	width: 100%;
+}
+.hero-img:after {
+	content: "";
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 2;
+	@media (min-width: $break-small) {
+		background: -moz-linear-gradient(top,  rgba(0,0,0,0) 20%, rgba(0,0,0,0.6) 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(20%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.6))); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 20%,rgba(0,0,0,0.6) 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top,  rgba(0,0,0,0) 20%,rgba(0,0,0,0.6) 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top,  rgba(0,0,0,0) 20%,rgba(0,0,0,0.6) 100%); /* IE10+ */
+		background: linear-gradient(to bottom,  rgba(0,0,0,0) 20%,rgba(0,0,0,0.6) 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#99000000',GradientType=0 ); /* IE6-9 */
+	}
+}
+.slickcarousel .inner {
+	background: #fff;
+	padding: 20px 40px;
+	text-align: center;
+	position: relative;
+	z-index: 10;
+	@media (min-width: $break-small) {
+		background: transparent;
+		bottom: 80px;
+		position: absolute;
+		width: 100%;
+		bottom: 0;
+		left: 50%;
+		margin-left: -50%;
+		color: #fff;
+		z-index: 100;
+		padding-bottom: 30px;
+	}
+	@media (min-width: $break-medium) {
+		bottom: 60px;
+	}
+	@media (min-width: $break-large) {
+		bottom: 80px;
+		width: 80%;
+		margin-left: -40%;
+	}
+}
+.slickcarousel .inner h3 {
+	display: none;
+	text-transform: uppercase;
+	@media (min-width: $break-small) {
+		color: #fff;
+		display: block;
+		font-size: 38px;
+		font-family: $condensed-font;
+		text-transform: none;
+		letter-spacing: 0;
+		line-height: 1.1;
+		margin: 0 0 10px;
+		letter-spacing: 1px;
+		font-weight: 600;
+		text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75);
+	}
+	@media (min-width: $break-medium) {
+		font-size: 65px;
+		text-transform: uppercase;
+	}
+}
+.slickcarousel .inner p {
+	margin: 0;
+	font-size: 15px;
+	line-height: 1.3;
+	@media (min-width: $break-small) {
+		font-size: 16px;
+		color: #fff;
+		font-weight: bold;
+		text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75);
+	}
+	@media (min-width: $break-medium) {
+		font-size: 22px;
+	}
+}
+.pulse-panel {
+	margin-bottom: 0;
+}
+.slickcarousel-btn {
+	display: inline-block;
+		border-radius: 1px;
+		background-color: $orange;
+		box-shadow: 0 0 2px rgba(0,0,0,.4), inset 0 1px 0 rgba(255,255,255,.4);
+		color: #fff;
+		text-shadow: 1px 1px 0 rgba(0,0,0,.15);
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 13px;
+		letter-spacing: 1px;
+		font-weight: bold;
+		padding: 10px 15px;
+		line-height: 1;
+		text-decoration: none;
+		margin-top: 15px;
+		position: relative;
+	@media (min-width: $break-small) {
+		margin-top: 30px;
+	}
+	@media (min-width: $break-medium) {
+		padding: 15px 25px;
+	}
+}
+.slickcarousel-btn:after {
+	content: "";
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	background-image: -webkit-linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 100%);
+	background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 100%);
+}
+.slickcarousel-btn:hover, .slickcarousel-btn:focus {
+	color: #fff;
+	text-decoration: none;
+	background-color: darken( $orange, 10% );
+}
+/* Carousel Dots Navigation */
+.slickcarousel .slick-dots {
+	margin: 0;
+	bottom: 0;
+	@media (min-width: $break-medium) {
+		bottom: 35px;
+	}
+	@media (min-width: $break-large) {
+		bottom: 45px;
+	}
+}
+.slickcarousel .slick-dots li.slick-active {
+	@media (min-width: $break-medium) {
+		-webkit-box-shadow: 0 0 0 2px #fff;
+		-moz-box-shadow: 0 0 0 2px #fff;
+		box-shadow: 0 0 0 2px #fff;
+	}
+}
+.slickcarousel .slick-dots li.slick-active a {
+	@media (min-width: $break-medium) {
+		background-color: #fff;
+	}
+}
+
+
+
+
+
+/* ---------------------------------------------------------------
+Initiatives
+--------------------------------------------------------------- */
+.home-initiatives {
+	background: url(../images/wave.jpg);
+	border-bottom: 1px solid rgba(0,0,0,.1);
+	padding: 60px 0;
+}
+.home-initiatives {
+	padding-top: 130px;
+	margin-top: -80px;
+}
+.home-initiatives h2 {
+	font-size: 35px;
+	font-family: $condensed-font;
+	margin: 0 0 1em;
+	text-align: center;
+	position: relative;
+}
+.home-initiatives .init-list {
+	list-style: none;
+	margin: 30px 0 0;
+	padding: 0;
+}
+.init-list li {
+	margin: 0 2% 20px 2%;
+	width: 46%;
+	@media (min-width: $break-small) {
+		margin: 0 1% 20px 1%;
+		width: 31%;
+	}
+	@media (min-width: $break-medium) {
+		margin: 0 10px 20px 10px;
+		width: 210px;
+	}
+	@media (min-width: $break-large) {
+		margin: 0 6px 20px 6px;
+		width: 139px;
+	}
+	@media (min-width: $break-xlarge) {
+		margin: 0 15px 20px 15px;
+		width: 167px;
+	}
+}
+.init-list .init-link {
+	background: #fff;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.2);
+	border-top: 4px solid #000;
+	border-radius: 2px;
+	display: block;
+	height: 240px;
+	padding: 30px 15px;
+	text-align: center;
+	text-decoration: none;
+	@media (min-width: 400px) {
+		height: 260px;
+		padding: 30px 25px;
+	}
+	@media (min-width: $break-small) {
+		height: 270px;
+	}
+	@media (min-width: $break-medium) {
+		padding: 30px 40px;
+	}
+	@media (min-width: $break-large) {
+		height: 244px;
+		padding: 30px 20px;
+	}
+	@media (min-width: $break-xlarge) {
+		height: 270px;
+	}
+}
+.init-list .init-link:hover, .init-list .init-link:focus {
+	background: #f4f4f4;
+}
+.energy .init-link{border-color: $energy;}
+.recycling .init-link {border-color: $recycling;}
+.biomass .init-link {border-color: $biomass;}
+.leed .init-link {border-color: $leed;}
+.transportation .init-link {border-color: $transportation;}
+.food .init-link {border-color: $food;}
+
+.init-imgwrapper {
+	padding: 5px;
+	border-radius: 50%;
+	display: block;
+	box-shadow: 0 1px 1px rgba(0,0,0,.15);
+}
+.init-imgwrapper span {
+	display: block;
+	padding: 15px;
+	background-color: #000;
+	border-radius: 50%;
+	box-shadow: inset 0 0 0 4px rgba(255,255,255,.2);
+	@media (min-width: 600px) {
+		padding: 25px;
+	}
+	@media (min-width: $break-large) {
+		padding: 15px;
+	}
+	@media (min-width: $break-xlarge) {
+		padding: 25px;
+	}
+}
+
+.energy .init-imgwrapper span {background-color: $energy;}
+.recycling .init-imgwrapper span {background-color: $recycling;}
+.biomass .init-imgwrapper span {background-color: $biomass;}
+.leed .init-imgwrapper span {background-color: $leed;}
+.transportation .init-imgwrapper span {background-color: $transportation;}
+.food .init-imgwrapper span {background-color: $food;}
+
+.init-img {
+	display: block;
+	width: 100%;
+}
+.init-title {
+	font-family: $body-font;
+	font-size: 15px;
+	font-weight: normal;
+	line-height: 1.5;
+	margin: 20px 0 0;
+}
+
+
+
+/* ---------------------------------------------------------------
+Pulse
+--------------------------------------------------------------- */
+.pulse {
+	padding: 4em 0;
+}
+.pulse-title {
+	font-size: 35px;
+	font-family: $condensed-font;
+	margin: 0 0 1.4em;
+	text-align: center;
+	overflow: hidden;
+	position: relative;
+	&:before, &:after {
+		background-color: #ded8cf;
+		content: "";
+		display: inline-block;
+		height: 2px;
+		position: relative;
+		vertical-align: middle;
+		width: 20%;
+	}
+	&:before {
+		right: 0.5em;
+		margin-left: -50%;
+	}
+	&:after {
+		left: 0.5em;
+		margin-right: -50%;
+	}
+}
+.pulse .pulse-panel {
+	list-style: none;
+ 	margin: 0;
+	padding-bottom: 31px;
+}
+.pulse-panel .seeall {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	font-size: 14px;
+	text-decoration: none;
+}
+
+/* Tab Menu Links ---------------------------------------------- */
+.pulse-tabs {
+	display: none;
+	@media (min-width: 600px) {
+		display: table;
+		list-style: none;
+		margin: 0 auto 20px;
+		overflow: hidden;
+		text-align: center;
+	}
+}
+.pulse-tabs li {
+	display: table-cell;
+	position: relative;
+}
+.pulse-tabs li a {
+	color: #8c7e71;
+	display: block;
+	font-family: $condensed-font;
+	font-weight: 600;
+	font-size: 16px;
+	overflow: hidden;
+	letter-spacing: 1px;
+	padding: 15px 12px;
+	position: relative;
+	text-decoration: none;
+	text-transform: uppercase;
+	-webkit-transition: .15s ease-in-out;
+	-moz-transition: .15s ease-in-out;
+	-ms-transition: .15s ease-in-out;
+	-o-transition: .15s ease-in-out;
+	transition: .15s ease-in-out;
+	@media (min-width: 700px) {
+		padding: 15px 24px;
+	}
+	@media (min-width: $break-large) {
+		padding: 15px 44px;
+	}
+}
+.pulse-tabs li a:hover, .pulse-tabs li a:focus {
+	color: #564e45;
+	outline: none;
+	text-decoration: none;
+}
+.pulse-tabs li.active {
+	color: #564e45;
+}
+.pulse-tabs li:before {
+	position: absolute;
+	bottom: 0px;
+	left: 0;
+	width: 100%;
+	height: 4px;
+	background: #ccc;
+	content: '';
+}
+.pulse-tabs li:after {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 4px;
+	background: $link;
+	content: '';
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: transform 0.3s;
+	-webkit-transform: translate3d(0,150%,0);
+	transform: translate3d(0,150%,0);
+}
+.pulse-tabs li.active:after {
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+
+/* Tab Content Show/Hide ---------------------------------------------- */
+.tab-content > .tab-pane {
+	@media (min-width: 600px) {
+		display: block !important;
+		height: 0px;
+		overflow: hidden;
+	}
+}
+.tab-content > .active {
+	@media (min-width: 600px) {
+		display: block !important;
+		height: auto;
+	}
+}
+.fade {
+	@media (min-width: 600px) {
+		opacity: 0;
+		-webkit-transition: opacity 0.3s linear;
+		-o-transition: opacity 0.3s linear;
+		transition: opacity 0.3s linear;
+	}
+}
+.fade.in {opacity: 1;}
+
+/* Prev/Next Arrows-------------------------------------------- */
+.pulse .slick-prev,
+.pulse .slick-next {
+	background: url(../images/tab-prevnext.gif) 0 0 no-repeat;
+	bottom: 0;
+	top: auto;
+	width: 31px;
+	height: 31px;
+	left: 50%;
+	margin-left: -29px;
+}
+.pulse .slick-next {
+	background-position: right top;
+	margin-left: 1px;
+}
+
+/* hover state */
+.pulse .slick-prev:hover,
+.pulse .slick-next:hover {
+	background-position: left -62px;
+}
+.pulse .slick-next:hover {
+	background-position: right -62px;
+}
+.pulse .slick-disabled.slick-next:hover {
+	background-position: right -31px;
+}
+.tab-content .slick-list {
+	background-color: #fff;
+}
+
+/* disabled state */
+.pulse .slick-disabled {
+	background-position: left -31px;
+	cursor: default;
+}
+.pulse .slick-disabled:hover {
+	background-position: left -31px;
+	cursor: default;
+}
+.pulse .slick-disabled.slick-next {
+	background-position: right -31px;
+}
+.pulse .slick-disabled.slick-next:hover {
+	background-position: right -31px;
+}
+
+
+/* Tab Content Panels -------------------------------------------- */
+.pulse-panel .slick-slide {
+	position: relative;
+}
+/* Photos */
+.pulse-panel .panel-photo {
+	position: relative;
+	& a {
+		display: block;
+		max-height: 250px;
+		overflow: hidden;
+	}
+}
+.slick-slider .panel-photo img {
+	display: block;
+	width: 100%;
+}
+/* photos for events */
+.panel-photo-event {
+	display: block;
+	height: 200px;
+	overflow: hidden;
+}
+.panel-photo-event img {
+	display: block;
+	margin: 0 auto;
+	max-width: none;
+	max-height: 200px;
+}
+
+/* Tagged Icons */
+.tagicon {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	background-color: #000;
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	margin-left: -20px;
+	margin-bottom: -20px;
+	padding: 7px;
+	box-shadow: 0 0 0 5px rgba(0,0,0,.1);
+}
+.tagicon.leed {background-color: $leed;}
+.tagicon.energy {background-color: $energy;}
+.tagicon.recycling {background-color: $recycling;}
+.tagicon.biomass {background-color: $biomass;}
+.tagicon.food {background-color: $food;}
+.tagicon.transportation {background-color: $transportation;}
+
+
+/* Panel Content */
+.pulse-panel .panel-content {
+	border-left: 1px solid #eee;
+	overflow: hidden;
+	padding: 25px 15px 45px;
+	position: relative;
+	@media (min-width: $break-small) {
+		min-height: 270px;
+	}
+}
+#news .pulse-panel .panel-content {
+	padding: 35px 15px 45px;
+}
+.slick-slide:first-of-type .pulse-panel .panel-content {
+	border-left: none;
+}
+.pulse-panel .panel-content .panel-title {
+	font-size: 19px;
+	line-height: 1.2;
+	margin: 0 0 10px;
+	& a {
+		text-decoration: none;
+	}
+}
+.pulse-panel .panel-content p {
+	font-size: 14px;
+	line-height: 1.4;
+	margin: 0 0 5px;
+}
+.pulse-panel .panel-content .date {
+
+}
+
+/* Read More Link */
+.pulse-panel .read {
+	color: #444;
+	font-family: $condensed-font;
+	display: block;
+	text-decoration: none;
+	border-bottom: 4px solid $link;
+	xwidth: 100px;
+	position: absolute;
+	left:15px;
+	bottom: 15px;
+	font-size: 12px;
+	text-transform: uppercase;
+	font-weight: 600;
+	letter-spacing: 1px;
+}
+.pulse-panel .read:hover, .pulse-panel .read:focus {
+	border-bottom-color: $orange;
+}
+.pulse-panel .read.external {
+	background: url(../images/external-link.png) no-repeat right 2px;
+	padding-right: 17px;
+}
+
+/* Mobile Styles -------------------------------------------- */
+.tab-pane .mobiletitle {
+	border-bottom: 4px solid #ccc;
+	color: #8c7e71;
+	font-family: $condensed-font;
+	font-weight: 600;
+	margin-top: 1.5em;
+	@media (min-width: 600px) {
+		display: none;
+	}
+}

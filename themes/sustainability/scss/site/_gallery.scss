@@ -1,0 +1,119 @@
+.gallerysection {
+	background-color: rgba(0,0,0,.04);
+	border-top: 1px solid rgba(0,0,0,.1);
+	overflow: hidden;
+	padding: 50px 0 40px;
+}
+.gallerysection h2 {
+	font-size: 28px;
+	margin-top: 0;
+	@media (min-width: $break-medium) {
+		font-size: 45px;
+	}
+}
+
+
+/* -------------------------------------------------------------
+Slick Carousel
+---------------------------------------------------------------- */
+.gallerysection .slick-slider {
+	@media (max-width: $break-medium - 1) {
+		padding-bottom: 30px;
+	}
+}
+.gallery-carousel .slick-slide {
+	position: relative;
+	margin: 0 5px;
+}
+.gallery-carousel .slick-slide a {
+	display: block;
+	overflow: hidden;
+	position: relative;
+}
+.gallery-carousel .slick-slide img {
+	display: block;
+	-webkit-transition: -webkit-transform 0.6s ease 0s !important;
+	transition: -ms-transform 0.6s ease 0s !important;
+	transition: transform 0.6s ease 0s !important;
+}
+.gallery-carousel .slick-slide a:hover img {
+	-webkit-transition-delay: 0.25s !important;
+	transition-delay: 0.25s !important;
+	-webkit-transform: scale(1.05);
+	-ms-transform: scale(1.05);
+	transform: scale(1.05);
+}
+.gallery-carousel .slick-slide .thumb-caption {
+	display: none;
+	@media (min-width: $break-medium) {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		color: #fff;
+		padding: 5px 8px;
+		font-size: 12px;
+		background: rgba(0,0,0,.5);
+		width: 100%;
+	}
+}
+
+/* Prev/Next Controls */
+.gallery-carousel .slick-prev,
+.gallery-carousel .slick-next {
+	display: none !important;
+	@media (min-width: $break-medium) {
+		background: #000000;
+		background: rgba(0, 0, 0, 0.6);
+		display: inline-block !important;
+		height: 250px;
+		margin-top: 0;
+		position: absolute;
+		top: 0;
+		width: 65px;
+		z-index: 2;
+		overflow: hidden;
+		text-indent: 200%;
+		white-space: nowrap;
+	}
+}
+.gallery-carousel .slick-next {
+	right: 0;
+}
+.gallery-carousel .slick-prev {
+	left: 0;
+}
+.gallery-carousel .slick-prev:after,
+.gallery-carousel .slick-next:after  {
+	display: none !important;
+	@media (min-width: $break-medium) {
+		content: "";
+		background: url(../images/roller-controls.png) center center no-repeat;
+		display: block !important;
+		height: 24px;
+		width: 20px;
+		bottom: 0;
+		left: 0;
+		margin: auto;
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+}
+.gallery-carousel .slick-next:after {
+	background-position: right center;
+}
+.gallery-carousel .slick-prev:after {
+	background-position: left center;
+}
+
+/* Dots Navigation */
+.gallery-carousel .slick-dots {
+	bottom: 0;
+	margin: 0;
+	@media (min-width: $break-medium) {
+		display: none !important;
+	}
+}
+.gallery-carousel .slick-dots li button:before {
+	background-color: #333
+}

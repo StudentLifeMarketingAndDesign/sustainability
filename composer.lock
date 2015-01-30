@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b8172814683b136f6fa1ba9fab60e265",
+    "hash": "8e1e442f4cb7a1ed42573f2d70a0421d",
     "packages": [
         {
             "name": "composer/installers",
@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "1273cbb768f63b6436994df1b51724f8930505eb"
+                "reference": "1bff8aa77a18f3616f468ed8000cf86a5725bac3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/1273cbb768f63b6436994df1b51724f8930505eb",
-                "reference": "1273cbb768f63b6436994df1b51724f8930505eb",
+                "url": "https://api.github.com/repos/composer/installers/zipball/1bff8aa77a18f3616f468ed8000cf86a5725bac3",
+                "reference": "1bff8aa77a18f3616f468ed8000cf86a5725bac3",
                 "shasum": ""
             },
             "replace": {
@@ -59,6 +59,7 @@
                 "Hurad",
                 "MODX Evo",
                 "OXID",
+                "SMF",
                 "Thelia",
                 "WolfCMS",
                 "agl",
@@ -69,6 +70,7 @@
                 "codeigniter",
                 "concrete5",
                 "croogo",
+                "dokuwiki",
                 "drupal",
                 "elgg",
                 "fuelphp",
@@ -96,7 +98,71 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2014-09-20 03:53:04"
+            "time": "2015-01-11 03:51:11"
+        },
+        {
+            "name": "md/ac-json-events",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events.git",
+                "reference": "05313a3eb585dd32d5530438a3173acc5dbd980c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/ac-json-events/zipball/05313a3eb585dd32d5530438a3173acc5dbd980c",
+                "reference": "05313a3eb585dd32d5530438a3173acc5dbd980c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2",
+                "silverstripe/cms": "3.*",
+                "silverstripe/framework": "3.*"
+            },
+            "type": "silverstripe-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.1.x-dev"
+                }
+            },
+            "description": "After Class JSON Display Module",
+            "support": {
+                "source": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events/tree/master",
+                "issues": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events/issues"
+            },
+            "time": "2014-11-10 19:01:47"
+        },
+        {
+            "name": "md/division-bar",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/StudentLifeMarketingAndDesign/division-bar.git",
+                "reference": "e5d2429ecba4283922530b25a22eb14375f96d98"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/division-bar/zipball/e5d2429ecba4283922530b25a22eb14375f96d98",
+                "reference": "e5d2429ecba4283922530b25a22eb14375f96d98",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2",
+                "silverstripe/cms": "3.*",
+                "silverstripe/framework": "3.*"
+            },
+            "type": "silverstripe-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.1.x-dev"
+                }
+            },
+            "description": "The University of Iowa Division of Student Life Bar",
+            "support": {
+                "source": "https://github.com/StudentLifeMarketingAndDesign/division-bar/tree/master",
+                "issues": "https://github.com/StudentLifeMarketingAndDesign/division-bar/issues"
+            },
+            "time": "2015-01-12 15:58:08"
         },
         {
             "name": "md/rss-display",
@@ -104,12 +170,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/rss-display.git",
-                "reference": "dd123c03f74ab764016d2de9bfaf4a3d533f1c62"
+                "reference": "16ffe91c9baf3e73805c92a47dd79d84d51e7b58"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/rss-display/zipball/dd123c03f74ab764016d2de9bfaf4a3d533f1c62",
-                "reference": "dd123c03f74ab764016d2de9bfaf4a3d533f1c62",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/rss-display/zipball/16ffe91c9baf3e73805c92a47dd79d84d51e7b58",
+                "reference": "16ffe91c9baf3e73805c92a47dd79d84d51e7b58",
                 "shasum": ""
             },
             "require": {
@@ -128,60 +194,61 @@
                 "source": "https://github.com/StudentLifeMarketingAndDesign/rss-display/tree/master",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/rss-display/issues"
             },
-            "time": "2014-03-21 15:04:28"
+            "time": "2015-01-09 22:03:58"
         },
         {
-            "name": "silverstripe/advancedworkflow",
+            "name": "silverstripe/blog",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/silverstripe-australia/advancedworkflow.git",
-                "reference": "13e5125424ad184ced53c8e55d710f42b6d3716a"
+                "url": "https://github.com/silverstripe/silverstripe-blog.git",
+                "reference": "9a56f5aabf81be7a4d89148141d475df8846ec55"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe-australia/advancedworkflow/zipball/13e5125424ad184ced53c8e55d710f42b6d3716a",
-                "reference": "13e5125424ad184ced53c8e55d710f42b6d3716a",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-blog/zipball/9a56f5aabf81be7a4d89148141d475df8846ec55",
+                "reference": "9a56f5aabf81be7a4d89148141d475df8846ec55",
                 "shasum": ""
             },
             "require": {
-                "silverstripe/cms": ">=3.0.0"
+                "silverstripe/cms": "~3.1"
+            },
+            "suggest": {
+                "silverstripe/comments": "Enable user comments on any page type, including blog posts",
+                "silverstripe/widgets": "Additional 'sidebar features', e.g. a list of recent posts and a tagcloud",
+                "simplepie/simplepie": "Parse RSS feeds, required for the RSS widget"
             },
             "type": "silverstripe-module",
             "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
             "authors": [
                 {
-                    "name": "Marcus Nyeholt",
-                    "email": "marcus@silverstirpe.com.au"
+                    "name": "Saophalkun Ponlu",
+                    "email": "phalkunz@silverstripe.com"
                 },
                 {
-                    "name": "Andrew Short",
-                    "email": "andrewjshort@gmail.com"
+                    "name": "Carlos Barberis",
+                    "email": "carlos@silverstripe.com"
                 }
             ],
-            "description": "Adds configurable workflow support to the CMS, with a GUI for creating custom workflow definitions.",
+            "description": "The blog module allows you to post blogs on your SilverStripe. It includes the ability to post blogs using a site front-end form. Blogs are summarised on the blog holder page type, with more detail viewable when a specific blog is clicked.",
             "keywords": [
-                "advancedworkflow",
-                "silverstripe",
-                "workflow"
+                "blog",
+                "silverstripe"
             ],
-            "time": "2014-08-20 23:01:21"
+            "time": "2014-12-05 02:18:04"
         },
         {
             "name": "silverstripe/cms",
-            "version": "3.1.6",
+            "version": "3.1.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-cms.git",
-                "reference": "796874dae7706e7675431948c9780e18c7c74dd5"
+                "reference": "ee4639ed7447b35ec7159b39165819f11b0ccb56"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-cms/zipball/796874dae7706e7675431948c9780e18c7c74dd5",
-                "reference": "796874dae7706e7675431948c9780e18c7c74dd5",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-cms/zipball/ee4639ed7447b35ec7159b39165819f11b0ccb56",
+                "reference": "ee4639ed7447b35ec7159b39165819f11b0ccb56",
                 "shasum": ""
             },
             "require": {
@@ -215,20 +282,20 @@
                 "cms",
                 "silverstripe"
             ],
-            "time": "2014-08-12 22:52:51"
+            "time": "2015-01-12 04:52:29"
         },
         {
             "name": "silverstripe/framework",
-            "version": "3.1.6",
+            "version": "3.1.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-framework.git",
-                "reference": "9da3357e3a7348914a4778366efa053277097cc4"
+                "reference": "87d6250ea75f5e1c765d9004c51bd5ffd5633185"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-framework/zipball/9da3357e3a7348914a4778366efa053277097cc4",
-                "reference": "9da3357e3a7348914a4778366efa053277097cc4",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-framework/zipball/87d6250ea75f5e1c765d9004c51bd5ffd5633185",
+                "reference": "87d6250ea75f5e1c765d9004c51bd5ffd5633185",
                 "shasum": ""
             },
             "require": {
@@ -264,121 +331,7 @@
                 "framework",
                 "silverstripe"
             ],
-            "time": "2014-08-24 23:25:01"
-        },
-        {
-            "name": "silverstripe/googlesitemaps",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/silverstripe-labs/silverstripe-googlesitemaps.git",
-                "reference": "5f26b65061008175f7bdddd2207a1724cd8018f2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe-labs/silverstripe-googlesitemaps/zipball/5f26b65061008175f7bdddd2207a1724cd8018f2",
-                "reference": "5f26b65061008175f7bdddd2207a1724cd8018f2",
-                "shasum": ""
-            },
-            "require": {
-                "silverstripe/framework": "~3.1"
-            },
-            "type": "silverstripe-module",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD"
-            ],
-            "authors": [
-                {
-                    "name": "Will Rossiter",
-                    "email": "will@fullscreen.io"
-                }
-            ],
-            "description": "SilverStripe support for the Google Sitemaps XML system, enabling Google and other search engines to see all urls on your site. This helps your SilverStripe website rank well in search engines, and to encourage the information on your site to be discovered by Google quickly.",
-            "homepage": "https://github.com/silverstripe-labs/silverstripe-googlesitemaps",
-            "keywords": [
-                "googlesitemaps",
-                "seo",
-                "silverstripe"
-            ],
-            "time": "2014-09-23 09:00:03"
-        },
-        {
-            "name": "silverstripe/recaptcha",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/chillu/silverstripe-recaptcha.git",
-                "reference": "ac7db259142dba769a76541fc156ef57b82f2970"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/chillu/silverstripe-recaptcha/zipball/ac7db259142dba769a76541fc156ef57b82f2970",
-                "reference": "ac7db259142dba769a76541fc156ef57b82f2970",
-                "shasum": ""
-            },
-            "require": {
-                "silverstripe/framework": "~3.1",
-                "silverstripe/spamprotection": "*"
-            },
-            "type": "silverstripe-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.2.x-dev"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "authors": [
-                {
-                    "name": "Ingo Schommer",
-                    "email": "ingo@silverstripe.com",
-                    "homepage": "http://chillu.com",
-                    "role": "tech-lead"
-                }
-            ],
-            "description": "Provides a form field which allows form to validate for non-bot submissions by giving them a challenge to decrypt an image.",
-            "keywords": [
-                "silverstripe",
-                "spamprotection"
-            ],
-            "time": "2014-02-18 21:11:57"
-        },
-        {
-            "name": "silverstripe/spamprotection",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/silverstripe/silverstripe-spamprotection.git",
-                "reference": "39f7f0be454af5f67f2789c6e7691221896fa313"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-spamprotection/zipball/39f7f0be454af5f67f2789c6e7691221896fa313",
-                "reference": "39f7f0be454af5f67f2789c6e7691221896fa313",
-                "shasum": ""
-            },
-            "require": {
-                "silverstripe/framework": "~3.1"
-            },
-            "type": "silverstripe-module",
-            "notification-url": "https://packagist.org/downloads/",
-            "authors": [
-                {
-                    "name": "Saophalkun Ponlu",
-                    "email": "phalkunz@silverstripe.com"
-                },
-                {
-                    "name": "Will Rossiter",
-                    "email": "will@fullscreen.io",
-                    "homepage": "http://wilr.github.com"
-                }
-            ],
-            "description": "Spam protection module for SilverStripe.",
-            "keywords": [
-                "silverstripe",
-                "spamprotection"
-            ],
-            "time": "2014-03-07 07:38:25"
+            "time": "2015-01-14 22:56:46"
         },
         {
             "name": "silverstripe/userforms",
@@ -386,12 +339,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-userforms.git",
-                "reference": "fcba06c1664e4c2ae5c7e2998719af92d5b0b63d"
+                "reference": "99ac1a3e20f60dc226e7b7166afd1ad81b7b06c3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-userforms/zipball/fcba06c1664e4c2ae5c7e2998719af92d5b0b63d",
-                "reference": "fcba06c1664e4c2ae5c7e2998719af92d5b0b63d",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-userforms/zipball/99ac1a3e20f60dc226e7b7166afd1ad81b7b06c3",
+                "reference": "99ac1a3e20f60dc226e7b7166afd1ad81b7b06c3",
                 "shasum": ""
             },
             "require": {
@@ -422,105 +375,91 @@
                 "silverstripe",
                 "userforms"
             ],
-            "time": "2014-08-25 06:42:29"
+            "time": "2015-01-06 03:59:34"
         },
         {
-            "name": "simplepie/simplepie",
+            "name": "silverstripe/widgets",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/simplepie/simplepie.git",
-                "reference": "9a9faaa0d563426cf6d897c169373c5b62f1b252"
+                "url": "https://github.com/silverstripe/silverstripe-widgets.git",
+                "reference": "674ea5d5913e8d40a226955c8c5936977a438e1e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/simplepie/simplepie/zipball/9a9faaa0d563426cf6d897c169373c5b62f1b252",
-                "reference": "9a9faaa0d563426cf6d897c169373c5b62f1b252",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-widgets/zipball/674ea5d5913e8d40a226955c8c5936977a438e1e",
+                "reference": "674ea5d5913e8d40a226955c8c5936977a438e1e",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.2.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "SimplePie": "library"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Ryan Parman",
-                    "homepage": "http://ryanparman.com/",
-                    "role": "Creator, alumnus developer"
-                },
-                {
-                    "name": "Geoffrey Sneddon",
-                    "homepage": "http://gsnedders.com/",
-                    "role": "Alumnus developer"
-                },
-                {
-                    "name": "Ryan McCue",
-                    "email": "me@ryanmccue.info",
-                    "homepage": "http://ryanmccue.info/",
-                    "role": "Developer"
-                }
-            ],
-            "description": "A simple Atom/RSS parsing library for PHP",
-            "homepage": "http://simplepie.org/",
-            "keywords": [
-                "atom",
-                "feeds",
-                "rss"
-            ],
-            "time": "2014-04-28 12:50:39"
-        },
-        {
-            "name": "unclecheese/betterbuttons",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/unclecheese/silverstripe-gridfield-betterbuttons.git",
-                "reference": "6206ecba9e9c606883e091bb366928c89bf8cb9a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/unclecheese/silverstripe-gridfield-betterbuttons/zipball/6206ecba9e9c606883e091bb366928c89bf8cb9a",
-                "reference": "6206ecba9e9c606883e091bb366928c89bf8cb9a",
-                "shasum": ""
-            },
-            "require": {
+                "silverstripe/cms": "~3.1",
                 "silverstripe/framework": "~3.1"
             },
             "type": "silverstripe-module",
             "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Ingo Schommer",
+                    "email": "ingo@silverstripe.com"
+                }
+            ],
+            "description": "Widgets are small pieces of functionality such as showing the latest Comments or Flickr Photos. They normally display on the sidebar of your website.",
+            "keywords": [
+                "blog",
+                "silverstripe",
+                "widgets"
+            ],
+            "time": "2014-12-05 02:17:50"
+        },
+        {
+            "name": "undefinedoffset/sortablegridfield",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/UndefinedOffset/SortableGridField.git",
+                "reference": "9d60a5834323a00af49960b3eb3d080fa8878122"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/UndefinedOffset/SortableGridField/zipball/9d60a5834323a00af49960b3eb3d080fa8878122",
+                "reference": "9d60a5834323a00af49960b3eb3d080fa8878122",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "*",
+                "silverstripe/framework": ">=3.0.1,<3.2"
+            },
+            "type": "silverstripe-module",
+            "extra": {
+                "installer-name": "sortablegridfield"
+            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
             "authors": [
                 {
-                    "name": "Uncle Cheese",
-                    "email": "unclecheese@leftandmain.com",
-                    "homepage": "http://leftandmain.com"
+                    "name": "Ed Chipman",
+                    "homepage": "http://www.edchipman.ca",
+                    "role": "Developer"
                 }
             ],
-            "description": "Adds new form actions and buttons to GridField detail form for usability enhancements.",
+            "description": "Adds drag and drop functionality to SilverStripe 3.0's GridField",
             "keywords": [
-                "buttons",
                 "gridfield",
                 "silverstripe"
             ],
-            "time": "2014-07-16 11:26:46"
+            "time": "2015-01-17 16:46:20"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
-    "prefer-stable": false,
+    "stability-flags": {
+        "md/ac-json-events": 20,
+        "md/division-bar": 20,
+        "md/rss-display": 20
+    },
     "platform": {
         "php": ">=5.3.2"
     },

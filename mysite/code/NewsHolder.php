@@ -1,79 +1,64 @@
 <?php
+class NewsHolder extends BlogHolder {
 
-class NewsHolder extends Page {
-	
 	private static $db = array(
-	
+
 	);
-	
+
 	private static $has_one = array(
+
+	);
+	private static $belongs_many_many = array (
+	);
+	private static $has_many = array(
 	);
 
-static $allowed_children = array('NewsPage');
-	
-	
-function getCMSFields() {
-	$fields = parent::getCMSFields();
-	
-	$fields->removeFieldFromTab("Root.Content","Content");
-	
-    return $fields;
-	
-   }	
-	
-}
+	private static $allowed_children = array(
+		'NewsEntry'
+	);
 
-class NewsHolder_Controller extends Page_Controller {
-	private static $allowed_actions = array('rss');
+	private static $singular_name = 'News Holder';
 
-		public function init() {
-			parent::init();
-			RSSFeed::linkToFeed($this->Link() . "rss", "RSS feed");
+	private static $plural_name = 'News Holders';
+
+	public function getCMSFields(){
+		$fields = parent::getCMSFields();
+		$fields->removeByName("Content");
+		$fields->removeByName("Metadata");
+
+		return $fields;
 	}
-	
-	
-		function rss() {
-			$set = DataObject::get("NewsPage");
-			
-			$rss = new RSSFeed($set, $this->Link(), "News Feed", "Shows a list of the most recently updated news and events.", "Title", "Content", "Author");
-			$rss->outputToBrowser();
-	}	
-	
-	
-	
-	function allNews() {
-	if(!isset($_GET['start']) || !is_numeric($_GET['start']) || (int)$_GET['start'] < 1) $_GET['start'] = 0;
-		$SQL_start = (int)$_GET['start'];
-		$doSet = Page::get(
-		$callerClass = "NewsPage",
-		$filter = "ShowInMenus = '1' and ParentID = '23'",
-		$sort = "sort",
-		$join = "",
-		$limit = "{$SQL_start},6"
-		
-		
-  	);
-  	if (isset($doSet)){
-  		$paginatedSet = new PaginatedList($doSet, $this->request);
-  		$paginatedSet->setPageLength(10);
-	}
-	
-	function newsTest(){
-		$items = NewsPage::get();
-		return $items;
-	}
-	
 
- 
-  return $paginatedSet ? $paginatedSet : false;
-  
-  
+
 }
+class NewsHolder_Controller extends BlogHolder_Controller {
 
+	/**
+	 * An array of actions that can be accessed via a request. Each array element should be an action name, and the
+	 * permissions or conditions required to allow the user to access it.
+	 *
+	 * <code>
+	 * array (
+	 *     'action', // anyone can access this action
+	 *     'action' => true, // same as above
+	 *     'action' => 'ADMIN', // you must have ADMIN permissions to access this action
+	 *     'action' => '->checkAction' // you can only access this action if $this->checkAction() returns true
+	 * );
+	 * </code>
+	 *
+	 * @var array
+	 */
+	private static $allowed_actions = array (
+	);
 
+	public function init() {
+		parent::init();
 
-	
-	
+	}
+
+	public function PaginatedNewsEntries($pageLength = 20){
+		$entries = $this->BlogEntries();
+		return $entries->setPageLength($pageLength);
+	}
+
 }
-
-?>

@@ -1,0 +1,99 @@
+.header {
+	background: #0a98a8 url(../images/header-bg.png) center bottom no-repeat;
+	border-bottom: 1px solid rgba(0,0,0,.1);
+	padding: 10px 0;
+	position: relative;
+	@media (min-width: $break-medium) {
+		padding: 15px 0;
+	}
+}
+.logo {
+	float: left;
+	margin: 0;
+	@media (max-width: $break-small - 1 ) {
+		width: 200px;
+	}
+}
+.logo a, .logo img {
+	display: block;
+	width: 100%;
+}
+
+/* -------------------------------------------------------------------
+Social Media Icons
+----------------------------------------------------------------------*/
+.webicons {
+	list-style: none;
+}
+.header .webicons {
+	float: right;
+	margin: 23px 0 0;
+	@media (max-width: $break-medium - 1) {
+		display: none;
+	}
+}
+[class^="icon-"], [class*=" icon-"] {
+	background-size: cover;
+	display: inline-block;
+	color: #ffffff;
+	fill: #ffffff;
+	-webkit-transition: fill .2s linear;
+	-moz-transition: fill .2s linear;
+	-ms-transition: fill .2s linear;
+	transition: fill .2s linear;
+}
+.webicons li {
+	float: left;
+}
+.header .webicons li a {
+	padding: 0 10px;
+}
+.header [class^="icon-"], .header [class*=" icon-"] {
+	width: 15px;
+	height: 15px;
+}
+.webicons li a:hover [class^="icon-"],
+.webicons li a:focus [class^="icon-"],
+.webicons li a:active [class^="icon-"] {
+	fill: #003c43;
+}
+
+/* -------------------------------------------------------------------
+Top Nav
+----------------------------------------------------------------------*/
+.top-nav {
+	float: right;
+	margin-top: 28px;
+	margin-left: 30px;
+	@media (max-width: $break-medium - 1) {
+		display: none;
+	}
+}
+.top-nav ul {
+	list-style: none;
+	margin: 0;
+}
+.top-nav li {
+	float: left;
+	padding: 0 8px;
+}
+.top-nav li:first-child {
+	border-right: 1px solid #fff;
+	border-right: 1px solid rgba(255,255,255,.3);
+}
+.top-nav li a {
+	color: #fff;
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	font-style: italic;
+	line-height: 1;
+	margin: 0 5px;
+	text-shadow: 1px 1px 1px rgba(0,0,0,.1);
+	text-decoration: none;
+}
+.top-nav li a:hover, .top-nav li a:focus {
+	text-decoration: underline;
+}
+
+

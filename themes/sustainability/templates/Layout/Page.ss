@@ -1,65 +1,32 @@
+<article class="container main-container">
+	<div class="row">
 
-<div id="content-wrapper">
-<div id="middle-image">
+		<!-- Side Bar -->
+		<div class="col-lg-4 col-lg-push-8 sidebar">
+			<% include SideNav %>
+		</div>
 
-<div id="bodywrap">
+		<!-- Main Content -->
+		<div class="col-lg-8 col-lg-pull-4">
+			<div class="article">
+				$Breadcrumbs
+				<h1>$Title</h1>
+				$Content
+				$Form
+			</div>
+			<br />
+			<!-- Loop Sub Pages -->
+			<% include ChildPages %>
 
+			<div class="tablet-show">
+				<% include SideBarItems %>
+			</div>
 
-<% include Navigation %>
-
-
-
-<div class="clear"></div>
-
-</div><!--/end bodywrap div -->
-
-<div id="top-shadow"></div> 
-<div id="interior-wrapper">
-<div id="main-content-wrapper">
-
-
-<div id="content-right-column">
-
-<div id="side-navigation-top"></div>
-<div id="side-navigation">
-
-</div>
-<div id="side-navigation-bottom"></div>
-
-
+		</div><!-- end .col -->
+	</div><!-- end .row -->
+</article><!-- end .container -->
 
 
-</div>
+<!-- Gallery Carousel -->
+<% include Gallery %>
 
-<div id="content" class="typography">
-
-
-$Content
- 
- $Form
-
-
-
-
-
-</div>
-</div>
-
-
-
-
-<div class="clear"></div>
-</div> <!--end home wrapper -->
-<div id="interior-bottom-shadow"></div>
-
-
-
-
-
-
-
-
-
-
-</div><!--/end middle-image div -->
-</div><!--/end background graident div -->

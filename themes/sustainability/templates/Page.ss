@@ -1,210 +1,66 @@
 <!DOCTYPE html>
-
-<html lang="en">
+<!--[if lt IE 9]>         <html lang="en" class="lt-ie9 no-js"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
 <head>
-
-<title>$Title - Sustainability at Iowa - The University of Iowa</title>
-$MetaTags(false)
 <% base_tag %>
-<script src="//use.typekit.net/usb3cui.js"></script>
-<script>try{Typekit.load();}catch(e){}</script>
-<link rel="stylesheet" type="text/css" href="$ThemeDir/css/reset.css" />
-<link rel="stylesheet" type="text/css" href="$ThemeDir/css/styles.css" />
-<link rel="stylesheet" type="text/css" href="$ThemeDir/css/shadowbox.css" />
+<meta charset="utf-8">
+<meta name="description" content="$Content.LimitCharacters(150)">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Home | Sustainability at Iowa</title>
+<link rel="shortcut icon" href="{$BaseHref}favicon.ico" type="image/x-icon">
+<link rel="icon" href="{$BaseHref}favicon.ico" type="image/x-icon">
+<!--
 
-<link rel="stylesheet" href="$ThemeDir/css/ui.css" type="text/css" media="print, projection, screen"/>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
-<script type="text/javascript" src="$BaseHref/mysite/code/javascript/shadowbox.js"></script>
-<script type="text/javascript">
-Shadowbox.init();
-</script>
-<script type="text/javascript" src="http://imu.uiowa.edu/themes/imu4/javascript/topup/javascripts/top_up-min.js"></script> 
-<script type="text/javascript"> 
-TopUp.host = "http://imu.uiowa.edu/";
-TopUp.images_path = "themes/imu4/javascript/topup/images/top_up/";
-TopUp.players_path = "themes/imu4/javascript/topup/players/";
-function hideTopUp() {
-  TopUp.close();
-}
-$(document).ready(function leaveFrame() {
-  if (window!=window.top) {
-	var str = String(window.location.href);
-    if (str.indexOf("feedback/finished") > 0) {
-      window.location = "http://imu.uiowa.edu/feedback-small-thanks";
-	}
-  }
-});
-</script> 
+MMMMMMMM               MMMMMMMM                               DDDDDDDDDDDDD
+M:::::::M             M:::::::M                               D::::::::::::DDD
+M::::::::M           M::::::::M                               D:::::::::::::::DD
+M:::::::::M         M:::::::::M            +++++++            DDD:::::DDDDD:::::D
+M::::::::::M       M::::::::::M            +:::::+              D:::::D    D:::::D
+M:::::::::::M     M:::::::::::M            +:::::+              D:::::D     D:::::D
+M:::::::M::::M   M::::M:::::::M      +++++++:::::+++++++        D:::::D     D:::::D
+M::::::M M::::M M::::M M::::::M      +:::::::::::::::::+        D:::::D     D:::::D
+M::::::M  M::::M::::M  M::::::M      +:::::::::::::::::+        D:::::D     D:::::D
+M::::::M   M:::::::M   M::::::M      +++++++:::::+++++++        D:::::D     D:::::D
+M::::::M    M:::::M    M::::::M            +:::::+              D:::::D     D:::::D
+M::::::M     MMMMM     M::::::M            +:::::+              D:::::D    D:::::D
+M::::::M               M::::::M            +++++++            DDD:::::DDDDD:::::D
+M::::::M               M::::::M                               D:::::::::::::::DD
+M::::::M               M::::::M                               D::::::::::::DDD
+MMMMMMMM               MMMMMMMM                               DDDDDDDDDDDDD
 
-<script type="text/javascript" src="$BaseHref/mysite/code/javascript/hoverIntent.js"></script>
-<!--<script type="text/javascript" src="$BaseHref/mysite/code/javascript/superfish.js"></script>
-<script type="text/javascript">
-    $(document).ready(function(){   
-        jQuery('ul.sf-menu').superfish();
-    });
-</script>-->
+                              http://studentlife.uiowa.edu/md/
+-->
 
-
-
-
-<!--[if IE 6]><style type='text/css'>@import url($ThemeDir/css/ie6.css);</style><![endif]-->
-<!--[if IE 7]><style type='text/css'>@import url($ThemeDir/css/ie7.css);</style><![endif]-->
-
-
-
-
-<link rel="SHORTCUT ICON" href="$ThemeDir/images/favicon.ico" />
-
-
-<% if CurrentMember %>
-
-<style type="text/css">
-div.edit-box {
-  margin: 0;
-  font-size: 80% /*smaller*/;
-  font-weight: bold;
-  line-height: 1.1;
-  text-align: center;
-  position: fixed;
-  top: 2em;
-  left: auto;
-  width: 8.5em;
-  right: 2em;
-}
-div.edit-box p {
-  margin: 0; 
-  padding: 0.3em 0.4em;
-  font-family: Arial, sans-serif;
-  background: #900;
-  border: thin outset #900;
-  color: white;
-}
-
-div.edit-box a, div.edit-box em { display: block; margin: 0 0.5em }
-div.edit-box a, div.edit-box em { border-top: 2px groove #900 }
-div.edit-box a:first-child { border-top: none }
-div.edit-box em { color: #CFC }
-
-div.edit-box a:link { text-decoration: none; color: white }
-div.edit-box a:visited { text-decoration: none; color: #CCC }
-div.edit-box a:hover { background: black; color: white }
-</style>
-
-<% end_if %>
+<!-- Typekit Fonts -->
+<% include Typekit %>
+<!-- CSS -->
+<link rel="stylesheet" href="{$ThemeDir}/css/master.css">
+<!-- JS -->
+<!--[if lt IE 9]>
+   <script src="{$ThemeDir}/js/html5shiv.js"></script>
+<![endif]-->
 
 </head>
 
-<body>
-         
-         
+<body class="$ClassName  $Level(2).URLSegment shifter">
+  <% include Svg %>
 
-<div class="hidden"><a href="/#bodywrap">Skip to main content</a></div>
+  <div class="shifter-page">
+    <% include DivisionBarCopy %>
+    <% include Header %>
+    $Layout
+    <% include Footer %>
+  </div>
 
-<div id="container">
-<div id="header-wrapper"> 
-<div id="header"> 
- 
- <div id="search">
- 
-<!--<form method="get" action="http://search.uiowa.edu/search">
-<input type="text" style="width: 200px; border: 1px solid gray" size="19" title="text"/> 
-<input type="image" src="$ThemeDir/images/search.png" alt="search" name="op" id="edit-submit" value="Log in" tabindex="3" class="form-submit" title="submit"/>
-<input type="hidden" name="site" value="default_collection" />
+  <!-- Mobile Navigation Slideout -->
+  <% include ShifterNavigation %>
 
-<input type="hidden" name="client" value="default_frontend" />
-<input type="hidden" name="output" value="xml_no_dtd" />
-<input type="hidden" name="proxystylesheet" value="default_frontend" />
-<input type="hidden" name="sitesearch" value="sustainability.uiowa.edu" />
-
-</form>-->
-
-
-<form method="get" action="http://search.uiowa.edu/search">
-<input type="text" name="q" size="25" maxlength="256" value="" title="text"  />  
-<input type="submit" name="btnG" value="Search" class="submit" />  
-<input type="hidden" name="site" value="default_collection" />
-<input type="hidden" name="client" value="default_frontend" />
-<input type="hidden" name="output" value="xml_no_dtd" />
-<input type="hidden" name="proxystylesheet" value="default_frontend" />
-<input type="hidden" name="sitesearch" value="sustainability.uiowa.edu" />  
-</form>
-
-<!--<form>
-<input type="text" style="width: 200px; border: 1px solid gray" /> <input type="submit" class="formbutton" value="Submit" />
-</form>
--->
-</div>
-
-<a href="http://www.uiowa.edu" target="_blank"><img class="uiowa"  src="$ThemeDir/images/uiowa.png" alt="The University of Iowa" title="The University of Iowa" /></a><div class="clear"></div>
-  <h1 class="logo" title="Sustainability at Iowa"> <a href="$BaseHref">Sustainability at Iowa</a></h1>
- 
-  </div><!--  / header div -->
-</div><!--  / header wrapper div -->
-
-
-
-
-  
-
-$Layout
-
- 
-
-<div id="footer-container2">
-	<div class="footer2">
-	<a href= "http://www.aashe.org"><img id = "sponsor-logo1" src="$ThemeDir/images/Aashe.png" alt="Send Us Your Content" longdesc="http://sustainability.uiowa.edu" /></a>
-	<a href= "http://www.appa.org"><img id = "sponsor-logo2" src="$ThemeDir/images/appa.png" longdesc="http://sustainability.uiowa.edu" /></a>
-	<a href= "http://www.usgbc.org"><img id = "sponsor-logo3" src="$ThemeDir/images/usgbc.png" longdesc="http://sustainability.uiowa.edu" /></a>
-	<a href= "https://stars.aashe.org"><img id = "sponsor-logo4" src="$ThemeDir/images/stars.png" longdesc="http://sustainability.uiowa.edu" /></a>
-	<div class="clear"></div>
-	</div>
-</div>
-<div id="footer-container">    
-<div class="footer">
-<a href="$BaseHref/content-submission-form"><img src="$ThemeDir/images/contentbutton.png" alt="Send Us Your Content" title="Send Us Your Content" class="submit-content" longdesc="http://sustainability.uiowa.edu" /></a>	
-<a href="$BaseHref"><img style="margin-left:-10px;" src="$ThemeDir/images/newlogofooter.png" alt="Sustainability at Iowa" title="Sustainability at Iowa" width="333" height="80" class="logo" longdesc="http://sustainability.uiowa.edu" /></a>
-
-<p class="footer-contact">1680 University Capitol Centre, 200 South Clinton St. • Iowa City, IA 52242 • 319-335-5516  • <a href="mailto:Sustainability@uiowa.edu">Sustainability@uiowa.edu</a></p>
-
-
-  <ul class="menu">
-       <% loop Menu(1) %>
-                <li class="$URLSegment"><a href="$Link">$MenuTitle</a>
-                  <% if Children %>  <ul>
-                        <% loop Children %>
-                            <li><a href="$Link">$Title</a></li>
-                        <% end_loop %>
-                    </ul><% end_if %></li>
-            <% end_loop %>
-      </ul>
-		
-<p class="copywright">&copy; <a href="http://www.uiowa.edu/">The University of Iowa</a> {$Now.Year}. All rights reserved.</p>
-</div>
-<!--/end footer div --></div></div>
-<!--/end container div -->
-<% if CurrentMember %>
-<div class="edit-box">
-<p><a href="$BaseHref/admin/pages/edit/show/{$ID}">Edit this page</a></p>
-</div>
-<% end_if %>  
-    
-
-
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-try {
-var pageTracker = _gat._getTracker("UA-426753-19");
-pageTracker._trackPageview();
-} catch(err) {}</script>
+  <!-- JS -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  <!-- <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
+  <script src="{$ThemeDir}/js/build/production.min.js"></script>
+  <% include GoogleAnalytics %>
 
 </body>
 </html>
-
-
-
-
-
 
