@@ -37,6 +37,11 @@ Header Carousel
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#99000000',GradientType=0 ); /* IE6-9 */
 	}
 }
+.lt-ie10 .hero-img:after {
+	@media (min-width: $break-small) {
+		background: url(../images/bw-gradient.png) repeat-x bottom left;
+	}
+}
 .slickcarousel .inner {
 	background: #fff;
 	padding: 20px 40px;
@@ -145,6 +150,7 @@ Header Carousel
 .slickcarousel .slick-dots {
 	margin: 0;
 	bottom: 0;
+	z-index: 1000;
 	@media (min-width: $break-medium) {
 		bottom: 35px;
 	}
@@ -326,6 +332,10 @@ Pulse
 		margin-right: -50%;
 	}
 }
+.lt-ie10 .pulse-title:before,
+.lt-ie10 .pulse-title:after {
+	display: none;
+}
 .pulse .pulse-panel {
 	list-style: none;
  	margin: 0;
@@ -408,9 +418,15 @@ Pulse
 	-webkit-transform: translate3d(0,150%,0);
 	transform: translate3d(0,150%,0);
 }
+.lt-ie10 .pulse-tabs li:after {
+	display: none;
+}
 .pulse-tabs li.active:after {
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
+}
+.lt-ie10 .pulse-tabs li.active:after {
+	display: block;
 }
 
 

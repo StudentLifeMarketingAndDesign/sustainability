@@ -1,5 +1,6 @@
 .header {
 	background: #0a98a8 url(../images/header-bg.png) center bottom no-repeat;
+	border-bottom: 1px solid #008392;
 	border-bottom: 1px solid rgba(0,0,0,.1);
 	padding: 10px 0;
 	position: relative;
@@ -10,6 +11,7 @@
 .logo {
 	float: left;
 	margin: 0;
+	width: 286px;
 	@media (max-width: $break-small - 1 ) {
 		width: 200px;
 	}

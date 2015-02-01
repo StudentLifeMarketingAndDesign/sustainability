@@ -9,7 +9,6 @@
 				<!--[if IE 9]></video><![endif]-->
 				<img srcset="$Image.SetWidth(480).URL" alt="$Title">
 			</picture>
-			<!-- <img data-lazy="$Image.URL" alt=""> -->
 			<div class="inner">
 				<h3>$Title</h3>
 				<p>$SubTitle</p>

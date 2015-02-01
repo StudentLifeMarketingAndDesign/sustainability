@@ -94,6 +94,7 @@ $shifter-icon-width:					20px;
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
+	z-index: 1000;
 	@media (max-width: $break-small - 1) {
 		text-indent: -999em;
 		padding: 10px 30px 10px 0;

@@ -87,7 +87,7 @@ Slick Carousel
 	display: none !important;
 	@media (min-width: $break-medium) {
 		content: "";
-		background: url(../images/roller-controls.png) center center no-repeat;
+		background: url(../images/roller-controls.png) left center no-repeat;
 		display: block !important;
 		height: 24px;
 		width: 20px;
@@ -101,9 +101,6 @@ Slick Carousel
 }
 .gallery-carousel .slick-next:after {
 	background-position: right center;
-}
-.gallery-carousel .slick-prev:after {
-	background-position: left center;
 }
 
 /* Dots Navigation */

@@ -3,7 +3,7 @@
 	<div class="container clearfix">
 		<h1 class="logo">
 			<a href="{$BaseHref}">
-				<img src="{$ThemeDir}/images/sustainability-logo.png" alt="Sustainability at Iowa">
+				<img src="{$ThemeDir}/images/sustainability-logo.png" alt="Sustainability at Iowa" width="286">
 			</a>
 		</h1>
 		<nav role="navigation" class="top-nav no-print">
@@ -52,10 +52,6 @@
 		</ul>
 		<span class="shifter-handle">Menu</span>
 	</div>
-
-	<!-- <a class="menu-icon">
-		<span>Menu</span>
-	</a> -->
 </header>
 
 <!-- Navigation -->

@@ -1,11 +1,11 @@
 /* Configuration */
-$nav-padding-medium: 8px;
-$nav-margin-medium: 13px;
+$nav-padding-medium: 7px;
+$nav-margin-medium: 12px;
 
-$nav-padding-large: 12px;
-$nav-margin-large: 42px;
+$nav-padding-large: 10px;
+$nav-margin-large: 43px;
 
-$nav-padding-xlarge: 20px;
+$nav-padding-xlarge: 26px;
 $nav-margin-xlarge: 44px;
 
 
@@ -14,10 +14,11 @@ Navigation
 --------------------------------------------------------------- */
 .nav-wrapper {
 	background-color: #0a98a8;
+	border-top: 1px solid #1aa7b6;
 	border-top: 1px solid rgba(255,255,255,.15);
 	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
 	position: relative;
-	z-index: 100;
+	z-index: 1000;
 	@media (max-width: $break-medium - 1) {
 		display: none;
 	}
@@ -89,6 +90,7 @@ Dropdown
 	border-top: 4px solid $orange;
 	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
 	left: 0;
+	display: none; /* fix for fucking ie bug, fuck you ie */
 	list-style: none;
 	margin: -4px 0 0;
 	opacity: 0;
@@ -97,6 +99,7 @@ Dropdown
 	padding: 20px 30px;
 	top: 53px;
 	width: 300px;
+	z-index: 1000;
 	-webkit-transition: none;
 	transition: none;
 	-webkit-transform: translateY(10px);
@@ -111,6 +114,7 @@ Dropdown
 }
 .main-nav > li:hover .dropdown {
 	opacity: 1;
+	display: block; /* fix for fucking ie bug, fuck you ie */
 	pointer-events: all;
 	-webkit-transition: -webkit-transform 0.15s ease, opacity 0.15s linear;
 	transition: -ms-transform 0.15s ease, opacity 0.15s linear;
@@ -119,7 +123,7 @@ Dropdown
 	-ms-transform: translateY(0);
 	transform: translateY(0);
 }
-.main-nav > li:last-of-type .dropdown {
+.main-nav > li.last .dropdown {
 	left: auto;
 	right: 0;
 }
@@ -136,7 +140,7 @@ Dropdown
 	border-right: 10px solid transparent;
 	border-bottom: 10px solid $orange;
 }
-.main-nav > li:last-of-type .dropdown:before {
+.main-nav > li.last .dropdown:before {
 	left: auto;
 	right: 50px;
 }
@@ -150,7 +154,7 @@ Dropdown
 	padding: 10px 0;
 	text-align: left;
 }
-.dropdown li:first-of-type a {
+.dropdown li.first a {
 	border-top: none;
 }
 .dropdown li a:hover, .dropdown li a:focus {

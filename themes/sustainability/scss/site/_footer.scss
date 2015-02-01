@@ -52,6 +52,7 @@ Footer Navigation
 	padding: 20px 15px;
 	text-decoration: none;
 	&:hover {
+		background-color: #32a3af;
 		background-color: rgba(255,255,255,.2);
 	}
 	@media (min-width: $break-large) {
@@ -94,6 +95,7 @@ Social Media Icons
 Sponsors
 ----------------------------------------------------------------------*/
 .sponsors {
+	border-bottom: 1px solid #328991;
 	border-bottom: 1px solid rgba(255,255,255,.2);
 	list-style: none;
 	padding: 20px 0;
@@ -134,7 +136,9 @@ Sponsors
 	margin: 10px 0 20px;
 }
 .footer hr {
+	border-top: 1px solid #004b53;
 	border-top: 1px solid rgba(0,0,0,.3);
+	border-bottom: 1px solid #328991;
 	border-bottom: 1px solid rgba(255,255,255,.2);
 }
 
