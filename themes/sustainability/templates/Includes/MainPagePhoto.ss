@@ -39,7 +39,7 @@
 			</span>
 		</span>
 	<% end_if %>
-	<% if $URLSegment = recycling-and-waste-reduction %>
+	<% if $URLSegment = recycling %>
 		<span class="init-icon">
 			<span>
 				<img src="{$ThemeDir}/images/icon-recycle-128.png" alt="Recycling" class="init-img">
