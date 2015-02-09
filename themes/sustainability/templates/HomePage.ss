@@ -7,7 +7,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="$Content.LimitCharacters(150)">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<title>Home | Sustainability at Iowa</title>
+<title>$Title | Sustainability at Iowa</title>
 <script src="{$ThemeDir}/js/modernizr.js"></script>
 <link rel="shortcut icon" href="{$BaseHref}favicon.ico" type="image/x-icon">
 <link rel="icon" href="{$BaseHref}favicon.ico" type="image/x-icon">
