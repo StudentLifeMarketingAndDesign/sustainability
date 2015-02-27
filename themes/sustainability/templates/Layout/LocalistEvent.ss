@@ -55,7 +55,16 @@
 				<% end_if %>
 				<% if $Sponsor %>
 					<p><strong>Sponsor:</strong><br> $Sponsor </p><% end_if %>
-				<% if $MoreInfoLink %><a href="$MoreInfoLink" target="_blank">More information</a> <br /><% end_if %>
+				<% if $MoreInfoLink || $LocalistLink %>
+					<p>
+						<% if $MoreInfoLink %>
+							<a href="$MoreInfoLink" class="button" target="_blank">Event Website</a>
+						<% end_if %>
+						<% if $LocalistLink %>
+							<a href="$LocalistLink" class="button" target="_blank">View On events.uiowa.edu</a>
+						<% end_if %>
+					</p>
+				<% end_if %>
 
 			</div>
 		</div><!-- end .col -->

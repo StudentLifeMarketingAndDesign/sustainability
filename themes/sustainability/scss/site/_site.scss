@@ -236,7 +236,21 @@ Justify
 	margin: 0 !important;
 }
 
-
+.button {
+	background: $link;
+	border-radius: 2px;
+	color: #fff;
+	display: inline-block;
+	font-size: 0.8em;
+	margin: 0.3em .5em .3em 0;
+	padding: 0.3em 0.6em;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+.button:hover {
+	background-color: darken( $link, 10% );
+	color: #fff;
+}
 /* ---------------------------------------------------------------
 Admin Login form fields
 --------------------------------------------------------------- */
