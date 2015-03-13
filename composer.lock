@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "8e1e442f4cb7a1ed42573f2d70a0421d",
+    "hash": "dce6f1d0066eb1c6022294a2f2f2b387",
     "packages": [
         {
             "name": "composer/installers",
@@ -285,6 +285,49 @@
             "time": "2015-01-12 04:52:29"
         },
         {
+            "name": "silverstripe/event-calendar",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/unclecheese/silverstripe-event-calendar.git",
+                "reference": "9a490787b37b362e97410814a25fd9f51a2cd68f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/unclecheese/silverstripe-event-calendar/zipball/9a490787b37b362e97410814a25fd9f51a2cd68f",
+                "reference": "9a490787b37b362e97410814a25fd9f51a2cd68f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2",
+                "silverstripe/cms": ">=3.1",
+                "silverstripe/framework": ">=3.1"
+            },
+            "replace": {
+                "silverstripe/event-calendar": "*"
+            },
+            "type": "silverstripe-module",
+            "extra": {
+                "installer-name": "event_calendar"
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Aaron Carlino",
+                    "homepage": "http://leftandmain.com"
+                }
+            ],
+            "description": "Event Calendar for the SilverStripe CMS",
+            "keywords": [
+                "events",
+                "silverstripe"
+            ],
+            "time": "2015-03-10 23:57:27"
+        },
+        {
             "name": "silverstripe/framework",
             "version": "3.1.9",
             "source": {
@@ -458,8 +501,11 @@
     "stability-flags": {
         "md/ac-json-events": 20,
         "md/division-bar": 20,
-        "md/rss-display": 20
+        "md/rss-display": 20,
+        "silverstripe/event-calendar": 20
     },
+    "prefer-stable": false,
+    "prefer-lowest": false,
     "platform": {
         "php": ">=5.3.2"
     },

@@ -1,29 +1,26 @@
 <?php
-class NewsAndEvents extends Page {
 
+class CommunityEvent extends CalendarEvent{
 	private static $db = array(
-
+		'Location' => 'Text'
 	);
 
-	private static $has_one = array(
 
-	);
-
-	public function getCMSFields(){
+public function getCMSFields(){
 		$fields = parent::getCMSFields();
+		
 
-		// $fields->removeByName("Content");
-		$fields->removeByName("Metadata");
-		$fields->removeByName("Gallery");
-		$fields->removeByName("PageSummary");
-
+		$fields->addFieldToTab("Root.Main", new TextField("Location", "Location"), "Content");
 
 		return $fields;
-
 	}
 
+
+
 }
-class NewsAndEvents_Controller extends Page_Controller {
+
+
+class CommunityEvent_Controller extends Page_Controller {
 
 	/**
 	 * An array of actions that can be accessed via a request. Each array element should be an action name, and the
@@ -45,26 +42,11 @@ class NewsAndEvents_Controller extends Page_Controller {
 		parent::init();
 		// You can include any CSS or JS required by your project here.
 		// See: http://doc.silverstripe.org/framework/en/reference/requirements
-		
-		$this->getEvents();
 	}
 
-	public function getEvents(){
-		$communityEvents  = CommunityEvent::get();
-		$localistEvents = LocalistEvent::get();
-		$eventsList = ArrayList::create();
-		print_r($localistEvents);
-
-		foreach ($communityEvents as $CommunityEvent) {
-			$eventsList->add($CommunityEvent);
+	public function index() {
+		return $this->renderWith(array("CommunityEvent", "Page"));
 
 	}
-		foreach ($localListEvents as $localListEvent) {
- 			$eventsList->add($localListEvent);
-		}
-		//print_r($eventsList);
 
-		return $eventsList;
-	}
-	
 }
