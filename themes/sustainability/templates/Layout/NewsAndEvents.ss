@@ -181,7 +181,8 @@
 								<h5 class="newsblock-title"><a href="$Link">$Title</a></h5>
 								<% loop $Dates %>
 									<p class="date-time">
-										<% with $StartDate %>
+				
+										<% with $StartDateTime %>
 											<time itemprop="startDate" datetime="$Format(c)">
 												$Format(l), $Format(F) $Format(j)
 											</time>

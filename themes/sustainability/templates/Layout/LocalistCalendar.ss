@@ -26,6 +26,7 @@
 									<% end_if %>
 									<h4 class="newsblock-title"><a href="$Link">$Title</a></h4>
 									<% loop $Dates %>
+						
 										<p class="date-time">
 											<% with $StartDateTime %>
 												<time itemprop="startDate" datetime="$Format(c)">
