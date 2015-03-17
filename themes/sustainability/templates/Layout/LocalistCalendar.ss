@@ -16,7 +16,7 @@
 
 				<!-- Loop Events -->
 					<div class="newsholder-entries">
-						<% loop $EventList %>
+						<% loop $AllEvents %>
 							<div class="newsblock clearfix <% if $Photo %>withphoto<% end_if %>">
 								<div class="newsblock-info">
 									<% if $Image %>

@@ -8,7 +8,7 @@
         "md/ac-json-events" : "dev-master",
         "md/division-bar" : "dev-master",
         "md/rss-display" : "dev-master",
-        "silverstripe/blog" : "*",
+        "silverstripe/blog" : "1.0",
         "undefinedoffset/sortablegridfield" : "*",
         "silverstripe/widgets": "*",
         "silverstripe/userforms": "*",

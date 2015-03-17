@@ -167,10 +167,10 @@
 		<!-- Main Content -->
 		<div class="col-lg-6">
 				<h2>Upcoming Events <a href="{$BaseHref}events" class="all-link">View all events</a></h2>
-				<% with LocalistCalendar %>
+	
 				<!-- Loop Events -->
 				<div class="newsholder-entries">
-					<% loop $EventList.Limit(8) %>
+					<% loop $AllEvents.Limit(8) %>
 						<div class="newsblock clearfix <% if $Photo %>withphoto<% end_if %>">
 							<div class="newsblock-info">
 								<% if $Image %>
@@ -181,7 +181,7 @@
 								<h5 class="newsblock-title"><a href="$Link">$Title</a></h5>
 								<% loop $Dates %>
 									<p class="date-time">
-										<% with $StartDateTime %>
+										<% with $StartDate %>
 											<time itemprop="startDate" datetime="$Format(c)">
 												$Format(l), $Format(F) $Format(j)
 											</time>
@@ -208,7 +208,6 @@
 						</div>
 					<% end_loop %>
 				</div>
-			<% end_with %>
 		</div>
 	</div>
 </div><!-- end .container -->

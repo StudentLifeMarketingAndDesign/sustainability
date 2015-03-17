@@ -1,24 +1,30 @@
 <?php
 
-class CommunityEvent extends CalendarEvent{
+class CommunityEvent extends CalendarEvent {
 	private static $db = array(
-		'Location' => 'Text'
+		'Location' => 'Text',
+		'FirstStartDateTime' => 'SS_Datetime',
 	);
 
-
-public function getCMSFields(){
+	public function getCMSFields() {
 		$fields = parent::getCMSFields();
-		
 
 		$fields->addFieldToTab("Root.Main", new TextField("Location", "Location"), "Content");
 
 		return $fields;
 	}
 
+	public function Dates() {
+		return $this->DateTimes();
+	}
 
+	public function onBeforeWrite() {
+		$firstDateTime = $this->DateTimes()->First()->StartDate;
+		$this->FirstStartDateTime = $firstDateTime;
+		parent::onBeforeWrite();
+	}
 
 }
-
 
 class CommunityEvent_Controller extends Page_Controller {
 

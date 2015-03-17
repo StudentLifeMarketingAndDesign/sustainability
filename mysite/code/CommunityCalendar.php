@@ -1,28 +1,25 @@
 <?php
-class NewsAndEvents extends Page {
 
+class CommunityCalendar extends Calendar {
 	private static $db = array(
 
 	);
 
-	private static $has_one = array(
-
+	private static $allowed_children = array(
+		'CommunityEvent',
 	);
 
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
 
-		// $fields->removeByName("Content");
-		$fields->removeByName("Metadata");
-		$fields->removeByName("Gallery");
-		$fields->removeByName("PageSummary");
+		$fields->addFieldToTab("Root.Main", new TextField("Location", "Location"), "Content");
 
 		return $fields;
-
 	}
 
 }
-class NewsAndEvents_Controller extends Page_Controller {
+
+class CommunityCalendar_Controller extends Calendar_Controller {
 
 	/**
 	 * An array of actions that can be accessed via a request. Each array element should be an action name, and the
@@ -44,8 +41,11 @@ class NewsAndEvents_Controller extends Page_Controller {
 		parent::init();
 		// You can include any CSS or JS required by your project here.
 		// See: http://doc.silverstripe.org/framework/en/reference/requirements
+	}
 
-		//$this->getEvents();
+	public function index(SS_HTTPRequest $r) {
+		$this->redirect("events/");
+
 	}
 
 }

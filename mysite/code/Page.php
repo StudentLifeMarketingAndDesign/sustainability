@@ -86,6 +86,28 @@ class Page_Controller extends ContentController {
 	private static $allowed_actions = array(
 	);
 
+	public function getAllEvents() {
+		$communityEvents = CommunityEvent::get();
+		$localistCalendar = LocalistCalendar::get()->First();
+		$localistEvents = $localistCalendar->EventList();
+
+		$eventsList = ArrayList::create();
+		//print_r($localistEvents);
+
+		foreach ($communityEvents as $CommunityEvent) {
+			$eventsList->add($CommunityEvent);
+
+		}
+		foreach ($localistEvents as $localListEvent) {
+			$eventsList->add($localListEvent);
+		}
+
+		$eventsListSorted = $eventsList->sort('FirstStartDateTime ASC');
+		//print_r($eventsListSorted);
+
+		return $eventsListSorted;
+	}
+
 	public function init() {
 		parent::init();
 		Requirements::block(THIRDPARTY_DIR . '/jquery/jquery.js');
