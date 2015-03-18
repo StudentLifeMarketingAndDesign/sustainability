@@ -2,13 +2,23 @@
 class CalendarDateTimeExtension extends DataExtension {
 
 	public function StartDateTime() {
-		//print_r();
-
 		$startDateTime = new SS_Datetime();
 		$startDateTime->setValue($this->owner->StartDate);
 
 		return $startDateTime;
-		//return "eawhasf";
+	}
+
+	public function onBeforeWrite(){
+		$event = $this->owner->Event();
+
+		$event->FirstStartDateTime = $this->owner->StartDate;
+		$event->write();
+
+		if($event->isPublished()){
+			$event->doPublish();
+		}
+
+		parent::onBeforeWrite();
 	}
 
 }

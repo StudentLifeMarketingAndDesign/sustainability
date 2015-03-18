@@ -2,15 +2,28 @@
 
 class CommunityEvent extends CalendarEvent {
 	private static $db = array(
-		'Location' => 'Text',
+		'Venue' => 'Text',
+		'Sponsor' => 'Text',
+		'ContactName' => 'Text',
+		'ContactEmail' => 'Text',
+		'MoreInfoLink' => 'Text',
+
 		'FirstStartDateTime' => 'SS_Datetime',
+	);
+
+	private static $has_one = array (
+		'Image' => 'Image'
 	);
 
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
 
-		$fields->addFieldToTab("Root.Main", new TextField("Location", "Location"), "Content");
-
+		$fields->addFieldToTab("Root.Main", new TextField("Venue", "Venue"), "Content");
+		$fields->addFieldToTab("Root.Main", new TextField("Sponsor", "Sponsor"), "Content");
+		$fields->addFieldToTab("Root.Main", new TextField("ContactName", "Contact Name"), "Content");
+		$fields->addFieldToTab("Root.Main", new TextField("ContactEmail", "Contact Email"), "Content");
+		$fields->addFieldToTab("Root.Main", new TextField("MoreInfoLink", "More Info Link"), "Content");
+		$fields->addFieldToTab('Root.Main', new UploadField('Image'), 'Content');
 		return $fields;
 	}
 
@@ -19,9 +32,13 @@ class CommunityEvent extends CalendarEvent {
 	}
 
 	public function onBeforeWrite() {
+		$this->updateFirstStartDateTime();
+		parent::onBeforeWrite();
+	}
+
+	public function updateFirstStartDateTime(){
 		$firstDateTime = $this->DateTimes()->First()->StartDate;
 		$this->FirstStartDateTime = $firstDateTime;
-		parent::onBeforeWrite();
 	}
 
 }
@@ -50,9 +67,5 @@ class CommunityEvent_Controller extends Page_Controller {
 		// See: http://doc.silverstripe.org/framework/en/reference/requirements
 	}
 
-	public function index() {
-		return $this->renderWith(array("CommunityEvent", "Page"));
-
-	}
 
 }

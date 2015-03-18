@@ -95,10 +95,12 @@ class Page_Controller extends ContentController {
 		//print_r($localistEvents);
 
 		foreach ($communityEvents as $CommunityEvent) {
+			//print_r('community event '.$CommunityEvent->FirstStartDateTime.'<br />');
 			$eventsList->add($CommunityEvent);
 
 		}
 		foreach ($localistEvents as $localListEvent) {
+			//print_r('localistevent '.$localListEvent->FirstStartDateTime.'<br />');
 			$eventsList->add($localListEvent);
 		}
 
