@@ -259,11 +259,10 @@
 		</div>
 
 	</div>
-
-
-
-
-
-
+<%-- 
+	<h2>Earth Month!</h2>
+	<% loop $LocalistCalendar.EventListByTag("earth month") %>
+		<h3>$Title</h3>
+	<% end_loop %> --%>
 
 </div><!-- end .container -->
