@@ -37,8 +37,10 @@ class CommunityEvent extends CalendarEvent {
 	}
 
 	public function updateFirstStartDateTime(){
-		$firstDateTime = $this->DateTimes()->First()->StartDate;
-		$this->FirstStartDateTime = $firstDateTime;
+		if($this->DateTimes()->First()){
+			$firstDateTime = $this->DateTimes()->First()->StartDate;
+			$this->FirstStartDateTime = $firstDateTime;
+		}
 	}
 
 }

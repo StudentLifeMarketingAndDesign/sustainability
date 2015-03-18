@@ -12,8 +12,6 @@ class CommunityCalendar extends Calendar {
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
 
-		$fields->addFieldToTab("Root.Main", new TextField("Location", "Location"), "Content");
-
 		return $fields;
 	}
 
