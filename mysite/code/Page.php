@@ -60,7 +60,9 @@ class Page extends SiteTree {
 
 		return $fields;
 	}
-
+	public function Breadcrumbs( $maxDepth = 20, $unlinked = false, $stopAtPageType = false, $showHidden = false ){
+		return parent::Breadcrumbs(20, false, false, true);
+	}
 	public function SidebarItems() {
 		return $this->owner->getManyManyComponents('SidebarItems')->sort('SortOrder');
 	}
@@ -118,5 +120,6 @@ class Page_Controller extends ContentController {
 		// included so that our older themes still work
 
 	}
+
 
 }
