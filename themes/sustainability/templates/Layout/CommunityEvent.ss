@@ -36,8 +36,9 @@
 						<% end_if %>
 					</p>
 				<% end_loop %>
-
+				<% if $Venue %>
 				<p><strong>Venue:</strong><br>$Venue</p>
+				<% end_if %>
 
 				<% if $Content %>
 					$Content
