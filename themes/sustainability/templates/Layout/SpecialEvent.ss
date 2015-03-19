@@ -31,5 +31,44 @@
 	</article><!-- end .container -->
 <% end_if %>
 
+<!-- Tagged Events -->
+<% with LocalistCalendar %>
+	<div class="relatednews">
+		<div class="container">
+			<h2>Related Events</h2>
+			<% loop $EventList %>
+				<div class="relatednews-item">
+					<h4><a href="$Link">$Title</a></h4>
+					<% loop $Dates %>
+						<p class="date-time">
+							<% with $StartDateTime %>
+								<time itemprop="startDate" datetime="$Format(c)">
+									$Format(l), $Format(F) $Format(j)
+								</time>
+								 , $Format("g:i A")
+							<% end_with %>
+							<% if $EndTime %>
+								<% with $EndTime %>
+									- $Format("g:i A")
+								<% end_with %>
+							<% end_if %>
+							<% if $EndDate %>
+								until
+								<% with $EndDate %>
+									<time itemprop="endDate" datetime="$Format(c)">
+										$Format(l), $Format(F) $Format(j)
+									</time>
+									, $Format("g:i A")
+								<% end_with %>
+							<% end_if %>
+						</p>
+					<% end_loop %>
+					<p>$Venue.Title</p>
+				</div>
+			<% end_loop %>
+		</div>
+	</div>
+<% end_with %>
+
 <!-- Gallery Carousel -->
 <% include Gallery %>
