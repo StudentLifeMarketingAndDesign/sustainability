@@ -32,6 +32,7 @@
 <% end_if %>
 
 <!-- Tagged Events -->
+<% if $EventTag %>
 	<div class="relatednews">
 		<div class="container">
 			<h2>Related Events</h2>
@@ -67,6 +68,6 @@
 			<% end_loop %>
 		</div>
 	</div>
-
+<% end_if %>
 <!-- Gallery Carousel -->
 <% include Gallery %>
