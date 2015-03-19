@@ -16,6 +16,8 @@
 							<time itemprop="startDate" datetime="$Format(c)">
 								$Format(l), $Format(F) $Format(j)
 							</time>
+						<% end_with %>
+						<% with $StartTime %>
 							 <br />$Format("g:i A")
 						<% end_with %>
 						<% if $EndTime %>
