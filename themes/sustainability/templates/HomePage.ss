@@ -8,35 +8,51 @@
 <meta name="description" content="$Content.LimitCharacters(150)">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <title>$Title | Sustainability at Iowa</title>
-<script src="{$ThemeDir}/js/modernizr.js"></script>
 <link rel="shortcut icon" href="{$BaseHref}favicon.ico" type="image/x-icon">
 <link rel="icon" href="{$BaseHref}favicon.ico" type="image/x-icon">
-<!--
-
-MMMMMMMM               MMMMMMMM                               DDDDDDDDDDDDD
-M:::::::M             M:::::::M                               D::::::::::::DDD
-M::::::::M           M::::::::M                               D:::::::::::::::DD
-M:::::::::M         M:::::::::M            +++++++            DDD:::::DDDDD:::::D
-M::::::::::M       M::::::::::M            +:::::+              D:::::D    D:::::D
-M:::::::::::M     M:::::::::::M            +:::::+              D:::::D     D:::::D
-M:::::::M::::M   M::::M:::::::M      +++++++:::::+++++++        D:::::D     D:::::D
-M::::::M M::::M M::::M M::::::M      +:::::::::::::::::+        D:::::D     D:::::D
-M::::::M  M::::M::::M  M::::::M      +:::::::::::::::::+        D:::::D     D:::::D
-M::::::M   M:::::::M   M::::::M      +++++++:::::+++++++        D:::::D     D:::::D
-M::::::M    M:::::M    M::::::M            +:::::+              D:::::D     D:::::D
-M::::::M     MMMMM     M::::::M            +:::::+              D:::::D    D:::::D
-M::::::M               M::::::M            +++++++            DDD:::::DDDDD:::::D
-M::::::M               M::::::M                               D:::::::::::::::DD
-M::::::M               M::::::M                               D::::::::::::DDD
-MMMMMMMM               MMMMMMMM                               DDDDDDDDDDDDD
-
-                              http://studentlife.uiowa.edu/md/
--->
-
+<!-- CSS -->
+<script>
+	function loadCSS( href, before, media, callback ){
+		"use strict";
+		var ss = window.document.createElement( "link" );
+		var ref = before || window.document.getElementsByTagName( "script" )[ 0 ];
+		var sheets = window.document.styleSheets;
+		ss.rel = "stylesheet";
+		ss.href = href;
+		ss.media = "only x";
+		if( callback ) {
+			ss.onload = callback;
+		}
+		ref.parentNode.insertBefore( ss, ref );
+		ss.onloadcssdefined = function( cb ){
+			var defined;
+			for( var i = 0; i < sheets.length; i++ ){
+				if( sheets[ i ].href && sheets[ i ].href.indexOf( href ) > -1 ){
+					defined = true;
+				}
+			}
+			if( defined ){
+				cb();
+			}
+			else {
+				setTimeout(function() {
+					ss.onloadcssdefined( cb );
+				});
+			}
+		};
+		ss.onloadcssdefined(function() {
+			ss.media = media || "all";
+		});
+		return ss;
+	}
+	loadCSS( "{$ThemeDir}/css/master.css" );
+</script>
+<noscript>
+	<link rel="stylesheet" href="{$ThemeDir}/css/master.css">
+</noscript>
 <!-- Typekit Fonts -->
 <% include Typekit %>
-<!-- CSS -->
-<link rel="stylesheet" href="{$ThemeDir}/css/master.css">
+<script src="{$ThemeDir}/js/modernizr.js"></script>
 <!--[if IE 8]>
   	<script>var IE8 = true;</script>
   	<script src="{$ThemeDir}/js/site.ie8.js"></script>
@@ -49,12 +65,9 @@ MMMMMMMM               MMMMMMMM                               DDDDDDDDDDDDD
 	 <script src="{$ThemeDir}/js/html5shiv.js"></script>
 	 <script src="{$ThemeDir}/js/respond.min.js"></script>
 <![endif]-->
-
 </head>
-
 <body class="$ClassName $Level(2).URLSegment shifter">
 	<% include Svg %>
-
 	<div class="shifter-page">
 		<% include DivisionBarCopy %>
 		<% include Header %>

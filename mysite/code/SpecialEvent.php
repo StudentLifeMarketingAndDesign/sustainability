@@ -2,7 +2,7 @@
 class SpecialEvent extends Page {
 
 	private static $db = array(
-
+		"EventTag" => "Text"
 	);
 
 	private static $has_one = array(
@@ -16,6 +16,7 @@ class SpecialEvent extends Page {
 		$fields->removeByName("Metadata");
 
 		$fields->addFieldToTab("Root.Main", new UploadField("PagePhoto", "Header Photo (width:1200px, height: 500px)"));
+		$fields->addFieldToTab("Root.Main", new TextField("EventTag", "Tag used to show events"));
 
 		return $fields;
 
