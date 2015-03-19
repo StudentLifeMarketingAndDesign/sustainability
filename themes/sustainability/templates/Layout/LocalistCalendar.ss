@@ -16,7 +16,7 @@
 
 				<!-- Loop Events -->
 					<div class="newsholder-entries">
-						<% loop $EventList %>
+						<% loop $AllEvents %>
 							<div class="newsblock clearfix <% if $Photo %>withphoto<% end_if %>">
 								<div class="newsblock-info">
 									<% if $Image %>
@@ -26,6 +26,7 @@
 									<% end_if %>
 									<h4 class="newsblock-title"><a href="$Link">$Title</a></h4>
 									<% loop $Dates %>
+						
 										<p class="date-time">
 											<% with $StartDateTime %>
 												<time itemprop="startDate" datetime="$Format(c)">

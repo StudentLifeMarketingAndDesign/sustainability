@@ -60,7 +60,9 @@ class Page extends SiteTree {
 
 		return $fields;
 	}
-
+	public function Breadcrumbs($maxDepth = 20, $unlinked = false, $stopAtPageType = false, $showHidden = false) {
+		return parent::Breadcrumbs(20, false, false, true);
+	}
 	public function SidebarItems() {
 		return $this->owner->getManyManyComponents('SidebarItems')->sort('SortOrder');
 	}
@@ -86,6 +88,55 @@ class Page_Controller extends ContentController {
 	private static $allowed_actions = array(
 	);
 
+	public function getAllEvents() {
+		$communityEvents = CommunityEvent::get();
+		$localistCalendar = LocalistCalendar::get()->First();
+		$localistEvents = $localistCalendar->EventList();
+
+		$eventsList = ArrayList::create();
+		//print_r($localistEvents);
+
+		foreach ($communityEvents as $CommunityEvent) {
+			//print_r('community event '.$CommunityEvent->FirstStartDateTime.'<br />');
+			$eventsList->add($CommunityEvent);
+
+		}
+		foreach ($localistEvents as $localListEvent) {
+			//print_r('localistevent '.$localListEvent->FirstStartDateTime.'<br />');
+			$eventsList->add($localListEvent);
+		}
+
+		$eventsListSorted = $eventsList->sort('FirstStartDateTime ASC');
+		//print_r($eventsListSorted);
+
+		return $eventsListSorted;
+	}
+
+	public function EventListByTag() {
+		$calendar = LocalistCalendar::get()->First();
+
+		if (isset($this->EventTag)) {
+			$events = $calendar->EventListByTag($this->EventTag);
+			return $events;
+		} else {
+			$events = $calendar->EventList();
+		}
+
+		return $events;
+	}
+
+	public function EventListBySearch() {
+		$calendar = LocalistCalendar::get()->First();
+
+		if (isset($this->EventTag)) {
+			$events = $calendar->EventListBySearchTerm($this->EventTag);
+			return $events;
+		} else {
+			$events = $calendar->EventList();
+		}
+
+		return $events;
+	}
 	public function init() {
 		parent::init();
 		Requirements::block(THIRDPARTY_DIR . '/jquery/jquery.js');

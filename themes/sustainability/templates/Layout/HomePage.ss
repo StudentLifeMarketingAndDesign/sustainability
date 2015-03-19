@@ -260,10 +260,4 @@
 
 	</div>
 
-
-
-
-
-
-
 </div><!-- end .container -->
