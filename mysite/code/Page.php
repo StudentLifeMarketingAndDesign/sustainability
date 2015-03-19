@@ -60,7 +60,7 @@ class Page extends SiteTree {
 
 		return $fields;
 	}
-	public function Breadcrumbs( $maxDepth = 20, $unlinked = false, $stopAtPageType = false, $showHidden = false ){
+	public function Breadcrumbs($maxDepth = 20, $unlinked = false, $stopAtPageType = false, $showHidden = false) {
 		return parent::Breadcrumbs(20, false, false, true);
 	}
 	public function SidebarItems() {
@@ -112,6 +112,31 @@ class Page_Controller extends ContentController {
 		return $eventsListSorted;
 	}
 
+	public function EventListByTag() {
+		$calendar = LocalistCalendar::get()->First();
+
+		if (isset($this->EventTag)) {
+			$events = $calendar->EventListByTag($this->EventTag);
+			return $events;
+		} else {
+			$events = $calendar->EventList();
+		}
+
+		return $events;
+	}
+
+	public function EventListBySearch() {
+		$calendar = LocalistCalendar::get()->First();
+
+		if (isset($this->EventTag)) {
+			$events = $calendar->EventListBySearchTerm($this->EventTag);
+			return $events;
+		} else {
+			$events = $calendar->EventList();
+		}
+
+		return $events;
+	}
 	public function init() {
 		parent::init();
 		Requirements::block(THIRDPARTY_DIR . '/jquery/jquery.js');
@@ -120,6 +145,5 @@ class Page_Controller extends ContentController {
 		// included so that our older themes still work
 
 	}
-
 
 }

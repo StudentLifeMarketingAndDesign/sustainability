@@ -32,11 +32,10 @@
 <% end_if %>
 
 <!-- Tagged Events -->
-<% with LocalistCalendar %>
 	<div class="relatednews">
 		<div class="container">
 			<h2>Related Events</h2>
-			<% loop $EventList %>
+			<% loop $EventListBySearch %>
 				<div class="relatednews-item">
 					<h4><a href="$Link">$Title</a></h4>
 					<% loop $Dates %>
@@ -68,7 +67,6 @@
 			<% end_loop %>
 		</div>
 	</div>
-<% end_with %>
 
 <!-- Gallery Carousel -->
 <% include Gallery %>
