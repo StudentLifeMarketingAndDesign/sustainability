@@ -36,7 +36,7 @@
 	<div class="relatednews">
 		<div class="container">
 			<h2>Related Events</h2>
-			<% loop $EventListByTag %>
+			<% loop $EventListBySearch %>
 				<div class="relatednews-item">
 					<h4><a href="$Link">$Title</a></h4>
 					<% loop $Dates %>
