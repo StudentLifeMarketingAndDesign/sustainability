@@ -3,8 +3,8 @@
     "description": "Sustainability Website",
     "require": {
         "php": ">=5.3.2",
-        "silverstripe/cms": "3.1.9",
-        "silverstripe/framework": "3.1.9",
+        "silverstripe/cms": "3.1.12",
+        "silverstripe/framework": "3.1.12",
         "md/ac-json-events" : "dev-master",
         "md/division-bar" : "dev-master",
         "md/rss-display" : "dev-master",
