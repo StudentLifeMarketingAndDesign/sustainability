@@ -181,11 +181,12 @@
 								<h5 class="newsblock-title"><a href="$Link">$Title</a></h5>
 								<% loop $Dates %>
 									<p class="date-time">
-				
-										<% with $StartDateTime %>
+										<% with $StartDate %>
 											<time itemprop="startDate" datetime="$Format(c)">
 												$Format(l), $Format(F) $Format(j)
 											</time>
+										<% end_with %>
+										<% with $StartTime %>
 											 <br />$Format("g:i A")
 										<% end_with %>
 										<% if $EndTime %>
@@ -199,7 +200,7 @@
 												<time itemprop="endDate" datetime="$Format(c)">
 													$Format(l), $Format(F) $Format(j)
 												</time>
-												<br />$Format("g:i A")
+											<%-- 	<br />$Format("g:i A") --%>
 											<% end_with %>
 										<% end_if %>
 									</p>
