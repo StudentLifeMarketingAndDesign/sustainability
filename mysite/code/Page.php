@@ -89,7 +89,17 @@ class Page_Controller extends ContentController {
 	);
 
 	public function getAllEvents() {
-		$communityEvents = CommunityEvent::get();
+		$communityCalendar = CommunityCalendar::get()->First();
+		$communityEventDateTimes = $communityCalendar->UpcomingEvents(0);
+		$communityEvents = new ArrayList();
+
+		foreach($communityEventDateTimes as $communityEventDateTime){
+			$communityEvents->push($communityEventDateTime->Event());
+		}
+
+		//$communityEvents->removeDuplicates();
+
+
 		$localistCalendar = LocalistCalendar::get()->First();
 		$localistEvents = $localistCalendar->EventList();
 
