@@ -51,5 +51,5 @@ GD::set_default_quality(80);
 SiteConfig::add_extension('SiteConfigExtension');
 
 if(Director::isLive()) {
-	Director::forceSSL();
+	Director::forceSSL(array('/^Security/','/^admin/'));
 }
