@@ -75,7 +75,7 @@
 				<div class="col-xs-6 col-md-3 col-md-pull-5">
 					<div itemscope itemtype="http://schema.org/LocalBusiness" class="address">
 						<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-							<span itemprop="streetAddress">1680 University Capitol Centre<br>200 South Clinton St.</span><br/>
+							<span itemprop="streetAddress">1650 University Capitol Centre<br>200 South Clinton St.</span><br/>
 							<span itemprop="addressLocality">Iowa City</span>,
 							<span itemprop="addressRegion">IA</span> <span itemprop="postalCode">52242</span>
 						</div>

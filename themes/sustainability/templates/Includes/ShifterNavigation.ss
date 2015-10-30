@@ -15,7 +15,7 @@
 		<div class="shifter-address">
 			<div class="contain">
 				<h3>Sustainability at Iowa</h3>
-				<p>1680 University Capitol Centre<br />200 South Clinton St.<br />Iowa City, IA 52242</p>
+				<p>1650 University Capitol Centre<br />200 South Clinton St.<br />Iowa City, IA 52242</p>
 			</div>
 		</div>
 		<hr />
