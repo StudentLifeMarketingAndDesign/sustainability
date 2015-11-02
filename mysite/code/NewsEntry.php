@@ -14,10 +14,6 @@ class NewsEntry extends BlogEntry {
 	private static $has_many = array(
 	);
 
-	private static $allowed_children = array(
-
-	);
-
 	private static $singular_name = 'News Entry';
 
 	private static $plural_name = 'News Entries';

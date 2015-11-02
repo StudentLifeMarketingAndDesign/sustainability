@@ -6,7 +6,7 @@ class CommunityCalendar extends Calendar {
 	);
 
 	private static $allowed_children = array(
-		'CommunityEvent',
+		'CommunityEvent'
 	);
 
 	public function getCMSFields() {

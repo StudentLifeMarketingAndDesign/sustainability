@@ -35,7 +35,6 @@ class StaffMember extends Page {
 
 	}
 
-	//private static $allowed_children = array("");
 
 }
 class StaffMember_Controller extends Page_Controller {
