@@ -3,15 +3,15 @@
     "description": "Sustainability Website",
     "require": {
         "php": ">=5.3.2",
-        "silverstripe/cms": "3.1.13",
-        "silverstripe/framework": "3.1.13",
+        "silverstripe/cms": "3.1.16",
+        "silverstripe/framework": "3.1.16",
         "md/ac-json-events" : "dev-master",
         "md/division-bar" : "dev-master",
         "md/rss-display" : "dev-master",
         "silverstripe/blog" : "1.0",
         "undefinedoffset/sortablegridfield" : "*",
         "silverstripe/widgets": "*",
-        "silverstripe/userforms": "*",
+        "silverstripe/userforms": "2.*",
         "silverstripe/event-calendar": "dev-master"
 
     },

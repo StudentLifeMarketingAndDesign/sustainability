@@ -46,3 +46,4 @@ blog/wp-content/uploads/*
 vendor/simplepie/simplepie/
 cache/
 .phpintel
+gridfieldextensions/
