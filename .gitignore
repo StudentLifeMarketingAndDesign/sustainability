@@ -47,3 +47,6 @@ vendor/simplepie/simplepie/
 cache/
 .phpintel
 gridfieldextensions/
+reports/
+siteconfig/
+vendor/
