@@ -11,7 +11,7 @@
         "silverstripe/blog" : "1.0",
         "undefinedoffset/sortablegridfield" : "*",
         "silverstripe/widgets": "*",
-        "silverstripe/userforms": "2.*",
+        "silverstripe/userforms": "*",
         "silverstripe/event-calendar": "*"
 
     },
