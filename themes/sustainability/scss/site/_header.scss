@@ -97,5 +97,12 @@ Top Nav
 .top-nav li a:hover, .top-nav li a:focus {
 	text-decoration: underline;
 }
+/* Climate Narrative Blog */
+.top-nav li a span {
+	display: none;
+	@media (min-width: $break-large) {
+		display: inline;
+	}
+}
 
 
