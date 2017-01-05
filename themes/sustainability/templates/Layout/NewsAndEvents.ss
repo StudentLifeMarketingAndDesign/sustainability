@@ -100,7 +100,7 @@
 				<% end_with %>
 				<!-- loop featured news articles -->
 				<% with Page(news) %>
-					<% loop $Entries %>
+					<% loop $Entries(8) %>
 						<% if $IsFeatured %>
 							<div class="row">
 								<div class="col-md-6 col-md-push-6">
@@ -167,7 +167,7 @@
 		<!-- Main Content -->
 		<div class="col-lg-6">
 				<h2>Upcoming Events <a href="{$BaseHref}events" class="all-link">View all events</a></h2>
-	
+
 				<!-- Loop Events -->
 				<div class="newsholder-entries">
 					<% loop $AllEvents.Limit(8) %>
