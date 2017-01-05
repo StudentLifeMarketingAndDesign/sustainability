@@ -263,8 +263,8 @@ Admin Login form fields
 	margin-bottom: 8px;
 	overflow: hidden;
 }
-#MemberLoginForm_LoginForm .field .text,
-.UserDefinedForm .article fieldset .field .text {
+#MemberLoginForm_LoginForm .field input.text,
+.UserDefinedForm .article fieldset  input.text {
 	display: block;
 	width: 100%;
 	height: 34px;
@@ -281,7 +281,7 @@ Admin Login form fields
 	-webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 	transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
-.UserDefinedForm .article fieldset .field .textarea {
+.UserDefinedForm .article fieldset textarea.textarea {
 	display: block;
 	width: 100%;
 	padding: 6px 12px;
@@ -304,12 +304,15 @@ Admin Login form fields
 	float: left;
 	padding-right: 5px;
 }
-.UserDefinedForm .article fieldset .field .optionset {
+.UserDefinedForm fieldset .optionset {
 	list-style: none;
 	margin: 0;
 	& li label {
 		font-weight: normal;
 		padding-left: 5px;
+	}
+	legend.left {
+		float: none;
 	}
 }
 .UserDefinedForm .article fieldset label.left {
