@@ -4,21 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "8ac564ae3d7a09b86eeaf4b4648d00e1",
-    "content-hash": "e50e9febaf47301a1b191478a3609bf4",
+    "hash": "b36b93549d94c891d3e49cda4be70119",
+    "content-hash": "a81a7a86d3ea7788d550fc69a255f79c",
     "packages": [
         {
             "name": "composer/installers",
-            "version": "v1.2.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "d78064c68299743e0161004f2de3a0204e33b804"
+                "reference": "87933d75bdab747400138a7e0381760bb9b64dde"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/d78064c68299743e0161004f2de3a0204e33b804",
-                "reference": "d78064c68299743e0161004f2de3a0204e33b804",
+                "url": "https://api.github.com/repos/composer/installers/zipball/87933d75bdab747400138a7e0381760bb9b64dde",
+                "reference": "87933d75bdab747400138a7e0381760bb9b64dde",
                 "shasum": ""
             },
             "require": {
@@ -62,10 +62,12 @@
                 "Dolibarr",
                 "Hurad",
                 "ImageCMS",
+                "Kanboard",
                 "MODX Evo",
                 "Mautic",
                 "OXID",
                 "Plentymarkets",
+                "Porto",
                 "RadPHP",
                 "SMF",
                 "Thelia",
@@ -112,7 +114,7 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2016-08-13 20:53:52"
+            "time": "2016-12-23 18:55:51"
         },
         {
             "name": "johngrogg/ics-parser",
@@ -399,12 +401,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/unclecheese/silverstripe-event-calendar.git",
-                "reference": "524383e240ceeb9a20dc99dea17de2327059baf7"
+                "reference": "e1dd3f4699f1e0943089634df4c14343afa4266b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/unclecheese/silverstripe-event-calendar/zipball/524383e240ceeb9a20dc99dea17de2327059baf7",
-                "reference": "524383e240ceeb9a20dc99dea17de2327059baf7",
+                "url": "https://api.github.com/repos/unclecheese/silverstripe-event-calendar/zipball/e1dd3f4699f1e0943089634df4c14343afa4266b",
+                "reference": "e1dd3f4699f1e0943089634df4c14343afa4266b",
                 "shasum": ""
             },
             "require": {
@@ -435,7 +437,7 @@
                 "events",
                 "silverstripe"
             ],
-            "time": "2017-01-12 02:35:24"
+            "time": "2017-01-12 22:49:58"
         },
         {
             "name": "silverstripe/framework",
@@ -620,16 +622,16 @@
         },
         {
             "name": "silverstripe/userforms",
-            "version": "3.x-dev",
+            "version": "4.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-userforms.git",
-                "reference": "bda22e9df6688e3de8c15b38816a646ea39b7cc3"
+                "reference": "2c0c03435d899f2b5087ad1fbdc3d27ac8eb6d86"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-userforms/zipball/bda22e9df6688e3de8c15b38816a646ea39b7cc3",
-                "reference": "bda22e9df6688e3de8c15b38816a646ea39b7cc3",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-userforms/zipball/2c0c03435d899f2b5087ad1fbdc3d27ac8eb6d86",
+                "reference": "2c0c03435d899f2b5087ad1fbdc3d27ac8eb6d86",
                 "shasum": ""
             },
             "require": {
@@ -643,11 +645,6 @@
                 "silverstripe/secureassets": "Enables files uploaded via userforms to be secured from public access"
             },
             "type": "silverstripe-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.1.x-dev"
-                }
-            },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause"
@@ -679,7 +676,7 @@
                 "silverstripe",
                 "userforms"
             ],
-            "time": "2016-10-11 03:20:08"
+            "time": "2016-12-21 02:56:13"
         },
         {
             "name": "silverstripe/widgets",
@@ -775,7 +772,8 @@
         "silverstripe/framework": 0,
         "md/ac-json-events": 20,
         "md/division-bar": 20,
-        "md/rss-display": 20
+        "md/rss-display": 20,
+        "silverstripe/userforms": 0
     },
     "prefer-stable": false,
     "prefer-lowest": false,
