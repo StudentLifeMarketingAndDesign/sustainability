@@ -109,9 +109,6 @@
 			<li role="presentation">
 				<a href="#events" aria-controls="events" role="tab" data-toggle="tab">Upcoming Events</a>
 			</li>
-			<li role="presentation">
-				<a href="#blog" aria-controls="blog" role="tab" data-toggle="tab">Climate Narrative Blog</a>
-			</li>
 		</ul>
 
 		<!-- Tab panes -->
@@ -233,27 +230,6 @@
 						<!-- end Loop Events -->
 						<a href="{$BaseHref}events" class="seeall">See all events</a>
 					<% end_with %>
-				</div>
-			</div>
-			<div role="tabpanel" class="tab-pane fade" id="blog">
-				<h3 class="mobiletitle">Climate Narrative Blog</h3>
-				<div class="pulse-panel">
-					<% loop $RSSDisplay("8", "http://sustainability.uiowa.edu/climatenarrative/?feed=rss2") %>
-						<div>
-							<% if $ThumbnailURL %>
-								<div class="panel-photo">
-									<a href="$Link" target="_blank">
-										<img data-lazy="$ThumbnailURL" />
-									</a>
-								</div>
-							<% end_if %>
-							<div class="panel-content">
-								<h4 class="panel-title"><a href="$Link" target="_blank">$Title</a></h4>
-								<p>$Description.LimitCharacters(100)</p>
-							</div>
-							<a href="$Link" class="read" target="_blank">Read More</a>
-						</div>
-					<% end_loop %>
 				</div>
 			</div>
 		</div>

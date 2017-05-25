@@ -9,7 +9,6 @@
 		<nav role="navigation" class="top-nav no-print">
 			<ul>
 				<li><a href="{$BaseHref}news-and-events/">News &amp; Events</a></li>
-				<li><a href="http://sustainability.uiowa.edu/climatenarrative/" target="_blank"><span>Climate Narrative </span>Blog</a></li>
 			</ul>
 		</nav>
 		<ul class="webicons no-print">
