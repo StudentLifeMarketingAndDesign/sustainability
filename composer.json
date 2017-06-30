@@ -3,8 +3,8 @@
     "description": "Sustainability Website",
     "require": {
         "php": ">=5.3.2",
-        "silverstripe/cms": "3.5.*@stable",
-        "silverstripe/framework": "3.5.*@stable",
+        "silverstripe/cms": "3.6.*@stable",
+        "silverstripe/framework": "3.6.*@stable",
         "md/ac-json-events" : "dev-master",
         "md/division-bar" : "dev-master",
         "md/rss-display" : "dev-master",
@@ -12,8 +12,8 @@
         "undefinedoffset/sortablegridfield" : "*",
         "silverstripe/widgets": "*",
         "silverstripe/userforms": "4.*@stable",
-        "silverstripe/event-calendar": "*"
-
+        "silverstripe/event-calendar": "*",
+        "jonom/focuspoint":"2.4.*"
     },
     "config": {
         "process-timeout": 600
