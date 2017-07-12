@@ -76,14 +76,15 @@
 
 
 	<% if Menu(3) %>
-		<nav class="block siblings">
+		<%-- removing per George's request --%>
+		<%-- <nav class="block siblings">
 			<h2>Related Sections</h2>
 			<ul class="first-level">
 				<% loop Menu(2) %>
 					<li><a href="$Link">$MenuTitle</a></li>
 				<% end_loop %>
 			</ul>
-		</nav>
+		</nav> --%>
 	<% else %>
 		<nav class="block siblings current">
 			<h2>This Section</h2>
