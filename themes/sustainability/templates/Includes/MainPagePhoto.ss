@@ -1,4 +1,4 @@
-<div style="background-image: url($PagePhoto.CroppedImage(1200,500).URL);" class="mainimg-container">
+<div style="background-image: url($PagePhoto.CroppedFocusedImage(1200,500).URL);" class="mainimg-container">
 	<div class="mainimg-content">
 		<div class="container">
 			<h1 class="maintitle">$Title</h1>
