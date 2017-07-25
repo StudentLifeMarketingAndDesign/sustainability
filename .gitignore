@@ -37,12 +37,10 @@ tagfield/
 ac-json-events/
 advancedworkflow/
 rss-display/
-
 mysite/recaptchaKeys.php
 blog/
 blog/wp-content/uploads
 blog/wp-content/uploads/*
-
 vendor/simplepie/simplepie/
 cache/
 .phpintel
@@ -52,3 +50,6 @@ siteconfig/
 vendor/
 segment-field/
 focuspoint/
+activedirectory/
+multivaluefield/
+queuedjobs/
