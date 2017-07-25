@@ -13,7 +13,8 @@
         "silverstripe/widgets": "*",
         "silverstripe/userforms": "4.*@stable",
         "silverstripe/event-calendar": "*",
-        "jonom/focuspoint":"2.4.*"
+        "jonom/focuspoint":"2.4.*",
+        "silverstripe/activedirectory" : "3.*"
     },
     "config": {
         "process-timeout": 600
@@ -32,6 +33,15 @@
         {
             "type": "vcs",
             "url": "https://github.com/StudentLifeMarketingAndDesign/division-bar"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/StudentLifeMarketingAndDesign/silverstripe-activedirectory"
+
+        },
+        {
+             "type": "vcs",
+             "url": "https://github.com/StudentLifeMarketingAndDesign/silverstripe-betternavigator"
         }
     ]
 }
