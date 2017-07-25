@@ -104,10 +104,13 @@ Interior Large Photo
 --------------------------------------------------------------- */
 .mainimg-container {
 	background-color: #000;
-	background-position: center center;
+	background-position: center top;
 	background-repeat: no-repeat;
 	background-size: cover;
 	position: relative;
+	@media (min-width: $break-xlarge) {
+		min-height: 450px;
+	}
 }
 .Initiative .mainimg-container {
 	margin-bottom: 50px;
