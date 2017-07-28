@@ -44,7 +44,7 @@
 							<img src="{$ThemeDir}/images/icon-recycle-128.png" alt="Recycling" class="init-img">
 						</span>
 					</span>
-					<h4 class="init-title">Recyling and Waste Reduction</h4>
+					<h4 class="init-title">Recycling and Waste Reduction</h4>
 				</a>
 			</li>
 			<li class="justify-item biomass">

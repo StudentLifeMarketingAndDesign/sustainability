@@ -6,7 +6,8 @@ class SiteConfigExtension extends DataExtension {
 		'TwitterLink' => 'Text',
 		'FacebookLink' =>'Text',
 		'FlickrLink' =>'Text',
-		'InstagramLink' =>'Text'
+		'InstagramLink' =>'Text',
+		'PinterestLink' =>'Text'
 	);
 
 	static $has_one = array(
@@ -19,6 +20,7 @@ class SiteConfigExtension extends DataExtension {
 		$fields->addFieldToTab('Root.Main', new TextField('FacebookLink', 'Facebook Account URL'));
 		$fields->addFieldToTab('Root.Main', new TextField('FlickrLink', 'Flickr Account URL'));
 		$fields->addFieldToTab('Root.Main', new TextField('InstagramLink', 'Instagram Account URL'));
+		$fields->addFieldToTab('Root.Main', new TextField('PinterestLink', 'Pinterest Account URL'));
 
 		return $fields;
 

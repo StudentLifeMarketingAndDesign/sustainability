@@ -51,6 +51,15 @@
 							</a>
 						</li>
 						<% end_if %>
+						<% if $SiteConfig.PinterestLink %>
+						<li>
+							<a href="$SiteConfig.PinterestLink" title="Pinterest" target="_blank">
+								<svg class="icon-pinterest">
+									<use xlink:href="#icon-pinterest"></use>
+								</svg><span class="visuallyhidden">Pinterest</span>
+							</a>
+						</li>
+						<% end_if %>
 					</ul>
 				</div><!-- end col -->
 			</div><!-- end .row -->

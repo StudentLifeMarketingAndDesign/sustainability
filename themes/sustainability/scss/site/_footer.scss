@@ -72,12 +72,12 @@ Social Media Icons
 .footer .webicons li {
 	display: inline-block;
 	float: none;
-	width: 23%;
+	width: 20%;
 	@media (min-width: $break-medium) {
-		width: 48%;
+		width: 32%;
 	}
 	@media (min-width: $break-large) {
-		width: 23%;
+		width: 20%;
 	}
 }
 .footer .webicons li a {
