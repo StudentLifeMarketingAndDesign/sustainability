@@ -2,6 +2,7 @@
 <!--[if lt IE 10]><html lang="en" class="lt-ie10 no-js"> <![endif]-->
 <!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
 <head>
+<% include GoogleTagManagerHead %>
 <% base_tag %>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -29,6 +30,7 @@
 <![endif]-->
 </head>
 <body class="$ClassName $Level(2).URLSegment shifter">
+	<% include GoogleTagManagerBody %>
 	<% include Svg %>
 	<div class="shifter-page">
 		<% include DivisionBarCopy %>
@@ -51,8 +53,6 @@
 		document.createElement( "picture" );
 	</script>
 	<script src="{$ThemeDir}/js/picturefill.min.js" async></script>
-
-	<% include GoogleAnalytics %>
 
 </body>
 </html>
