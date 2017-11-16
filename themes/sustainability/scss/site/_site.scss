@@ -254,23 +254,24 @@ Justify
 	background-color: darken( $link, 10% );
 	color: #fff;
 }
+
 /* ---------------------------------------------------------------
 Admin Login form fields
 --------------------------------------------------------------- */
 #MemberLoginForm_LoginForm fieldset,
-.UserDefinedForm .article fieldset {
+.userform {
 	padding: 1em 0;
 	border: none;
 }
-.UserDefinedForm .article fieldset .field {
-	margin-bottom: 8px;
+.userform .field {
+	margin-bottom: 1em;
 	overflow: hidden;
 }
 #MemberLoginForm_LoginForm .field input.text,
-.UserDefinedForm .article fieldset  input.text {
+.userform .field input.text {
 	display: block;
 	width: 100%;
-	height: 34px;
+	// height: 34px;
 	padding: 6px 12px;
 	font-size: 14px;
 	line-height: 1.428571429;
@@ -284,7 +285,7 @@ Admin Login form fields
 	-webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 	transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
-.UserDefinedForm .article fieldset textarea.textarea {
+.userform .field textarea.textarea {
 	display: block;
 	width: 100%;
 	padding: 6px 12px;
@@ -299,30 +300,28 @@ Admin Login form fields
 	-webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 	transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
-.UserDefinedForm .article fieldset label {
-	font-weight: bold;
-}
 #MemberLoginForm_LoginForm #Remember label.right,
-.UserDefinedForm .article fieldset label.right {
-	float: left;
-	padding-right: 5px;
+.userform label.right {
+	float: none;
+	padding-left: 5px;
 }
-.UserDefinedForm fieldset .optionset {
+.userform .field .optionset {
 	list-style: none;
 	margin: 0;
 	& li label {
 		font-weight: normal;
 		padding-left: 5px;
 	}
-	legend.left {
-		float: none;
-	}
 }
-.UserDefinedForm .article fieldset label.left {
+.userform .left {
 	float: none;
 }
+
+.userform .error{
+	color: red;
+}
 #MemberLoginForm_LoginForm .Actions .action,
-.UserDefinedForm .article  .Actions .action {
+.userform  .Actions .action {
 	display: inline-block;
 	padding: 8px 12px;
 	margin-bottom: 0;
@@ -350,7 +349,7 @@ Admin Login form fields
 		border-color: #adadad;
 	}
 }
- .UserDefinedForm .article .FormHeading {
+ .userform .FormHeading {
  	border-top: 1px solid #ccc;
- 	padding-top: .5em;
+ 	padding: 1em 0;
  }
