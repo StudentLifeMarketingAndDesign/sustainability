@@ -53,4 +53,5 @@ SiteConfig::add_extension('SiteConfigExtension');
 if(Director::isLive()) {
 	Director::forceSSL(array('/^Security/','/^admin/'));
 }
+Authenticator::unregister('MemberAuthenticator');
 Authenticator::set_default_authenticator('SAMLAuthenticator');

@@ -14,7 +14,8 @@
         "silverstripe/userforms": "4.*@stable",
         "silverstripe/event-calendar": "*",
         "jonom/focuspoint":"2.4.*",
-        "silverstripe/activedirectory" : "3.*"
+        "silverstripe/activedirectory" : "3.*",
+        "silverstripe/secureassets":"1.1.*"
     },
     "config": {
         "process-timeout": 600
