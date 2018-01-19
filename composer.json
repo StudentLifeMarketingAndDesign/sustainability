@@ -15,7 +15,9 @@
         "silverstripe/event-calendar": "*",
         "jonom/focuspoint":"2.4.*",
         "silverstripe/activedirectory" : "3.*",
-        "silverstripe/secureassets":"1.1.*"
+        "silverstripe/secureassets":"1.1.*",
+        "md/uiowa-bar":"*",
+        "md/division-analytics":"1.*"
     },
     "config": {
         "process-timeout": 600
@@ -34,6 +36,14 @@
         {
             "type": "vcs",
             "url": "https://github.com/StudentLifeMarketingAndDesign/division-bar"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/StudentLifeMarketingAndDesign/division-analytics"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/StudentLifeMarketingAndDesign/uiowa-bar"
         },
         {
             "type": "vcs",

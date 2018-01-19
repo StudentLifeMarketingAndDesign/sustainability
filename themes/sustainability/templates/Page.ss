@@ -38,7 +38,7 @@
 	<% include Svg %>
 
 	<div class="shifter-page">
-		<% include DivisionBarCopy %>
+		<% include UiowaBar %>
 		<% include Header %>
 		$Layout
 		<% include Footer %>

@@ -29,7 +29,8 @@
 
 /* Layout
 -------------------------------------------*/
-@import "site/_division-bar";
+@import "../../../uiowa-bar/scss/uiowa-bar";
+
 @import "site/_searchresults";
 @import "site/_staff";
 @import "site/_initiative";
