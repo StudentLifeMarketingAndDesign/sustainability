@@ -149,9 +149,9 @@ class Page_Controller extends ContentController {
 	}
 
 	public function EventList(){
-		if(isset($this->EventSearchTerm)){
+		if($this->EventSearchTerm != ''){
 			return $this->EventListBySearch();
-		}elseif(isset($this->EventTag)){
+		}elseif($this->EventTag != ''){
 			return $this->EventListByTag();
 		}
 	}
