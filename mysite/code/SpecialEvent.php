@@ -2,7 +2,8 @@
 class SpecialEvent extends Page {
 
 	private static $db = array(
-		"EventTag" => "Text"
+		"EventTag" => "Text",
+		"EventSearchTerm" => "Text"
 	);
 
 	private static $has_one = array(
@@ -17,6 +18,7 @@ class SpecialEvent extends Page {
 
 		$fields->addFieldToTab("Root.Main", new UploadField("PagePhoto", "Header Photo (width:1200px, height: 500px)"));
 		$fields->addFieldToTab("Root.Main", new TextField("EventTag", "Tag used to show events"));
+		$fields->addFieldToTab("Root.Main", new TextField("EventSearchTerm", "OR search term used to show events (overrides above)"));
 
 		return $fields;
 

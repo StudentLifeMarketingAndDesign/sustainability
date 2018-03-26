@@ -32,11 +32,11 @@
 <% end_if %>
 
 <!-- Tagged Events -->
-<% if $EventTag %>
+<% if $EventTag || $EventSearchTerm %>
 	<div class="relatednews">
 		<div class="container">
 			<h2>Related Events</h2>
-			<% loop $EventListBySearch %>
+			<% loop $EventList %>
 				<div class="relatednews-item">
 					<h4><a href="$Link">$Title</a></h4>
 					<% loop $Dates %>

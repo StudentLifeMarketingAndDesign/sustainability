@@ -138,14 +138,22 @@ class Page_Controller extends ContentController {
 	public function EventListBySearch() {
 		$calendar = LocalistCalendar::get()->First();
 
-		if (isset($this->EventTag)) {
-			$events = $calendar->EventListBySearchTerm($this->EventTag);
+		if (isset($this->EventSearchTerm)) {
+			$events = $calendar->EventListBySearchTerm($this->EventSearchTerm);
 			return $events;
 		} else {
 			$events = $calendar->EventList();
 		}
 
 		return $events;
+	}
+
+	public function EventList(){
+		if(isset($this->EventSearchTerm)){
+			return $this->EventListBySearch();
+		}elseif(isset($this->EventTag)){
+			return $this->EventListByTag();
+		}
 	}
 	public function init() {
 		parent::init();
