@@ -94,14 +94,38 @@ class Page_Controller extends ContentController {
 	);
 
     public function feed() {
-        $rss = new RSSFeed(
-            SiteTree::get(), 
-            $this->Link(), 
-            "Sustainability at Iowa pages", 
-            "Feed of all Sustainability at Iowa pages"
-        );
+   		$pages = SiteTree::get();
 
-        return $rss->outputToBrowser();
+   		$feedArray = array();
+
+   		foreach($pages as $page){
+   			$pageTagsArray = array();
+
+   			if($page->ClassName == "NewsEntry"){
+   				$pageTags = $page->TagNames();
+   			}else{
+   				$pageTags = array();
+   			}
+   			
+
+   			foreach($pageTags as $pageTag){
+   				array_push($pageTagsArray, $pageTag);
+   			}
+
+
+   			$pageArray = array(
+   				'id' => $page->ID,
+   				'title' => $page->Title,
+   				'type' => $page->ClassName,
+   				'published' => $page->Created,
+   				'content' => $page->Content,
+   				'tags' => $pageTagsArray
+   			);
+
+   			array_push($feedArray, $pageArray);
+   		}
+   		$this->getResponse()->addHeader('Content-type', 'application/json');
+   		return json_encode($feedArray);
     }
 
 
