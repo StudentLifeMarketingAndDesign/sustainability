@@ -86,7 +86,24 @@ class Page_Controller extends ContentController {
 	 * @var array
 	 */
 	private static $allowed_actions = array(
+		'feed'
 	);
+
+	private static $url_handlers = array(
+		'feed' => 'feed'
+	);
+
+    public function feed() {
+        $rss = new RSSFeed(
+            SiteTree::get(), 
+            $this->Link(), 
+            "Sustainability at Iowa pages", 
+            "Feed of all Sustainability at Iowa pages"
+        );
+
+        return $rss->outputToBrowser();
+    }
+
 
 	public function getAllEvents() {
 		$communityCalendar = CommunityCalendar::get()->First();
