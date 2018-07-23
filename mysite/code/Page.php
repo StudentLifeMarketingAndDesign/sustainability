@@ -106,20 +106,50 @@ class Page_Controller extends ContentController {
    			}else{
    				$pageTags = array();
    			}
+
+
    			
 
    			foreach($pageTags as $pageTag){
    				array_push($pageTagsArray, $pageTag);
    			}
 
+   			$pageImagesArray = array();
+   			//Photo, PagePhoto, SummaryPhoto, Image
+
+   			$imageFields = array(
+   				'Photo',
+   				'PagePhoto',
+   				'SummaryPhoto',
+   				'Image'
+   			);
+
+   			foreach($imageFields as $imageField){
+	   			if($page->{$imageField.'ID'}){
+	   				$imageURL = $page->obj($imageField)->getRelativePath();
+
+
+	   				$imageURLFiltered = str_replace('assets/', '/sites/sustainability.uiowa.edu/files/', $imageURL);
+
+
+
+	   				array_push($pageImagesArray, $imageURLFiltered);
+	   			}
+   			}
+
+   			$content = $page->Content;
+   			$contentFiltered = ShortcodeParser::get_active()->parse($content);
+
+   			$contentFiltered = str_replace('assets/', '/sites/sustainability.uiowa.edu/files/', $contentFiltered);
 
    			$pageArray = array(
    				'id' => $page->ID,
    				'title' => $page->Title,
    				'type' => $page->ClassName,
    				'published' => $page->Created,
-   				'content' => $page->Content,
-   				'tags' => $pageTagsArray
+   				'content' => $contentFiltered,
+   				'tags' => $pageTagsArray,
+   				'images' => $pageImagesArray
    			);
 
    			array_push($feedArray, $pageArray);
