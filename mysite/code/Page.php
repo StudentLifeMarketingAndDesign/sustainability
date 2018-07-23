@@ -107,9 +107,6 @@ class Page_Controller extends ContentController {
    				$pageTags = array();
    			}
 
-
-   			
-
    			foreach($pageTags as $pageTag){
    				array_push($pageTagsArray, $pageTag);
    			}
@@ -142,6 +139,12 @@ class Page_Controller extends ContentController {
 
    			$contentFiltered = str_replace('assets/', '/sites/sustainability.uiowa.edu/files/', $contentFiltered);
 
+   			$externalLink = null;
+
+   			if($page->ExternalLink){
+   				$externalLink = $page->ExternalLink;
+   			}
+
    			$pageArray = array(
    				'id' => $page->ID,
    				'title' => $page->Title,
@@ -149,7 +152,8 @@ class Page_Controller extends ContentController {
    				'published' => $page->Created,
    				'content' => $contentFiltered,
    				'tags' => $pageTagsArray,
-   				'images' => $pageImagesArray
+   				'images' => $pageImagesArray,
+   				'external_link' => $externalLink
    			);
 
    			array_push($feedArray, $pageArray);
